@@ -347,10 +347,15 @@ function copySummary(r){
 }
 
 /* ---------- события ---------- */
+function setMenu(open){
+  $("#side").classList.toggle("on", open);
+  $("#scrim").classList.toggle("on", open || S.open !== null);
+  document.body.style.overflow = open || S.open !== null ? "hidden" : "";
+}
 function setFilter(patch){
   Object.assign(S, patch); S.kb = -1;
   store.set("view", S.view);
-  $("#side").classList.remove("on");
+  if ($("#side").classList.contains("on")) setMenu(false);
   render(); window.scrollTo({ top: 0, behavior: "smooth" });
 }
 document.addEventListener("click", e => {
@@ -380,18 +385,19 @@ document.addEventListener("click", e => {
   }
   if (t.matches("[data-i]") && !t.closest(".reader")) openReader(+t.dataset.i);
 });
-$("#scrim").onclick = closeReader;
+$("#scrim").onclick = () => { if ($("#side").classList.contains("on")) setMenu(false); else closeReader(); };
 $("#rClose").onclick = closeReader;
 $("#rPrev").onclick = () => S.open > 0 && openReader(S.open - 1);
 $("#rNext").onclick = () => S.open < LIST.length - 1 && openReader(S.open + 1);
-$("#menuBtn").onclick = () => $("#side").classList.toggle("on");
+$("#menuBtn").onclick = () => setMenu(!$("#side").classList.contains("on"));
 document.addEventListener("change", e => { if (e.target.id === "sort"){ S.sort = e.target.value; store.set("sort", S.sort); renderMain(); } });
 let qt; $("#q").addEventListener("input", e => { clearTimeout(qt); qt = setTimeout(() => setFilter({ q: e.target.value.trim() }), 140); });
 
 document.addEventListener("keydown", e => {
   const typing = /INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName);
   if (e.key === "Escape"){
-    if (S.open !== null) closeReader();
+    if ($("#side").classList.contains("on")) setMenu(false);
+    else if (S.open !== null) closeReader();
     else if (typing) document.activeElement.blur();
     return;
   }
