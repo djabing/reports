@@ -3,7 +3,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="app.css">
+<!-- Версия файлов берётся из manifest.js ("build"), чтобы браузер не показывал старую копию из кэша. -->
+<script>document.write('<script src="data/manifest.js?t=' + Date.now() + '"><\/script>');</script>
+<script>window.RDB_V = encodeURIComponent(((window.RDB_MANIFEST || {}).build || (window.RDB_MANIFEST || {}).updated || Date.now()));
+document.write('<link rel="stylesheet" href="app.css?v=' + window.RDB_V + '">');</script>
 <!-- Версия для публикации на claude.ai (без doctype/html/head/body: обёртку добавляет платформа).
      Разметка совпадает с index.html — при изменении интерфейса правьте оба файла. -->
 
@@ -47,8 +50,6 @@
 </section>
 <div class="toast" id="toast"></div>
 
-<script src="data/vendors.js"></script>
-<script src="data/manifest.js"></script>
-<script src="app.js"></script>
+<script>document.write('<script src="data/vendors.js?v=' + window.RDB_V + '"><\/script><script src="app.js?v=' + window.RDB_V + '"><\/script>');</script>
 
 </body></html>
