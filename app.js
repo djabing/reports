@@ -105,7 +105,7 @@ function load(){
   if (!man.length) return Promise.resolve();
   return Promise.all(man.map(m => new Promise(res => {
     const s = document.createElement("script");
-    s.src = "data/reports/" + encodeURIComponent(m.id) + ".js";
+    s.src = "data/reports/" + encodeURIComponent(m.id) + ".js?v=" + (window.RDB_V || "");
     s.onload = s.onerror = res;
     document.head.appendChild(s);
   })));
