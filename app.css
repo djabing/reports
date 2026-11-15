@@ -206,3 +206,17 @@ ul.todo li.done span{text-decoration:line-through;color:var(--ink-3)}
   .meta-grid{grid-template-columns:1fr}
   .hint{display:none}
 }
+
+/* разделы */
+.grp-switch{display:flex;flex-direction:column;gap:4px;padding:4px;border:1px solid var(--line);border-radius:12px;background:var(--bg-2)}
+.grp-switch button{display:flex;align-items:center;gap:8px;border:0;background:none;padding:8px 10px;border-radius:9px;text-align:left;color:var(--ink-2);font-weight:600;font-size:13.5px}
+.grp-switch button:hover{color:var(--ink)}
+.grp-switch button.on{background:var(--panel);color:var(--ink);box-shadow:var(--shadow)}
+.grp-switch .cnt{margin-left:auto;font:500 12px var(--mono);color:var(--ink-3)}
+.ghost-link{display:block;margin-top:18px;border:0;background:none;padding:2px 0;font-size:11.5px;color:var(--ink-3);opacity:.55;cursor:pointer}
+.ghost-link:hover{opacity:1;text-decoration:underline}
+.grp-head{margin:0 0 14px}
+.grp-head h2{margin:0;font-size:22px;letter-spacing:-.01em}
+.grp-head p{margin:4px 0 0;color:var(--ink-3);font-size:13px}
+.grp-head .chip{margin-top:10px}
+.grp-head.muted h2{color:var(--ink-2)}

@@ -2,9 +2,18 @@
 // Сборщик добавляет новые строки сразу под якорем и обновляет "updated".
 window.RDB_MANIFEST = {
   "updated": "2026-11-15T12:00:00+03:00",
-  "last_run_note": "Добавлено 17 отчётов (окт.–нояб. 2026): ИИ-атаки ×7 (CrowdStrike, Unit 42 ×2, Kaspersky, PT, BI.ZONE, Google), Trellix, Kaspersky ×3, ENISA, ReliaQuest, Tenable, PT ×2, Solar 4RAYS.",
+  "last_run_note": "Разделы: «Вендоры ИБ», «Международная аналитика» (+9: McKinsey, Gartner, Forrester, ВЭФ, IBM, Verizon, PwC, EY, KPMG), «Конкуренты» (PT, F6). Ранее: +17 отчётов за окт.–нояб. 2026.",
   "reports": [
     // NEW-REPORT-ANCHOR (не удалять: сборщик вставляет новые записи под этой строкой)
+    { "id": "2026-11-mckinsey-frontier-ai-software-security", "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/how-frontier-ai-is-rewriting-software-security-rules", "title": "How frontier AI is rewriting software security rules", "added": "2026-11-15" },
+    { "id": "2026-10-pwc-digital-trust-insights-2027", "url": "https://www.pwc.com/us/en/services/consulting/cybersecurity-data-tech-risk/library/global-digital-trust-insights.html", "title": "2027 Global Digital Trust Insights: Moving targets", "added": "2026-11-15" },
+    { "id": "2026-11-forrester-predictions-2027-cybersecurity", "url": "https://forrester.com/blogs/predictions-2027-its-going-to-be-another-hold-my-beer-kind-of-year-for-security-and-risk", "title": "Predictions 2027: Cybersecurity And Risk", "added": "2026-11-15" },
+    { "id": "2026-07-ibm-cost-of-a-data-breach-2026", "url": "https://www.ibm.com/reports/data-breach", "title": "Cost of a Data Breach Report 2026", "added": "2026-11-15" },
+    { "id": "2026-05-verizon-dbir-2026", "url": "https://www.verizon.com/about/news/breach-industry-wide-dbir-finds", "title": "2026 Data Breach Investigations Report", "added": "2026-11-15" },
+    { "id": "2026-03-ey-cybersecurity-roadmap-study", "url": "https://ey.com/en_us/newsroom/2026/03/cybersecurity-leaders-investing-in-ai-and-agentic-defenses-to-combat-escalating-ai-enabled-threats", "title": "EY Cybersecurity Roadmap Study 2026", "added": "2026-11-15" },
+    { "id": "2026-02-gartner-infosec-spending-forecast-2026", "url": "https://www.gartner.com/en/documents/7408930", "title": "Forecast Analysis: Information Security, Worldwide, 2026", "added": "2026-11-15" },
+    { "id": "2026-02-kpmg-cybersecurity-tech-risk-survey", "url": "https://www.grcreport.com/post/kpmg-survey-finds-cisos-caught-between-ai-ambition-security-reality", "title": "KPMG 2026 Cybersecurity & Technology Risk Survey", "added": "2026-11-15" },
+    { "id": "2026-01-wef-global-cybersecurity-outlook-2026", "url": "https://www.weforum.org/publications/global-cybersecurity-outlook-2026/digest/", "title": "Global Cybersecurity Outlook 2026", "added": "2026-11-15" },
     { "id": "2026-11-kaspersky-esxi-blacknevas", "url": "https://securelist.com/esxi-ransomware/121959/", "title": "ESXi ransomware: why it is dangerous and how to defend against it", "added": "2026-11-15" },
     { "id": "2026-11-pt-phishing-domains-q3", "url": "https://safe.cnews.ru/news/line/2026-11-13_positive_technologies_vyyavila_bolee", "title": "Positive Technologies выявила более 3400 новых фишинговых доменов в III квартале 2026 года", "added": "2026-11-15" },
     { "id": "2026-11-google-cloud-security-forecast-2027", "url": "https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-our-security-forecast-2027", "title": "Cloud CISO Perspectives: Our security forecast for 2027", "added": "2026-11-15" },
