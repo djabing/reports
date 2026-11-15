@@ -25,5 +25,7 @@ window.RDB_VENDORS = {
   "sentinelone": { "name": "SentinelOne",          "domain": "sentinelone.com",        "color": "#6B2FD9" },
   "verizon":     { "name": "Verizon",              "domain": "verizon.com",            "color": "#EE0000" },
   "enisa":       { "name": "ENISA",                "domain": "enisa.europa.eu",        "color": "#003399" },
+  "tenable":     { "name": "Tenable",              "domain": "tenable.com",            "color": "#00A5B5" },
+  "reliaquest":  { "name": "ReliaQuest",           "domain": "reliaquest.com",         "color": "#E4002B" },
   // NEW-VENDOR-ANCHOR (не удалять: сборщик вставляет новых вендоров над этой строкой)
 };
