@@ -18,6 +18,12 @@ const TYPES = {
   phishing:       { name: "Фишинг и мошенничество",c: "#e06a2c" },
   other:          { name: "Другое",                c: "#7b8496" }
 };
+/* Разделы библиотеки. Группа берётся из отчёта (r.group), иначе из справочника вендоров, иначе "main". */
+const GROUPS = {
+  main: { name: "Вендоры ИБ",              hint: "аналитика ИБ-вендоров и исследовательских центров" },
+  intl: { name: "Международная аналитика", hint: "консалтинг, аналитические агентства, международные организации и флагманские годовые исследования" },
+  comp: { name: "Конкуренты",              hint: "Positive Technologies и аффилированные компании, F6 — отдельно от основной ленты" }
+};
 const MONTHS = ["январь","февраль","март","апрель","май","июнь","июль","август","сентябрь","октябрь","ноябрь","декабрь"];
 const MONTHS_G = ["янв","фев","мар","апр","мая","июн","июл","авг","сен","окт","ноя","дек"];
 const DAY = 864e5;
@@ -34,6 +40,7 @@ let todos   = store.get("todos", {});
 
 /* ---------- состояние ---------- */
 const S = {
+  group: GROUPS[store.get("group", "main")] ? store.get("group", "main") : "main",
   view: store.get("view", "all"),         // all | new | unread | fav | top
   type: null, vendor: null, tag: null,
   q: "",
@@ -41,7 +48,7 @@ const S = {
   layout: store.get("layout", "cards"),
   kb: -1, open: null
 };
-let ALL = [], LIST = [];
+let ALL = [], LIST = [], POOL = [];
 
 /* ---------- утилиты ---------- */
 const $ = s => document.querySelector(s);
@@ -57,6 +64,11 @@ function vendorOf(r){
     domain: v.domain || r.vendor_domain || (safeUrl(r.url) ? new URL(r.url).hostname : ""),
     color: v.color || r.vendor_color || "#7b8496"
   };
+}
+function groupOf(r){
+  if (r.group && GROUPS[r.group]) return r.group;
+  const g = ((window.RDB_VENDORS || {})[r.vendor] || {}).group;
+  return GROUPS[g] ? g : "main";
 }
 function sortKey(r){
   const p = String(r.published || "");
@@ -111,7 +123,8 @@ function haystack(r){
   return r.__h;
 }
 function apply(){
-  let L = ALL.slice();
+  POOL = ALL.filter(r => groupOf(r) === S.group);
+  let L = POOL.slice();
   if (S.view === "new") L = L.filter(r => isNew(r, 7));
   if (S.view === "unread") L = L.filter(r => !readSet.has(r.id));
   if (S.view === "fav") L = L.filter(r => favSet.has(r.id));
@@ -130,7 +143,9 @@ function apply(){
 
 /* ---------- сайдбар ---------- */
 function renderSide(){
-  const cnt = f => ALL.filter(f).length;
+  POOL = ALL.filter(r => groupOf(r) === S.group);
+  const cnt = f => POOL.filter(f).length;
+  const gc = g => ALL.filter(r => groupOf(r) === g).length;
   const views = [
     ["all",    "Все отчёты",     cnt(() => true)],
     ["new",    "Новые за 7 дней",cnt(r => isNew(r, 7))],
@@ -139,26 +154,31 @@ function renderSide(){
     ["top",    "Главное",        cnt(r => (r.importance||0) >= 3)]
   ];
   const icons = { all:"▤", new:"✦", unread:"◉", fav:"★", top:"▲" };
-  let h = `<h4>Подборки</h4>` + views.map(([k, n, c]) =>
+  let h = `<h4>Раздел</h4><div class="grp-switch">` + ["main", "intl"].map(g =>
+    `<button class="${S.group===g?"on":""}" data-group="${g}"><span>${GROUPS[g].name}</span><span class="cnt">${gc(g)}</span></button>`).join("") +
+    (S.group === "comp" ? `<button class="on" data-group="comp"><span>${GROUPS.comp.name}</span><span class="cnt">${gc("comp")}</span></button>` : "") + `</div>`;
+  h += `<h4>Подборки</h4>` + views.map(([k, n, c]) =>
     `<button class="nav-item ${S.view===k?"on":""}" data-view="${k}"><span style="width:16px;text-align:center;color:var(--ink-3)">${icons[k]}</span><span class="nm">${n}</span><span class="cnt">${c}</span></button>`).join("");
 
-  const tc = {}; ALL.forEach(r => { const t = TYPES[r.type] ? r.type : "other"; tc[t] = (tc[t]||0) + 1; });
+  const tc = {}; POOL.forEach(r => { const t = TYPES[r.type] ? r.type : "other"; tc[t] = (tc[t]||0) + 1; });
   h += `<h4>Тип отчёта</h4>` + Object.keys(TYPES).filter(t => tc[t]).map(t =>
     `<button class="nav-item ${S.type===t?"on":""}" data-type="${t}"><span class="sw" style="background:${TYPES[t].c}"></span><span class="nm">${TYPES[t].name}</span><span class="cnt">${tc[t]}</span></button>`).join("");
 
-  const vc = {}; ALL.forEach(r => { vc[r.vendor] = (vc[r.vendor]||0) + 1; });
+  const vc = {}; POOL.forEach(r => { vc[r.vendor] = (vc[r.vendor]||0) + 1; });
   const vids = Object.keys(vc).sort((a, b) => vc[b] - vc[a] || vendorOf({vendor:a}).name.localeCompare(vendorOf({vendor:b}).name));
-  h += `<h4>Вендоры · ${vids.length}</h4>` + vids.map(id => {
-    const r0 = ALL.find(r => r.vendor === id), v = vendorOf(r0);
+  h += `<h4>${S.group === "intl" ? "Источники" : "Вендоры"} · ${vids.length}</h4>` + vids.map(id => {
+    const r0 = POOL.find(r => r.vendor === id), v = vendorOf(r0);
     return `<button class="nav-item ${S.vendor===id?"on":""}" data-vendor="${esc(id)}">${logo(v)}<span class="nm">${esc(v.name)}</span><span class="cnt">${vc[id]}</span></button>`;
   }).join("");
 
-  const tg = {}; ALL.forEach(r => (r.tags||[]).forEach(t => { const k = norm(t); tg[k] = tg[k] || { t, n: 0 }; tg[k].n++; }));
+  const tg = {}; POOL.forEach(r => (r.tags||[]).forEach(t => { const k = norm(t); tg[k] = tg[k] || { t, n: 0 }; tg[k].n++; }));
   const tops = Object.values(tg).sort((a, b) => b.n - a.n).slice(0, 18);
   if (tops.length) h += `<h4>Темы</h4><div class="tagcloud">` + tops.map(x =>
     `<button class="chip ${S.tag && norm(S.tag)===norm(x.t)?"active":""}" data-tag="${esc(x.t)}">${esc(x.t)} <span style="opacity:.55">${x.n}</span></button>`).join("") + `</div>`;
 
   h += `<div class="hint" style="margin-top:26px"><span><span class="kbd">/</span> поиск</span><span><span class="kbd">j</span><span class="kbd">k</span> навигация</span><span><span class="kbd">Enter</span> открыть</span><span><span class="kbd">f</span> в избранное</span></div>`;
+  const nc = gc("comp");
+  if (nc && S.group !== "comp") h += `<button class="ghost-link" data-group="comp" title="${esc(GROUPS.comp.hint)}">${GROUPS.comp.name} · ${nc}</button>`;
   $("#side").innerHTML = h;
   $("#side").querySelectorAll(".logo").forEach(l => { l.style.width = "22px"; l.style.height = "22px"; l.style.fontSize = "22px"; l.style.borderRadius = "6px"; });
 }
@@ -193,13 +213,15 @@ const starSvg = on => `<svg width="18" height="18" viewBox="0 0 24 24" fill="${o
 
 function renderMain(){
   apply();
-  const vendors = new Set(ALL.map(r => r.vendor)).size;
-  const new7 = ALL.filter(r => isNew(r, 7)).length;
-  const unread = ALL.filter(r => !readSet.has(r.id)).length;
-  let h = `<section class="hero">
-    <div class="kpi"><b>${ALL.length}</b><span>${plural(ALL.length,"отчёт","отчёта","отчётов")} в библиотеке</span></div>
+  const vendors = new Set(POOL.map(r => r.vendor)).size;
+  const new7 = POOL.filter(r => isNew(r, 7)).length;
+  const unread = POOL.filter(r => !readSet.has(r.id)).length;
+  const G = GROUPS[S.group];
+  let h = `<div class="grp-head${S.group==="comp"?" muted":""}"><h2>${G.name}</h2><p>${G.hint}</p>${S.group==="comp" ? `<button class="chip" data-group="main">← К основной ленте</button>` : ""}</div>`;
+  h += `<section class="hero">
+    <div class="kpi"><b>${POOL.length}</b><span>${plural(POOL.length,"отчёт","отчёта","отчётов")} в разделе</span></div>
     <div class="kpi accent"><b>${new7}</b><span>${plural(new7,"новый","новых","новых")} за 7 дней</span></div>
-    <div class="kpi"><b>${vendors}</b><span>${plural(vendors,"вендор","вендора","вендоров")}</span></div>
+    <div class="kpi"><b>${vendors}</b><span>${S.group === "intl" ? plural(vendors,"источник","источника","источников") : plural(vendors,"вендор","вендора","вендоров")}</span></div>
     <div class="kpi"><b>${unread}</b><span>не прочитано</span></div></section>`;
 
   const names = { all:"Все отчёты", new:"Новые за 7 дней", unread:"Непрочитанные", fav:"Избранное", top:"Главное" };
@@ -216,7 +238,7 @@ function renderMain(){
       <option value="vendor" ${S.sort==="vendor"?"selected":""}>По вендору</option></select>
     <div class="seg"><button data-layout="cards" class="${S.layout==="cards"?"on":""}">Карточки</button><button data-layout="list" class="${S.layout==="list"?"on":""}">Список</button></div></div>`;
 
-  if (!ALL.length){
+  if (!POOL.length){
     h += `<div class="empty"><b>Библиотека пока пуста</b>Запустите задачу «Сбор ИБ-отчётов» в Claude — она найдёт и добавит свежие отчёты.</div>`;
   } else if (!LIST.length){
     h += `<div class="empty"><b>Ничего не найдено</b>Измените фильтры или поисковый запрос.</div>`;
@@ -335,6 +357,7 @@ document.addEventListener("click", e => {
   const t = e.target.closest("button,a,[data-i],textarea,input");
   if (!t) return;
   if (t.dataset.fav){ e.stopPropagation(); toggleFav(t.dataset.fav); render(); return; }
+  if (t.dataset.group){ S.group = t.dataset.group; store.set("group", S.group); setFilter({ view: "all", type: null, vendor: null, tag: null }); return; }
   if (t.dataset.view){ setFilter({ view: t.dataset.view }); return; }
   if (t.dataset.type){ setFilter({ type: S.type === t.dataset.type ? null : t.dataset.type }); return; }
   if (t.dataset.vendor){ setFilter({ vendor: S.vendor === t.dataset.vendor ? null : t.dataset.vendor }); return; }
@@ -412,6 +435,10 @@ load().then(() => {
   ALL = RDB.items.filter(r => !seen.has(r.id) && seen.add(r.id));
   stamp(); render();
   const hash = decodeURIComponent(location.hash.slice(1));
-  if (hash){ const i = LIST.findIndex(r => r.id === hash); if (i >= 0) openReader(i); }
+  if (hash){
+    const r = ALL.find(x => x.id === hash);
+    if (r && groupOf(r) !== S.group){ S.group = groupOf(r); render(); }
+    const i = LIST.findIndex(x => x.id === hash); if (i >= 0) openReader(i);
+  }
 });
 })();

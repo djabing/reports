@@ -1,11 +1,13 @@
 // Справочник вендоров: брендовый цвет и домен для логотипа.
+// "group": "intl" — раздел «Международная аналитика» (консалтинг, аналитические агентства, межд. организации);
+// "group": "comp" — скрытый раздел «Конкуренты» (PT и аффилированные, F6). Без group — основной раздел «Вендоры ИБ».
 // Сборщик добавляет сюда новых вендоров (строкой перед якорем). Если вендора нет —
 // интерфейс возьмёт имя и домен из самого отчёта.
 window.RDB_VENDORS = {
   "kaspersky":   { "name": "Kaspersky",            "domain": "kaspersky.com",          "color": "#00A88E" },
-  "pt":          { "name": "Positive Technologies","domain": "ptsecurity.com",         "color": "#D7262B" },
+  "pt":          { "name": "Positive Technologies","domain": "ptsecurity.com",         "color": "#D7262B", "group": "comp" },
   "bizone":      { "name": "BI.ZONE",              "domain": "bi.zone",                "color": "#1E5BFF" },
-  "f6":          { "name": "F6",                   "domain": "f6.ru",                  "color": "#E4002B" },
+  "f6":          { "name": "F6",                   "domain": "f6.ru",                  "color": "#E4002B", "group": "comp" },
   "solar":       { "name": "Солар",                "domain": "rt-solar.ru",            "color": "#FF6B00" },
   "microsoft":   { "name": "Microsoft",            "domain": "microsoft.com",          "color": "#0078D4" },
   "google":      { "name": "Google Threat Intelligence", "domain": "cloud.google.com", "color": "#4285F4" },
@@ -23,9 +25,17 @@ window.RDB_VENDORS = {
   "recordedfuture": { "name": "Recorded Future",   "domain": "recordedfuture.com",     "color": "#1F2A44" },
   "proofpoint":  { "name": "Proofpoint",           "domain": "proofpoint.com",         "color": "#2C5EA8" },
   "sentinelone": { "name": "SentinelOne",          "domain": "sentinelone.com",        "color": "#6B2FD9" },
-  "verizon":     { "name": "Verizon",              "domain": "verizon.com",            "color": "#EE0000" },
-  "enisa":       { "name": "ENISA",                "domain": "enisa.europa.eu",        "color": "#003399" },
+  "verizon":     { "name": "Verizon",              "domain": "verizon.com",            "color": "#EE0000", "group": "intl" },
+  "enisa":       { "name": "ENISA",                "domain": "enisa.europa.eu",        "color": "#003399", "group": "intl" },
   "tenable":     { "name": "Tenable",              "domain": "tenable.com",            "color": "#00A5B5" },
   "reliaquest":  { "name": "ReliaQuest",           "domain": "reliaquest.com",         "color": "#E4002B" },
+  "mckinsey":    { "name": "McKinsey & Company",   "domain": "mckinsey.com",           "color": "#051C2C", "group": "intl" },
+  "gartner":     { "name": "Gartner",              "domain": "gartner.com",            "color": "#002856", "group": "intl" },
+  "forrester":   { "name": "Forrester",            "domain": "forrester.com",          "color": "#00A651", "group": "intl" },
+  "wef":         { "name": "World Economic Forum", "domain": "weforum.org",            "color": "#005DAA", "group": "intl" },
+  "ibm":         { "name": "IBM",                  "domain": "ibm.com",                "color": "#0F62FE", "group": "intl" },
+  "pwc":         { "name": "PwC",                  "domain": "pwc.com",                "color": "#D04A02", "group": "intl" },
+  "ey":          { "name": "EY",                   "domain": "ey.com",                 "color": "#2E2E38", "group": "intl" },
+  "kpmg":        { "name": "KPMG",                 "domain": "kpmg.com",               "color": "#00338D", "group": "intl" },
   // NEW-VENDOR-ANCHOR (не удалять: сборщик вставляет новых вендоров над этой строкой)
 };

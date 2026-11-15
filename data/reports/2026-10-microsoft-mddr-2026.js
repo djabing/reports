@@ -1,6 +1,7 @@
 RDB.add({
   "id": "2026-10-microsoft-mddr-2026",
   "vendor": "microsoft",
+  "group": "intl",
   "title": "Microsoft Digital Defense Report 2026",
   "title_ru": "Ежегодный доклад Microsoft о киберзащите 2026",
   "url": "https://www.microsoft.com/en-us/security/blog/2026/10/01/insights-from-the-2026-microsoft-digital-defense-report/",
