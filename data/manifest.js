@@ -1,10 +1,27 @@
 // Реестр отчётов. Каждая строка = файл data/reports/<id>.js.
 // Сборщик добавляет новые строки сразу под якорем и обновляет "updated".
 window.RDB_MANIFEST = {
-  "updated": "2026-10-16T12:00:00+03:00",
-  "last_run_note": "Добавлено 12 отчётов: BI.ZONE ×5, Solar 4RAYS, F6, Kaspersky ×3, Proofpoint, Sophos.",
+  "updated": "2026-11-15T12:00:00+03:00",
+  "last_run_note": "Добавлено 17 отчётов (окт.–нояб. 2026): ИИ-атаки ×7 (CrowdStrike, Unit 42 ×2, Kaspersky, PT, BI.ZONE, Google), Trellix, Kaspersky ×3, ENISA, ReliaQuest, Tenable, PT ×2, Solar 4RAYS.",
   "reports": [
     // NEW-REPORT-ANCHOR (не удалять: сборщик вставляет новые записи под этой строкой)
+    { "id": "2026-11-kaspersky-esxi-blacknevas", "url": "https://securelist.com/esxi-ransomware/121959/", "title": "ESXi ransomware: why it is dangerous and how to defend against it", "added": "2026-11-15" },
+    { "id": "2026-11-pt-phishing-domains-q3", "url": "https://safe.cnews.ru/news/line/2026-11-13_positive_technologies_vyyavila_bolee", "title": "Positive Technologies выявила более 3400 новых фишинговых доменов в III квартале 2026 года", "added": "2026-11-15" },
+    { "id": "2026-11-google-cloud-security-forecast-2027", "url": "https://cloud.google.com/blog/products/identity-security/cloud-ciso-perspectives-our-security-forecast-2027", "title": "Cloud CISO Perspectives: Our security forecast for 2027", "added": "2026-11-15" },
+    { "id": "2026-11-kaspersky-q3-desktop-iot", "url": "https://securelist.com/malware-report-q3-2026-pc-iot-statistics/121843/", "title": "Desktop and IoT threat statistics for Q3 2026", "added": "2026-11-15" },
+    { "id": "2026-11-kaspersky-q3-mobile", "url": "https://securelist.com/malware-report-q3-2026-mobile-statistics/121844/", "title": "Mobile threat report for Q3 2026", "added": "2026-11-15" },
+    { "id": "2026-11-tenable-patch-tuesday-november", "url": "https://www.tenable.com/blog/microsoft-november-2026-patch-tuesday-addresses-1093-cves-cve-2026-124194", "title": "Microsoft's November 2026 Patch Tuesday Addresses 1,093 CVEs (CVE-2026-124194)", "added": "2026-11-15" },
+    { "id": "2026-11-trellix-cyberthreat-report-november", "url": "https://www.trellix.com/advanced-research-center/threat-reports/november-2026/", "title": "The CyberThreat Report: November 2026", "added": "2026-11-15" },
+    { "id": "2026-11-kaspersky-cyberstrikeai", "url": "https://securelist.com/cyberstrikeai-attacks/121715/", "title": "CyberStrikeAI attacks educational institutions", "added": "2026-11-15" },
+    { "id": "2026-11-reliaquest-q3-ransomware", "url": "https://reliaquest.com/blog/threat-spotlight-ransomware-and-cyber-extortion-in-q3-2026", "title": "Threat Spotlight: Ransomware and Cyber Extortion in Q3 2026", "added": "2026-11-15" },
+    { "id": "2026-11-pt-ai-agents-3h-intrusion", "url": "https://securitylab.ru/news/579551.php", "title": "ИИ-агенты провели весь взлом за три часа", "added": "2026-11-15" },
+    { "id": "2026-10-unit42-artex-agentic-framework", "url": "https://github.com/PaloAltoNetworks/Unit42-timely-threat-intel/blob/main/2026-10-30-activity-using-ARTEX-agentic-AI.txt", "title": "ARTEX Agentic AI Framework Used to Abuse Exposed APIs and Probe Identity Providers", "added": "2026-11-15" },
+    { "id": "2026-10-solar-rfrx003-linux-backdoor", "url": "https://safe.cnews.ru/news/line/2026-10-22_v_solar_4rays_vyyavili_opasnoe", "title": "В Solar 4RAYS выявили опасное для большинства компаний в России шпионское ПО", "added": "2026-11-15" },
+    { "id": "2026-10-crowdstrike-agentic-ai-campaigns", "url": "https://www.crowdstrike.com/en-us/blog/crowdstrike-uncovers-new-agentic-ai-campaigns/", "title": "CrowdStrike Counter Adversary Operations Uncovers New 2026 Agentic AI Campaigns", "added": "2026-11-15" },
+    { "id": "2026-10-bizone-ai-infostealers", "url": "https://cisoclub.ru/bi-zone-ii-nachal-sostavljat-dose-na-polzovatelej-skomprometirovannyh-ustrojstv", "title": "AI-powered infostealers: Bee Stealer and AVENGER", "added": "2026-11-15" },
+    { "id": "2026-10-pt-cyberthreats-q3", "url": "https://telesputnik.ru/materials/infobez/news/analiz-kiberugroz-v-rossii-za-tretii-kvartal-2026-goda", "title": "Анализ киберугроз в России за III квартал 2026 года", "added": "2026-11-15" },
+    { "id": "2026-09-enisa-threat-landscape-2026", "url": "https://www.enisa.europa.eu/news/exploring-the-evolution-of-the-cyber-threat-landscape-how-dependencies-weaken-our-digital-resilience", "title": "ENISA Threat Landscape 2026", "added": "2026-11-15" },
+    { "id": "2026-09-unit42-ai-assisted-attack", "url": "https://unit42.paloaltonetworks.com/ai-assisted-cyber-attack-inside-a-unit-42-investigation/", "title": "An AI-Assisted Cyber Attack: Inside a Unit 42 Investigation", "added": "2026-11-15" },
     { "id": "2026-10-bizone-insolent-werewolf", "url": "https://bi.zone/news/kibershpionazh-vmesto-khaktivizma-my-utochnili-motivatsiyu-insolent-werewolf/", "title": "Кибершпионаж вместо хактивизма: мы уточнили мотивацию Insolent Werewolf", "added": "2026-10-16" },
     { "id": "2026-10-bizone-dfir-9m-industry", "url": "https://bi.zone/news/za-devyat-mesyatsev-2026-goda-60-rassledovannykh-kiberatak-prishlos-na-promyshlennost/", "title": "За девять месяцев 2026 года 60% расследованных кибератак пришлось на промышленность", "added": "2026-10-16" },
     { "id": "2026-10-bizone-easm-exposed-databases", "url": "https://bi.zone/news/u-kazhdoy-pyatoy-kompanii-v-rossii-servisy-baz-dannykh-dostupny-iz-interneta/", "title": "У каждой пятой компании в России сервисы баз данных доступны из интернета", "added": "2026-10-16" },
