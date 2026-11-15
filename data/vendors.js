@@ -37,5 +37,13 @@ window.RDB_VENDORS = {
   "pwc":         { "name": "PwC",                  "domain": "pwc.com",                "color": "#D04A02", "group": "intl" },
   "ey":          { "name": "EY",                   "domain": "ey.com",                 "color": "#2E2E38", "group": "intl" },
   "kpmg":        { "name": "KPMG",                 "domain": "kpmg.com",               "color": "#00338D", "group": "intl" },
+  "ncsc":        { "name": "NCSC (Великобритания)", "domain": "ncsc.gov.uk",           "color": "#3D2E73", "group": "intl" },
+  "europol":     { "name": "Европол",              "domain": "europol.europa.eu",      "color": "#0B3D91", "group": "intl" },
+  "isaca":       { "name": "ISACA",                "domain": "isaca.org",              "color": "#0067B1", "group": "intl" },
+  "allianz":     { "name": "Allianz",              "domain": "allianz.com",            "color": "#003781", "group": "intl" },
+  "fbi":         { "name": "ФБР (IC3)",            "domain": "ic3.gov",                "color": "#1B3A5C", "group": "intl" },
+  "deloitte":    { "name": "Deloitte",             "domain": "deloitte.com",           "color": "#86BC25", "group": "intl" },
+  "thales":      { "name": "Thales",               "domain": "thalesgroup.com",        "color": "#242A75", "group": "intl" },
+  "imf":         { "name": "МВФ",                  "domain": "imf.org",                "color": "#004C97", "group": "intl" },
   // NEW-VENDOR-ANCHOR (не удалять: сборщик вставляет новых вендоров над этой строкой)
 };

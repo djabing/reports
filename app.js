@@ -40,7 +40,7 @@ let todos   = store.get("todos", {});
 
 /* ---------- состояние ---------- */
 const S = {
-  group: GROUPS[store.get("group", "main")] ? store.get("group", "main") : "main",
+  group: "intl",                           // портал всегда открывается на «Международной аналитике»
   view: store.get("view", "all"),         // all | new | unread | fav | top
   type: null, vendor: null, tag: null,
   q: "",
@@ -154,7 +154,7 @@ function renderSide(){
     ["top",    "Главное",        cnt(r => (r.importance||0) >= 3)]
   ];
   const icons = { all:"▤", new:"✦", unread:"◉", fav:"★", top:"▲" };
-  let h = `<h4>Раздел</h4><div class="grp-switch">` + ["main", "intl"].map(g =>
+  let h = `<h4>Раздел</h4><div class="grp-switch">` + ["intl", "main"].map(g =>
     `<button class="${S.group===g?"on":""}" data-group="${g}"><span>${GROUPS[g].name}</span><span class="cnt">${gc(g)}</span></button>`).join("") +
     (S.group === "comp" ? `<button class="on" data-group="comp"><span>${GROUPS.comp.name}</span><span class="cnt">${gc("comp")}</span></button>` : "") + `</div>`;
   h += `<h4>Подборки</h4>` + views.map(([k, n, c]) =>
@@ -217,7 +217,7 @@ function renderMain(){
   const new7 = POOL.filter(r => isNew(r, 7)).length;
   const unread = POOL.filter(r => !readSet.has(r.id)).length;
   const G = GROUPS[S.group];
-  let h = `<div class="grp-head${S.group==="comp"?" muted":""}"><h2>${G.name}</h2><p>${G.hint}</p>${S.group==="comp" ? `<button class="chip" data-group="main">← К основной ленте</button>` : ""}</div>`;
+  let h = `<div class="grp-head${S.group==="comp"?" muted":""}"><h2>${G.name}</h2><p>${G.hint}</p>${S.group==="comp" ? `<button class="chip" data-group="intl">← К основной ленте</button>` : ""}</div>`;
   h += `<section class="hero">
     <div class="kpi"><b>${POOL.length}</b><span>${plural(POOL.length,"отчёт","отчёта","отчётов")} в разделе</span></div>
     <div class="kpi accent"><b>${new7}</b><span>${plural(new7,"новый","новых","новых")} за 7 дней</span></div>
@@ -362,7 +362,7 @@ document.addEventListener("click", e => {
   const t = e.target.closest("button,a,[data-i],textarea,input");
   if (!t) return;
   if (t.dataset.fav){ e.stopPropagation(); toggleFav(t.dataset.fav); render(); return; }
-  if (t.dataset.group){ S.group = t.dataset.group; store.set("group", S.group); setFilter({ view: "all", type: null, vendor: null, tag: null }); return; }
+  if (t.dataset.group){ S.group = t.dataset.group; setFilter({ view: "all", type: null, vendor: null, tag: null }); return; }
   if (t.dataset.view){ setFilter({ view: t.dataset.view }); return; }
   if (t.dataset.type){ setFilter({ type: S.type === t.dataset.type ? null : t.dataset.type }); return; }
   if (t.dataset.vendor){ setFilter({ vendor: S.vendor === t.dataset.vendor ? null : t.dataset.vendor }); return; }

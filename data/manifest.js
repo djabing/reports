@@ -2,10 +2,19 @@
 // Сборщик добавляет новые строки сразу под якорем и обновляет "updated" и "build".
 window.RDB_MANIFEST = {
   "updated": "2026-11-15T12:00:00+03:00",
-  "build": "2026-11-15.4",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
-  "last_run_note": "Разделы: «Вендоры ИБ», «Международная аналитика» (+9: McKinsey, Gartner, Forrester, ВЭФ, IBM, Verizon, PwC, EY, KPMG), «Конкуренты» (PT, F6). Ранее: +17 отчётов за окт.–нояб. 2026.",
+  "build": "2026-11-15.5",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
+  "last_run_note": "«Международная аналитика» открывается по умолчанию; +9 отчётов: NCSC, Европол, ISACA, Gartner, Allianz, ФБР IC3, Deloitte, Thales, МВФ.",
   "reports": [
     // NEW-REPORT-ANCHOR (не удалять: сборщик вставляет новые записи под этой строкой)
+    { "id": "2026-11-ncsc-annual-review-2026", "url": "https://www.ncsc.gov.uk/collection/annual-review-2026/understanding-threat/incident-management", "title": "NCSC Annual Review 2026", "added": "2026-11-15" },
+    { "id": "2026-10-imf-gfsr-cyber-ai", "url": "https://www.gulftoday.ae/business/2026/10/13/imf-warns-of-ai-market-correction-cyber-threats-to-financial-system", "title": "Global Financial Stability Report, October 2026: AI and cyber risks", "added": "2026-11-15" },
+    { "id": "2026-09-isaca-state-of-cybersecurity-2026", "url": "https://www.isaca.org/resources/reports/state-of-cybersecurity-2026", "title": "State of Cybersecurity 2026", "added": "2026-11-15" },
+    { "id": "2026-09-gartner-strategic-predictions-2027", "url": "https://www.gartner.com/en/newsroom/press-releases/2026-09-15-gartner-unveils-top-strategic-predictions-for-2027-and-beyond", "title": "Gartner Top Strategic Predictions for 2027 and Beyond", "added": "2026-11-15" },
+    { "id": "2026-04-europol-iocta-2026", "url": "https://www.europol.europa.eu/cms/sites/default/files/documents/IOCTA-2026.pdf", "title": "IOCTA 2026: How encryption, proxies and AI are expanding cybercrime", "added": "2026-11-15" },
+    { "id": "2026-04-fbi-ic3-internet-crime-report-2025", "url": "https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf", "title": "2025 Internet Crime Report (IC3)", "added": "2026-11-15" },
+    { "id": "2026-03-thales-data-threat-report-2026", "url": "https://cpl.thalesgroup.com/sites/default/files/content/campaigns/data-threat-report/2026-thales-data-threat-report.pdf", "title": "2026 Thales Data Threat Report", "added": "2026-11-15" },
+    { "id": "2026-01-allianz-risk-barometer-2026", "url": "https://commercial.allianz.com/news-and-insights/expert-risk-articles/allianz-risk-barometer-2026-cyber-incidents.html", "title": "Allianz Risk Barometer 2026", "added": "2026-11-15" },
+    { "id": "2026-nascio-deloitte-cybersecurity-study", "url": "https://www.deloitte.com/us/en/insights/industry/government-public-sector-services/2026-nascio-deloitte-cybersecurity-study.html", "title": "2026 NASCIO-Deloitte Cybersecurity Study", "added": "2026-11-15" },
     { "id": "2026-11-mckinsey-frontier-ai-software-security", "url": "https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/how-frontier-ai-is-rewriting-software-security-rules", "title": "How frontier AI is rewriting software security rules", "added": "2026-11-15" },
     { "id": "2026-10-pwc-digital-trust-insights-2027", "url": "https://www.pwc.com/us/en/services/consulting/cybersecurity-data-tech-risk/library/global-digital-trust-insights.html", "title": "2027 Global Digital Trust Insights: Moving targets", "added": "2026-11-15" },
     { "id": "2026-11-forrester-predictions-2027-cybersecurity", "url": "https://forrester.com/blogs/predictions-2027-its-going-to-be-another-hold-my-beer-kind-of-year-for-security-and-risk", "title": "Predictions 2027: Cybersecurity And Risk", "added": "2026-11-15" },
