@@ -21,6 +21,7 @@ const TYPES = {
 /* Разделы библиотеки. Группа берётся из отчёта (r.group), иначе из справочника вендоров, иначе "main". */
 const GROUPS = {
   main: { name: "Вендоры ИБ",              hint: "аналитика ИБ-вендоров и исследовательских центров" },
+  kasp: { name: "Kaspersky",               hint: "исследования «Лаборатории Касперского»: Securelist, GReAT, ICS CERT, GERT, Digital Footprint Intelligence" },
   intl: { name: "Международная аналитика", hint: "консалтинг, аналитические агентства, международные организации и флагманские годовые исследования" },
   comp: { name: "Конкуренты",              hint: "Positive Technologies и аффилированные компании, F6 — отдельно от основной ленты" }
 };
@@ -154,7 +155,7 @@ function renderSide(){
     ["top",    "Главное",        cnt(r => (r.importance||0) >= 3)]
   ];
   const icons = { all:"▤", new:"✦", unread:"◉", fav:"★", top:"▲" };
-  let h = `<h4>Раздел</h4><div class="grp-switch">` + ["intl", "main"].map(g =>
+  let h = `<h4>Раздел</h4><div class="grp-switch">` + ["intl", "kasp", "main"].map(g =>
     `<button class="${S.group===g?"on":""}" data-group="${g}"><span>${GROUPS[g].name}</span><span class="cnt">${gc(g)}</span></button>`).join("") +
     (S.group === "comp" ? `<button class="on" data-group="comp"><span>${GROUPS.comp.name}</span><span class="cnt">${gc("comp")}</span></button>` : "") + `</div>`;
   h += `<h4>Подборки</h4>` + views.map(([k, n, c]) =>

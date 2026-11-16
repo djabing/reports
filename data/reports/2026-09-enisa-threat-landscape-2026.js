@@ -3,7 +3,7 @@ RDB.add({
   "vendor": "enisa",
   "title": "ENISA Threat Landscape 2026",
   "title_ru": "Ландшафт угроз ENISA 2026",
-  "url": "https://www.enisa.europa.eu/news/exploring-the-evolution-of-the-cyber-threat-landscape-how-dependencies-weaken-our-digital-resilience",
+  "url": "https://www.enisa.europa.eu/publications/enisa-threat-landscape-2026",
   "pdf_url": "https://www.enisa.europa.eu/sites/default/files/2026-09/ENISA%20Threat%20Landscape%202026_Final.pdf",
   "published": "2026-09-22",
   "date_precision": "day",
