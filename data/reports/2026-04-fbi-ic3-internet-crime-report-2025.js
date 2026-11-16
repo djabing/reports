@@ -59,5 +59,36 @@ RDB.add({
     "Учитывать дипфейки и ИИ-сгенерированные обращения в антифрод-процессах."
   ],
   "why_it_matters": "Самая масштабная официальная статистика потерь от киберпреступности — ориентир для оценки ущерба от мошенничества.",
-  "source_note": "Выжимка по отчёту IC3 и обзорам (CyberScoop, The Register, Help Net Security)."
+  "source_note": "Выжимка по отчёту IC3 и обзорам (CyberScoop, The Register, Help Net Security).",
+  "en": {
+    "tldr": "US cybercrime losses in 2025 hit a record $20.9 billion (+26%), with over a million complaints for the first time. Investment fraud — $8.6 billion; AI tracked separately for the first time: 22,000+ complaints and $893 million in losses.",
+    "summary": "The FBI Internet Crime Complaint Center's annual report. Cyber-enabled fraud accounted for 452,868 complaints and $17.7 billion in losses; cryptocurrency for 181,565 complaints and $11.4 billion (+22%). The FBI notes these are reported losses only — real figures are higher.",
+    "key_findings": [
+      "$20.877 billion in reported losses, +26% vs 2024.",
+      "1,008,597 complaints — over one million for the first time.",
+      "Investment fraud — $8.65 billion (over 40% of losses).",
+      "Cryptocurrency schemes — $11.4 billion (+22%).",
+      "AI as a separate descriptor for the first time: 22,000+ complaints, $893 million in losses."
+    ],
+    "stats": [
+      {
+        "value": "$20.9 bn",
+        "label": "losses in 2025"
+      },
+      {
+        "value": "1 m+",
+        "label": "complaints"
+      },
+      {
+        "value": "$893 m",
+        "label": "losses from AI schemes"
+      }
+    ],
+    "recommendations": [
+      "Train staff to recognise investment and BEC schemes.",
+      "Verify payments through an independent channel.",
+      "Account for deepfakes and AI-generated requests in anti-fraud processes."
+    ],
+    "why_it_matters": "The largest official statistics on cybercrime losses — a benchmark for fraud damage."
+  }
 });

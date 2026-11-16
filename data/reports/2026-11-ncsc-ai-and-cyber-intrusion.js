@@ -58,5 +58,32 @@ RDB.add({
     "Готовиться к ускорению цикла «обнаружение — эксплуатация» уязвимостей."
   ],
   "why_it_matters": "Официальная разведывательная оценка ИИ-угроз с вероятностными формулировками — полезна для долгосрочного планирования.",
-  "source_note": "Выжимка по материалам NCSC и обзорам; формулировки вероятностей стоит сверить с оригиналом."
+  "source_note": "Выжимка по материалам NCSC и обзорам; формулировки вероятностей стоит сверить с оригиналом.",
+  "en": {
+    "tldr": "NCSC: by 2028 Russia, China and other states will highly likely use AI-enabled cyber capabilities routinely, and AI-powered malware will highly likely be used in a ransomware attack on UK critical national infrastructure.",
+    "summary": "An assessment of AI-enabled intrusion threats to 2028 across three scenarios: baseline (rising global threat), pessimistic (proliferation outpaces defences) and optimistic (development slows). NCSC stresses these are plausible possibilities rather than predictions, and not evidence of current AI attacks on OT. Attacks on legacy CNI technology and new attack surfaces created by AI adoption are likely; it is almost certain that many systems will remain vulnerable to AI vulnerability-discovery tools.",
+    "key_findings": [
+      "Three scenarios for AI-enabled threats to 2028.",
+      "By 2028 states will highly likely use AI-enabled cyber capabilities routinely.",
+      "AI-powered malware will highly likely be used in a ransomware attack on UK CNI by 2028.",
+      "Targets: legacy CNI technology and new attack surfaces created by AI.",
+      "Almost certainly, many systems will remain vulnerable to AI-driven vulnerability discovery."
+    ],
+    "stats": [
+      {
+        "value": "3",
+        "label": "scenarios"
+      },
+      {
+        "value": "2028",
+        "label": "assessment horizon"
+      }
+    ],
+    "recommendations": [
+      "Prioritise modernising legacy critical-infrastructure systems.",
+      "Assess new attack surfaces before deploying AI.",
+      "Prepare for a faster discovery-to-exploitation cycle."
+    ],
+    "why_it_matters": "An official intelligence assessment of AI threats with probabilistic language — useful for long-term planning."
+  }
 });

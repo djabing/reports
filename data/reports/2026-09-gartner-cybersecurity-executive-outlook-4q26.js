@@ -52,5 +52,31 @@ RDB.add({
     "Оценить внедрение превентивных технологий (deception, moving target defense)."
   ],
   "why_it_matters": "Квартальный ориентир Gartner для руководителей ИБ; публичная часть полезна для обоснования PQC-программы.",
-  "source_note": "Документ Gartner доступен клиентам; выжимка по аннотации и пресс-релизу Gartner от 30.09.2026."
+  "source_note": "Документ Gartner доступен клиентам; выжимка по аннотации и пресс-релизу Gartner от 30.09.2026.",
+  "en": {
+    "tldr": "Gartner's quarterly outlook for CISOs (clients only). Public messages from the same period: organizations that don't start piloting post-quantum cryptography by 2027 will pay at least 200% more for migration; 51% of CISOs have not started any PQC work.",
+    "summary": "Full text is available to Gartner clients only. In its 30 September 2026 press release ('top five actions for CISOs by end of 2026'), Gartner urges prioritizing preemptive capabilities — automated moving target defense, obfuscation, deception and predictive threat intelligence. According to an industry blog, half of organizations have no defined approach to limiting AI agent access (not directly confirmed by Gartner).",
+    "key_findings": [
+      "Without PQC pilots by 2027, full migration will cost at least 200% more.",
+      "51% of surveyed CISOs have not started any post-quantum work.",
+      "Priority: preemptive defence — moving target defense, deception, predictive threat intelligence.",
+      "~50% of organizations don't restrict AI agent access (per a secondary source, unconfirmed)."
+    ],
+    "stats": [
+      {
+        "value": "+200%",
+        "label": "cost of late PQC migration"
+      },
+      {
+        "value": "51%",
+        "label": "CISOs with no PQC work"
+      }
+    ],
+    "recommendations": [
+      "Launch a post-quantum cryptography pilot before 2027.",
+      "Define an access policy for AI agents.",
+      "Evaluate preemptive technologies (deception, moving target defense)."
+    ],
+    "why_it_matters": "Gartner's quarterly reference for security leaders; the public part helps justify a PQC programme."
+  }
 });

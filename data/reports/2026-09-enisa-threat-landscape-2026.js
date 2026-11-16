@@ -73,5 +73,36 @@ RDB.add({
     "Готовить план устойчивости к DDoS, но приоритизировать защиту от вымогателей."
   ],
   "why_it_matters": "Официальная европейская точка отсчёта для регуляторики (NIS2, CRA): полезна для обоснования бюджета и приоритетов.",
-  "source_note": "Выжимка по материалам ENISA и аналитическим обзорам (CSA, King & Spalding и др.)."
+  "source_note": "Выжимка по материалам ENISA и аналитическим обзорам (CSA, King & Spalding и др.).",
+  "en": {
+    "tldr": "The EU cybersecurity agency's annual review: 8,257 incidents in 2025. DDoS dominates by count (51%), but ransomware and supplier compromise cause the most short-term damage; espionage is the main long-term threat.",
+    "summary": "ENISA analyses 8,257 incidents recorded from January to December 2025 using open sources and data from EU Member States. The key theme is digital dependencies that make risk systemic. Low-impact DDoS makes up half of all cases, but real damage comes from financially motivated attacks and supplier compromise. Compromised libraries and npm packages are on the rise (the Shai-Hulud campaign). According to one review, 73% of malicious events affected 'essential' and 'important' entities under NIS2.",
+    "key_findings": [
+      "8,257 incidents in 2025 in the report's dataset.",
+      "DDoS — 51% of recorded cases, mostly low impact.",
+      "Ransomware and supplier compromise cause the most short-term damage.",
+      "Cyber espionage is the main long-term threat.",
+      "Rising attacks via libraries and npm packages (Shai-Hulud)."
+    ],
+    "stats": [
+      {
+        "value": "8,257",
+        "label": "incidents analysed"
+      },
+      {
+        "value": "51%",
+        "label": "of cases are DDoS"
+      },
+      {
+        "value": "73%",
+        "label": "events hit NIS2 entities (per a review)"
+      }
+    ],
+    "recommendations": [
+      "Map dependencies on IT and cloud providers as a source of systemic risk.",
+      "Use package managers securely: version pinning, integrity checks, delayed updates.",
+      "Prepare a DDoS resilience plan, but prioritise ransomware protection."
+    ],
+    "why_it_matters": "The official European baseline for regulation (NIS2, CRA): useful for justifying budget and priorities."
+  }
 });

@@ -54,5 +54,32 @@ RDB.add({
     "Усилить проверку при открытии и использовании счетов в необанках (для финсектора)."
   ],
   "why_it_matters": "Взгляд правоохранительных органов ЕС: показывает, какие преступные схемы растут быстрее всего и где у расследований слепые зоны.",
-  "source_note": "Выжимка по материалам Европола и обзорам (eucrim, FIAU Malta)."
+  "source_note": "Выжимка по материалам Европола и обзорам (eucrim, FIAU Malta).",
+  "en": {
+    "tldr": "Europol's 11th assessment: online fraud is the fastest-growing area of organised crime, encryption, residential proxies and AI hamper investigations, and personal data has become the raw material of the criminal economy.",
+    "summary": "Europol describes how encryption, anonymising proxies and AI expand criminals' capabilities and complicate law enforcement. It notes the persistent ransomware threat (many active brands in 2025), growing use of IMSI catchers and SMS blasters, abuse of neobanks, and personal data becoming a key resource of the criminal economy.",
+    "key_findings": [
+      "Online fraud is the fastest-growing area of organised crime.",
+      "Ransomware remains a persistent threat with many active brands in 2025.",
+      "Residential proxies make detection and tracking harder.",
+      "Growing use of IMSI catchers and SMS blasters; abuse of neobanks.",
+      "Personal data is critical 'raw material' for the criminal economy."
+    ],
+    "stats": [
+      {
+        "value": "11th",
+        "label": "IOCTA edition"
+      },
+      {
+        "value": "2025",
+        "label": "period analysed"
+      }
+    ],
+    "recommendations": [
+      "Account for residential-proxy traffic in anti-fraud systems.",
+      "Minimise collection and storage of personal data — it is the main target.",
+      "Strengthen checks on opening and using neobank accounts (financial sector)."
+    ],
+    "why_it_matters": "The EU law-enforcement view: which criminal schemes grow fastest and where investigations have blind spots."
+  }
 });

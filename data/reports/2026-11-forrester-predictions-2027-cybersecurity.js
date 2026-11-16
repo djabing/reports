@@ -56,5 +56,35 @@ RDB.add({
     "Подготовить дорожную карту постквантовой миграции, чтобы избежать спешки."
   ],
   "why_it_matters": "Взгляд крупного аналитического агентства на 2027 год: ИИ-риски становятся вопросом корпоративного управления.",
-  "source_note": "Полный отчёт доступен клиентам Forrester; выжимка по публичному блогу и пресс-релизу."
+  "source_note": "Полный отчёт доступен клиентам Forrester; выжимка по публичному блогу и пресс-релизу.",
+  "en": {
+    "tldr": "Forrester expects 2027 to bring executive ousters and board refreshes over AI negligence, $1.5 billion in enterprise spending on AI tokens in SecOps and AppSec, and a C-suite 'quantum scramble'.",
+    "summary": "Forrester's annual predictions for security and risk leaders: five main and two bonus predictions (full version for clients). The central idea is that 2027 brings problems from both new technology and old failure modes. Public highlights: accountability for AI incidents becomes personal for top management, AI token spending in security reaches $1.5 billion, and a quantum breakthrough triggers a C-suite rush. In the broader technology forecast, AI accounts for about 20% of all business technology spend.",
+    "key_findings": [
+      "AI negligence will lead to executive ousters and board refreshes.",
+      "Enterprise spend on AI tokens reaches $1.5 billion, mostly in SecOps and AppSec.",
+      "A quantum breakthrough will cause a broad C-suite scramble.",
+      "AI accounts for about 20% of all business technology spend in 2027."
+    ],
+    "stats": [
+      {
+        "value": "$1.5 bn",
+        "label": "AI token spend in security"
+      },
+      {
+        "value": "20%",
+        "label": "of tech budget on AI"
+      },
+      {
+        "value": "5+2",
+        "label": "predictions"
+      }
+    ],
+    "recommendations": [
+      "Assign personal accountability for AI risks at executive and board level.",
+      "Plan and control AI token spend in SOC and AppSec as a separate budget line.",
+      "Prepare a post-quantum migration roadmap to avoid a rush."
+    ],
+    "why_it_matters": "A major analyst firm's view of 2027: AI risk becomes a corporate governance issue."
+  }
 });

@@ -74,5 +74,42 @@ RDB.add({
     "Снизить зависимость от ключевых специалистов: документация, дублирование ролей."
   ],
   "why_it_matters": "Крупнейший независимый срез по промышленной безопасности — сигнал резкого роста инцидентов в OT.",
-  "source_note": "Выжимка по материалам SANS и обзорам (Industrial Cyber, OPSWAT)."
+  "source_note": "Выжимка по материалам SANS и обзорам (Industrial Cyber, OPSWAT).",
+  "en": {
+    "tldr": "Survey of 696 practitioners: organizations reporting a confirmed OT incident rose from 22% to 34% — the largest one-year jump in nine years. 72% of incidents caused downtime and only 41% were detected within 24 hours.",
+    "summary": "SANS's ninth annual industrial security study. For the first time, detection slowed down. The most common incident types are compromise of shared IT/OT credentials and ransomware (31% each). Only 13% have full IT/OT visibility across the kill chain; budget is the top barrier (43%). Organizations that test plans annually and include OT in BCP/DR recover faster.",
+    "key_findings": [
+      "34% reported a confirmed OT incident (22% a year earlier).",
+      "72% of incidents caused facility or system downtime.",
+      "Only 41% of incidents were detected within 24 hours (previously over 50%).",
+      "Shared IT/OT credential compromise and ransomware — 31% each.",
+      "Only 13% have full IT/OT visibility; 74% use OT-specific threat intelligence.",
+      "68%: losing 1–2 key people would seriously harm OT security."
+    ],
+    "stats": [
+      {
+        "value": "34%",
+        "label": "hit by an OT incident"
+      },
+      {
+        "value": "72%",
+        "label": "incidents with downtime"
+      },
+      {
+        "value": "41%",
+        "label": "detected within 24 h"
+      },
+      {
+        "value": "13%",
+        "label": "have full visibility"
+      }
+    ],
+    "recommendations": [
+      "Separate IT and OT accounts; eliminate shared identities.",
+      "Deploy dedicated OT monitoring — it accounts for 38% of detections.",
+      "Test recovery plans annually and include OT in BCP/DR.",
+      "Reduce key-person risk: documentation and role redundancy."
+    ],
+    "why_it_matters": "The largest independent survey of industrial security — a signal of a sharp rise in OT incidents."
+  }
 });

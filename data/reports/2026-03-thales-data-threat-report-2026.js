@@ -62,5 +62,41 @@ RDB.add({
     "Консолидировать средства защиты данных и системы управления ключами."
   ],
   "why_it_matters": "Показывает, как ИИ меняет приоритеты защиты данных и бюджетирование.",
-  "source_note": "Выжимка по материалам Thales и обзорам (Help Net Security, Kiteworks)."
+  "source_note": "Выжимка по материалам Thales и обзорам (Help Net Security, Kiteworks).",
+  "en": {
+    "tldr": "Survey of 3,120 professionals in 20 countries: 70% see AI as the top data-security risk, 30% already have a dedicated AI security budget, and the share of encrypted sensitive cloud data fell to 47%.",
+    "summary": "Thales's annual data protection study (with S&P Global / 451 Research). AI risk has its own budget line for the first time. Credential theft is the leading attack technique against cloud infrastructure. Tooling complexity grows: most use five or more data protection tools. 59% are already prototyping post-quantum algorithms.",
+    "key_findings": [
+      "70% name AI as the top data-security risk.",
+      "30% have a dedicated AI security budget (20% a year earlier).",
+      "47% of sensitive cloud data is encrypted (51% in 2025).",
+      "77% use five or more data protection tools.",
+      "67% see rising theft of credentials and secrets — the leading cloud attack technique.",
+      "59% are prototyping post-quantum algorithms."
+    ],
+    "stats": [
+      {
+        "value": "3,120",
+        "label": "respondents in 20 countries"
+      },
+      {
+        "value": "70%",
+        "label": "see AI as the top risk"
+      },
+      {
+        "value": "47%",
+        "label": "of cloud data encrypted"
+      },
+      {
+        "value": "59%",
+        "label": "testing PQC"
+      }
+    ],
+    "recommendations": [
+      "Set a dedicated budget for securing AI and the data it uses.",
+      "Increase encryption coverage of sensitive cloud data.",
+      "Consolidate data protection tools and key management systems."
+    ],
+    "why_it_matters": "Shows how AI is changing data-protection priorities and budgeting."
+  }
 });

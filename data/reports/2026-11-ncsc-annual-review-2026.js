@@ -62,5 +62,36 @@ RDB.add({
     "Готовить планы реагирования к возможному росту атак в ближайшие месяцы."
   ],
   "why_it_matters": "Официальная государственная статистика одной из ведущих киберсил — полезный ориентир для оценки угроз критической инфраструктуре.",
-  "source_note": "Выжимка по материалам NCSC и обзорам (Infosecurity Magazine, techUK)."
+  "source_note": "Выжимка по материалам NCSC и обзорам (Infosecurity Magazine, techUK).",
+  "en": {
+    "tldr": "NCSC received 1,831 reports of attacks between September 2025 and August 2026, supported 337 incidents, 80 of which were nationally significant (204 a year earlier). Most such threats come from nation states.",
+    "summary": "The UK NCSC's review for the year to August 2026. Nationally significant incidents are well below last year, but the classification methodology is not disclosed, so the comparison may be misleading. NCSC CEO Richard Horne warns of a possible unprecedented rise in attacks in the coming months and stresses that most nationally significant threats are state-linked (China, Russia, Iran). Successful attacks still exploit long-known weaknesses.",
+    "key_findings": [
+      "1,831 attack reports; 337 incidents required NCSC support.",
+      "80 nationally significant incidents (~24% of supported cases; 204 a year earlier).",
+      "The classification methodology is not described — the drop may partly reflect a change.",
+      "Most nationally significant threats originate from nation states.",
+      "Successful attacks mainly exploit known, long-documented weaknesses."
+    ],
+    "stats": [
+      {
+        "value": "1,831",
+        "label": "attack reports"
+      },
+      {
+        "value": "337",
+        "label": "supported incidents"
+      },
+      {
+        "value": "80",
+        "label": "nationally significant"
+      }
+    ],
+    "recommendations": [
+      "Fix basic vulnerabilities and misconfigurations — still the main cause of successful attacks.",
+      "Include state-actor scenarios in the threat model for critical systems.",
+      "Prepare response plans for a possible rise in attacks."
+    ],
+    "why_it_matters": "Official government statistics from a leading cyber power — a benchmark for critical-infrastructure threats."
+  }
 });

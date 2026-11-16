@@ -62,5 +62,41 @@ RDB.add({
     "Контролировать использование неразрешённых ИИ-сервисов и утечки исходного кода."
   ],
   "why_it_matters": "Крупнейшая эмпирическая база по утечкам: смена главного вектора на эксплуатацию уязвимостей — ключевой сигнал для приоритизации.",
-  "source_note": "Выжимка по пресс-релизу Verizon и обзорам (SecureWorld, TechRepublic, Help Net Security); часть процентов — из вторичных источников."
+  "source_note": "Выжимка по пресс-релизу Verizon и обзорам (SecureWorld, TechRepublic, Help Net Security); часть процентов — из вторичных источников.",
+  "en": {
+    "tldr": "For the first time in the DBIR's 19 years, vulnerability exploitation (31%) overtook credential theft as the top initial access vector. Third parties are involved in 48% of breaches, and only 26% of critical CISA KEV vulnerabilities were fully remediated.",
+    "summary": "Verizon's annual report covering 22,000+ breaches and 31,000 incidents (November 2024 — October 2025). The key shift: vulnerability exploitation became the dominant initial access method (31% vs 20% a year earlier). Attackers move faster than organizations can remediate. Ransomware is present in 48% of confirmed breaches. Generative AI was used across many attack stages, mostly for standard techniques; source code is the most common data employees upload to unsanctioned AI services.",
+    "key_findings": [
+      "Vulnerability exploitation is the top vector (31%, up from 20%) — a first in the report's history.",
+      "Third parties involved in 48% of breaches (+60% year on year).",
+      "Only 26% of critical CISA KEV vulnerabilities fully remediated (38% a year earlier).",
+      "Ransomware in 48% of confirmed breaches (44% a year earlier).",
+      "Human element in 62% of breaches.",
+      "Source code is the data most often uploaded to unsanctioned AI services."
+    ],
+    "stats": [
+      {
+        "value": "31%",
+        "label": "breaches via exploitation"
+      },
+      {
+        "value": "48%",
+        "label": "involving third parties"
+      },
+      {
+        "value": "26%",
+        "label": "KEV fully remediated"
+      },
+      {
+        "value": "22,000+",
+        "label": "breaches in dataset"
+      }
+    ],
+    "recommendations": [
+      "Shorten remediation time for CISA KEV vulnerabilities on the perimeter.",
+      "Implement a third-party risk programme with regular assessments.",
+      "Control use of unsanctioned AI services and source-code leakage."
+    ],
+    "why_it_matters": "The largest empirical breach dataset: the shift to exploitation as the top vector is a key prioritization signal."
+  }
 });

@@ -63,5 +63,40 @@ RDB.add({
     "Готовиться к тяжёлым инцидентам с вымогателями: офлайн-копии и планы восстановления."
   ],
   "why_it_matters": "Государственная статистика одной из стран «Пяти глаз» — сопоставима с отчётами NCSC и ФБР.",
-  "source_note": "Выжимка по материалам ASD/cyber.gov.au и обзорам; часть цифр — из вторичных источников."
+  "source_note": "Выжимка по материалам ASD/cyber.gov.au и обзорам; часть цифр — из вторичных источников.",
+  "en": {
+    "tldr": "ASD's seventh annual report: 82,000+ cybercrime reports (one every 6 minutes), 1,500+ incidents (+20%), and notifications to organizations about suspicious activity up almost 80%. AI amplifies existing threats.",
+    "summary": "The Australian Signals Directorate's report for the financial year to June 2026. Main themes: AI as an amplifier, unpatched vulnerabilities and social engineering. Average cost per business cybercrime report rose 16% to A$93,500. Ransomware incidents were stable (139) but severe ones increased (24 vs 16). DoS incidents fell by over 60% due to the absence of coordinated campaigns.",
+    "key_findings": [
+      "82,000+ cybercrime reports — one every 6 minutes.",
+      "1,500+ incidents (+20%); 4,400+ notifications of suspicious activity (almost +80%).",
+      "Average cost per business report — A$93,500 (+16%).",
+      "139 ransomware incidents; extensive ones rose to 24 (from 16).",
+      "Phishing was the most common technique (39% of analysed incidents, per reviews)."
+    ],
+    "stats": [
+      {
+        "value": "82,000+",
+        "label": "cybercrime reports"
+      },
+      {
+        "value": "1,500+",
+        "label": "incidents"
+      },
+      {
+        "value": "+80%",
+        "label": "notifications to organizations"
+      },
+      {
+        "value": "A$93,500",
+        "label": "average cost"
+      }
+    ],
+    "recommendations": [
+      "Patch known vulnerabilities — they still cause many incidents.",
+      "Deploy phishing-resistant MFA and train staff against AI-driven social engineering.",
+      "Prepare for severe ransomware: offline backups and recovery plans."
+    ],
+    "why_it_matters": "National statistics from a Five Eyes country — comparable with NCSC and FBI reports."
+  }
 });

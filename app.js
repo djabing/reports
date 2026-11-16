@@ -25,6 +25,12 @@ const GROUPS = {
   intl: { name: "Международная аналитика", hint: "консалтинг, аналитические агентства, международные организации и флагманские годовые исследования" },
   comp: { name: "Конкуренты",              hint: "Positive Technologies и аффилированные компании, F6 — отдельно от основной ленты" }
 };
+const TAB_HINT = { intl: "консалтинг, агентства, регуляторы", kasp: "GReAT, ICS CERT, GERT, Securelist", main: "аналитика других ИБ-вендоров" };
+const SLUG = { intl: "international", kasp: "kaspersky", main: "vendors", comp: "competitors" };
+const BY_SLUG = Object.fromEntries(Object.entries(SLUG).map(([k, v]) => [v, k]));
+/* Подписи читалки на английском (для англ. версии международных отчётов) */
+const EN_UI = { "Коротко": "TL;DR", "Ключевые цифры": "Key figures", "О чём отчёт": "About the report", "Главные выводы": "Key findings",
+  "Почему это важно": "Why it matters", "Что сделать · чек-лист": "What to do · checklist", "Открыть оригинал ↗": "Open original ↗" };
 const MONTHS = ["январь","февраль","март","апрель","май","июнь","июль","август","сентябрь","октябрь","ноябрь","декабрь"];
 const MONTHS_G = ["янв","фев","мар","апр","мая","июн","июл","авг","сен","окт","ноя","дек"];
 const DAY = 864e5;
@@ -42,6 +48,7 @@ let todos   = store.get("todos", {});
 /* ---------- состояние ---------- */
 const S = {
   group: "intl",                           // портал всегда открывается на «Международной аналитике»
+  lang: store.get("lang", "ru") === "en" ? "en" : "ru",   // язык выжимок международных отчётов
   view: store.get("view", "all"),         // all | new | unread | fav | top
   type: null, vendor: null, tag: null,
   q: "",
@@ -66,6 +73,16 @@ function vendorOf(r){
     color: v.color || r.vendor_color || "#7b8496"
   };
 }
+function enOn(){ return S.lang === "en" && S.group === "intl"; }
+/* Английская версия выжимки: оригинальное название + поля из r.en */
+function loc(r){
+  if (!r || !enOn() || !r.en) return r;
+  const e = r.en;
+  return Object.assign({}, r, { title_ru: r.title, tldr: e.tldr || r.tldr, summary: e.summary || r.summary,
+    key_findings: e.key_findings || r.key_findings, stats: e.stats || r.stats, recommendations: e.recommendations || r.recommendations,
+    why_it_matters: e.why_it_matters || r.why_it_matters, __en: true });
+}
+const T = s => (enOn() && EN_UI[s]) || s;
 function groupOf(r){
   if (r.group && GROUPS[r.group]) return r.group;
   const g = ((window.RDB_VENDORS || {})[r.vendor] || {}).group;
@@ -119,7 +136,8 @@ function haystack(r){
     r.__h = norm([r.title, r.title_ru, r.tldr, r.summary, v.name, (TYPES[r.type]||{}).name,
       (r.tags||[]).join(" "), (r.actors||[]).join(" "), (r.malware||[]).join(" "), (r.cves||[]).join(" "),
       (r.sectors||[]).join(" "), (r.regions||[]).join(" "), (r.key_findings||[]).join(" "),
-      (r.ttps||[]).map(t => t.id + " " + t.name).join(" ")].join(" "));
+      (r.ttps||[]).map(t => t.id + " " + t.name).join(" "),
+      r.en ? [r.en.tldr, r.en.summary, (r.en.key_findings||[]).join(" ")].join(" ") : ""].join(" "));
   }
   return r.__h;
 }
@@ -155,10 +173,7 @@ function renderSide(){
     ["top",    "Главное",        cnt(r => (r.importance||0) >= 3)]
   ];
   const icons = { all:"▤", new:"✦", unread:"◉", fav:"★", top:"▲" };
-  let h = `<h4>Раздел</h4><div class="grp-switch">` + ["intl", "kasp", "main"].map(g =>
-    `<button class="${S.group===g?"on":""}" data-group="${g}"><span>${GROUPS[g].name}</span><span class="cnt">${gc(g)}</span></button>`).join("") +
-    (S.group === "comp" ? `<button class="on" data-group="comp"><span>${GROUPS.comp.name}</span><span class="cnt">${gc("comp")}</span></button>` : "") + `</div>`;
-  h += `<h4>Подборки</h4>` + views.map(([k, n, c]) =>
+  let h = `<h4>Подборки</h4>` + views.map(([k, n, c]) =>
     `<button class="nav-item ${S.view===k?"on":""}" data-view="${k}"><span style="width:16px;text-align:center;color:var(--ink-3)">${icons[k]}</span><span class="nm">${n}</span><span class="cnt">${c}</span></button>`).join("");
 
   const tc = {}; POOL.forEach(r => { const t = TYPES[r.type] ? r.type : "other"; tc[t] = (tc[t]||0) + 1; });
@@ -192,6 +207,7 @@ function statsMini(r){
 }
 function typeBadge(r){ const t = TYPES[r.type] || TYPES.other; return `<span class="type" style="--tc:${t.c}">${t.name}</span>`; }
 function card(r, i){
+  r = loc(r);
   const v = vendorOf(r), title = r.title_ru || r.title, orig = r.title_ru && r.title && r.title_ru !== r.title ? r.title : "";
   return `<article class="card ${readSet.has(r.id)?"read":""} ${S.kb===i?"kb":""}" data-i="${i}" style="--vc:${esc(v.color)}" tabindex="0">
     <div class="c-head">${logo(v)}<div><div class="c-vendor">${esc(v.name)}</div><div class="c-date">${esc(fmtDate(r))}</div></div>
@@ -204,6 +220,7 @@ function card(r, i){
   </article>`;
 }
 function row(r, i){
+  r = loc(r);
   const v = vendorOf(r);
   return `<div class="row ${readSet.has(r.id)?"read":""} ${S.kb===i?"kb":""}" data-i="${i}">
     ${logo(v)}<div class="r-vendor">${esc(v.name)}</div>
@@ -218,7 +235,15 @@ function renderMain(){
   const new7 = POOL.filter(r => isNew(r, 7)).length;
   const unread = POOL.filter(r => !readSet.has(r.id)).length;
   const G = GROUPS[S.group];
-  let h = `<div class="grp-head${S.group==="comp"?" muted":""}"><h2>${G.name}</h2><p>${G.hint}</p>${S.group==="comp" ? `<button class="chip" data-group="intl">← К основной ленте</button>` : ""}</div>`;
+  const gc = g => ALL.filter(r => groupOf(r) === g).length;
+  let h = S.group === "comp"
+    ? `<div class="grp-head muted"><h2>${G.name}</h2><p>${G.hint}</p><button class="chip" data-group="intl">← К основной ленте</button></div>`
+    : `<nav class="grp-tabs" role="tablist" aria-label="Раздел библиотеки">` + ["intl", "kasp", "main"].map(g =>
+        `<button role="tab" aria-selected="${S.group===g}" class="grp-tab${S.group===g?" on":""}" data-group="${g}">
+          <span class="t-top"><span class="t-name">${GROUPS[g].name}</span><span class="t-cnt">${gc(g)}</span></span>
+          <span class="t-hint">${TAB_HINT[g]}</span></button>`).join("") + `</nav>` +
+      `<div class="grp-sub"><p>${G.hint}</p>${S.group === "intl" ? `<div class="seg lang" role="group" aria-label="Язык выжимок">
+          <button data-lang="ru" class="${S.lang==="ru"?"on":""}">Русский</button><button data-lang="en" class="${S.lang==="en"?"on":""}">English</button></div>` : ""}</div>`;
   h += `<section class="hero">
     <div class="kpi"><b>${POOL.length}</b><span>${plural(POOL.length,"отчёт","отчёта","отчётов")} в разделе</span></div>
     <div class="kpi accent"><b>${new7}</b><span>${plural(new7,"новый","новых","новых")} за 7 дней</span></div>
@@ -263,7 +288,38 @@ function renderMain(){
   $("#main").innerHTML = h;
 }
 
-function render(){ renderSide(); renderMain(); }
+function render(){ renderSide(); renderMain(); writeHash(); }
+
+/* ---------- адрес страницы: #/<раздел>[/en][/<id отчёта>] ---------- */
+function writeHash(){
+  const parts = [SLUG[S.group]];
+  if (enOn()) parts.push("en");
+  if (S.open !== null && LIST[S.open]) parts.push(LIST[S.open].id);
+  const h = "#/" + parts.join("/");
+  if (location.hash !== h) history.replaceState(null, "", h);
+}
+/* Разбор адреса. Старые ссылки вида #<id отчёта> тоже поддерживаются. */
+function readHash(){
+  const raw = decodeURIComponent(location.hash.slice(1));
+  if (!raw) return {};
+  if (raw[0] !== "/") return { id: raw };
+  const p = raw.slice(1).split("/").filter(Boolean), out = {};
+  if (BY_SLUG[p[0]]) out.group = BY_SLUG[p.shift()];
+  if (p[0] === "en" || p[0] === "ru"){ out.lang = p.shift(); }
+  else if (out.group === "intl") out.lang = "ru";
+  if (p[0]) out.id = p[0];
+  return out;
+}
+function applyHash(){
+  const h = readHash();
+  let r = h.id ? ALL.find(x => x.id === h.id) : null;
+  S.group = r ? groupOf(r) : (h.group || S.group);
+  if (h.lang) S.lang = h.lang;
+  S.type = S.vendor = S.tag = null; S.view = "all"; S.open = null;
+  $("#reader").classList.remove("on"); $("#scrim").classList.remove("on"); document.body.style.overflow = "";
+  render();
+  if (r){ const i = LIST.findIndex(x => x.id === r.id); if (i >= 0) openReader(i); }
+}
 
 /* ---------- читалка ---------- */
 function chipList(arr, kind){
@@ -276,7 +332,7 @@ function chipList(arr, kind){
   }).join("") + `</div>`;
 }
 function openReader(i){
-  const r = LIST[i]; if (!r) return;
+  const r = loc(LIST[i]); if (!r) return;
   S.open = i; S.kb = i;
   const v = vendorOf(r);
   if (!readSet.has(r.id)){ readSet.add(r.id); store.set("read", [...readSet]); }
@@ -287,22 +343,23 @@ function openReader(i){
     ["Отрасли", chipList(r.sectors)], ["Регионы", chipList(r.regions)]
   ].filter(x => x[1]);
   let h = `<div style="--vc:${esc(v.color)}">
-    <div class="r-top">${logo(v)}<div><div class="v">${esc(v.name)}</div><div class="d">${esc(fmtDate(r))} · ${typeBadge(r)} ${r.lang==="ru"?"· на русском":"· оригинал на английском"}</div></div></div>
+    <div class="r-top">${logo(v)}<div><div class="v">${esc(v.name)}</div><div class="d">${esc(fmtDate(r))} · ${typeBadge(r)} ${r.__en ? "· English version" : r.lang==="ru" ? "· на русском" : "· оригинал на английском"}</div></div></div>
     <h1 class="r-h1">${esc(r.title_ru || r.title)}</h1>
     ${r.title_ru && r.title && r.title !== r.title_ru ? `<div class="r-sub">${esc(r.title)}</div>` : ""}
     <div class="r-actions">
-      ${url ? `<a class="btn primary" href="${esc(url)}" target="_blank" rel="noopener">Открыть оригинал ↗</a>` : ""}
+      ${url ? `<a class="btn primary" href="${esc(url)}" target="_blank" rel="noopener">${T("Открыть оригинал ↗")}</a>` : ""}
       ${pdf ? `<a class="btn" href="${esc(pdf)}" target="_blank" rel="noopener">PDF ↗</a>` : ""}
       <button class="btn ${favSet.has(r.id)?"on":""}" data-act="fav">${favSet.has(r.id)?"★ В избранном":"☆ В избранное"}</button>
       <button class="btn" data-act="unread">Отметить непрочитанным</button>
       <button class="btn" data-act="copy">Скопировать выжимку</button>
+      <button class="btn" data-act="link">Скопировать ссылку</button>
     </div>
-    <div class="tldr"><span class="lbl">Коротко</span>${esc(r.tldr)}</div>
-    ${(r.stats||[]).length ? `<div class="sec"><h3>Ключевые цифры</h3><div class="stats">${r.stats.map(s => `<div class="stat"><b>${esc(s.value)}</b><span>${esc(s.label)}</span></div>`).join("")}</div></div>` : ""}
-    ${r.summary ? `<div class="sec"><h3>О чём отчёт</h3><p>${esc(r.summary)}</p></div>` : ""}
-    ${(r.key_findings||[]).length ? `<div class="sec"><h3>Главные выводы</h3><ol class="find">${r.key_findings.map(f => `<li>${esc(f)}</li>`).join("")}</ol></div>` : ""}
-    ${r.why_it_matters ? `<div class="sec"><h3>Почему это важно</h3><div class="why">${esc(r.why_it_matters)}</div></div>` : ""}
-    ${(r.recommendations||[]).length ? `<div class="sec"><h3>Что сделать · чек-лист</h3><ul class="todo">${r.recommendations.map((x, k) => `<li class="${td[k]?"done":""}"><input type="checkbox" data-todo="${k}" ${td[k]?"checked":""}><span>${esc(x)}</span></li>`).join("")}</ul></div>` : ""}
+    <div class="tldr"><span class="lbl">${T("Коротко")}</span>${esc(r.tldr)}</div>
+    ${(r.stats||[]).length ? `<div class="sec"><h3>${T("Ключевые цифры")}</h3><div class="stats">${r.stats.map(s => `<div class="stat"><b>${esc(s.value)}</b><span>${esc(s.label)}</span></div>`).join("")}</div></div>` : ""}
+    ${r.summary ? `<div class="sec"><h3>${T("О чём отчёт")}</h3><p>${esc(r.summary)}</p></div>` : ""}
+    ${(r.key_findings||[]).length ? `<div class="sec"><h3>${T("Главные выводы")}</h3><ol class="find">${r.key_findings.map(f => `<li>${esc(f)}</li>`).join("")}</ol></div>` : ""}
+    ${r.why_it_matters ? `<div class="sec"><h3>${T("Почему это важно")}</h3><div class="why">${esc(r.why_it_matters)}</div></div>` : ""}
+    ${(r.recommendations||[]).length ? `<div class="sec"><h3>${T("Что сделать · чек-лист")}</h3><ul class="todo">${r.recommendations.map((x, k) => `<li class="${td[k]?"done":""}"><input type="checkbox" data-todo="${k}" ${td[k]?"checked":""}><span>${esc(x)}</span></li>`).join("")}</ul></div>` : ""}
     ${meta.length ? `<div class="sec"><h3>Кто, где, чем</h3><div class="meta-grid">${meta.map(m => `<div><h5>${m[0]}</h5>${m[1]}</div>`).join("")}</div></div>` : ""}
     ${(r.ttps||[]).length ? `<div class="sec"><h3>Техники MITRE ATT&amp;CK</h3>${chipList(r.ttps, "ttp")}</div>` : ""}
     ${(r.cves||[]).length ? `<div class="sec"><h3>Уязвимости</h3>${chipList(r.cves, "cve")}</div>` : ""}
@@ -320,12 +377,14 @@ function openReader(i){
   note.addEventListener("input", () => { notes[r.id] = note.value; if (!note.value) delete notes[r.id]; store.set("notes", notes); });
   renderSide();
   markRows();
+  writeHash();
 }
 function closeReader(){
   S.open = null;
   $("#reader").classList.remove("on"); $("#scrim").classList.remove("on");
   document.body.style.overflow = "";
   renderMain();
+  writeHash();
 }
 function markRows(){
   document.querySelectorAll("[data-i]").forEach(el => {
@@ -340,6 +399,7 @@ function toggleFav(id){
   toast(favSet.has(id) ? "Добавлено в избранное" : "Убрано из избранного");
 }
 function copySummary(r){
+  r = loc(r);
   const v = vendorOf(r);
   const t = [`${r.title_ru || r.title} — ${v.name}, ${fmtDate(r)}`, r.url || "", "", r.tldr || "", "",
     ...(r.key_findings||[]).map((f, k) => `${k+1}. ${f}`), "",
@@ -364,6 +424,7 @@ document.addEventListener("click", e => {
   if (!t) return;
   if (t.dataset.fav){ e.stopPropagation(); toggleFav(t.dataset.fav); render(); return; }
   if (t.dataset.group){ S.group = t.dataset.group; setFilter({ view: "all", type: null, vendor: null, tag: null }); return; }
+  if (t.dataset.lang){ S.lang = t.dataset.lang; store.set("lang", S.lang); renderMain(); writeHash(); return; }
   if (t.dataset.view){ setFilter({ view: t.dataset.view }); return; }
   if (t.dataset.type){ setFilter({ type: S.type === t.dataset.type ? null : t.dataset.type }); return; }
   if (t.dataset.vendor){ setFilter({ vendor: S.vendor === t.dataset.vendor ? null : t.dataset.vendor }); return; }
@@ -377,6 +438,7 @@ document.addEventListener("click", e => {
     if (t.dataset.act === "fav"){ toggleFav(r.id); openReader(S.open); }
     if (t.dataset.act === "unread"){ readSet.delete(r.id); store.set("read", [...readSet]); toast("Отмечено как непрочитанное"); renderSide(); markRows(); }
     if (t.dataset.act === "copy") copySummary(r);
+    if (t.dataset.act === "link"){ writeHash(); (navigator.clipboard ? navigator.clipboard.writeText(location.href) : Promise.reject()).then(() => toast("Ссылка скопирована"), () => toast("Не удалось скопировать")); }
     return;
   }
   if (t.dataset.todo !== undefined){
@@ -440,12 +502,7 @@ function stamp(){
 load().then(() => {
   const seen = new Set();
   ALL = RDB.items.filter(r => !seen.has(r.id) && seen.add(r.id));
-  stamp(); render();
-  const hash = decodeURIComponent(location.hash.slice(1));
-  if (hash){
-    const r = ALL.find(x => x.id === hash);
-    if (r && groupOf(r) !== S.group){ S.group = groupOf(r); render(); }
-    const i = LIST.findIndex(x => x.id === hash); if (i >= 0) openReader(i);
-  }
+  stamp(); applyHash();
+  window.addEventListener("hashchange", applyHash);
 });
 })();
