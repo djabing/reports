@@ -164,7 +164,7 @@ button.chip:hover{border-color:var(--ink-3);color:var(--ink)}
 .sec p{margin:0;color:var(--ink-2)}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
 .stat{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
-.stat b{display:block;font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1.1;color:var(--vc,var(--ink))}
+.stat b{display:block;font-size:26px;font-weight:800;letter-spacing:-.03em;line-height:1.1;color:var(--ink);color:color-mix(in oklab,var(--vc,var(--ink)) var(--vc-mix,70%),var(--ink))}
 .stat span{font-size:12.5px;color:var(--ink-3)}
 ol.find{list-style:none;counter-reset:f;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
 ol.find li{counter-increment:f;position:relative;padding:12px 14px 12px 50px;background:var(--panel);border:1px solid var(--line);border-radius:12px;color:var(--ink-2)}
@@ -251,3 +251,7 @@ ul.todo li.done span{text-decoration:line-through;color:var(--ink-3)}
 
 a.brand{color:inherit;text-decoration:none;border-radius:10px}
 a.brand:hover .brand-logo{filter:brightness(1.12)}
+
+/* цвет вендора в цифрах подмешивается к цвету текста темы: тёмные фирменные цвета остаются читаемыми на тёмном фоне */
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){ --vc-mix:25% } }
+:root[data-theme="dark"]{ --vc-mix:25% }
