@@ -11,6 +11,7 @@ RDB.add({
   "type": "ai",
   "lang": "ru",
   "importance": 3,
+  "tier": "case",
   "tags": [
     "ИИ",
     "агентные атаки",

@@ -11,6 +11,7 @@ RDB.add({
   "type": "ai",
   "lang": "en",
   "importance": 2,
+  "tier": "key",
   "tags": [
     "защита данных",
     "ИИ",

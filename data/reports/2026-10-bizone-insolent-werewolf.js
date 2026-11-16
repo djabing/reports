@@ -11,9 +11,23 @@ RDB.add({
   "type": "apt",
   "lang": "ru",
   "importance": 2,
-  "tags": ["APT", "кибершпионаж", "ОПК", "ClickFix", "RAT"],
-  "sectors": ["Госсектор", "Промышленность", "Наука", "ОПК"],
-  "regions": ["Россия"],
+  "tier": "case",
+  "tags": [
+    "APT",
+    "кибершпионаж",
+    "ОПК",
+    "ClickFix",
+    "RAT"
+  ],
+  "sectors": [
+    "Госсектор",
+    "Промышленность",
+    "Наука",
+    "ОПК"
+  ],
+  "regions": [
+    "Россия"
+  ],
   "tldr": "BI.ZONE переквалифицировала кластер Insolent Werewolf из хактивистов в кибершпионов: группа не шифрует и не публикует, а тихо удерживает доступ. В арсенале — новый RAT NightStrike, загрузчик Octowave Loader, AdaptixC2 и впервые Havoc.",
   "summary": "Ранее активность Insolent Werewolf связывали с идеологическими атаками ради огласки. Длительное наблюдение показало обратное: нет вайперов, шифровальщиков и заявлений об атаках, зато есть сбор данных и долговременное удержание доступа. Цели — госорганы, промышленность и НИИ, связанные с ОПК. Группа может получать доступ к жертвам от других шпионских кластеров.",
   "key_findings": [
@@ -24,17 +38,42 @@ RDB.add({
     "Загрузчик Octowave Loader доставлял AdaptixC2 и Havoc; Havoc ранее у группы не встречался."
   ],
   "stats": [
-    { "value": "с июня", "label": "NightStrike в атаках" },
-    { "value": "4", "label": "новых/обновлённых инструмента" }
+    {
+      "value": "с июня",
+      "label": "NightStrike в атаках"
+    },
+    {
+      "value": "4",
+      "label": "новых/обновлённых инструмента"
+    }
   ],
-  "actors": ["Insolent Werewolf"],
-  "malware": ["NightStrike", "Octowave Loader", "AdaptixC2", "Havoc"],
+  "actors": [
+    "Insolent Werewolf"
+  ],
+  "malware": [
+    "NightStrike",
+    "Octowave Loader",
+    "AdaptixC2",
+    "Havoc"
+  ],
   "cves": [],
   "ttps": [
-    { "id": "T1566", "name": "Phishing" },
-    { "id": "T1204.004", "name": "Malicious Copy and Paste" },
-    { "id": "T1113", "name": "Screen Capture" },
-    { "id": "T1555.003", "name": "Credentials from Web Browsers" }
+    {
+      "id": "T1566",
+      "name": "Phishing"
+    },
+    {
+      "id": "T1204.004",
+      "name": "Malicious Copy and Paste"
+    },
+    {
+      "id": "T1113",
+      "name": "Screen Capture"
+    },
+    {
+      "id": "T1555.003",
+      "name": "Credentials from Web Browsers"
+    }
   ],
   "recommendations": [
     "Добавить детекты на AdaptixC2 и Havoc (сетевые и хостовые).",

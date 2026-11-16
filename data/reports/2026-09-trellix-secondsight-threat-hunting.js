@@ -11,9 +11,24 @@ RDB.add({
   "type": "apt",
   "lang": "en",
   "importance": 2,
-  "tags": ["threat hunting", "APT28", "supply chain", "npm", "iOS"],
-  "sectors": ["Госсектор", "Оборона", "Дипломатия"],
-  "regions": ["Европа", "Юго-Восточная Азия", "Южная Азия"],
+  "tier": "analytics",
+  "tags": [
+    "threat hunting",
+    "APT28",
+    "supply chain",
+    "npm",
+    "iOS"
+  ],
+  "sectors": [
+    "Госсектор",
+    "Оборона",
+    "Дипломатия"
+  ],
+  "regions": [
+    "Европа",
+    "Юго-Восточная Азия",
+    "Южная Азия"
+  ],
   "tldr": "Trellix разбирает пять кампаний первого полугодия 2026, построенных на обходе детектирования: многоэтапный фишинг APT28 с эксплойтом CVE-2026-21509 через сутки после раскрытия, iOS-эксплойт-кит DarkSword, атаку на npm-пакет Axios и др.",
   "summary": "Отчёт команды проактивного поиска угроз Trellix показывает пять кампаний и то, как их находили: проверка релевантности TI, сопоставление поведения с известными техниками, оценка экспозиции среды и решение об уведомлении клиентов. Общий знаменатель — злоупотребление доверенной инфраструктурой (в т.ч. скомпрометированными госучётками) и техники обхода классических средств защиты.",
   "key_findings": [
@@ -24,19 +39,51 @@ RDB.add({
     "Массовая атака на цепочку поставок через npm-пакет Axios."
   ],
   "stats": [
-    { "value": "5", "label": "разобранных кампаний" },
-    { "value": "24 ч", "label": "от раскрытия CVE до эксплуатации" },
-    { "value": "29+", "label": "заблокированных писем APT28" },
-    { "value": "9", "label": "стран — цели APT28" }
+    {
+      "value": "5",
+      "label": "разобранных кампаний"
+    },
+    {
+      "value": "24 ч",
+      "label": "от раскрытия CVE до эксплуатации"
+    },
+    {
+      "value": "29+",
+      "label": "заблокированных писем APT28"
+    },
+    {
+      "value": "9",
+      "label": "стран — цели APT28"
+    }
   ],
-  "actors": ["APT28", "Bitter APT"],
-  "malware": ["DarkSword", "JSCeal"],
-  "cves": ["CVE-2026-21509"],
+  "actors": [
+    "APT28",
+    "Bitter APT"
+  ],
+  "malware": [
+    "DarkSword",
+    "JSCeal"
+  ],
+  "cves": [
+    "CVE-2026-21509"
+  ],
   "ttps": [
-    { "id": "T1566.001", "name": "Spearphishing Attachment" },
-    { "id": "T1203", "name": "Exploitation for Client Execution" },
-    { "id": "T1195.002", "name": "Compromise Software Supply Chain" },
-    { "id": "T1078", "name": "Valid Accounts" }
+    {
+      "id": "T1566.001",
+      "name": "Spearphishing Attachment"
+    },
+    {
+      "id": "T1203",
+      "name": "Exploitation for Client Execution"
+    },
+    {
+      "id": "T1195.002",
+      "name": "Compromise Software Supply Chain"
+    },
+    {
+      "id": "T1078",
+      "name": "Valid Accounts"
+    }
   ],
   "recommendations": [
     "Сократить окно патчинга Office для критичных CVE до часов, а не недель.",

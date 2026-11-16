@@ -11,6 +11,7 @@ RDB.add({
   "type": "other",
   "lang": "en",
   "importance": 1,
+  "tier": "analytics",
   "tags": [
     "Gartner",
     "рынок",

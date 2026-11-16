@@ -11,6 +11,7 @@ RDB.add({
   "type": "landscape",
   "lang": "en",
   "importance": 3,
+  "tier": "key",
   "tags": [
     "годовой",
     "госрегулятор",

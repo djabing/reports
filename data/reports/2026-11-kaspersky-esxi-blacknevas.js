@@ -11,6 +11,7 @@ RDB.add({
   "type": "ransomware",
   "lang": "en",
   "importance": 3,
+  "tier": "case",
   "tags": [
     "вымогатели",
     "ESXi",

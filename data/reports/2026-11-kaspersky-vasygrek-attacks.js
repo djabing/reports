@@ -11,6 +11,7 @@ RDB.add({
   "type": "apt",
   "lang": "ru",
   "importance": 2,
+  "tier": "case",
   "tags": [
     "Россия",
     "СНГ",

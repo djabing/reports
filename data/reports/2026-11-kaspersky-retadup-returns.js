@@ -11,6 +11,7 @@ RDB.add({
   "type": "other",
   "lang": "ru",
   "importance": 1,
+  "tier": "case",
   "tags": [
     "черви",
     "USB",

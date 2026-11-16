@@ -11,9 +11,21 @@ RDB.add({
   "type": "landscape",
   "lang": "en",
   "importance": 3,
-  "tags": ["годовой", "ИИ", "облако", "identity", "vishing", "supply chain"],
-  "sectors": ["Все отрасли"],
-  "regions": ["Глобально"],
+  "tier": "key",
+  "tags": [
+    "годовой",
+    "ИИ",
+    "облако",
+    "identity",
+    "vishing",
+    "supply chain"
+  ],
+  "sectors": [
+    "Все отрасли"
+  ],
+  "regions": [
+    "Глобально"
+  ],
   "tldr": "«Год уклоняющегося противника»: ИИ-атаки выросли на 89%, 88% эксплуатаций начинаются в течение 48 часов после публикации PoC, облачный eCrime вырос на 171%.",
   "summary": "Ежегодный отчёт команды Falcon OverWatch, представленный на Black Hat 2026. Злоумышленники ускоряют эксплуатацию уязвимостей, используют ИИ, атакуют цепочки поставок ПО (особенно инструменты разработчиков и ИИ-экосистемы) и смещаются к атакам на идентичность и облако. Вишинг, злоупотребление OAuth и доверенные учётные записи сокращают время до компрометации предприятия.",
   "key_findings": [
@@ -24,18 +36,39 @@ RDB.add({
     "Атаки на цепочку поставок всё чаще нацелены на инструменты разработчиков и ИИ-экосистемы."
   ],
   "stats": [
-    { "value": "+89%", "label": "ИИ-атак" },
-    { "value": "88%", "label": "эксплуатаций в первые 48 ч после PoC" },
-    { "value": "+171%", "label": "облачного eCrime" }
+    {
+      "value": "+89%",
+      "label": "ИИ-атак"
+    },
+    {
+      "value": "88%",
+      "label": "эксплуатаций в первые 48 ч после PoC"
+    },
+    {
+      "value": "+171%",
+      "label": "облачного eCrime"
+    }
   ],
   "actors": [],
   "malware": [],
   "cves": [],
   "ttps": [
-    { "id": "T1566.004", "name": "Spearphishing Voice" },
-    { "id": "T1528", "name": "Steal Application Access Token" },
-    { "id": "T1078.004", "name": "Valid Accounts: Cloud Accounts" },
-    { "id": "T1195", "name": "Supply Chain Compromise" }
+    {
+      "id": "T1566.004",
+      "name": "Spearphishing Voice"
+    },
+    {
+      "id": "T1528",
+      "name": "Steal Application Access Token"
+    },
+    {
+      "id": "T1078.004",
+      "name": "Valid Accounts: Cloud Accounts"
+    },
+    {
+      "id": "T1195",
+      "name": "Supply Chain Compromise"
+    }
   ],
   "recommendations": [
     "SLA на патчинг критичных публичных уязвимостей — 48 часов, иначе компенсирующие меры.",

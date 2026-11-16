@@ -11,6 +11,7 @@ RDB.add({
   "type": "landscape",
   "lang": "en",
   "importance": 2,
+  "tier": "analytics",
   "tags": [
     "квартальный",
     "статистика",

@@ -11,6 +11,7 @@ RDB.add({
   "type": "ai",
   "lang": "ru",
   "importance": 2,
+  "tier": "key",
   "tags": [
     "ИИ",
     "даркнет",

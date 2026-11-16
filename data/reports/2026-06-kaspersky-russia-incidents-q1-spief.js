@@ -11,6 +11,7 @@ RDB.add({
   "type": "landscape",
   "lang": "ru",
   "importance": 2,
+  "tier": "key",
   "tags": [
     "Россия",
     "инциденты",

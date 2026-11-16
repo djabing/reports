@@ -11,6 +11,7 @@ RDB.add({
   "type": "forecast",
   "lang": "en",
   "importance": 3,
+  "tier": "key",
   "tags": [
     "прогноз",
     "2027",

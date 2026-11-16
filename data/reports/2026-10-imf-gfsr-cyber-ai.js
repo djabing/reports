@@ -11,6 +11,7 @@ RDB.add({
   "type": "forecast",
   "lang": "en",
   "importance": 2,
+  "tier": "key",
   "tags": [
     "финансовая стабильность",
     "ИИ",

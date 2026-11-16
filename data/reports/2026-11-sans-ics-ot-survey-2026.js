@@ -11,6 +11,7 @@ RDB.add({
   "type": "ics",
   "lang": "en",
   "importance": 3,
+  "tier": "key",
   "tags": [
     "АСУ ТП",
     "OT",

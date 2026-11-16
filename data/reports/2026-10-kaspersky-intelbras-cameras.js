@@ -11,6 +11,7 @@ RDB.add({
   "type": "vulnerabilities",
   "lang": "en",
   "importance": 1,
+  "tier": "case",
   "tags": [
     "IoT",
     "видеонаблюдение",

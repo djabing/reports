@@ -11,6 +11,7 @@ RDB.add({
   "type": "ai",
   "lang": "en",
   "importance": 3,
+  "tier": "analytics",
   "tags": [
     "ИИ",
     "уязвимости",

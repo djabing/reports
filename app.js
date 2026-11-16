@@ -31,6 +31,13 @@ const BY_SLUG = Object.fromEntries(Object.entries(SLUG).map(([k, v]) => [v, k]))
 /* Подписи читалки на английском (для англ. версии международных отчётов) */
 const EN_UI = { "Коротко": "TL;DR", "Ключевые цифры": "Key figures", "О чём отчёт": "About the report", "Главные выводы": "Key findings",
   "Почему это важно": "Why it matters", "Что сделать · чек-лист": "What to do · checklist", "Открыть оригинал ↗": "Open original ↗" };
+/* Значимость отчёта (поле r.tier) */
+const TIERS = {
+  key:       { name: "Ключевые отчёты",      short: "Ключевой отчёт", hint: "флагманские годовые и полугодовые обзоры, крупные исследования" },
+  analytics: { name: "Регулярная аналитика", short: "Аналитика",      hint: "квартальная статистика, опросы, дайджесты" },
+  case:      { name: "Исследования и кейсы", short: "Кейс",           hint: "разборы отдельных кампаний, атак и уязвимостей" }
+};
+const tierOf = r => TIERS[r.tier] ? r.tier : "analytics";
 const MONTHS = ["январь","февраль","март","апрель","май","июнь","июль","август","сентябрь","октябрь","ноябрь","декабрь"];
 const MONTHS_G = ["янв","фев","мар","апр","мая","июн","июл","авг","сен","окт","ноя","дек"];
 const DAY = 864e5;
@@ -49,7 +56,8 @@ let todos   = store.get("todos", {});
 const S = {
   group: "intl",                           // портал всегда открывается на «Международной аналитике»
   lang: store.get("lang", "ru") === "en" ? "en" : "ru",   // язык выжимок международных отчётов
-  view: store.get("view", "all"),         // all | new | unread | fav | top
+  view: ["all","new","unread","fav"].includes(store.get("view", "all")) ? store.get("view", "all") : "all",   // all | new | unread | fav
+  tier: null,                             // key | analytics | case
   type: null, vendor: null, tag: null,
   q: "",
   sort: store.get("sort", "date"),
@@ -147,7 +155,7 @@ function apply(){
   if (S.view === "new") L = L.filter(r => isNew(r, 7));
   if (S.view === "unread") L = L.filter(r => !readSet.has(r.id));
   if (S.view === "fav") L = L.filter(r => favSet.has(r.id));
-  if (S.view === "top") L = L.filter(r => (r.importance || 0) >= 3);
+  if (S.tier) L = L.filter(r => tierOf(r) === S.tier);
   if (S.type) L = L.filter(r => (r.type || "other") === S.type);
   if (S.vendor) L = L.filter(r => r.vendor === S.vendor);
   if (S.tag) L = L.filter(r => (r.tags || []).some(t => norm(t) === norm(S.tag)));
@@ -156,7 +164,8 @@ function apply(){
   if (S.sort === "date") L.sort((a, b) => sortKey(b).localeCompare(sortKey(a)) || (b.added||"").localeCompare(a.added||""));
   if (S.sort === "added") L.sort((a, b) => (b.added||"").localeCompare(a.added||"") || sortKey(b).localeCompare(sortKey(a)));
   if (S.sort === "vendor") L.sort((a, b) => vendorOf(a).name.localeCompare(vendorOf(b).name, "ru") || sortKey(b).localeCompare(sortKey(a)));
-  if (S.sort === "importance") L.sort((a, b) => (b.importance||0) - (a.importance||0) || sortKey(b).localeCompare(sortKey(a)));
+  const TR = { key: 0, analytics: 1, case: 2 };
+  if (S.sort === "importance") L.sort((a, b) => TR[tierOf(a)] - TR[tierOf(b)] || (b.importance||0) - (a.importance||0) || sortKey(b).localeCompare(sortKey(a)));
   LIST = L;
 }
 
@@ -169,12 +178,15 @@ function renderSide(){
     ["all",    "Все отчёты",     cnt(() => true)],
     ["new",    "Новые за 7 дней",cnt(r => isNew(r, 7))],
     ["unread", "Непрочитанные",  cnt(r => !readSet.has(r.id))],
-    ["fav",    "Избранное",      cnt(r => favSet.has(r.id))],
-    ["top",    "Главное",        cnt(r => (r.importance||0) >= 3)]
+    ["fav",    "Избранное",      cnt(r => favSet.has(r.id))]
   ];
-  const icons = { all:"▤", new:"✦", unread:"◉", fav:"★", top:"▲" };
+  const icons = { all:"▤", new:"✦", unread:"◉", fav:"★" };
   let h = `<h4>Подборки</h4>` + views.map(([k, n, c]) =>
     `<button class="nav-item ${S.view===k?"on":""}" data-view="${k}"><span style="width:16px;text-align:center;color:var(--ink-3)">${icons[k]}</span><span class="nm">${n}</span><span class="cnt">${c}</span></button>`).join("");
+
+  const kc = {}; POOL.forEach(r => { kc[tierOf(r)] = (kc[tierOf(r)]||0) + 1; });
+  h += `<h4>Значимость</h4>` + Object.keys(TIERS).filter(t => kc[t]).map(t =>
+    `<button class="nav-item tier-${t} ${S.tier===t?"on":""}" data-tier="${t}" title="${esc(TIERS[t].hint)}"><span class="tier-dot"></span><span class="nm">${TIERS[t].name}</span><span class="cnt">${kc[t]}</span></button>`).join("");
 
   const tc = {}; POOL.forEach(r => { const t = TYPES[r.type] ? r.type : "other"; tc[t] = (tc[t]||0) + 1; });
   h += `<h4>Тип отчёта</h4>` + Object.keys(TYPES).filter(t => tc[t]).map(t =>
@@ -211,7 +223,7 @@ function card(r, i){
   const v = vendorOf(r), title = r.title_ru || r.title, orig = r.title_ru && r.title && r.title_ru !== r.title ? r.title : "";
   return `<article class="card ${readSet.has(r.id)?"read":""} ${S.kb===i?"kb":""}" data-i="${i}" style="--vc:${esc(v.color)}" tabindex="0">
     <div class="c-head">${logo(v)}<div><div class="c-vendor">${esc(v.name)}</div><div class="c-date">${esc(fmtDate(r))}</div></div>
-      <div class="c-flags">${isNew(r, 2) ? `<span class="badge-new">НОВОЕ</span>` : ""}${(r.importance||0) >= 3 ? `<span class="imp" title="Важный отчёт">▲</span>` : ""}
+      <div class="c-flags">${tierOf(r) === "key" ? `<span class="badge-key" title="${esc(TIERS.key.hint)}">КЛЮЧЕВОЙ</span>` : ""}${isNew(r, 2) ? `<span class="badge-new">НОВОЕ</span>` : ""}${(r.importance||0) >= 3 ? `<span class="imp" title="Важный отчёт">▲</span>` : ""}
       <button class="star ${favSet.has(r.id)?"on":""}" data-fav="${esc(r.id)}" title="В избранное (f)">${starSvg(favSet.has(r.id))}</button></div></div>
     <h3 class="c-title">${esc(title)}</h3>${orig ? `<div class="c-orig">${esc(orig)}</div>` : ""}
     <div class="c-tldr">${esc(r.tldr)}</div>
@@ -250,29 +262,33 @@ function renderMain(){
     <div class="kpi"><b>${vendors}</b><span>${S.group === "intl" ? plural(vendors,"источник","источника","источников") : S.group === "kasp" ? plural(vendors,"команда","команды","команд") : plural(vendors,"вендор","вендора","вендоров")}</span></div>
     <div class="kpi"><b>${unread}</b><span>не прочитано</span></div></section>`;
 
-  const names = { all:"Все отчёты", new:"Новые за 7 дней", unread:"Непрочитанные", fav:"Избранное", top:"Главное" };
+  const names = { all:"Все отчёты", new:"Новые за 7 дней", unread:"Непрочитанные", fav:"Избранное" };
   const act = [];
+  if (S.tier && S.tier !== "key") act.push(`<button class="chip active" data-clear="tier">${TIERS[S.tier].name}<span class="x">✕</span></button>`);
   if (S.type) act.push(`<button class="chip active" data-clear="type">${TYPES[S.type].name}<span class="x">✕</span></button>`);
   if (S.vendor) act.push(`<button class="chip active" data-clear="vendor">${esc(vendorOf({vendor:S.vendor}).name)}<span class="x">✕</span></button>`);
   if (S.tag) act.push(`<button class="chip active" data-clear="tag">#${esc(S.tag)}<span class="x">✕</span></button>`);
   if (S.q) act.push(`<button class="chip active" data-clear="q">«${esc(S.q)}»<span class="x">✕</span></button>`);
-  h += `<div class="toolbar"><span class="title">${names[S.view]}</span><span class="chip">${LIST.length}</span>${act.join("")}<span class="spacer"></span>
+  h += `<div class="toolbar"><span class="title">${S.tier === "key" ? TIERS.key.name : names[S.view]}</span><span class="chip">${LIST.length}</span>${act.join("")}<span class="spacer"></span>
+    <button class="key-toggle ${S.tier==="key"?"on":""}" data-tier="key" aria-pressed="${S.tier==="key"}" title="${esc(TIERS.key.hint)}">★ Только ключевые</button>
     <select class="sel" id="sort" aria-label="Сортировка">
       <option value="date" ${S.sort==="date"?"selected":""}>По дате публикации</option>
       <option value="added" ${S.sort==="added"?"selected":""}>По дате добавления</option>
-      <option value="importance" ${S.sort==="importance"?"selected":""}>По важности</option>
+      <option value="importance" ${S.sort==="importance"?"selected":""}>По значимости</option>
       <option value="vendor" ${S.sort==="vendor"?"selected":""}>По вендору</option></select>
     <div class="seg"><button data-layout="cards" class="${S.layout==="cards"?"on":""}">Карточки</button><button data-layout="list" class="${S.layout==="list"?"on":""}">Список</button></div></div>`;
 
   if (!POOL.length){
     h += `<div class="empty"><b>Библиотека пока пуста</b>Запустите задачу «Сбор ИБ-отчётов» в Claude — она найдёт и добавит свежие отчёты.</div>`;
   } else if (!LIST.length){
-    h += `<div class="empty"><b>Ничего не найдено</b>Измените фильтры или поисковый запрос.</div>`;
+    h += S.tier === "key" && !POOL.some(r => tierOf(r) === "key")
+      ? `<div class="empty"><b>В этом разделе пока нет ключевых отчётов</b><button class="chip" data-tier="key">Показать все отчёты раздела</button></div>`
+      : `<div class="empty"><b>Ничего не найдено</b>Измените фильтры или поисковый запрос.</div>`;
   } else {
     const groups = [];
     LIST.forEach((r, i) => {
       const key = S.sort === "vendor" ? vendorOf(r).name
-        : S.sort === "importance" ? ["Обычные","Обычные","Заметные","Важные"][r.importance||0]
+        : S.sort === "importance" ? TIERS[tierOf(r)].name
         : S.sort === "added" ? "Добавлено " + (r.added || "—")
         : (() => { const k = sortKey(r); return r.date_precision === "year" ? k.slice(0,4) + " · дата не уточнена" : MONTHS[+k.slice(5,7)-1] + " " + k.slice(0,4); })();
       const g = groups[groups.length-1];
@@ -290,10 +306,11 @@ function renderMain(){
 
 function render(){ renderSide(); renderMain(); writeHash(); }
 
-/* ---------- адрес страницы: #/<раздел>[/en][/<id отчёта>] ---------- */
+/* ---------- адрес страницы: #/<раздел>[/en][/key][/<id отчёта>] ---------- */
 function writeHash(){
   const parts = [SLUG[S.group]];
   if (enOn()) parts.push("en");
+  if (S.tier === "key") parts.push("key");
   if (S.open !== null && LIST[S.open]) parts.push(LIST[S.open].id);
   const h = "#/" + parts.join("/");
   if (location.hash !== h) history.replaceState(null, "", h);
@@ -307,6 +324,7 @@ function readHash(){
   if (BY_SLUG[p[0]]) out.group = BY_SLUG[p.shift()];
   if (p[0] === "en" || p[0] === "ru"){ out.lang = p.shift(); }
   else if (out.group === "intl") out.lang = "ru";
+  if (p[0] === "key"){ out.tier = "key"; p.shift(); }
   if (p[0]) out.id = p[0];
   return out;
 }
@@ -315,7 +333,7 @@ function applyHash(){
   let r = h.id ? ALL.find(x => x.id === h.id) : null;
   S.group = r ? groupOf(r) : (h.group || S.group);
   if (h.lang) S.lang = h.lang;
-  S.type = S.vendor = S.tag = null; S.view = "all"; S.open = null;
+  S.type = S.vendor = S.tag = null; S.view = "all"; S.open = null; S.tier = h.tier || null;
   $("#reader").classList.remove("on"); $("#scrim").classList.remove("on"); document.body.style.overflow = "";
   render();
   if (r){ const i = LIST.findIndex(x => x.id === r.id); if (i >= 0) openReader(i); }
@@ -343,7 +361,7 @@ function openReader(i){
     ["Отрасли", chipList(r.sectors)], ["Регионы", chipList(r.regions)]
   ].filter(x => x[1]);
   let h = `<div style="--vc:${esc(v.color)}">
-    <div class="r-top">${logo(v)}<div><div class="v">${esc(v.name)}</div><div class="d">${esc(fmtDate(r))} · ${typeBadge(r)} ${r.__en ? "· English version" : r.lang==="ru" ? "· на русском" : "· оригинал на английском"}</div></div></div>
+    <div class="r-top">${logo(v)}<div><div class="v">${esc(v.name)}</div><div class="d">${esc(fmtDate(r))} · ${typeBadge(r)} · <span class="tier-label tier-${tierOf(r)}">${TIERS[tierOf(r)].short}</span> ${r.__en ? "· English version" : r.lang==="ru" ? "· на русском" : "· оригинал на английском"}</div></div></div>
     <h1 class="r-h1">${esc(r.title_ru || r.title)}</h1>
     ${r.title_ru && r.title && r.title !== r.title_ru ? `<div class="r-sub">${esc(r.title)}</div>` : ""}
     <div class="r-actions">
@@ -425,6 +443,7 @@ document.addEventListener("click", e => {
   if (t.dataset.fav){ e.stopPropagation(); toggleFav(t.dataset.fav); render(); return; }
   if (t.dataset.group){ S.group = t.dataset.group; setFilter({ view: "all", type: null, vendor: null, tag: null }); return; }
   if (t.dataset.lang){ S.lang = t.dataset.lang; store.set("lang", S.lang); renderMain(); writeHash(); return; }
+  if (t.dataset.tier){ setFilter({ tier: S.tier === t.dataset.tier ? null : t.dataset.tier }); return; }
   if (t.dataset.view){ setFilter({ view: t.dataset.view }); return; }
   if (t.dataset.type){ setFilter({ type: S.type === t.dataset.type ? null : t.dataset.type }); return; }
   if (t.dataset.vendor){ setFilter({ vendor: S.vendor === t.dataset.vendor ? null : t.dataset.vendor }); return; }

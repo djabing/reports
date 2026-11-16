@@ -11,6 +11,7 @@ RDB.add({
   "type": "phishing",
   "lang": "en",
   "importance": 2,
+  "tier": "key",
   "tags": [
     "годовой",
     "мошенничество",

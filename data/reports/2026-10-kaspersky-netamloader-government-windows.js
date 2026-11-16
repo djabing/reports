@@ -11,6 +11,7 @@ RDB.add({
   "type": "apt",
   "lang": "en",
   "importance": 2,
+  "tier": "case",
   "tags": [
     "APT",
     "госсектор",

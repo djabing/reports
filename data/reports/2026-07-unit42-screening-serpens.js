@@ -11,9 +11,25 @@ RDB.add({
   "type": "apt",
   "lang": "en",
   "importance": 2,
-  "tags": ["APT", "Иран", "шпионаж", "социальная инженерия", "RAT", ".NET"],
-  "sectors": ["ИТ", "Оборона"],
-  "regions": ["США", "Израиль", "ОАЭ", "Ближний Восток"],
+  "tier": "case",
+  "tags": [
+    "APT",
+    "Иран",
+    "шпионаж",
+    "социальная инженерия",
+    "RAT",
+    ".NET"
+  ],
+  "sectors": [
+    "ИТ",
+    "Оборона"
+  ],
+  "regions": [
+    "США",
+    "Израиль",
+    "ОАЭ",
+    "Ближний Восток"
+  ],
   "tldr": "Иранская Screening Serpens (UNC1549, Smoke Sandstorm) атакует ИТ- и оборонные компании через фейковые вакансии; за февраль–апрель 2026 появилось шесть новых RAT, впервые применён AppDomainManager hijacking.",
   "summary": "Unit 42 отслеживает атаки группировки с середины февраля по апрель 2026 года против организаций в США, Израиле, ОАЭ и ещё как минимум двух странах Ближнего Востока. Всплеск активности совпал с региональным конфликтом, начавшимся 28 февраля 2026. Группа использует персонализированные «рекрутинговые» приманки от имени известных брендов и платформ найма, а для запуска — комбинацию DLL sideloading и перехвата AppDomainManager в .NET.",
   "key_findings": [
@@ -24,18 +40,46 @@ RDB.add({
     "Высокий операционный темп сохранялся весь март и апрель."
   ],
   "stats": [
-    { "value": "6", "label": "новых вариантов RAT" },
-    { "value": "5+", "label": "стран-целей" },
-    { "value": "3 мес", "label": "период наблюдения" }
+    {
+      "value": "6",
+      "label": "новых вариантов RAT"
+    },
+    {
+      "value": "5+",
+      "label": "стран-целей"
+    },
+    {
+      "value": "3 мес",
+      "label": "период наблюдения"
+    }
   ],
-  "actors": ["Screening Serpens", "UNC1549", "Smoke Sandstorm"],
-  "malware": ["MiniJunk", "MiniUpdate"],
+  "actors": [
+    "Screening Serpens",
+    "UNC1549",
+    "Smoke Sandstorm"
+  ],
+  "malware": [
+    "MiniJunk",
+    "MiniUpdate"
+  ],
   "cves": [],
   "ttps": [
-    { "id": "T1566.002", "name": "Spearphishing Link" },
-    { "id": "T1574", "name": "Hijack Execution Flow" },
-    { "id": "T1574.014", "name": "AppDomainManager" },
-    { "id": "T1204", "name": "User Execution" }
+    {
+      "id": "T1566.002",
+      "name": "Spearphishing Link"
+    },
+    {
+      "id": "T1574",
+      "name": "Hijack Execution Flow"
+    },
+    {
+      "id": "T1574.014",
+      "name": "AppDomainManager"
+    },
+    {
+      "id": "T1204",
+      "name": "User Execution"
+    }
   ],
   "recommendations": [
     "Предупредить инженеров и HR о поддельных вакансиях и «тестовых заданиях».",
