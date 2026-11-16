@@ -1,6 +1,6 @@
 RDB.add({
   "id": "2026-09-kaspersky-ics-cert-q2",
-  "vendor": "kaspersky",
+  "vendor": "kaspersky-ics",
   "title": "Threat landscape for industrial automation systems. Q2 2026",
   "title_ru": "Ландшафт угроз для систем промышленной автоматизации, II квартал 2026",
   "url": "https://www.kaspersky.com/about/press-releases/kaspersky-ics-cert-q2-2026-saw-a-rise-in-ransomware-targeting-industrial-control-systems",

@@ -1,6 +1,6 @@
 RDB.add({
   "id": "2026-11-kaspersky-q3-desktop-iot",
-  "vendor": "kaspersky",
+  "vendor": "kaspersky-securelist",
   "title": "Desktop and IoT threat statistics for Q3 2026",
   "title_ru": "Статистика угроз для ПК и IoT за III квартал 2026",
   "url": "https://securelist.com/malware-report-q3-2026-pc-iot-statistics/121843/",

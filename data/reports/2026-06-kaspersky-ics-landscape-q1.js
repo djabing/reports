@@ -1,6 +1,6 @@
 RDB.add({
   "id": "2026-06-kaspersky-ics-landscape-q1",
-  "vendor": "kaspersky",
+  "vendor": "kaspersky-ics",
   "title": "Threat landscape for industrial automation systems. Q1 2026",
   "title_ru": "Ландшафт угроз для систем промышленной автоматизации. I квартал 2026",
   "url": "https://ics-cert.kaspersky.com/publications/reports/2026/06/09/threat-landscape-for-industrial-automation-systems-q1-2026/",

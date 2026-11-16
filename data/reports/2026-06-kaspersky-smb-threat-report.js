@@ -1,6 +1,6 @@
 RDB.add({
   "id": "2026-06-kaspersky-smb-threat-report",
-  "vendor": "kaspersky",
+  "vendor": "kaspersky-securelist",
   "title": "Threat landscape for SMBs in 2026: fake AI tools, phishing and more",
   "title_ru": "Угрозы для малого и среднего бизнеса в 2026: поддельные ИИ-инструменты и фишинг",
   "url": "https://securelist.com/smb-threat-report-2026/120357/",

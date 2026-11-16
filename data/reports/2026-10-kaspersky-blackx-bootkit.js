@@ -1,6 +1,6 @@
 RDB.add({
   "id": "2026-10-kaspersky-blackx-bootkit",
-  "vendor": "kaspersky",
+  "vendor": "kaspersky-great",
   "title": "Beneath the operating system: Kaspersky discovers BlackX bootkit targeting diplomatic organisations in Central Asia",
   "title_ru": "Буткит BlackX обходит Secure Boot на полностью обновлённых Windows",
   "url": "https://bleepingcomputer.com/news/security/blackx-uefi-bootkit-exploits-baton-drop-flaw-to-bypass-secure-boot",

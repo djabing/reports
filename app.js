@@ -167,7 +167,7 @@ function renderSide(){
 
   const vc = {}; POOL.forEach(r => { vc[r.vendor] = (vc[r.vendor]||0) + 1; });
   const vids = Object.keys(vc).sort((a, b) => vc[b] - vc[a] || vendorOf({vendor:a}).name.localeCompare(vendorOf({vendor:b}).name));
-  h += `<h4>${S.group === "intl" ? "Источники" : "Вендоры"} · ${vids.length}</h4>` + vids.map(id => {
+  h += `<h4>${S.group === "intl" ? "Источники" : S.group === "kasp" ? "Команды" : "Вендоры"} · ${vids.length}</h4>` + vids.map(id => {
     const r0 = POOL.find(r => r.vendor === id), v = vendorOf(r0);
     return `<button class="nav-item ${S.vendor===id?"on":""}" data-vendor="${esc(id)}">${logo(v)}<span class="nm">${esc(v.name)}</span><span class="cnt">${vc[id]}</span></button>`;
   }).join("");
@@ -222,7 +222,7 @@ function renderMain(){
   h += `<section class="hero">
     <div class="kpi"><b>${POOL.length}</b><span>${plural(POOL.length,"отчёт","отчёта","отчётов")} в разделе</span></div>
     <div class="kpi accent"><b>${new7}</b><span>${plural(new7,"новый","новых","новых")} за 7 дней</span></div>
-    <div class="kpi"><b>${vendors}</b><span>${S.group === "intl" ? plural(vendors,"источник","источника","источников") : plural(vendors,"вендор","вендора","вендоров")}</span></div>
+    <div class="kpi"><b>${vendors}</b><span>${S.group === "intl" ? plural(vendors,"источник","источника","источников") : S.group === "kasp" ? plural(vendors,"команда","команды","команд") : plural(vendors,"вендор","вендора","вендоров")}</span></div>
     <div class="kpi"><b>${unread}</b><span>не прочитано</span></div></section>`;
 
   const names = { all:"Все отчёты", new:"Новые за 7 дней", unread:"Непрочитанные", fav:"Избранное", top:"Главное" };

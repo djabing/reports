@@ -1,6 +1,6 @@
 RDB.add({
   "id": "2026-11-kaspersky-cyberstrikeai",
-  "vendor": "kaspersky",
+  "vendor": "kaspersky-securelist",
   "title": "CyberStrikeAI attacks educational institutions",
   "title_ru": "Атаки CyberStrikeAI на образовательные учреждения",
   "url": "https://securelist.com/cyberstrikeai-attacks/121715/",

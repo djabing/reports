@@ -1,6 +1,6 @@
 RDB.add({
   "id": "2026-11-kaspersky-q3-mobile",
-  "vendor": "kaspersky",
+  "vendor": "kaspersky-securelist",
   "title": "Mobile threat report for Q3 2026",
   "title_ru": "Мобильные угрозы в III квартале 2026",
   "url": "https://securelist.com/malware-report-q3-2026-mobile-statistics/121844/",
