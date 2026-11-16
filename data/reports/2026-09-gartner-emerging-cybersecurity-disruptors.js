@@ -52,5 +52,30 @@ RDB.add({
     "Оценить готовность к защите ИИ-агентов и к подтверждению подлинности контента."
   ],
   "why_it_matters": "Полезно для стратегического планирования портфеля ИБ-продуктов.",
-  "source_note": "Выжимка по аннотации Gartner; полный документ доступен клиентам."
+  "source_note": "Выжимка по аннотации Gartner; полный документ доступен клиентам.",
+  "en": {
+    "tldr": "Gartner (analyst Apoorva Chhabra) names the technologies that will shape the security market over five years: agentic AI security, digital trust authenticity platforms, preemptive exposure management and cyberkinetic security.",
+    "summary": "A briefing for security product leaders; the full text is for Gartner clients. The abstract advises weighing these technologies against their business impact over the next five years.",
+    "key_findings": [
+      "Agentic AI security is one of the key disruptive technologies.",
+      "Digital trust authenticity platforms.",
+      "Preemptive exposure management.",
+      "Cyberkinetic security (protection of cyber-physical systems)."
+    ],
+    "stats": [
+      {
+        "value": "4",
+        "label": "disruptive areas"
+      },
+      {
+        "value": "5 years",
+        "label": "assessment horizon"
+      }
+    ],
+    "recommendations": [
+      "Check product and investment strategy against the four areas.",
+      "Assess readiness to protect AI agents and verify content authenticity."
+    ],
+    "why_it_matters": "Useful for strategic planning of a security product portfolio."
+  }
 });

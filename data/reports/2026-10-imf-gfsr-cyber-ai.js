@@ -48,5 +48,27 @@ RDB.add({
     "Закрепить ответственность за киберустойчивость на уровне совета директоров."
   ],
   "why_it_matters": "Киберриск признан системным риском для мировой финансовой системы — это влияет на регуляторные требования к банкам.",
-  "source_note": "Выжимка по обзорам доклада в СМИ (Gulf Today, Banking Exchange); полный текст — на сайте МВФ."
+  "source_note": "Выжимка по обзорам доклада в СМИ (Gulf Today, Banking Exchange); полный текст — на сайте МВФ.",
+  "en": {
+    "tldr": "The IMF rates risks to the global financial system as elevated: key threats include an AI-related market correction and cyberattacks on critical financial institutions and infrastructure, a risk the Fund says is getting worse.",
+    "summary": "In its October Global Financial Stability Report, the IMF says the risk of successful attacks on critical financial institutions and market infrastructure is worsening, with potentially 'severe' consequences. In a May blog the Fund explained that AI lowers the cost and increases the speed of attacks, which could cause funding shortages, solvency doubts and market disruption; frontier AI can also help defence.",
+    "key_findings": [
+      "Risks to the global financial system assessed as elevated.",
+      "The risk of successful attacks on critical financial institutions and infrastructure is rising.",
+      "AI lowers the cost and speeds up attacks (IMF blog, May).",
+      "Consequences: funding shortages, solvency doubts, market disruption.",
+      "Cyber resilience should be treated as a financial-stability issue."
+    ],
+    "stats": [
+      {
+        "value": "2",
+        "label": "key threats: AI correction and cyberattacks"
+      }
+    ],
+    "recommendations": [
+      "Include cyber scenarios in financial institutions' stress tests.",
+      "Assign board-level accountability for cyber resilience."
+    ],
+    "why_it_matters": "Cyber risk is recognized as a systemic risk to the global financial system — shaping regulatory requirements for banks."
+  }
 });

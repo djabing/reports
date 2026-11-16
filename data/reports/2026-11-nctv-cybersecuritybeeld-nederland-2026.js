@@ -46,5 +46,23 @@ RDB.add({
     "Строить защиту по принципу «атакующий уже в сети» (assume breach)."
   ],
   "why_it_matters": "Государственная оценка европейской страны с высокой цифровизацией — хороший ориентир для понимания регуляторной повестки ЕС.",
-  "source_note": "Выжимка по материалам NCTV, NCSC NL и обзорам (Computable, CIO Platform)."
+  "source_note": "Выжимка по материалам NCTV, NCSC NL и обзорам (Computable, CIO Platform).",
+  "en": {
+    "tldr": "NCTV: threats from states and cybercriminals are growing faster than the digital resilience of Dutch organizations, and this gap poses a serious risk to national security. AI has cut the time from vulnerability discovery to exploitation from days to hours.",
+    "summary": "The Netherlands' annual national assessment (NCTV with NCSC). Attackers use AI to prepare and scale attacks. Many organizations lack basic measures. Without a substantial improvement in resilience, NCTV expects a sharp rise in incidents. Alongside the report, the government presented an action programme on digital resilience; SMEs cannot cope alone — suppliers, supervisors and government share responsibility.",
+    "key_findings": [
+      "The gap between rising threats and resilience is a national-security risk.",
+      "AI shortens the time between vulnerability discovery and exploitation to a few hours.",
+      "Many organizations lack basics: patching, backups, 24/7 monitoring.",
+      "Organizations should assume the attacker is already inside.",
+      "SMEs cannot raise resilience on their own — suppliers and government must help."
+    ],
+    "stats": [],
+    "recommendations": [
+      "Get the basics right: patch management, backups, 24/7 logging and monitoring.",
+      "Test business continuity regularly.",
+      "Design defences on an assume-breach basis."
+    ],
+    "why_it_matters": "A national assessment from a highly digitalized European country — useful for understanding the EU regulatory agenda."
+  }
 });

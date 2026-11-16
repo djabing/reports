@@ -55,5 +55,34 @@ RDB.add({
     "Выстроить управление агентным ИИ до перевода пилотов в продакшн."
   ],
   "why_it_matters": "Трезвая оценка разрыва между ожиданиями от ИИ в защите и реальной отдачей.",
-  "source_note": "Выжимка по пресс-релизу EY и обзору CIO Dive."
+  "source_note": "Выжимка по пресс-релизу EY и обзору CIO Dive.",
+  "en": {
+    "tldr": "96% of security leaders see AI as a core defensive tool and 95% already use it, but two-thirds are still testing, and half report returns from agentic tools below $1 million.",
+    "summary": "EY surveyed 500 security leaders at companies with revenue above $500 million (December 2025 — January 2026). AI has become standard in defence in terms of intent, but implementation maturity lags: most products are in pilots and returns from agentic AI are modest. Almost all respondents call governance essential to getting value from AI investments.",
+    "key_findings": [
+      "96% see AI as a core defensive solution; 95% already use it in security operations.",
+      "Two-thirds are still testing AI products.",
+      "About half got less than $1 million in returns from agentic tools.",
+      "97% say AI governance is essential to the value of investments."
+    ],
+    "stats": [
+      {
+        "value": "500",
+        "label": "security leaders"
+      },
+      {
+        "value": "96%",
+        "label": "see AI as core to defence"
+      },
+      {
+        "value": "97%",
+        "label": "say AI governance is essential"
+      }
+    ],
+    "recommendations": [
+      "Set measurable ROI metrics for AI security tools before scaling.",
+      "Build agentic AI governance before moving pilots to production."
+    ],
+    "why_it_matters": "A sober look at the gap between expectations of AI in defence and actual returns."
+  }
 });

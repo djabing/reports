@@ -65,5 +65,41 @@ RDB.add({
     "Использовать цифры отчёта для расчёта киберриска в деньгах и обоснования бюджета."
   ],
   "why_it_matters": "Самый цитируемый источник для перевода киберрисков в финансовые показатели.",
-  "source_note": "Выжимка по обзорам отчёта (Infosecurity Magazine, eSecurity Planet, Baker Donelson); темпы роста по США в источниках различаются."
+  "source_note": "Выжимка по обзорам отчёта (Infosecurity Magazine, eSecurity Planet, Baker Donelson); темпы роста по США в источниках различаются.",
+  "en": {
+    "tldr": "The average cost of a breach hit a record $4.99 million (+12%). AI-driven attacks rose 56% and add about $1 million to the damage, while extensive use of AI and automation in defence saves $1.93 million.",
+    "summary": "IBM's flagship annual study (with Ponemon Institute) on the financial impact of breaches. The global average is the highest in the report's history; in the US it is about $11.5 million. Healthcare leads for the 13th year ($6.64 million), finance $6.29 million. Phishing remains the top vector for the fourth year, and time to identify and contain a breach rose to 247 days.",
+    "key_findings": [
+      "Average breach cost — $4.99 million, +12%, a record.",
+      "US — about $11.5 million, more than double the global average.",
+      "Healthcare — $6.64 million (13th year at #1); finance — $6.29 million.",
+      "AI-driven attacks +56% year on year, adding ~$1 million to the average cost.",
+      "AI and automation in defence cut costs by $1.93 million and the breach lifecycle by 65 days.",
+      "Phishing — top vector for the fourth year; 247 days to identify and contain."
+    ],
+    "stats": [
+      {
+        "value": "$4.99 m",
+        "label": "average breach cost"
+      },
+      {
+        "value": "+56%",
+        "label": "AI-driven attacks"
+      },
+      {
+        "value": "−$1.93 m",
+        "label": "savings from AI in defence"
+      },
+      {
+        "value": "247 days",
+        "label": "to identify and contain"
+      }
+    ],
+    "recommendations": [
+      "Invest in SOC automation — the financial effect is measurable.",
+      "Prioritise phishing protection and phishing-resistant MFA.",
+      "Use the report's figures to quantify cyber risk in money and justify budget."
+    ],
+    "why_it_matters": "The most cited source for translating cyber risk into financial terms."
+  }
 });

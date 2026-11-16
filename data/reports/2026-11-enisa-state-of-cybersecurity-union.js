@@ -60,5 +60,37 @@ RDB.add({
     "Снижать зависимости в цепочках поставок."
   ],
   "why_it_matters": "Официальная оценка зрелости ЕС — ориентир для регуляторных ожиданий по NIS2.",
-  "source_note": "Выжимка по материалам ENISA и обзорам (Help Net Security, Industrial Cyber, Eunews)."
+  "source_note": "Выжимка по материалам ENISA и обзорам (Help Net Security, Industrial Cyber, Eunews).",
+  "en": {
+    "tldr": "The EU Cybersecurity Index stands at 71.53 out of 100 and the threat level is rated 'substantial'. 45% of surveyed IT service providers take more than three months to patch critical systems; regulatory compliance is the main driver of investment (70%).",
+    "summary": "ENISA's official report to EU institutions. The index methodology has changed, so comparisons with 2024 are not valid. Strengths: supply-chain management by essential and important entities (89.91). Weaknesses: uneven preparedness and incident response across Member States, slow patching by IT providers, and a gap between higher (73.59) and primary/secondary education (55.44). ENISA notes increasingly widespread use of AI by malicious actors and sets five priorities.",
+    "key_findings": [
+      "EU Cybersecurity Index: 71.53 out of 100.",
+      "Threat level assessed as substantial; attackers increasingly use AI.",
+      "45% of IT service providers take over three months to apply critical patches.",
+      "Supply-chain management scores 89.91; primary and secondary education 55.44.",
+      "70% of investment in critical sectors is driven by regulatory compliance.",
+      "Five priorities: implementing regulation, crisis coordination, critical-infrastructure resilience, supply-chain risk, skills."
+    ],
+    "stats": [
+      {
+        "value": "71.53",
+        "label": "EU cybersecurity index"
+      },
+      {
+        "value": "45%",
+        "label": "providers patch in >3 months"
+      },
+      {
+        "value": "70%",
+        "label": "investment driven by compliance"
+      }
+    ],
+    "recommendations": [
+      "Shorten critical patching timelines at IT contractors (contractual SLAs).",
+      "Run joint crisis-response exercises.",
+      "Reduce supply-chain dependencies."
+    ],
+    "why_it_matters": "The EU's official maturity assessment — a benchmark for regulatory expectations under NIS2."
+  }
 });

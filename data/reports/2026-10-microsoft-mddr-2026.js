@@ -84,5 +84,41 @@ RDB.add({
     "Сокращение поверхности атаки на периметре и ускорение патчинга публичных сервисов."
   ],
   "why_it_matters": "Отчёт опирается на огромную телеметрию Microsoft и фактически задаёт отраслевую повестку: идентичность — новый периметр, и инвестиции в IAM дают максимальную отдачу.",
-  "source_note": "Выжимка по публикации в блоге Microsoft Security и обзорам отчёта в СМИ."
+  "source_note": "Выжимка по публикации в блоге Microsoft Security и обзорам отчёта в СМИ.",
+  "en": {
+    "tldr": "Microsoft's flagship annual report: AI accelerates both attack and defence; identity remains the main way into organizations; government became the most targeted sector (27% of activity vs 17% a year earlier).",
+    "summary": "Microsoft highlights three shifts in 2026: AI speeds up both sides, account compromise remains the main way in, and incident impact increasingly extends beyond the original victim (supply chains, software updates, vendor ecosystems). It also notes a structural shift towards attacks on government identity infrastructure: phishing as an intrusion vector tripled, and abuse of valid accounts features in more than half of investigated intrusions.",
+    "key_findings": [
+      "Government is the most targeted sector: 27% of observed activity (17% in 2025).",
+      "Phishing as an initial access vector tripled; valid accounts in over half of intrusions.",
+      "In 93% of cases, missing secure access and lateral-movement controls in popular online services enabled the attack.",
+      "Exploitation of public-facing applications remains the dominant entry for hybrid campaigns.",
+      "Compromise of trusted updates and vendor ecosystems turns supply-chain risk into a national-security threat."
+    ],
+    "stats": [
+      {
+        "value": "27%",
+        "label": "of activity targets government"
+      },
+      {
+        "value": "×3",
+        "label": "growth of phishing as a vector"
+      },
+      {
+        "value": "93%",
+        "label": "incidents due to weak access control"
+      },
+      {
+        "value": ">50%",
+        "label": "intrusions via valid accounts"
+      }
+    ],
+    "recommendations": [
+      "Phishing-resistant MFA (FIDO2/passkeys) for all privileged and external accounts.",
+      "Conditional access and monitoring of anomalous sign-ins to cloud services.",
+      "Inventory and control access for contractors and software suppliers.",
+      "Reduce the perimeter attack surface and speed up patching of public services."
+    ],
+    "why_it_matters": "Built on Microsoft's huge telemetry, the report effectively sets the industry agenda: identity is the new perimeter, and IAM investment gives the highest return."
+  }
 });

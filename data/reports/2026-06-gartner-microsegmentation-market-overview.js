@@ -40,5 +40,19 @@ RDB.add({
     "Использовать при выборе решений микросегментации вместе с будущим Magic Quadrant."
   ],
   "why_it_matters": "Справочный документ для выбора решений микросегментации.",
-  "source_note": "Выжимка по аннотации Gartner; полный документ доступен клиентам."
+  "source_note": "Выжимка по аннотации Gartner; полный документ доступен клиентам.",
+  "en": {
+    "tldr": "Gartner market overview (clients only): microsegmentation tools provide finer-grained zoning across public, private and hybrid cloud infrastructure. Succeeds the May 2025 Market Guide.",
+    "summary": "Full text is available to Gartner clients. Per the abstract, the document describes the market for microsegmentation tools that enable more granular and dynamic access policies than traditional network segmentation. The Magic Quadrant and Critical Capabilities planned for 12 November 2026 were not confirmed as published at the time of adding.",
+    "key_findings": [
+      "Microsegmentation enables finer-grained zoning across public, private and hybrid clouds.",
+      "Predecessor: Market Guide for Network Security Microsegmentation (May 2025).",
+      "Magic Quadrant and Critical Capabilities planned for 12 Nov 2026 (publication unconfirmed)."
+    ],
+    "stats": [],
+    "recommendations": [
+      "Use when selecting microsegmentation solutions, together with the upcoming Magic Quadrant."
+    ],
+    "why_it_matters": "A reference document for choosing microsegmentation solutions."
+  }
 });

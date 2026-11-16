@@ -57,5 +57,36 @@ RDB.add({
     "Начать инвентаризацию криптографии под переход на постквантовые алгоритмы."
   ],
   "why_it_matters": "Базовая точка отсчёта для бюджетирования и обоснования инвестиций перед финансовым директором.",
-  "source_note": "Документ Gartner доступен клиентам; выжимка по аннотации и публичным пересказам. Цифры квартальных обновлений не подтверждены первоисточником."
+  "source_note": "Документ Gartner доступен клиентам; выжимка по аннотации и публичным пересказам. Цифры квартальных обновлений не подтверждены первоисточником.",
+  "en": {
+    "tldr": "Gartner puts 2026 worldwide information security spending at $244 billion (+11.6% in constant currency). Cloud security is the fastest-growing segment; quarterly updates raised the forecast to about $248 billion.",
+    "summary": "Gartner's annual information security market forecast. The February edition puts 2026 spending at $244 billion, up 11.6% in constant currency (vs $213 billion in 2025). According to summaries of quarterly updates, the estimate ranged from $246 to $248 billion, and the market could reach about $373 billion by 2030. Cloud security is the fastest-growing segment; the AI-amplified security market is projected to reach $160 billion by 2029. Key 2026 themes include agentic AI governance and post-quantum cryptography.",
+    "key_findings": [
+      "$244 billion worldwide security spending in 2026, +11.6% in constant currency.",
+      "For comparison: $213 billion in 2025.",
+      "Cloud security is the fastest-growing segment (~29% per summaries).",
+      "AI-amplified security market — up to $160 billion by 2029.",
+      "Agentic AI governance and post-quantum cryptography are key themes of the year."
+    ],
+    "stats": [
+      {
+        "value": "$244 bn",
+        "label": "security spending in 2026"
+      },
+      {
+        "value": "+11.6%",
+        "label": "growth in constant currency"
+      },
+      {
+        "value": "$160 bn",
+        "label": "AI security market by 2029"
+      }
+    ],
+    "recommendations": [
+      "Benchmark your security budget growth against the market (~11–12%).",
+      "Budget for cloud security and AI agent protection.",
+      "Start a cryptography inventory for the post-quantum transition."
+    ],
+    "why_it_matters": "A baseline for budgeting and justifying investment to the CFO."
+  }
 });

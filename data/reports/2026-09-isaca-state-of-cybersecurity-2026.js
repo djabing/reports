@@ -63,5 +63,41 @@ RDB.add({
     "Следить за выгоранием команды — это фактор риска."
   ],
   "why_it_matters": "Даёт аргументы для обсуждения штата, бюджета и учений по ИИ-инцидентам с руководством.",
-  "source_note": "Выжимка по материалам и пресс-релизам ISACA."
+  "source_note": "Выжимка по материалам и пресс-релизам ISACA.",
+  "en": {
+    "tldr": "ISACA's 12th annual survey (1,888 professionals): only 8% of organizations regularly run AI incident-response exercises and 31% have never done so; 58% of teams are understaffed and 54% expect an attack within a year.",
+    "summary": "ISACA finds security teams stretched thin: more attacks, shrinking budgets, rising workload and stress. Despite rapid AI adoption, readiness for AI incidents remains low. In the European cut, 38% report more attacks, and more than half cite understaffing (56%) and underfunding (55%).",
+    "key_findings": [
+      "Only 8% regularly run AI-specific incident-response exercises.",
+      "31% have never run AI-related exercises.",
+      "58% say their security team is understaffed (55% last year).",
+      "68% say their roles have become more stressful over five years.",
+      "54% expect a cyberattack on their organization within a year.",
+      "Europe: 38% see more attacks; 56% understaffed, 55% underfunded."
+    ],
+    "stats": [
+      {
+        "value": "1,888",
+        "label": "respondents"
+      },
+      {
+        "value": "8%",
+        "label": "regularly exercise AI incidents"
+      },
+      {
+        "value": "58%",
+        "label": "teams understaffed"
+      },
+      {
+        "value": "54%",
+        "label": "expect an attack within a year"
+      }
+    ],
+    "recommendations": [
+      "Add AI scenarios (model data leaks, agent compromise) to incident-response exercises.",
+      "Use automation to offset staff shortages.",
+      "Watch for team burnout — it is a risk factor."
+    ],
+    "why_it_matters": "Arguments for discussing headcount, budget and AI incident exercises with leadership."
+  }
 });

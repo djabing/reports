@@ -56,5 +56,35 @@ RDB.add({
     "Встроить оценку рисков ИИ в процесс согласования бизнес-инициатив."
   ],
   "why_it_matters": "Даёт аргументы в пользу консолидации платформ при обсуждении бюджета ИБ.",
-  "source_note": "Выжимка по обзорам GRC Report и пресс-материалам KPMG; дата публикации — ориентировочно февраль 2026."
+  "source_note": "Выжимка по обзорам GRC Report и пресс-материалам KPMG; дата публикации — ориентировочно февраль 2026.",
+  "en": {
+    "tldr": "KPMG surveyed 310 security leaders at large US companies (revenue over $1 billion): CISOs are caught between business AI ambitions and security reality, and progress increasingly depends on consolidation rather than expanding the stack.",
+    "summary": "KPMG's annual survey shows the attack surface growing as business functions are automated, while security resources lag. KPMG concludes that the way forward is consolidating tools and processes. In related KPMG surveys, three-quarters of large-company executives are concerned about the cyber and privacy risks of AI tools, and 99% of security leaders plan to increase budgets over 2–3 years.",
+    "key_findings": [
+      "310 security leaders at companies with revenue over $1 billion.",
+      "AI-driven automation expands the attack surface faster than security resources grow.",
+      "Progress comes from consolidation rather than adding tools.",
+      "Three-quarters of executives worry about AI's cyber and privacy risks (related KPMG survey).",
+      "99% of security leaders plan budget increases over 2–3 years (late-2025 survey)."
+    ],
+    "stats": [
+      {
+        "value": "310",
+        "label": "CISOs at large companies"
+      },
+      {
+        "value": "3/4",
+        "label": "executives worried about AI risk"
+      },
+      {
+        "value": "99%",
+        "label": "plan budget growth"
+      }
+    ],
+    "recommendations": [
+      "Review the security stack and consolidate overlapping tools.",
+      "Build AI risk assessment into approval of business initiatives."
+    ],
+    "why_it_matters": "Supports the case for platform consolidation in budget discussions."
+  }
 });

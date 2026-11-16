@@ -59,5 +59,38 @@ RDB.add({
     "Обновить риск- и контрольные рамки под машинную скорость эксплуатации."
   ],
   "why_it_matters": "Управленческая рамка для совета директоров: переводит тему ИИ-уязвимостей из технической плоскости в вопрос операционной модели и бюджета.",
-  "source_note": "Выжимка по статье McKinsey и её обзорам (SecureWorld, ANI); детали четырёх рычагов стоит сверить с оригиналом."
+  "source_note": "Выжимка по статье McKinsey и её обзорам (SecureWorld, ANI); детали четырёх рычагов стоит сверить с оригиналом.",
+  "en": {
+    "tldr": "McKinsey: frontier AI has broken two core assumptions of software security — that finding and exploiting vulnerabilities requires rare expertise, and that defenders have time to fix them. The response: rework practices, operating model, risk controls and technology together within 90 days.",
+    "summary": "McKinsey's article on how next-generation models change the economics of vulnerabilities. Citing Project Glasswing among others (partners found more than 10,000 high/critical vulnerabilities using Claude Mythos Preview), the authors show that finding vulnerabilities is no longer the bottleneck — fixing them is. McKinsey warns against relying only on hiring or faster patching and proposes four levers that must move together, starting with a limited set of critical applications.",
+    "key_findings": [
+      "The assumptions 'exploitation needs rare expertise' and 'defenders have time' no longer hold.",
+      "Project Glasswing: 10,000+ high/critical vulnerabilities found with AI.",
+      "Four levers: security practices, operating model, risk and control frameworks, technology — together.",
+      "Hiring or faster patching alone won't solve the problem.",
+      "Start with a limited set of critical applications and launch changes within 90 days.",
+      "Use several AI models alongside traditional scanners — they find different flaws."
+    ],
+    "stats": [
+      {
+        "value": "10,000+",
+        "label": "vulnerabilities found by AI (Glasswing)"
+      },
+      {
+        "value": "4",
+        "label": "transformation levers"
+      },
+      {
+        "value": "90 days",
+        "label": "to start changes"
+      }
+    ],
+    "recommendations": [
+      "Define the critical-application scope and start there, not with a full overhaul.",
+      "Rebuild the remediation process: finding is no longer the constraint, fixing is.",
+      "Combine several AI models and traditional scanners in AppSec.",
+      "Update risk and control frameworks for machine-speed exploitation."
+    ],
+    "why_it_matters": "A board-level framework that turns AI-driven vulnerabilities from a technical topic into an operating-model and budget question."
+  }
 });

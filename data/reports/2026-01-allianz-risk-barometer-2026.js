@@ -57,5 +57,36 @@ RDB.add({
     "Для МСБ — рассмотреть киберстрахование и сервисы MDR."
   ],
   "why_it_matters": "Показывает, как киберриски видит страховой рынок и топ-менеджмент: сильный аргумент для бюджета.",
-  "source_note": "Выжимка по материалам Allianz Commercial и обзорам (Claims Journal, Business Wire)."
+  "source_note": "Выжимка по материалам Allianz Commercial и обзорам (Claims Journal, Business Wire).",
+  "en": {
+    "tldr": "Cyber incidents are the #1 business risk for the fifth year running, with a record 42% of responses. AI made the biggest jump — from 10th to 2nd place.",
+    "summary": "Survey of 3,338 risk experts by insurer Allianz. Cyber leads across all company sizes, with the widest margin ever (+10 pp). Drivers: dependence on third-party providers of critical data and services, and AI 'supercharging' threats. Small and mid-sized companies are increasingly targeted and lack resources.",
+    "key_findings": [
+      "Cyber incidents — risk #1 for the fifth year (42% of responses, a record).",
+      "AI rose from 10th to 2nd place — the fastest climb.",
+      "Cyber and AI are top-5 risks in all regions and almost all industries.",
+      "Cyber is the top risk for large, mid-sized and small companies.",
+      "Third-party dependence and AI are the main cyber-risk drivers."
+    ],
+    "stats": [
+      {
+        "value": "3,338",
+        "label": "risk experts"
+      },
+      {
+        "value": "42%",
+        "label": "rank cyber as risk #1"
+      },
+      {
+        "value": "#2",
+        "label": "AI's position (was #10)"
+      }
+    ],
+    "recommendations": [
+      "Put cyber and AI risks on the board's risk map.",
+      "Assess dependence on critical IT service providers.",
+      "For SMEs — consider cyber insurance and MDR services."
+    ],
+    "why_it_matters": "Shows how the insurance market and top management see cyber risk — a strong budget argument."
+  }
 });
