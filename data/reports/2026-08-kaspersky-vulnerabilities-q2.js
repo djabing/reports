@@ -1,6 +1,6 @@
 RDB.add({
   "id": "2026-08-kaspersky-vulnerabilities-q2",
-  "vendor": "kaspersky",
+  "vendor": "kaspersky-securelist",
   "title": "Exploits and vulnerabilities in Q2 2026",
   "title_ru": "Уязвимости и эксплойты во II квартале 2026",
   "url": "https://securelist.com/vulnerabilities-and-exploits-in-q2-2026/121091/",

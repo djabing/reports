@@ -1,6 +1,6 @@
 RDB.add({
   "id": "2026-11-kaspersky-esxi-blacknevas",
-  "vendor": "kaspersky",
+  "vendor": "kaspersky-gert",
   "title": "ESXi ransomware: why it is dangerous and how to defend against it",
   "title_ru": "Шифровальщики для ESXi: почему они опасны и как защищаться",
   "url": "https://securelist.com/esxi-ransomware/121959/",

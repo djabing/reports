@@ -1,6 +1,6 @@
 RDB.add({
   "id": "2026-06-kaspersky-strikeshark-sharkloader",
-  "vendor": "kaspersky",
+  "vendor": "kaspersky-great",
   "title": "Kaspersky warns of a new StrikeShark campaign targeting organizations in Asia, Latin America and Europe with advanced malware",
   "title_ru": "Кампания StrikeShark: новый загрузчик SharkLoader против организаций Азии, Латинской Америки и Европы",
   "url": "https://www.kaspersky.com/about/press-releases/kaspersky-warns-of-a-new-strikeshark-campaign-targeting-organizations-in-asia-latin-america-and-europe-with-advanced-malware",

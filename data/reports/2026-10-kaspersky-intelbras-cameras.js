@@ -1,6 +1,6 @@
 RDB.add({
   "id": "2026-10-kaspersky-intelbras-cameras",
-  "vendor": "kaspersky",
+  "vendor": "kaspersky-great",
   "title": "Millions of security cameras at risk: Kaspersky discovered a vulnerability in Intelbras devices",
   "title_ru": "Уязвимость в IP-камерах Intelbras: под угрозой миллионы устройств",
   "url": "https://www.kaspersky.com/about/press-releases/millions-of-security-cameras-at-risk-kaspersky-discovered-a-vulnerability-in-intelbras-devices",

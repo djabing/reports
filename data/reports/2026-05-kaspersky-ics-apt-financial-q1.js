@@ -1,6 +1,6 @@
 RDB.add({
   "id": "2026-05-kaspersky-ics-apt-financial-q1",
-  "vendor": "kaspersky",
+  "vendor": "kaspersky-ics",
   "title": "APT and financial attacks on industrial organizations in Q1 2026",
   "title_ru": "APT и финансовые атаки на промышленные организации в I квартале 2026",
   "url": "https://ics-cert.kaspersky.com/publications/reports/2026/05/21/apt-and-financial-attacks-on-industrial-organizations-in-q1-2026",

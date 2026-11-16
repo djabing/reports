@@ -1,6 +1,6 @@
 RDB.add({
   "id": "2026-10-kaspersky-netamloader-government-windows",
-  "vendor": "kaspersky",
+  "vendor": "kaspersky-great",
   "title": "Kaspersky GReAT uncovers attack targeting government-only Windows system in Asia",
   "title_ru": "NetamLoader: атака на правительственную сборку Windows 10 в Азии",
   "url": "https://www.kaspersky.com/about/press-releases/kaspersky-great-uncovers-attack-targeting-government-only-windows-system-in-asia",

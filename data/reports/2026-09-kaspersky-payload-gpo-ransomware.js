@@ -1,6 +1,6 @@
 RDB.add({
   "id": "2026-09-kaspersky-payload-gpo-ransomware",
-  "vendor": "kaspersky",
+  "vendor": "kaspersky-gert",
   "title": "Group Policy hijacked: PAYLOAD ransomware weaponizes Active Directory GPO",
   "title_ru": "PAYLOAD: вымогатели парализуют домен через групповые политики AD без шифрования",
   "url": "https://www.kaspersky.com/about/press-releases/kaspersky-uncovers-new-payload-the-stealth-ransomware-that-hijacks-corporate-devices-without-encrypting-files",

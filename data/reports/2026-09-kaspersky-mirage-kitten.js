@@ -1,6 +1,6 @@
 RDB.add({
   "id": "2026-09-kaspersky-mirage-kitten",
-  "vendor": "kaspersky",
+  "vendor": "kaspersky-great",
   "title": "Mirage Kitten targets aviation and FinTech in the Middle East and Africa with a new malware set",
   "title_ru": "Mirage Kitten атакует авиацию и финтех Ближнего Востока и Африки новым набором ВПО",
   "url": "https://www.kaspersky.com/about/press-releases/kaspersky-great-uncovers-linkedin-recruitment-phishing-and-new-cross-platform-spyware-targeting-mea-by-mirage-kitten",

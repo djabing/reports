@@ -1,6 +1,6 @@
 RDB.add({
   "id": "2026-07-kaspersky-goserpent-espionage",
-  "vendor": "kaspersky",
+  "vendor": "kaspersky-great",
   "title": "Kaspersky uncovers a patient cyber-espionage campaign using new GoSerpent malware to harvest diplomatic secrets",
   "title_ru": "GoSerpent: долгосрочный кибершпионаж за дипломатами Юго-Восточной Азии",
   "url": "https://www.kaspersky.com/about/press-releases/kaspersky-uncovers-a-patient-cyber-espionage-campaign-using-new-goserpent-malware-to-harvest-diplomatic-secrets",

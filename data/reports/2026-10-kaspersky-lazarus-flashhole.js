@@ -1,6 +1,6 @@
 RDB.add({
   "id": "2026-10-kaspersky-lazarus-flashhole",
-  "vendor": "kaspersky",
+  "vendor": "kaspersky-great",
   "title": "Kaspersky identifies new Lazarus APT campaign utilizing AI and post-quantum encryption",
   "title_ru": "Lazarus Operation FlashHole: ИИ и постквантовое шифрование в кибершпионаже",
   "url": "https://www.kaspersky.com/about/press-releases/kaspersky-identifies-new-lazarus-apt-campaign-utilizing-ai-and-post-quantum-encryption",

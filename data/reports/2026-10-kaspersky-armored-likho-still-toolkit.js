@@ -1,6 +1,6 @@
 RDB.add({
   "id": "2026-10-kaspersky-armored-likho-still-toolkit",
-  "vendor": "kaspersky",
+  "vendor": "kaspersky-great",
   "title": "Armored Likho: inside the Still Toolkit",
   "title_ru": "Armored Likho: шпионаж через фальшивое приложение для пожертвований",
   "url": "https://securelist.com/armored-likho-still-toolkit/121033/",

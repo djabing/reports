@@ -1,6 +1,6 @@
 RDB.add({
   "id": "2026-11-kaspersky-ddos-for-hire-hacktivists",
-  "vendor": "kaspersky",
+  "vendor": "kaspersky-dfi",
   "title": "Hacktivists join forces with DDoS-for-hire providers",
   "title_ru": "Хактивисты объединяются с поставщиками DDoS-атак на заказ",
   "url": "https://www.msspalert.com/brief/kaspersky-research-reveals-link-between-hacktivists-and-ddos-for-hire-services",

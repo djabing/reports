@@ -1,6 +1,6 @@
 RDB.add({
   "id": "2026-08-kaspersky-q2-mobile",
-  "vendor": "kaspersky",
+  "vendor": "kaspersky-securelist",
   "title": "IT threat evolution in Q2 2026. Mobile statistics",
   "title_ru": "Мобильные угрозы во II квартале 2026",
   "url": "https://securelist.com/malware-report-q2-2026-mobile-statistics/120948/",

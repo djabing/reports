@@ -1,6 +1,6 @@
 RDB.add({
   "id": "2026-08-kaspersky-head-mare-trueconf",
-  "vendor": "kaspersky",
+  "vendor": "kaspersky-securelist",
   "title": "Organizations face new attacks via unpatched TrueConf videoconferencing servers",
   "title_ru": "Head Mare атакует организации через непропатченные серверы TrueConf",
   "url": "https://securelist.com/head-mare-targets-trueconf-server-with-phantomcore/120988/",
