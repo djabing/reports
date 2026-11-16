@@ -4,17 +4,29 @@ RDB.add({
   "group": "intl",
   "title": "Microsoft Digital Defense Report 2026",
   "title_ru": "Ежегодный доклад Microsoft о киберзащите 2026",
-  "url": "https://www.microsoft.com/en-us/security/blog/2026/10/01/insights-from-the-2026-microsoft-digital-defense-report/",
-  "pdf_url": "",
+  "url": "https://www.microsoft.com/en-us/corporate-responsibility/topics/cybersecurity/reports/microsoft-digital-defense-report/",
+  "pdf_url": "https://cdn-dynmedia-1.microsoft.com/is/content/microsoftcorp/microsoft/msc/documents/presentations/CSR/2026-Microsoft-Digital-Defense-Report.pdf",
   "published": "2026-10-01",
   "date_precision": "day",
   "added": "2026-10-15",
   "type": "landscape",
   "lang": "en",
   "importance": 3,
-  "tags": ["годовой", "identity", "ИИ", "supply chain", "госсектор"],
-  "sectors": ["Госсектор", "Все отрасли"],
-  "regions": ["Глобально", "Ближний Восток"],
+  "tags": [
+    "годовой",
+    "identity",
+    "ИИ",
+    "supply chain",
+    "госсектор"
+  ],
+  "sectors": [
+    "Госсектор",
+    "Все отрасли"
+  ],
+  "regions": [
+    "Глобально",
+    "Ближний Восток"
+  ],
   "tldr": "Главный годовой отчёт Microsoft: ИИ ускоряет и атаку, и защиту; идентичность остаётся главным входом в организацию; госсектор стал самой атакуемой отраслью (27% активности против 17% годом ранее).",
   "summary": "Microsoft выделяет три сдвига 2026 года: ИИ ускоряет обе стороны противостояния, компрометация учётных записей остаётся основным способом проникновения, а последствия инцидентов всё чаще выходят за пределы исходной жертвы (цепочки поставок, обновления ПО, экосистемы вендоров). Отдельно отмечен структурный сдвиг в сторону атак на инфраструктуру идентификации госорганов: фишинг как вектор вторжения вырос втрое, а злоупотребление действующими учётными записями фигурирует более чем в половине расследованных вторжений.",
   "key_findings": [
@@ -25,19 +37,45 @@ RDB.add({
     "Компрометация доверенных обновлений и экосистем вендоров переводит риск цепочки поставок в разряд угроз национальной безопасности."
   ],
   "stats": [
-    { "value": "27%", "label": "активности — против госсектора" },
-    { "value": "×3", "label": "рост фишинга как вектора" },
-    { "value": "93%", "label": "инцидентов — из-за слабого контроля доступа" },
-    { "value": ">50%", "label": "вторжений через валидные аккаунты" }
+    {
+      "value": "27%",
+      "label": "активности — против госсектора"
+    },
+    {
+      "value": "×3",
+      "label": "рост фишинга как вектора"
+    },
+    {
+      "value": "93%",
+      "label": "инцидентов — из-за слабого контроля доступа"
+    },
+    {
+      "value": ">50%",
+      "label": "вторжений через валидные аккаунты"
+    }
   ],
-  "actors": ["Flax Typhoon"],
+  "actors": [
+    "Flax Typhoon"
+  ],
   "malware": [],
   "cves": [],
   "ttps": [
-    { "id": "T1566", "name": "Phishing" },
-    { "id": "T1078", "name": "Valid Accounts" },
-    { "id": "T1190", "name": "Exploit Public-Facing Application" },
-    { "id": "T1195", "name": "Supply Chain Compromise" }
+    {
+      "id": "T1566",
+      "name": "Phishing"
+    },
+    {
+      "id": "T1078",
+      "name": "Valid Accounts"
+    },
+    {
+      "id": "T1190",
+      "name": "Exploit Public-Facing Application"
+    },
+    {
+      "id": "T1195",
+      "name": "Supply Chain Compromise"
+    }
   ],
   "recommendations": [
     "Фишингоустойчивая MFA (FIDO2/passkeys) для всех привилегированных и внешних учётных записей.",

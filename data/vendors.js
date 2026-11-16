@@ -45,5 +45,17 @@ window.RDB_VENDORS = {
   "deloitte":    { "name": "Deloitte",             "domain": "deloitte.com",           "color": "#86BC25", "group": "intl" },
   "thales":      { "name": "Thales",               "domain": "thalesgroup.com",        "color": "#242A75", "group": "intl" },
   "imf":         { "name": "МВФ",                  "domain": "imf.org",                "color": "#004C97", "group": "intl" },
+  "forescout":   { "name": "Forescout Vedere Labs", "domain": "forescout.com",         "color": "#E8730C" },
+  "securonix":   { "name": "Securonix",            "domain": "securonix.com",          "color": "#00A0DF" },
+  "cloudsek":    { "name": "CloudSEK",             "domain": "cloudsek.com",           "color": "#1A56DB" },
+  "lumen":       { "name": "Lumen (Black Lotus Labs)", "domain": "lumen.com",          "color": "#0047BB" },
+  "acronis":     { "name": "Acronis",              "domain": "acronis.com",            "color": "#0066CC" },
+  "apiiro":      { "name": "Apiiro",               "domain": "apiiro.com",             "color": "#5B3FD3" },
+  "elastic":     { "name": "Elastic Security",     "domain": "elastic.co",             "color": "#00BFB3" },
+  "mandiant":    { "name": "Mandiant (Google Cloud)", "domain": "mandiant.com",        "color": "#C8102E" },
+  "sans":        { "name": "SANS Institute",       "domain": "sans.org",               "color": "#C8102E", "group": "intl" },
+  "nctv":        { "name": "NCTV / NCSC (Нидерланды)", "domain": "nctv.nl",            "color": "#154273", "group": "intl" },
+  "certeu":      { "name": "CERT-EU",              "domain": "cert.europa.eu",         "color": "#004494", "group": "intl" },
+  "asd":         { "name": "ASD / ACSC (Австралия)", "domain": "cyber.gov.au",         "color": "#1C3F6E", "group": "intl" },
   // NEW-VENDOR-ANCHOR (не удалять: сборщик вставляет новых вендоров над этой строкой)
 };

@@ -1,12 +1,12 @@
 RDB.add({
   "id": "2026-10-pt-cyberthreats-q3",
   "vendor": "pt",
-  "title": "Анализ киберугроз в России за III квартал 2026 года",
-  "title_ru": "Анализ киберугроз в России за III квартал 2026 года",
-  "url": "https://telesputnik.ru/materials/infobez/news/analiz-kiberugroz-v-rossii-za-tretii-kvartal-2026-goda",
+  "title": "Анализ активности хакерских группировок в III квартале 2026 года",
+  "title_ru": "Анализ активности хакерских группировок в III квартале 2026 года",
+  "url": "https://ptsecurity.com/research/pt-esc-threat-intelligence/hacker-group-activity-q3-2026/",
   "pdf_url": "",
-  "published": "2026-10",
-  "date_precision": "month",
+  "published": "2026-11-12",
+  "date_precision": "day",
   "added": "2026-11-15",
   "type": "landscape",
   "lang": "ru",
@@ -76,5 +76,5 @@ RDB.add({
     "Отслеживать IoC Rare Werewolf и других активных в России групп."
   ],
   "why_it_matters": "Основной квартальный срез по российскому ландшафту: подтверждает перенос этапов атак на ИИ-агентов и в российском сегменте.",
-  "source_note": "Выжимка по публикациям Телеспутника и SecurityLab на основе данных PT ESC и PT AF Cloud."
+  "source_note": "Выжимка по публикациям Телеспутника и SecurityLab на основе данных PT ESC; первоисточник — ptsecurity.com."
 });

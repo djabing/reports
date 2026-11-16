@@ -1,10 +1,10 @@
 RDB.add({
   "id": "2026-11-ncsc-annual-review-2026",
   "vendor": "ncsc",
-  "title": "NCSC Annual Review 2026",
+  "title": "NCSC Annual Review 2026: The State of the Cyber Nation",
   "title_ru": "Ежегодный обзор Национального центра кибербезопасности Великобритании 2026",
-  "url": "https://www.ncsc.gov.uk/collection/annual-review-2026/understanding-threat/incident-management",
-  "pdf_url": "",
+  "url": "https://www.ncsc.gov.uk/collection/annual-review-2026",
+  "pdf_url": "https://www.ncsc.gov.uk/sites/default/files/2026-11/ncsc-annual-review-2026.pdf",
   "published": "2026-11-03",
   "date_precision": "day",
   "added": "2026-11-15",
