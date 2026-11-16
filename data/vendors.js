@@ -28,7 +28,6 @@ window.RDB_VENDORS = {
   "qualys":      { "name": "Qualys",               "domain": "qualys.com",             "color": "#ED2E26" },
   "cisco-talos": { "name": "Cisco Talos",          "domain": "talosintelligence.com",  "color": "#049FD9" },
   "sophos":      { "name": "Sophos",               "domain": "sophos.com",             "color": "#005BC8" },
-  "recordedfuture": { "name": "Recorded Future",   "domain": "recordedfuture.com",     "color": "#1F2A44" },
   "proofpoint":  { "name": "Proofpoint",           "domain": "proofpoint.com",         "color": "#2C5EA8" },
   "sentinelone": { "name": "SentinelOne",          "domain": "sentinelone.com",        "color": "#6B2FD9" },
   "verizon":     { "name": "Verizon",              "domain": "verizon.com",            "color": "#EE0000", "group": "intl" },
