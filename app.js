@@ -83,6 +83,18 @@ function loc(r){
     why_it_matters: e.why_it_matters || r.why_it_matters, __en: true });
 }
 const T = s => (enOn() && EN_UI[s]) || s;
+/* Ограничения по законодательству РФ (data/legal.js): сноски к упоминаниям и запрет источников */
+const LEGAL = window.RDB_LEGAL || { blocked_sources: [], marked_mentions: [] };
+const LEGAL_RX = (LEGAL.marked_mentions || []).map(m => ({ rx: new RegExp(m.pattern, "i"), note: m.note }));
+function legalNotes(r){
+  const text = [r.title, r.title_ru, r.tldr, r.summary, (r.key_findings||[]).join(" "), (r.recommendations||[]).join(" "),
+    r.why_it_matters, (r.actors||[]).join(" "), (r.malware||[]).join(" "), (r.tags||[]).join(" ")].join(" ");
+  return LEGAL_RX.filter(m => m.rx.test(text)).map(m => m.note);
+}
+function isBlocked(r){
+  let host = ""; try { host = new URL(r.url).hostname.replace(/^www\./, ""); } catch(e){}
+  return (LEGAL.blocked_sources || []).some(b => b.id === r.vendor || (b.domains || []).some(d => host === d || host.endsWith("." + d)));
+}
 function groupOf(r){
   if (r.group && GROUPS[r.group]) return r.group;
   const g = ((window.RDB_VENDORS || {})[r.vendor] || {}).group;
@@ -216,6 +228,7 @@ function card(r, i){
     <h3 class="c-title">${esc(title)}</h3>${orig ? `<div class="c-orig">${esc(orig)}</div>` : ""}
     <div class="c-tldr">${esc(r.tldr)}</div>
     ${statsMini(r)}
+    ${legalNotes(r).length ? `<div class="c-legal">* ${legalNotes(r).map(esc).join(" ")}</div>` : ""}
     <div class="c-foot">${typeBadge(r)}${(r.tags||[]).slice(0, 3).map(t => `<span class="chip">${esc(t)}</span>`).join("")}</div>
   </article>`;
 }
@@ -365,6 +378,7 @@ function openReader(i){
     ${(r.cves||[]).length ? `<div class="sec"><h3>Уязвимости</h3>${chipList(r.cves, "cve")}</div>` : ""}
     ${(r.tags||[]).length ? `<div class="sec"><h3>Темы</h3><div class="chips">${r.tags.map(t => `<button class="chip" data-tagopen="${esc(t)}">#${esc(t)}</button>`).join("")}</div></div>` : ""}
     <div class="sec"><h3>Мои заметки</h3><textarea class="note" id="note" placeholder="Выводы для своей организации, к кому передать, что проверить…">${esc(notes[r.id] || "")}</textarea></div>
+    ${legalNotes(r).length ? `<div class="legal-note">${legalNotes(r).map(n => `<p>* ${esc(n)}</p>`).join("")}</div>` : ""}
     <div class="src">${esc(r.source_note || "")}${r.added ? ` · Добавлено в библиотеку: ${esc(r.added)}` : ""}</div>
     <div class="hint"><span><span class="kbd">←</span><span class="kbd">→</span> соседние отчёты</span><span><span class="kbd">f</span> избранное</span><span><span class="kbd">Esc</span> закрыть</span></div>
   </div>`;
@@ -501,7 +515,7 @@ function stamp(){
 }
 load().then(() => {
   const seen = new Set();
-  ALL = RDB.items.filter(r => !seen.has(r.id) && seen.add(r.id));
+  ALL = RDB.items.filter(r => !seen.has(r.id) && seen.add(r.id) && !isBlocked(r));
   stamp(); applyHash();
   window.addEventListener("hashchange", applyHash);
 });
