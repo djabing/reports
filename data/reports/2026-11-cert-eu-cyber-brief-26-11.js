@@ -11,6 +11,7 @@ RDB.add({
   "type": "vulnerabilities",
   "lang": "en",
   "importance": 2,
+  "tier": "analytics",
   "tags": [
     "ежемесячный",
     "уязвимости",

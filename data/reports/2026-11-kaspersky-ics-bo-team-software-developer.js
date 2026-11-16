@@ -11,6 +11,7 @@ RDB.add({
   "type": "apt",
   "lang": "ru",
   "importance": 3,
+  "tier": "case",
   "tags": [
     "цепочка поставок",
     "Россия",

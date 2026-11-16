@@ -11,6 +11,7 @@ RDB.add({
   "type": "vulnerabilities",
   "lang": "en",
   "importance": 3,
+  "tier": "case",
   "tags": [
     "Patch Tuesday",
     "0-day",

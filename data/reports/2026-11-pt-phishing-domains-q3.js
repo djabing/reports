@@ -11,6 +11,7 @@ RDB.add({
   "type": "phishing",
   "lang": "ru",
   "importance": 2,
+  "tier": "analytics",
   "tags": [
     "фишинг",
     "мессенджеры",

@@ -11,9 +11,25 @@ RDB.add({
   "type": "apt",
   "lang": "en",
   "importance": 2,
-  "tags": ["APT", "Иран", "LinkedIn", "кроссплатформенный RAT", "Node.js"],
-  "sectors": ["Авиация", "Финтех"],
-  "regions": ["Египет", "Эфиопия", "Афганистан", "Ближний Восток", "Африка"],
+  "tier": "case",
+  "tags": [
+    "APT",
+    "Иран",
+    "LinkedIn",
+    "кроссплатформенный RAT",
+    "Node.js"
+  ],
+  "sectors": [
+    "Авиация",
+    "Финтех"
+  ],
+  "regions": [
+    "Египет",
+    "Эфиопия",
+    "Афганистан",
+    "Ближний Восток",
+    "Африка"
+  ],
   "tldr": "Kaspersky GReAT обнаружила кампанию иранской Mirage Kitten с фейковым рекрутингом в LinkedIn и тестовыми заданиями для разработчиков. Новые кроссплатформенные RAT NodeRabbit (Node.js) и PollCat (JavaScript) — первое применение таких языков группой; также бэкдор NightLedger.",
   "summary": "Целевая шпионская кампания против авиационных и финтех-компаний в Египте, Эфиопии и Афганистане. Операторы рассылают в LinkedIn и на других площадках поиска работы «тестовые задания» — троянизированные архивы с кодом. Внутри — ранее не описанные кроссплатформенные трояны удалённого доступа.",
   "key_findings": [
@@ -24,16 +40,37 @@ RDB.add({
     "Дополнительно обнаружен бэкдор NightLedger для шпионских операций в регионе."
   ],
   "stats": [
-    { "value": "3", "label": "новых семейства ВПО" },
-    { "value": "3", "label": "страны-цели" }
+    {
+      "value": "3",
+      "label": "новых семейства ВПО"
+    },
+    {
+      "value": "3",
+      "label": "страны-цели"
+    }
   ],
-  "actors": ["Mirage Kitten"],
-  "malware": ["NodeRabbit", "PollCat", "NightLedger"],
+  "actors": [
+    "Mirage Kitten"
+  ],
+  "malware": [
+    "NodeRabbit",
+    "PollCat",
+    "NightLedger"
+  ],
   "cves": [],
   "ttps": [
-    { "id": "T1566.003", "name": "Spearphishing via Service" },
-    { "id": "T1204.002", "name": "Malicious File" },
-    { "id": "T1059.007", "name": "JavaScript" }
+    {
+      "id": "T1566.003",
+      "name": "Spearphishing via Service"
+    },
+    {
+      "id": "T1204.002",
+      "name": "Malicious File"
+    },
+    {
+      "id": "T1059.007",
+      "name": "JavaScript"
+    }
   ],
   "recommendations": [
     "Запретить запуск «тестовых заданий» от рекрутеров на рабочих машинах; использовать песочницы.",

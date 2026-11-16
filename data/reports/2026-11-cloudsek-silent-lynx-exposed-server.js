@@ -11,6 +11,7 @@ RDB.add({
   "type": "apt",
   "lang": "en",
   "importance": 3,
+  "tier": "case",
   "tags": [
     "APT",
     "Центральная Азия",

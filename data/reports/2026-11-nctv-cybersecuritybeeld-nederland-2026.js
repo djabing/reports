@@ -11,6 +11,7 @@ RDB.add({
   "type": "landscape",
   "lang": "nl",
   "importance": 2,
+  "tier": "key",
   "tags": [
     "госрегулятор",
     "Нидерланды",

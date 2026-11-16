@@ -11,6 +11,7 @@ RDB.add({
   "type": "ransomware",
   "lang": "en",
   "importance": 2,
+  "tier": "analytics",
   "tags": [
     "квартальный",
     "вымогатели",

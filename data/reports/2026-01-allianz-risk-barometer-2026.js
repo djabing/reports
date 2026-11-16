@@ -11,6 +11,7 @@ RDB.add({
   "type": "industry",
   "lang": "en",
   "importance": 2,
+  "tier": "key",
   "tags": [
     "бизнес-риски",
     "страхование",

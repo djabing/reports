@@ -11,9 +11,21 @@ RDB.add({
   "type": "landscape",
   "lang": "en",
   "importance": 2,
-  "tags": ["статистика", "квартальный", "ransomware", "майнеры", "macOS", "IoT"],
-  "sectors": ["Все отрасли"],
-  "regions": ["Глобально"],
+  "tier": "analytics",
+  "tags": [
+    "статистика",
+    "квартальный",
+    "ransomware",
+    "майнеры",
+    "macOS",
+    "IoT"
+  ],
+  "sectors": [
+    "Все отрасли"
+  ],
+  "regions": [
+    "Глобально"
+  ],
   "tldr": "Kaspersky за Q2 2026: ~400 млн заблокированных веб-атак, 2 538 новых модификаций вымогателей, Qilin снова №1 по жертвам на DLS (14,57%), число новых майнеров почти удвоилось.",
   "summary": "Квартальная статистика Securelist по данным продуктов Kaspersky. Активность вымогателей стабилизировалась после пиков прошлых кварталов, но Qilin вернул лидерство и, по данным Check Point, эксплуатировал 0-day в Check Point Remote Access VPN. Отмечены ликвидация Microsoft сервиса подписи вредоносного ПО Fox Tempest, эксплуатация BlueHammer (CVE-2026-33825) в атаках вымогателей и использование QEMU-виртуалок для скрытия инструментов группировкой PayoutsKing. На macOS — GlassWorm через расширения IDE и бэкдор FlutterShell, прошедший нотаризацию Apple.",
   "key_findings": [
@@ -26,20 +38,64 @@ RDB.add({
     "Майнеры: 6 067 новых вариантов (почти ×2), 213 003 атакованных пользователя."
   ],
   "stats": [
-    { "value": "~400 млн", "label": "заблокированных веб-атак" },
-    { "value": "2 538", "label": "новых модификаций вымогателей" },
-    { "value": "14,57%", "label": "жертв DLS — Qilin" },
-    { "value": "213 003", "label": "пользователя атаковано майнерами" }
+    {
+      "value": "~400 млн",
+      "label": "заблокированных веб-атак"
+    },
+    {
+      "value": "2 538",
+      "label": "новых модификаций вымогателей"
+    },
+    {
+      "value": "14,57%",
+      "label": "жертв DLS — Qilin"
+    },
+    {
+      "value": "213 003",
+      "label": "пользователя атаковано майнерами"
+    }
   ],
-  "actors": ["Qilin", "Akira", "DragonForce", "Fox Tempest", "PayoutsKing"],
-  "malware": ["GlassWorm", "FlutterShell", "Coruna", "Lumma", "Vidar", "Oyster"],
-  "cves": ["CVE-2026-50751", "CVE-2026-50752", "CVE-2026-33825"],
+  "actors": [
+    "Qilin",
+    "Akira",
+    "DragonForce",
+    "Fox Tempest",
+    "PayoutsKing"
+  ],
+  "malware": [
+    "GlassWorm",
+    "FlutterShell",
+    "Coruna",
+    "Lumma",
+    "Vidar",
+    "Oyster"
+  ],
+  "cves": [
+    "CVE-2026-50751",
+    "CVE-2026-50752",
+    "CVE-2026-33825"
+  ],
   "ttps": [
-    { "id": "T1486", "name": "Data Encrypted for Impact" },
-    { "id": "T1190", "name": "Exploit Public-Facing Application" },
-    { "id": "T1564.006", "name": "Run Virtual Instance" },
-    { "id": "T1553.002", "name": "Code Signing" },
-    { "id": "T1496", "name": "Resource Hijacking" }
+    {
+      "id": "T1486",
+      "name": "Data Encrypted for Impact"
+    },
+    {
+      "id": "T1190",
+      "name": "Exploit Public-Facing Application"
+    },
+    {
+      "id": "T1564.006",
+      "name": "Run Virtual Instance"
+    },
+    {
+      "id": "T1553.002",
+      "name": "Code Signing"
+    },
+    {
+      "id": "T1496",
+      "name": "Resource Hijacking"
+    }
   ],
   "recommendations": [
     "Срочно проверить обновление Check Point Remote Access VPN / Mobile Access (CVE-2026-50751).",

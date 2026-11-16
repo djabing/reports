@@ -11,9 +11,21 @@ RDB.add({
   "type": "landscape",
   "lang": "en",
   "importance": 2,
-  "tags": ["полугодовой", "ClickFix", "ИИ", "Android", "QR-фишинг", "EDR killers"],
-  "sectors": ["Все отрасли"],
-  "regions": ["Глобально"],
+  "tier": "key",
+  "tags": [
+    "полугодовой",
+    "ClickFix",
+    "ИИ",
+    "Android",
+    "QR-фишинг",
+    "EDR killers"
+  ],
+  "sectors": [
+    "Все отрасли"
+  ],
+  "regions": [
+    "Глобально"
+  ],
   "tldr": "ClickFix вырос на 108% и мутировал в ConsentFix (угон облачных аккаунтов через OAuth без кражи пароля); найден PromptSpy — первый Android-зловред с GenAI в цепочке выполнения; в атаках вымогателей замечено 100+ «убийц EDR».",
   "summary": "Полугодовой обзор телеметрии ESET за декабрь 2025 — май 2026. Злоумышленники не столько изобретают новое, сколько доводят до совершенства проверенные техники. Отдельное исследование экосистемы «ИИ-навыков» (skills) для агентов выявило тысячи вредоносных экземпляров. Растёт QR-фишинг (quishing).",
   "key_findings": [
@@ -24,18 +36,41 @@ RDB.add({
     "Более 100 различных EDR killers задокументировано в атаках вымогателей."
   ],
   "stats": [
-    { "value": "+108%", "label": "детектов ClickFix" },
-    { "value": "3 000+", "label": "вредоносных ИИ-навыков" },
-    { "value": "100+", "label": "EDR killers" }
+    {
+      "value": "+108%",
+      "label": "детектов ClickFix"
+    },
+    {
+      "value": "3 000+",
+      "label": "вредоносных ИИ-навыков"
+    },
+    {
+      "value": "100+",
+      "label": "EDR killers"
+    }
   ],
   "actors": [],
-  "malware": ["PromptSpy"],
+  "malware": [
+    "PromptSpy"
+  ],
   "cves": [],
   "ttps": [
-    { "id": "T1204.004", "name": "Malicious Copy and Paste" },
-    { "id": "T1528", "name": "Steal Application Access Token" },
-    { "id": "T1562.001", "name": "Disable or Modify Tools" },
-    { "id": "T1068", "name": "Exploitation for Privilege Escalation" }
+    {
+      "id": "T1204.004",
+      "name": "Malicious Copy and Paste"
+    },
+    {
+      "id": "T1528",
+      "name": "Steal Application Access Token"
+    },
+    {
+      "id": "T1562.001",
+      "name": "Disable or Modify Tools"
+    },
+    {
+      "id": "T1068",
+      "name": "Exploitation for Privilege Escalation"
+    }
   ],
   "recommendations": [
     "Обучить пользователей: никогда не вставлять команды из браузера в Win+R/терминал.",

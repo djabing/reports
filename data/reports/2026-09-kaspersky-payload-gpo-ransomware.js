@@ -11,9 +11,20 @@ RDB.add({
   "type": "ransomware",
   "lang": "en",
   "importance": 3,
-  "tags": ["ransomware", "Active Directory", "GPO", "VPN", "расследование"],
-  "sectors": ["Промышленность"],
-  "regions": ["Ближний Восток"],
+  "tier": "case",
+  "tags": [
+    "ransomware",
+    "Active Directory",
+    "GPO",
+    "VPN",
+    "расследование"
+  ],
+  "sectors": [
+    "Промышленность"
+  ],
+  "regions": [
+    "Ближний Восток"
+  ],
   "tldr": "Kaspersky GERT расследовала атаку, где вымогатели не запускали шифровальщик: через вредоносную GPO «PAYLOAD» в корне домена они отключили локальных админов, развесили требования выкупа на все экраны и выключили брандмауэр, а украденные данные опубликовали в даркнете.",
   "summary": "Разбор реального инцидента в производственной компании на Ближнем Востоке (апрель 2026). Вход — через FortiGate SSL VPN по валидной, но скомпрометированной доменной учётке. Получив права, атакующие создали GPO с именем PAYLOAD и привязали её к корню домена, плюс вторую политику «win Firewall Off». Шифрование не понадобилось — бизнес был парализован самой инфраструктурой управления.",
   "key_findings": [
@@ -24,18 +35,41 @@ RDB.add({
     "Атака обходит защиту, настроенную на детект шифрования."
   ],
   "stats": [
-    { "value": "0", "label": "зашифрованных файлов" },
-    { "value": "2", "label": "вредоносные GPO" }
+    {
+      "value": "0",
+      "label": "зашифрованных файлов"
+    },
+    {
+      "value": "2",
+      "label": "вредоносные GPO"
+    }
   ],
   "actors": [],
-  "malware": ["PAYLOAD"],
+  "malware": [
+    "PAYLOAD"
+  ],
   "cves": [],
   "ttps": [
-    { "id": "T1133", "name": "External Remote Services" },
-    { "id": "T1078.002", "name": "Valid Accounts: Domain Accounts" },
-    { "id": "T1484.001", "name": "Group Policy Modification" },
-    { "id": "T1562.004", "name": "Disable or Modify System Firewall" },
-    { "id": "T1531", "name": "Account Access Removal" }
+    {
+      "id": "T1133",
+      "name": "External Remote Services"
+    },
+    {
+      "id": "T1078.002",
+      "name": "Valid Accounts: Domain Accounts"
+    },
+    {
+      "id": "T1484.001",
+      "name": "Group Policy Modification"
+    },
+    {
+      "id": "T1562.004",
+      "name": "Disable or Modify System Firewall"
+    },
+    {
+      "id": "T1531",
+      "name": "Account Access Removal"
+    }
   ],
   "recommendations": [
     "Мониторить создание и изменение GPO, особенно привязанных к корню домена; следить за изменениями в SYSVOL.",

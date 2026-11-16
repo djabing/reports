@@ -11,6 +11,7 @@ RDB.add({
   "type": "ics",
   "lang": "ru",
   "importance": 2,
+  "tier": "analytics",
   "tags": [
     "промышленность",
     "ИИ",
