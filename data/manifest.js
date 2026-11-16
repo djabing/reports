@@ -1,11 +1,14 @@
 // Реестр отчётов. Каждая строка = файл data/reports/<id>.js.
 // Сборщик добавляет новые строки сразу под якорем и обновляет "updated" и "build".
 window.RDB_MANIFEST = {
-  "updated": "2026-11-16T12:00:00+03:00",
-  "build": "2026-11-16.12",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
-  "last_run_note": "Раздел Kaspersky разбит по командам (GReAT, ICS CERT, GERT, DFI, Securelist, пресс-релизы); +8 исследований Kaspersky.",
+  "updated": "2026-11-16T17:40:00+03:00",
+  "build": "2026-11-16.13",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
+  "last_run_note": "+3 отчёта вендоров: Google GTIG AI Threat Tracker (ноябрь 2026), Unit 42 — Cairn (автономные ИИ-атаки CL-STA-1238) и Falcon C2 (шпионаж через браузер).",
   "reports": [
     // NEW-REPORT-ANCHOR (не удалять: сборщик вставляет новые записи под этой строкой)
+    { "id": "2026-11-google-gtig-ai-threat-tracker-agentic-threshold", "url": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold", "title": "GTIG AI Threat Tracker: Agentic Threat Activity Crosses a Significant Threshold", "added": "2026-11-16" },
+    { "id": "2026-11-unit42-cairn-autonomous-ai-attacks", "url": "https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/", "title": "Attackers Use Autonomous AI to Target Semiconductor, Defense and Civil Society Sectors", "added": "2026-11-16" },
+    { "id": "2026-11-unit42-falcon-c2-browser", "url": "https://unit42.paloaltonetworks.com/falcon-c2-browser-compromise/", "title": "The XG Files: Falcon C2 Flying Under The (Browser) Radar", "added": "2026-11-16" },
     { "id": "2026-11-kaspersky-ics-bo-team-software-developer", "url": "https://safe.cnews.ru/news/line/2026-11-09_laboratoriya_kasperskogo", "title": "«Лаборатория Касперского» раскрыла многомесячную кибератаку на разработчика ПО в России", "added": "2026-11-16" },
     { "id": "2026-11-kaspersky-vasygrek-attacks", "url": "https://www.kaspersky.ru/about/press-releases/laboratoriya-kasperskogo-zafiksirovala-bolee-100-popytok-atak-gruppy-vasygrek-na-organizacii-v-rossii-i-stranah-sng-v-2026-godu", "title": "«Лаборатория Касперского» зафиксировала более 100 попыток атак группы VasyGrek на организации в России и странах СНГ в 2026 году", "added": "2026-11-16" },
     { "id": "2026-11-kaspersky-retadup-returns", "url": "https://www.kaspersky.ru/about/press-releases/fleshka-s-syurprizom-pobezhdyonnyj-cherv-retadup-vnov-zarazhaet-ustrojstva-polzovatelej-v-rossii-spustya-sem-let", "title": "Флешка с сюрпризом: побеждённый червь Retadup вновь заражает устройства пользователей в России спустя семь лет", "added": "2026-11-16" },
