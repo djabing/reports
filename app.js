@@ -436,6 +436,14 @@ function setFilter(patch){
 document.addEventListener("click", e => {
   const t = e.target.closest("button,a,[data-i],textarea,input");
   if (!t) return;
+  if (t.dataset.home){   /* логотип и название — на главную: «Международная аналитика», все фильтры и поиск сброшены */
+    e.preventDefault();
+    if (S.open !== null) closeReader();
+    $("#q").value = "";
+    S.group = "intl";
+    setFilter({ view: "all", type: null, vendor: null, tag: null, q: "" });
+    return;
+  }
   if (t.dataset.fav){ e.stopPropagation(); toggleFav(t.dataset.fav); render(); return; }
   if (t.dataset.group){ S.group = t.dataset.group; setFilter({ view: "all", type: null, vendor: null, tag: null }); return; }
   if (t.dataset.lang){ S.lang = t.dataset.lang; store.set("lang", S.lang); renderMain(); writeHash(); return; }
