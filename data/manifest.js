@@ -1,11 +1,17 @@
 // Реестр отчётов. Каждая строка = файл data/reports/<id>.js.
 // Сборщик добавляет новые строки сразу под якорем и обновляет "updated" и "build".
 window.RDB_MANIFEST = {
-  "updated": "2026-11-16T17:40:00+03:00",
-  "build": "2026-11-16.13",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
-  "last_run_note": "+3 отчёта вендоров: Google GTIG AI Threat Tracker (ноябрь 2026), Unit 42 — Cairn (автономные ИИ-атаки CL-STA-1238) и Falcon C2 (шпионаж через браузер).",
+  "updated": "2026-11-16T17:35:00+03:00",
+  "build": "2026-11-16.20",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
+  "last_run_note": "+6 Kaspersky: Citrus (GERT), Arra Ghouls (Securelist), рассылка через Google Data Studio, опросы о киберкультуре и мобильных геймерах, Киберпульс H1 2026.",
   "reports": [
     // NEW-REPORT-ANCHOR (не удалять: сборщик вставляет новые записи под этой строкой)
+    { "id": "2026-11-kaspersky-cyberculture-survey", "url": "https://www.kaspersky.ru/about/press-releases/laboratoriya-kasperskogo-pochti-60-rossiyan-veryat-chto-kiberkultura-stanet-vazhnoj-chastyu-obshestva", "title": "«Лаборатория Касперского»: почти 60% россиян верят, что киберкультура станет важной частью общества", "added": "2026-11-16" },
+    { "id": "2026-11-kaspersky-google-data-studio-compensation-scam", "url": "https://www.kaspersky.ru/about/press-releases/laboratoriya-kasperskogo-obnaruzhila-moshennicheskuyu-rassylku-o-kompensacionnyh-vyplatah-cherez-servis-google", "title": "«Лаборатория Касперского» обнаружила мошенническую рассылку о компенсационных выплатах через сервис Google", "added": "2026-11-16" },
+    { "id": "2026-11-kaspersky-citrus-ransomware", "url": "https://www.kaspersky.ru/about/press-releases/novaya-gruppa-shifrovalshikov-citrus-atakovala-rossijskie-organizacii-cherez-podryadchikov", "title": "Новая группа шифровальщиков Citrus атаковала российские организации через подрядчиков", "added": "2026-11-16" },
+    { "id": "2026-11-kaspersky-arra-ghouls", "url": "https://www.kaspersky.ru/about/press-releases/laboratoriya-kasperskogo-obnaruzhila-novuyu-gruppu-arra-ghouls-atakuyushuyu-rossijskie-organizacii", "title": "«Лаборатория Касперского» обнаружила новую группу Arra Ghouls, атакующую российские организации", "added": "2026-11-16" },
+    { "id": "2026-11-kaspersky-mobile-gamers-survey", "url": "https://www.kaspersky.ru/about/press-releases/kazhdyj-tretij-mobilnyj-gejmer-v-rossii-gotov-risknut-bezopasnostyu-radi-ponravivshejsya-igry", "title": "Каждый третий мобильный геймер в России готов рискнуть безопасностью ради понравившейся игры", "added": "2026-11-16" },
+    { "id": "2026-10-kaspersky-cyberpulse-h1-exploits", "url": "https://www.kaspersky.ru/about/press-releases/chislo-atak-s-vredonosnym-po-ekspluatiruyushim-uyazvimosti-v-rossii-vyroslo-na-24-v-2026-godu", "title": "Число атак с вредоносным ПО, эксплуатирующим уязвимости, в России выросло на 24% в 2026 году", "added": "2026-11-16" },
     { "id": "2026-11-google-gtig-ai-threat-tracker-agentic-threshold", "url": "https://cloud.google.com/blog/topics/threat-intelligence/agentic-threat-activity-crosses-a-significant-threshold", "title": "GTIG AI Threat Tracker: Agentic Threat Activity Crosses a Significant Threshold", "added": "2026-11-16" },
     { "id": "2026-11-unit42-cairn-autonomous-ai-attacks", "url": "https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/", "title": "Attackers Use Autonomous AI to Target Semiconductor, Defense and Civil Society Sectors", "added": "2026-11-16" },
     { "id": "2026-11-unit42-falcon-c2-browser", "url": "https://unit42.paloaltonetworks.com/falcon-c2-browser-compromise/", "title": "The XG Files: Falcon C2 Flying Under The (Browser) Radar", "added": "2026-11-16" },
