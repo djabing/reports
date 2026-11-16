@@ -1,10 +1,11 @@
 // Справочник вендоров: брендовый цвет и домен для логотипа.
 // "group": "intl" — раздел «Международная аналитика» (консалтинг, аналитические агентства, межд. организации);
+// "group": "kasp" — отдельный раздел «Kaspersky»;
 // "group": "comp" — скрытый раздел «Конкуренты» (PT и аффилированные, F6). Без group — основной раздел «Вендоры ИБ».
 // Сборщик добавляет сюда новых вендоров (строкой перед якорем). Если вендора нет —
 // интерфейс возьмёт имя и домен из самого отчёта.
 window.RDB_VENDORS = {
-  "kaspersky":   { "name": "Kaspersky",            "domain": "kaspersky.com",          "color": "#00A88E" },
+  "kaspersky":   { "name": "Kaspersky",            "domain": "kaspersky.com",          "color": "#00A88E", "group": "kasp" },
   "pt":          { "name": "Positive Technologies","domain": "ptsecurity.com",         "color": "#D7262B", "group": "comp" },
   "bizone":      { "name": "BI.ZONE",              "domain": "bi.zone",                "color": "#1E5BFF" },
   "f6":          { "name": "F6",                   "domain": "f6.ru",                  "color": "#E4002B", "group": "comp" },

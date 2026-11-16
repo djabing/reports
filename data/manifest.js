@@ -2,7 +2,7 @@
 // Сборщик добавляет новые строки сразу под якорем и обновляет "updated" и "build".
 window.RDB_MANIFEST = {
   "updated": "2026-11-16T12:00:00+03:00",
-  "build": "2026-11-16.2",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
+  "build": "2026-11-16.3",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
   "last_run_note": "Сверка с подборкой за 16.05–16.11.2026: +22 отчёта (ENISA, NCSC, ASD, NCTV, CERT-EU, SANS, Gartner ×3, Forescout, Proofpoint, Microsoft, Elastic, Acronis, Lumen, Apiiro, CloudSEK, Securonix, Mandiant, BI.ZONE, PT ×2); ссылки заменены на первоисточники; +17 отчётов Kaspersky (май–ноябрь 2026).",
   "reports": [
     // NEW-REPORT-ANCHOR (не удалять: сборщик вставляет новые записи под этой строкой)
