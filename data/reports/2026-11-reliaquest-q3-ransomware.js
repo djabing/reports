@@ -85,5 +85,41 @@ RDB.add({
     "Приоритизировать патчинг периметровых устройств и VPN."
   ],
   "why_it_matters": "Важная поправка к «рекордным» цифрам вымогателей: показатели DLS всё хуже отражают реальное число атак.",
-  "source_note": "Выжимка по обзорам отчёта ReliaQuest в СМИ (Cyber Security News, Cyber Daily)."
+  "source_note": "Выжимка по обзорам отчёта ReliaQuest в СМИ (Cyber Security News, Cyber Daily).",
+  "en": {
+    "tldr": "The number of organisations on leak sites rose 30%, but 93% of the growth came from 43 new groups, some of which publish recycled or false claims. ReliaQuest estimates real attack growth is much smaller.",
+    "summary": "ReliaQuest warns against confusing growth in DLS postings with growth in attacks. 43 groups that first appeared in Q3 accounted for 93% of the growth, while groups active in both Q2 and Q3 saw victims rise only 1%. Some new names are data brokers and pure extortion groups rather than classic ransomware operators. The Storm group posted 71 victims in 20 days — more than DragonForce and LockBit. Established players (Qilin, The Gentlemen) exploit perimeter systems and vulnerable drivers to disable EDR.",
+    "key_findings": [
+      "+30% organisations on leak sites in the quarter.",
+      "43 new groups accounted for 93% of the growth; 'old' groups grew only 1%.",
+      "Storm: 71 victims in 20 days — more than DragonForce and LockBit.",
+      "Some new postings are recycled or false claims.",
+      "Qilin and The Gentlemen use vulnerable drivers (BYOVD) to disable EDR."
+    ],
+    "stats": [
+      {
+        "value": "+30%",
+        "label": "victims on DLS"
+      },
+      {
+        "value": "43",
+        "label": "new groups"
+      },
+      {
+        "value": "93%",
+        "label": "of growth — from new groups"
+      },
+      {
+        "value": "71",
+        "label": "Storm victims in 20 days"
+      }
+    ],
+    "recommendations": [
+      "Verify breach claims on DLS before reacting publicly — some are false.",
+      "Block loading of known vulnerable drivers (Microsoft Vulnerable Driver Blocklist).",
+      "Prioritise patching perimeter devices and VPNs."
+    ],
+    "why_it_matters": "An important correction to 'record' ransomware figures: DLS numbers increasingly fail to reflect the real number of attacks.",
+    "source_note": "Summary based on media coverage of the ReliaQuest report (Cyber Security News, Cyber Daily)."
+  }
 });

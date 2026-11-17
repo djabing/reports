@@ -40,5 +40,21 @@ RDB.add({
     "Внедрять автоматизацию реагирования (SOAR, автономные плейбуки) для типовых сценариев."
   ],
   "why_it_matters": "Сходится с выводами Anthropic и CrowdStrike: 2026 — год агентных атак.",
-  "source_note": "Выжимка по пресс-релизу Check Point; детальные цифры — в полном отчёте."
+  "source_note": "Выжимка по пресс-релизу Check Point; детальные цифры — в полном отчёте.",
+  "en": {
+    "tldr": "Check Point sees AI moving 'from assistant to operator': AI is already running live intrusions with minimal human involvement, changing the rules of both attack and defence.",
+    "summary": "Check Point Research's annual report on AI's role in cyberattacks. The key thesis is that AI is no longer a supporting tool (writing phishing or code) but an attack executor able to carry out stages of an intrusion on its own. The report also looks at autonomous defence as the answer to machine-speed attacks.",
+    "key_findings": [
+      "AI has moved from being the attacker's assistant to operating attacks.",
+      "Live intrusions run by AI with minimal human direction have been observed.",
+      "Defence must also become autonomous to keep up with attack speed."
+    ],
+    "stats": [],
+    "recommendations": [
+      "Revisit MTTD/MTTR metrics with machine-speed attacks in mind.",
+      "Automate response (SOAR, autonomous playbooks) for common scenarios."
+    ],
+    "why_it_matters": "Consistent with Anthropic and CrowdStrike: 2026 is the year of agentic attacks.",
+    "source_note": "Summary based on the Check Point press release; detailed figures are in the full report."
+  }
 });

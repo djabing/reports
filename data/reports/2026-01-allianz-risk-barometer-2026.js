@@ -88,6 +88,7 @@ RDB.add({
       "Assess dependence on critical IT service providers.",
       "For SMEs — consider cyber insurance and MDR services."
     ],
-    "why_it_matters": "Shows how the insurance market and top management see cyber risk — a strong budget argument."
+    "why_it_matters": "Shows how the insurance market and top management see cyber risk — a strong budget argument.",
+    "source_note": "Summary based on Allianz Commercial materials and coverage (Claims Journal, Business Wire)."
   }
 });

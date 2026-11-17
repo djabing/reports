@@ -92,5 +92,42 @@ RDB.add({
     "Детектировать поведение: канареечные логины в журналах IdP, первое использование облачного ключа с нового IP, тесты «записал — удалил» в хранилищах."
   ],
   "why_it_matters": "Открытые ИИ-фреймворки для пентеста стали массовым инструментом атакующих: они дёшевы, быстры и находят слабые места в процессах идентификации, а не в коде, — защита должна строиться на поведенческом детектировании и сокращении внешней поверхности.",
-  "source_note": "Выжимка по первоисточнику — публикации Unit 42 от 11.11.2026. Дополняет индикаторы Unit 42 по ARTEX от 30.10.2026, уже размещённые на портале."
+  "source_note": "Выжимка по первоисточнику — публикации Unit 42 от 11.11.2026. Дополняет индикаторы Unit 42 по ARTEX от 30.10.2026, уже размещённые на портале.",
+  "en": {
+    "tldr": "Unit 42 analysed how attackers use open multi-agent AI pentest frameworks — above all ARTEX — in real attacks. As of October 2026, 609 ARTEX servers and 1,323 CyberStrikeAI servers were found on the internet; agents turn public password reset pages and exposed APIs into cloud access, sometimes in under a day and without exploiting vulnerabilities.",
+    "summary": "ARTEX is an open multi-agent penetration testing framework published in mid-2026 and widely forked; after a Korean bank was breached, the author closed the code. Unit 42 observed intrusion attempts and a coordinated campaign against customers' cloud environments in various industries, including retail and consulting. The agents download OpenAPI specs and source maps, insert 'canary' values, self-correct after HTTP 422 errors, verify writes with a follow-up GET and abuse self-service flows (registration, password reset, verification codes). The behaviour is recognisable: bursts of 1–14 requests with 25–31 s pauses for model 'thinking', moving to the next step within a minute of obtaining credentials, and testing more than 200 client secrets in three minutes. Unit 42 analysed 14 tools of this class (ARL, PentAGI, Cairn, DeepAudit, AI-Infra-Guard and others).",
+    "key_findings": [
+      "As of October 2026, 609 hosts with ARTEX, 1,323 with CyberStrikeAI and 21 with both were found on the internet.",
+      "Attacks target identity processes and exposed APIs; obtained credentials and trust relationships lead into the cloud — sometimes in under a day and without exploiting software vulnerabilities.",
+      "Characteristic rhythm: 1–14 requests about a second apart, then a 25–31 s pause (waiting for the model's response); more than 200 client secrets tested in ~3 minutes.",
+      "Within an hour the agents attack an application delivery controller, more than a dozen VPN gateways, NAS, corporate identity and cloud ports in parallel.",
+      "Some steps are performed by a human or via browser automation — e.g. password reset and the first token request."
+    ],
+    "stats": [
+      {
+        "value": "609",
+        "label": "exposed ARTEX servers"
+      },
+      {
+        "value": "1,323",
+        "label": "exposed CyberStrikeAI servers"
+      },
+      {
+        "value": "200+",
+        "label": "client secrets tested in ~3 min"
+      },
+      {
+        "value": "14",
+        "label": "AI tools analysed"
+      }
+    ],
+    "recommendations": [
+      "Remove 'attack maps' from public access: OpenAPI specs, source maps, configs with tokens and client IDs.",
+      "Require authentication on all write endpoints (including dev and staging); rate-limit and bot-protect registration, password reset and code verification.",
+      "Replace long-lived cloud keys with role-based access and move secrets into a secrets manager.",
+      "Detect behaviour: canary logins in IdP logs, first use of a cloud key from a new IP, 'write — delete' tests in storage."
+    ],
+    "why_it_matters": "Open AI pentest frameworks have become a mass attacker tool: they are cheap, fast and find weaknesses in identity processes rather than code — defence must rely on behavioural detection and reducing the external surface.",
+    "source_note": "Summary based on the primary source — Unit 42 post of 11 Nov 2026. Complements Unit 42's ARTEX indicators of 30 Oct 2026 already on the portal."
+  }
 });

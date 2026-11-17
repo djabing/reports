@@ -94,5 +94,42 @@ RDB.add({
     "Проверять cron, unit-файлы systemd с правдоподобными именами и файлы запуска оболочки; в приоритете — патчи повышения привилегий ядра."
   ],
   "why_it_matters": "Легитимные инструменты двойного назначения с ретрансляцией через публичную сеть лишают защитников привычных индикаторов (IP и домены атакующего), поэтому важны контроль исходящего трафика и поведенческое детектирование на Linux-серверах.",
-  "source_note": "Выжимка по первоисточнику — публикации Microsoft Security Research от 11.11.2026. Конкретные группировки в отчёте не названы."
+  "source_note": "Выжимка по первоисточнику — публикации Microsoft Security Research от 11.11.2026. Конкретные группировки в отчёте не названы.",
+  "en": {
+    "tldr": "Microsoft observes several unrelated groups using the open-source GSocket tool for covert remote access to compromised Linux servers. From March to August 2026 the number of devices with GSocket detections rose 356%; almost nine in ten incidents involve web applications and hosting.",
+    "summary": "Typical chain: exploitation of a web application vulnerability (mostly PHP and cPanel), download via curl of an installation script that picks a build for the architecture, places the binary in /dev/shm/.gs-0 and generates a shared secret; the operator receives it via the console, a temporary file or a messenger/webhook notification. Both the infected server and the operator make outbound connections to GSocket's public relay network, so the attacker has no IPs or domains of their own and the server has no inbound ports. Processes masquerade as kernel threads and systemd services, and persistence is multi-layered (cron, systemd, shell profiles, watchdog processes). In some cases attackers tried to escalate privileges via the kernel vulnerability CVE-2026-43284 (Dirty Frag). Education and research are hit most (30.7% of organisations) because of decentralised, poorly updated web resources.",
+    "key_findings": [
+      "Devices with GSocket detections rose 356.2% from March to August 2026.",
+      "87.1% of attributable incidents involve web applications and hosting; 63.9% PHP applications and cPanel, 24.3% Apache.",
+      "Among affected organisations, 30.7% are education and research, 22.9% technology and telecom.",
+      "C2 via a public relay network needs no attacker infrastructure: anyone with the secret can reconnect from any client.",
+      "Persistence is multi-layered — simply killing the process does not remove access; in several cases CVE-2026-43284 exploitation was attempted."
+    ],
+    "stats": [
+      {
+        "value": "+356%",
+        "label": "growth in devices with GSocket (Mar–Aug 2026)"
+      },
+      {
+        "value": "87.1%",
+        "label": "of incidents — web apps and hosting"
+      },
+      {
+        "value": "63.9%",
+        "label": "of incidents — PHP and cPanel"
+      },
+      {
+        "value": "30.7%",
+        "label": "of victims — education and research"
+      }
+    ],
+    "recommendations": [
+      "Update and harden public web applications, CMSs and plugins; restrict upload and administration paths.",
+      "Restrict server egress on a default-deny basis and monitor connections to GSocket relay infrastructure.",
+      "Mount temporary and memory-backed directories with noexec; alert on execution from hidden and world-writable paths.",
+      "Check cron, plausibly named systemd unit files and shell startup files; prioritise kernel privilege-escalation patches."
+    ],
+    "why_it_matters": "Legitimate dual-use tools relaying via a public network deprive defenders of familiar indicators (attacker IPs and domains), so egress control and behavioural detection on Linux servers become essential.",
+    "source_note": "Summary based on the primary source — Microsoft Security Research post of 11 Nov 2026. The report does not name specific groups."
+  }
 });

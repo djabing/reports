@@ -49,6 +49,7 @@ RDB.add({
   "why_it_matters": "Государственная оценка европейской страны с высокой цифровизацией — хороший ориентир для понимания регуляторной повестки ЕС.",
   "source_note": "Выжимка по материалам NCTV, NCSC NL и обзорам (Computable, CIO Platform).",
   "en": {
+    "title": "Cyber Security Assessment Netherlands 2026",
     "tldr": "NCTV: threats from states and cybercriminals are growing faster than the digital resilience of Dutch organizations, and this gap poses a serious risk to national security. AI has cut the time from vulnerability discovery to exploitation from days to hours.",
     "summary": "The Netherlands' annual national assessment (NCTV with NCSC). Attackers use AI to prepare and scale attacks. Many organizations lack basic measures. Without a substantial improvement in resilience, NCTV expects a sharp rise in incidents. Alongside the report, the government presented an action programme on digital resilience; SMEs cannot cope alone — suppliers, supervisors and government share responsibility.",
     "key_findings": [
@@ -64,6 +65,7 @@ RDB.add({
       "Test business continuity regularly.",
       "Design defences on an assume-breach basis."
     ],
-    "why_it_matters": "A national assessment from a highly digitalized European country — useful for understanding the EU regulatory agenda."
+    "why_it_matters": "A national assessment from a highly digitalized European country — useful for understanding the EU regulatory agenda.",
+    "source_note": "Summary based on NCTV and NCSC NL materials and coverage (Computable, CIO Platform)."
   }
 });

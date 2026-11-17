@@ -104,5 +104,44 @@ RDB.add({
     "Контролировать установку расширений IDE у разработчиков (Open VSX, VS Code Marketplace)."
   ],
   "why_it_matters": "Регулярный статистический срез с конкретными CVE и группировками — удобно для квартального отчёта SOC.",
-  "source_note": "Выжимка по полному тексту статьи на Securelist."
+  "source_note": "Выжимка по полному тексту статьи на Securelist.",
+  "en": {
+    "tldr": "Kaspersky for Q2 2026: ~400 million web attacks blocked, 2,538 new ransomware modifications, Qilin again #1 by leak-site victims (14.57%), and the number of new miners almost doubled.",
+    "summary": "Securelist's quarterly statistics based on Kaspersky product data. Ransomware activity stabilised after previous peaks, but Qilin regained the lead and, according to Check Point, exploited a 0-day in Check Point Remote Access VPN. Also noted: Microsoft's takedown of Fox Tempest's malware-signing service, exploitation of BlueHammer (CVE-2026-33825) in ransomware attacks, and the PayoutsKing group using QEMU VMs to hide tools. On macOS — GlassWorm via IDE extensions and the FlutterShell backdoor that passed Apple notarisation.",
+    "key_findings": [
+      "Almost 400 million web-borne attacks blocked; more than 16 million malicious objects caught by file anti-virus.",
+      "Ransomware: 4 new families, 2,538 modifications, 71,860 users attacked (peak in April).",
+      "Leak-site ranking: Qilin 14.57%, Akira 7.80%, DragonForce 6.88%.",
+      "Qilin linked to exploitation of 0-day CVE-2026-50751 in Check Point Remote Access VPN (from 7 May, peaking in early June).",
+      "Microsoft took down Fox Tempest's malware-signing-as-a-service used by Rhysida, Akira, INC, Qilin and BlackByte.",
+      "PayoutsKing deploys hidden Alpine Linux VMs via QEMU to evade EDR.",
+      "Miners: 6,067 new variants (almost ×2), 213,003 users attacked."
+    ],
+    "stats": [
+      {
+        "value": "~400 m",
+        "label": "web attacks blocked"
+      },
+      {
+        "value": "2,538",
+        "label": "new ransomware modifications"
+      },
+      {
+        "value": "14.57%",
+        "label": "of leak-site victims — Qilin"
+      },
+      {
+        "value": "213,003",
+        "label": "users attacked by miners"
+      }
+    ],
+    "recommendations": [
+      "Check the Check Point Remote Access VPN / Mobile Access update urgently (CVE-2026-50751).",
+      "Monitor QEMU and other hypervisors starting on workstations and servers.",
+      "Do not trust a digital signature as the only sign of legitimacy.",
+      "Control IDE extension installation by developers (Open VSX, VS Code Marketplace)."
+    ],
+    "why_it_matters": "A regular statistical snapshot with specific CVEs and groups — convenient for a quarterly SOC report.",
+    "source_note": "Summary based on the full text of the Securelist article."
+  }
 });

@@ -79,5 +79,37 @@ RDB.add({
     "Сегментировать сети транспортной инфраструктуры от офисных."
   ],
   "why_it_matters": "Один из первых задокументированных случаев APT-кампании, где ИИ-агент участвовал в операциях, — по журналам самих атакующих.",
-  "source_note": "Выжимка по блогу CloudSEK и обзорам (The Record, ITNerd)."
+  "source_note": "Выжимка по блогу CloudSEK и обзорам (The Record, ITNerd).",
+  "en": {
+    "tldr": "CloudSEK found an exposed Silent Lynx server with data from April–October 2026: the group had access to Tajikistan's railway network, collected 2,000+ defence documents and used the Hermes AI agent running on DeepSeek models.",
+    "summary": "An open directory on a VPS (port 8088, no authentication) held more than ten gigabytes: malware, compromised credentials, stolen government documents and operation logs. Access to Tajikistan's national railway network was maintained from mid-August until at least 10 October 2026. A geospatial platform in Uzbekistan was also compromised, and phishing lures for Turkmenistan were found. The Hermes AI agent (mostly DeepSeek) helped with reconnaissance, data collection and covering tracks. A link to Kazakhstan was assessed with medium confidence; no link to the government of Kazakhstan was established.",
+    "key_findings": [
+      "Exposed Silent Lynx server with operation data from April–October 2026.",
+      "Access to Tajikistan's railway network from mid-August until at least 10 October.",
+      "More than 2,000 government defence documents collected.",
+      "A geospatial platform in Uzbekistan compromised; lures against Turkmenistan.",
+      "Hermes AI agent on DeepSeek models — reconnaissance, data collection, trace cleanup."
+    ],
+    "stats": [
+      {
+        "value": "2,000+",
+        "label": "defence documents"
+      },
+      {
+        "value": "~2 mo.",
+        "label": "of railway network access"
+      },
+      {
+        "value": "7 mo.",
+        "label": "of operation logs"
+      }
+    ],
+    "recommendations": [
+      "Central Asian government bodies should check the IoCs in the CloudSEK report.",
+      "Monitor LLM API calls from infrastructure as a possible sign of attackers' AI agents.",
+      "Segment transport infrastructure networks from office networks."
+    ],
+    "why_it_matters": "One of the first documented APT campaigns in which an AI agent took part in operations — based on the attackers' own logs.",
+    "source_note": "Summary based on the CloudSEK blog and coverage (The Record, ITNerd)."
+  }
 });

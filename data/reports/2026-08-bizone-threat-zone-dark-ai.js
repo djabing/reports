@@ -62,5 +62,37 @@ RDB.add({
     "Мониторить андеграунд на предмет упоминаний компании и утёкших доступов."
   ],
   "why_it_matters": "Российский взгляд на теневой рынок ИИ — дополняет отчёты Anthropic и Check Point.",
-  "source_note": "Выжимка по аннотации BI.ZONE и публикациям СМИ. Дата — приблизительно (представлено на OFFZONE 2026)."
+  "source_note": "Выжимка по аннотации BI.ZONE и публикациям СМИ. Дата — приблизительно (представлено на OFFZONE 2026).",
+  "en": {
+    "title": "Threat Zone 2026: Dark AI — AI abuse on underground resources",
+    "tldr": "BI.ZONE analysed 7,400+ posts about AI on underground forums and Telegram. 77% of discussions are about bypassing restrictions of public models, 22% about 'uncensored' models; AI-enabled threats grew 93% in 2025.",
+    "summary": "A study of underground resources in the context of AI abuse, presented at OFFZONE 2026. Most groups use AI as an assistant — for malware development and individual attack stages. The main underground topics are jailbreaking public models, uncensored models and attack automation tools.",
+    "key_findings": [
+      "More than 7,400 posts on underground forums and Telegram channels about AI models and tools analysed.",
+      "77% of discussions are about bypassing public AI model restrictions (jailbreaks).",
+      "22% are about the capabilities of uncensored models.",
+      "AI-enabled threats grew 93% in 2025.",
+      "AI is mostly used as an assistant for malware creation and individual attack stages."
+    ],
+    "stats": [
+      {
+        "value": "7,400+",
+        "label": "posts analysed"
+      },
+      {
+        "value": "77%",
+        "label": "of discussions are jailbreaks"
+      },
+      {
+        "value": "+93%",
+        "label": "AI threats in 2025"
+      }
+    ],
+    "recommendations": [
+      "Factor AI-accelerated malware and phishing development into the threat model.",
+      "Monitor the underground for mentions of the company and leaked access."
+    ],
+    "why_it_matters": "A Russian view of the underground AI market — complements the Anthropic and Check Point reports.",
+    "source_note": "Summary based on the BI.ZONE abstract and media coverage. Date is approximate (presented at OFFZONE 2026)."
+  }
 });

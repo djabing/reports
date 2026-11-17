@@ -92,6 +92,7 @@ RDB.add({
       "Combine several AI models and traditional scanners in AppSec.",
       "Update risk and control frameworks for machine-speed exploitation."
     ],
-    "why_it_matters": "A board-level framework that turns AI-driven vulnerabilities from a technical topic into an operating-model and budget question."
+    "why_it_matters": "A board-level framework that turns AI-driven vulnerabilities from a technical topic into an operating-model and budget question.",
+    "source_note": "Summary based on the McKinsey article and coverage (SecureWorld, ANI); details of the four levers should be checked against the original."
   }
 });

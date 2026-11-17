@@ -55,5 +55,35 @@ RDB.add({
     "Закладывать ресурсы на управление ИИ-рисками при планировании бюджета."
   ],
   "why_it_matters": "Полезен для разговора с руководством: как коллеги по отрасли оценивают риски и ресурсы.",
-  "source_note": "Выжимка по пресс-релизу Proofpoint."
+  "source_note": "Выжимка по пресс-релизу Proofpoint.",
+  "en": {
+    "tldr": "Proofpoint's annual survey: the share of CISOs expecting a material attack in the next 12 months fell to 61% (76% in 2025). Cyber resilience is improving, but AI expands the CISO's remit without a proportional increase in resources.",
+    "summary": "A survey of 1,600 security leaders in 16 countries conducted by Censuswide in May 2026. Risk is shifting deeper — into people, data, identities, applications and AI systems. The human factor is still seen as the key risk.",
+    "key_findings": [
+      "61% of CISOs consider a material cyberattack likely in the next 12 months (76% in 2025).",
+      "1,600 CISOs surveyed in 16 countries; fieldwork in May 2026.",
+      "AI expands the CISO mandate: new responsibilities without proportional resources.",
+      "Risk is moving into people, data, identities, applications and AI systems."
+    ],
+    "stats": [
+      {
+        "value": "61%",
+        "label": "expect a material attack (was 76%)"
+      },
+      {
+        "value": "1,600",
+        "label": "CISOs surveyed"
+      },
+      {
+        "value": "16",
+        "label": "countries"
+      }
+    ],
+    "recommendations": [
+      "Check your security programme's priorities against the survey findings (people, data, AI).",
+      "Budget resources for AI risk management."
+    ],
+    "why_it_matters": "Useful for conversations with management: how industry peers assess risks and resources.",
+    "source_note": "Summary based on the Proofpoint press release."
+  }
 });

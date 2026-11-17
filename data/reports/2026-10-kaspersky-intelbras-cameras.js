@@ -54,5 +54,31 @@ RDB.add({
     "Выносить IoT-устройства в отдельный сегмент сети."
   ],
   "why_it_matters": "Типичный пример массовой уязвимости потребительского IoT.",
-  "source_note": "Выжимка по пресс-релизу и блогу Kaspersky."
+  "source_note": "Выжимка по пресс-релизу и блогу Kaspersky.",
+  "en": {
+    "tldr": "GReAT found a medium-severity DoS vulnerability in the firmware update procedure of Intelbras IP cameras: an attacker on the same Wi-Fi network can disable the camera. Fixed in firmware R.260804.",
+    "summary": "Potentially several million devices in different countries are affected; the Intelbras Mibo Smart app has been downloaded more than 4 million times, mainly in Brazil and Latin America.",
+    "key_findings": [
+      "Vulnerability in an unauthenticated firmware update procedure.",
+      "Allows disabling the camera from the same network.",
+      "Fixed in firmware R.260804.",
+      "Mibo Smart app — 4M+ downloads."
+    ],
+    "stats": [
+      {
+        "value": "4M+",
+        "label": "app downloads"
+      },
+      {
+        "value": "R.260804",
+        "label": "fixed firmware"
+      }
+    ],
+    "recommendations": [
+      "Update Intelbras camera firmware to R.260804 or later.",
+      "Place IoT devices in a separate network segment."
+    ],
+    "why_it_matters": "A typical example of a mass consumer IoT vulnerability.",
+    "source_note": "Summary based on the Kaspersky press release and blog."
+  }
 });

@@ -72,5 +72,38 @@ RDB.add({
     "Не делать исключений для писем, не прошедших DMARC/SPF/DKIM."
   ],
   "why_it_matters": "Масштаб телеметрии Microsoft даёт самую точную картину массового фишинга на корпоративной почте.",
-  "source_note": "Выжимка по блогу Microsoft Security и обзорам (Redmondmag, Campus Technology)."
+  "source_note": "Выжимка по блогу Microsoft Security и обзорам (Redmondmag, Campus Technology).",
+  "en": {
+    "tldr": "Microsoft recorded 7.3 billion email phishing threats in Q3, almost 3 billion in September alone (+41% vs August). 94–96% of malicious attachments lead to fake login pages rather than installing malware.",
+    "summary": "A quarterly review by Microsoft Threat Intelligence and Defender. QR phishing fell 67% vs Q2, but CAPTCHA phishing returned by the end of the quarter (3.1 million attacks in September), largely via SVG attachments. About 129 million emails spoofed tracked business services; some were delivered despite failing authentication checks. About 141,000 malicious Teams calls were observed.",
+    "key_findings": [
+      "~7.3 billion email phishing threats in the quarter; almost 3 billion in September (+41%).",
+      "QR phishing −67% vs Q2 (~12.1 million attacks).",
+      "CAPTCHA phishing is back: 3.1 million attacks in September, often via SVG.",
+      "94–96% of malicious attachments lead to a fake login, not malware installation.",
+      "~129 million emails spoofed business services; ~141,000 malicious Teams calls."
+    ],
+    "stats": [
+      {
+        "value": "7.3B",
+        "label": "phishing threats"
+      },
+      {
+        "value": "+41%",
+        "label": "growth in September"
+      },
+      {
+        "value": "~141,000",
+        "label": "attacks via Teams"
+      }
+    ],
+    "recommendations": [
+      "Enable phishing-resistant MFA — credentials are the main target.",
+      "Block or inspect SVG attachments.",
+      "Restrict external Teams calls and chats from unknown organisations.",
+      "Make no exceptions for emails that fail DMARC/SPF/DKIM."
+    ],
+    "why_it_matters": "The scale of Microsoft's telemetry gives the most accurate picture of mass phishing on corporate email.",
+    "source_note": "Summary based on the Microsoft Security blog and coverage (Redmondmag, Campus Technology)."
+  }
 });

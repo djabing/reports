@@ -79,5 +79,38 @@ RDB.add({
     "Включить защиту от загрузки уязвимых драйверов и tamper protection EDR."
   ],
   "why_it_matters": "ClickFix/ConsentFix — один из самых массовых векторов 2026 года, и он обходит MFA. Тема ИИ-навыков как новой поверхности атаки только начинает раскрываться.",
-  "source_note": "Выжимка по обзорам отчёта (Intelligent CIO, CXOToday, TechNadu). Дата — приблизительно."
+  "source_note": "Выжимка по обзорам отчёта (Intelligent CIO, CXOToday, TechNadu). Дата — приблизительно.",
+  "en": {
+    "tldr": "ClickFix grew 108% and mutated into ConsentFix (cloud account takeover via OAuth without stealing a password); PromptSpy — the first Android malware with GenAI in its execution chain — was found; 100+ 'EDR killers' were seen in ransomware attacks.",
+    "summary": "ESET's semi-annual telemetry review for December 2025 — May 2026. Attackers are perfecting proven techniques rather than inventing new ones. A separate study of the 'AI skills' ecosystem for agents found thousands of malicious items. QR phishing (quishing) is growing.",
+    "key_findings": [
+      "ClickFix +108% (H2 2025 → H1 2026): from fake CAPTCHAs to fake AI support pages, browser extensions and cloud authentication scenarios.",
+      "ConsentFix combines ClickFix with OAuth consent abuse: cloud account takeover without stealing credentials.",
+      "Analysis of 900,000 AI skills: 25,000 suspicious and 3,000+ malicious (with Mimikatz, Impacket, self-modification and persistence).",
+      "PromptSpy is the first known Android malware using generative AI at runtime.",
+      "More than 100 different EDR killers documented in ransomware attacks."
+    ],
+    "stats": [
+      {
+        "value": "+108%",
+        "label": "ClickFix detections"
+      },
+      {
+        "value": "3,000+",
+        "label": "malicious AI skills"
+      },
+      {
+        "value": "100+",
+        "label": "EDR killers"
+      }
+    ],
+    "recommendations": [
+      "Teach users never to paste commands from a browser into Win+R or a terminal.",
+      "Restrict user consent to OAuth apps and introduce an admin consent workflow.",
+      "Vet AI skills and agent plugins before installation; keep an allowlist.",
+      "Enable vulnerable driver blocking and EDR tamper protection."
+    ],
+    "why_it_matters": "ClickFix/ConsentFix is one of the most widespread vectors of 2026, and it bypasses MFA. AI skills as a new attack surface are only beginning to be explored.",
+    "source_note": "Summary based on coverage of the report (Intelligent CIO, CXOToday, TechNadu). Date is approximate."
+  }
 });

@@ -92,6 +92,7 @@ RDB.add({
       "Run joint crisis-response exercises.",
       "Reduce supply-chain dependencies."
     ],
-    "why_it_matters": "The EU's official maturity assessment — a benchmark for regulatory expectations under NIS2."
+    "why_it_matters": "The EU's official maturity assessment — a benchmark for regulatory expectations under NIS2.",
+    "source_note": "Summary based on ENISA materials and coverage (Help Net Security, Industrial Cyber, Eunews)."
   }
 });

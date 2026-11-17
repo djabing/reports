@@ -73,5 +73,42 @@ RDB.add({
     "Проверить, нет ли данных компании в известных утечках."
   ],
   "why_it_matters": "Крупнейший российский обзор теневой экономики киберпреступности — с данными по картам, утечкам и рынку эксплойтов.",
-  "source_note": "Выжимка по анонсу на Хабре и публикациям СМИ (CISOClub, ru-bezh, SecurityLab). Сайт F6 из среды сбора не открывался; полный отчёт — на f6.ru."
+  "source_note": "Выжимка по анонсу на Хабре и публикациям СМИ (CISOClub, ru-bezh, SecurityLab). Сайт F6 из среды сбора не открывался; полный отчёт — на f6.ru.",
+  "en": {
+    "title": "F6: global report 'Threat Landscape 2025–2026'",
+    "tldr": "F6's first international report: 9,300+ ransomware incidents in 2025 and H1 2026, 600+ million rows in leaks, 66 new ransomware groups. Ransomware gangs and state-sponsored groups increasingly borrow each other's tactics.",
+    "summary": "F6's (formerly F.A.C.C.T.) global analytical report for 2025 and the first half of 2026. It covers current threats, data leaks, underground forum shutdowns, the underground malware market and the role of initial access brokers. Forecast: pressure on Russian organisations will increase, with more attackers and more damage; attackers actively use AI chatbots.",
+    "key_findings": [
+      "More than 9,300 ransomware incidents in 2025 and H1 2026.",
+      "Database leaks contained more than 600 million rows of user data worldwide.",
+      "66 new cybercriminal groups distributing ransomware emerged.",
+      "Another 3.5 million compromised bank cards were found in underground shops in H1 2026; 65 unique listings selling 0-day exploits were found.",
+      "Ransomware and APT convergence: politically motivated groups increasingly encrypt data and demand ransom."
+    ],
+    "stats": [
+      {
+        "value": "9,300+",
+        "label": "ransomware incidents"
+      },
+      {
+        "value": "600+ m",
+        "label": "rows in leaks"
+      },
+      {
+        "value": "66",
+        "label": "new ransomware groups"
+      },
+      {
+        "value": "65",
+        "label": "0-day sale listings"
+      }
+    ],
+    "recommendations": [
+      "Monitor the underground for sales of access to your infrastructure.",
+      "Prepare defences against both encryption and data leaks: ransomware and APT groups use both tactics.",
+      "Check whether company data appears in known leaks."
+    ],
+    "why_it_matters": "The largest Russian review of the underground cybercrime economy — with data on cards, leaks and the exploit market.",
+    "source_note": "Summary based on the Habr announcement and media coverage (CISOClub, ru-bezh, SecurityLab). The F6 website could not be opened from the collection environment; the full report is on f6.ru."
+  }
 });

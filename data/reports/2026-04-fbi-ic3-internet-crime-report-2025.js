@@ -90,6 +90,7 @@ RDB.add({
       "Verify payments through an independent channel.",
       "Account for deepfakes and AI-generated requests in anti-fraud processes."
     ],
-    "why_it_matters": "The largest official statistics on cybercrime losses — a benchmark for fraud damage."
+    "why_it_matters": "The largest official statistics on cybercrime losses — a benchmark for fraud damage.",
+    "source_note": "Summary based on the IC3 report and coverage (CyberScoop, The Register, Help Net Security)."
   }
 });

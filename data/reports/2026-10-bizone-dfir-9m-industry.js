@@ -68,5 +68,39 @@ RDB.add({
     "Отработать сценарии реагирования на инциденты."
   ],
   "why_it_matters": "Сходится с данными Solar 4RAYS: промышленность в России стала главной мишенью. Хороший аргумент для бюджета ИБ производственной компании — цена простоя выше цены обслуживания.",
-  "source_note": "Выжимка по полному тексту публикации BI.ZONE."
+  "source_note": "Выжимка по полному тексту публикации BI.ZONE.",
+  "en": {
+    "title": "BI.ZONE DFIR: 60% of attacks investigated in 9 months of 2026 targeted manufacturing",
+    "tldr": "According to BI.ZONE DFIR investigations for January–September 2026, manufacturing became the most attacked industry: 60% of incidents. The main entry points are perimeter vulnerabilities (especially ERP) and contractors.",
+    "summary": "Statistics from the BI.ZONE DFIR team on investigated incidents. Manufacturing was long outside attackers' focus and has accumulated legacy systems and vulnerable business applications, while production downtime makes it a financially attractive target. The authors stress that the figure reflects BI.ZONE's investigation sample, not the whole market.",
+    "key_findings": [
+      "60% of investigated attacks targeted manufacturers, from consumer goods to highly specialised products.",
+      "60% of entry points were perimeter vulnerabilities and misconfigurations.",
+      "Vectors: ERP vulnerabilities — 30%, network equipment (routers, gateways) — 10%, corporate email and work tools — 10%.",
+      "20% of cases involved vulnerabilities or compromise of contractors and suppliers.",
+      "Why the industry is vulnerable: low IT budgets, long equipment life cycles, high cost of downtime."
+    ],
+    "stats": [
+      {
+        "value": "60%",
+        "label": "of investigated attacks — manufacturing"
+      },
+      {
+        "value": "30%",
+        "label": "of entries via ERP vulnerabilities"
+      },
+      {
+        "value": "20%",
+        "label": "of incidents via contractors"
+      }
+    ],
+    "recommendations": [
+      "Check updates and configuration of ERP systems, perimeter network equipment and email.",
+      "Tighten control over contractor access to internal systems.",
+      "Segment networks, back up regularly and test recovery.",
+      "Rehearse incident response scenarios."
+    ],
+    "why_it_matters": "Consistent with Solar 4RAYS data: manufacturing has become the main target in Russia. A good argument for a manufacturer's security budget — downtime costs more than maintenance.",
+    "source_note": "Summary based on the full text of the BI.ZONE publication."
+  }
 });

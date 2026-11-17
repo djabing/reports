@@ -73,5 +73,37 @@ RDB.add({
     "Обучить пользователей распознавать ClickFix (вставка команд из буфера обмена)."
   ],
   "why_it_matters": "Показывает новую поверхность атаки — легитимные ИИ-ассистенты на рабочих местах как канал исполнения команд.",
-  "source_note": "Выжимка по пресс-релизу Elastic и обзорам (iTWire, Business Wire)."
+  "source_note": "Выжимка по пресс-релизу Elastic и обзорам (iTWire, Business Wire).",
+  "en": {
+    "tldr": "Elastic: attackers use stolen credentials on average 8 minutes after infection and execute commands via trusted AI tools — Claude Code on Windows and ChatGPT for macOS.",
+    "summary": "A quarterly report on confirmed intrusions in April–September 2026. Attackers increasingly turn trusted AI and IT tools against organisations. In 23 cases legitimate remote access software (most often ScreenConnect) was installed for persistence. 12 of 27 confirmed infostealer infections began with a ClickFix lure. Elastic predicts blockchain-based C2 will become standard for mass-market loaders.",
+    "key_findings": [
+      "Stolen credentials are used on average 8 minutes after infection.",
+      "Commands were executed via Claude Code (Windows) and ChatGPT desktop (macOS).",
+      "23 cases of legitimate remote access software installation, most often ScreenConnect.",
+      "12 of 27 infostealer infections (44%) began with ClickFix.",
+      "Forecast: blockchain C2 will become standard for mass-market loaders."
+    ],
+    "stats": [
+      {
+        "value": "8 min",
+        "label": "until stolen data is used"
+      },
+      {
+        "value": "23",
+        "label": "cases of RMM abuse"
+      },
+      {
+        "value": "44%",
+        "label": "of stealers via ClickFix"
+      }
+    ],
+    "recommendations": [
+      "Inventory trusted AI and IT tools and signed software, and assess them by behaviour.",
+      "Restrict RMM tool installation to an allowlist.",
+      "Train users to recognise ClickFix (pasting commands from the clipboard)."
+    ],
+    "why_it_matters": "Shows a new attack surface — legitimate AI assistants on workstations as a command execution channel.",
+    "source_note": "Summary based on the Elastic press release and coverage (iTWire, Business Wire)."
+  }
 });

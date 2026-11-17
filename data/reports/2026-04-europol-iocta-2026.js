@@ -81,6 +81,7 @@ RDB.add({
       "Minimise collection and storage of personal data — it is the main target.",
       "Strengthen checks on opening and using neobank accounts (financial sector)."
     ],
-    "why_it_matters": "The EU law-enforcement view: which criminal schemes grow fastest and where investigations have blind spots."
+    "why_it_matters": "The EU law-enforcement view: which criminal schemes grow fastest and where investigations have blind spots.",
+    "source_note": "Summary based on Europol materials and coverage (eucrim, FIAU Malta)."
   }
 });

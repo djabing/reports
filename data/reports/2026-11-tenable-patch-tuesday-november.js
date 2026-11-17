@@ -74,5 +74,42 @@ RDB.add({
     "Пересмотреть процессы патч-менеджмента под объёмы 1000+ CVE в месяц."
   ],
   "why_it_matters": "Объём ежемесячных исправлений вырос на порядок — это практическое следствие ИИ-поиска уязвимостей, к которому нужно адаптировать процессы.",
-  "source_note": "Выжимка по блогу Tenable и обзорам Redmondmag, SOCRadar и др.; общее число CVE в источниках различается."
+  "source_note": "Выжимка по блогу Tenable и обзорам Redmondmag, SOCRadar и др.; общее число CVE в источниках различается.",
+  "en": {
+    "tldr": "The second Patch Tuesday in a row with 1,000+ fixes. The headline is an exploited Outlook zero-day (CVE-2026-124194): opening a message file leaks the NTLMv2 hash. The fix ships via Office updates, not Windows Update.",
+    "summary": "Microsoft fixed about 1,093 CVEs (media estimates vary: 1,094–1,259), 63 of them critical. The only exploited vulnerability is CVE-2026-124194 in Outlook (CWE-356, CVSS 6.5): a single opened message makes Outlook contact the attacker's server without warning and send the NTLMv2 hash. CISA added it to KEV on 10 November with a remediation deadline of 24 November. According to media reports, a researcher working with Claude took part in the discovery.",
+    "key_findings": [
+      "~1,093 CVEs, 63 critical and 1,029 important.",
+      "CVE-2026-124194 (Outlook, spoofing, CVSS 6.5) is exploited in attacks — NTLMv2 hash leak.",
+      "The fix is delivered via the Office update mechanism (KB5132061), not Windows Update.",
+      "CISA KEV: added 10 Nov 2026, remediation deadline 24 Nov 2026.",
+      "The second release in a row with more than 1,000 fixes — an effect of mass AI vulnerability discovery."
+    ],
+    "stats": [
+      {
+        "value": "1,093",
+        "label": "CVEs fixed"
+      },
+      {
+        "value": "63",
+        "label": "critical"
+      },
+      {
+        "value": "1",
+        "label": "exploited zero-day"
+      },
+      {
+        "value": "24 Nov",
+        "label": "CISA deadline"
+      }
+    ],
+    "recommendations": [
+      "Urgently update Office/Outlook (KB5132061) — separately from Windows Update.",
+      "Block outbound SMB (TCP 445) and NTLM to external addresses.",
+      "Add highly privileged users to the Protected Users group and restrict NTLM.",
+      "Rework patch management processes for volumes of 1,000+ CVEs per month."
+    ],
+    "why_it_matters": "Monthly fix volume has grown by an order of magnitude — a practical consequence of AI vulnerability discovery that processes must adapt to.",
+    "source_note": "Summary based on the Tenable blog and coverage by Redmondmag, SOCRadar and others; the total CVE count differs between sources."
+  }
 });

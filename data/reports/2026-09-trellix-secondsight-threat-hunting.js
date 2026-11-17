@@ -92,5 +92,42 @@ RDB.add({
     "Строить гипотезы для threat hunting на основе свежих TI-отчётов, а не только алертов."
   ],
   "why_it_matters": "Хороший практический пример того, как превращать TI в гипотезы для охоты за угрозами.",
-  "source_note": "Выжимка по анонсу отчёта и обзорам (Cyber Magazine, ThreatCluster, CXOToday)."
+  "source_note": "Выжимка по анонсу отчёта и обзорам (Cyber Magazine, ThreatCluster, CXOToday).",
+  "en": {
+    "tldr": "Trellix analyses five H1 2026 campaigns built on detection evasion: multi-stage APT28 phishing exploiting CVE-2026-21509 within a day of disclosure, the DarkSword iOS exploit kit, an attack on the Axios npm package and more.",
+    "summary": "The Trellix proactive threat hunting team's report presents five campaigns and how they were found: checking TI relevance, matching behaviour to known techniques, assessing environment exposure and deciding whether to notify customers. The common denominator is abuse of trusted infrastructure (including compromised government accounts) and techniques that evade classic defences.",
+    "key_findings": [
+      "APT28: spear-phishing against government, defence and diplomatic organisations in Europe; CVE-2026-21509 (Office OLE protection bypass) exploited within 24 hours of disclosure; at least 29 emails blocked in nine Eastern European countries.",
+      "Bitter APT: spear-phishing with a football World Cup lure.",
+      "DarkSword: a Russian iOS exploit kit targeting officials in NATO-aligned countries.",
+      "JSCeal: activity against organisations in Southeast Asia.",
+      "A mass supply-chain attack via the Axios npm package."
+    ],
+    "stats": [
+      {
+        "value": "5",
+        "label": "campaigns analysed"
+      },
+      {
+        "value": "24 h",
+        "label": "from CVE disclosure to exploitation"
+      },
+      {
+        "value": "29+",
+        "label": "APT28 emails blocked"
+      },
+      {
+        "value": "9",
+        "label": "countries targeted by APT28"
+      }
+    ],
+    "recommendations": [
+      "Shorten the Office patching window for critical CVEs to hours, not weeks.",
+      "Control npm dependencies: lock files, integrity checks, monitoring for anomalous versions.",
+      "Include executives' mobile devices in the protection programme (MDM, fast iOS updates).",
+      "Build threat hunting hypotheses from fresh TI reports, not just alerts."
+    ],
+    "why_it_matters": "A good practical example of turning TI into threat hunting hypotheses.",
+    "source_note": "Summary based on the report announcement and coverage (Cyber Magazine, ThreatCluster, CXOToday)."
+  }
 });

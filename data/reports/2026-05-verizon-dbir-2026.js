@@ -98,6 +98,7 @@ RDB.add({
       "Implement a third-party risk programme with regular assessments.",
       "Control use of unsanctioned AI services and source-code leakage."
     ],
-    "why_it_matters": "The largest empirical breach dataset: the shift to exploitation as the top vector is a key prioritization signal."
+    "why_it_matters": "The largest empirical breach dataset: the shift to exploitation as the top vector is a key prioritization signal.",
+    "source_note": "Summary based on the Verizon press release and coverage (SecureWorld, TechRepublic, Help Net Security); some percentages come from secondary sources."
   }
 });

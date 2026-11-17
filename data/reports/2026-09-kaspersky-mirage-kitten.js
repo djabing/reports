@@ -78,5 +78,33 @@ RDB.add({
     "Повысить осведомлённость разработчиков о job-lure атаках."
   ],
   "why_it_matters": "Третий за год отчёт (вместе с Unit 42 о Screening Serpens) о том, как иранские APT ловят инженеров на фейковые вакансии.",
-  "source_note": "Выжимка по пресс-релизу Kaspersky и обзорам (Security Affairs, Ampcus Cyber)."
+  "source_note": "Выжимка по пресс-релизу Kaspersky и обзорам (Security Affairs, Ampcus Cyber).",
+  "en": {
+    "tldr": "Kaspersky GReAT found an Iranian Mirage Kitten campaign using fake LinkedIn recruitment and developer test assignments. New cross-platform RATs NodeRabbit (Node.js) and PollCat (JavaScript) mark the group's first use of these languages; the NightLedger backdoor was also found.",
+    "summary": "A targeted espionage campaign against aviation and fintech companies in Egypt, Ethiopia and Afghanistan. Operators send 'test assignments' — trojanised code archives — on LinkedIn and other job platforms. Inside are previously undocumented cross-platform remote access trojans.",
+    "key_findings": [
+      "Vector: spear phishing on LinkedIn and job platforms with trojanised 'coding challenges'.",
+      "NodeRabbit — a new cross-platform RAT in Node.js.",
+      "PollCat — a new cross-platform RAT in obfuscated JavaScript.",
+      "First publicly documented use of Node.js and JavaScript malware by the group.",
+      "The NightLedger backdoor for espionage operations in the region was also found."
+    ],
+    "stats": [
+      {
+        "value": "3",
+        "label": "new malware families"
+      },
+      {
+        "value": "3",
+        "label": "target countries"
+      }
+    ],
+    "recommendations": [
+      "Prohibit running recruiters' 'test assignments' on work machines; use sandboxes.",
+      "Monitor node.exe and scripts launched from user directories.",
+      "Raise developer awareness of job-lure attacks."
+    ],
+    "why_it_matters": "The third report this year (alongside Unit 42 on Screening Serpens) on Iranian APTs luring engineers with fake jobs.",
+    "source_note": "Summary based on the Kaspersky press release and coverage (Security Affairs, Ampcus Cyber)."
+  }
 });

@@ -85,6 +85,7 @@ RDB.add({
       "Assess new attack surfaces before deploying AI.",
       "Prepare for a faster discovery-to-exploitation cycle."
     ],
-    "why_it_matters": "An official intelligence assessment of AI threats with probabilistic language — useful for long-term planning."
+    "why_it_matters": "An official intelligence assessment of AI threats with probabilistic language — useful for long-term planning.",
+    "source_note": "Summary based on NCSC materials and coverage; probability wording should be checked against the original."
   }
 });

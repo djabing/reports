@@ -120,6 +120,7 @@ RDB.add({
       "Inventory and control access for contractors and software suppliers.",
       "Reduce the perimeter attack surface and speed up patching of public services."
     ],
-    "why_it_matters": "Built on Microsoft's huge telemetry, the report effectively sets the industry agenda: identity is the new perimeter, and IAM investment gives the highest return."
+    "why_it_matters": "Built on Microsoft's huge telemetry, the report effectively sets the industry agenda: identity is the new perimeter, and IAM investment gives the highest return.",
+    "source_note": "Summary based on the Microsoft Security blog post and media coverage of the report."
   }
 });

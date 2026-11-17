@@ -58,5 +58,22 @@ RDB.add({
     "Проверять кандидатов и их портфолио при найме, особенно в ИТ."
   ],
   "why_it_matters": "Первые случаи применения постквантовой криптографии в инструментарии государственной APT.",
-  "source_note": "Выжимка по пресс-релизу Kaspersky и обзорам (BleepingComputer, TechRadar)."
+  "source_note": "Выжимка по пресс-релизу Kaspersky и обзорам (BleepingComputer, TechRadar).",
+  "en": {
+    "tldr": "In Operation FlashHole, Lazarus uses the post-quantum ML-KEM-1024 algorithm to protect communications and payload delivery, and AI to create lures. At least three South Korean companies were affected.",
+    "summary": "Presented at Security Analyst Summit 2026 (Bali). The campaign has been active since at least July 2025 and is linked to Operation SyncHole with medium to high confidence. The updated LPEClient uses ML-KEM-1024. According to Kaspersky, AI was used for a photo lure and portfolio sites of fake job seekers.",
+    "key_findings": [
+      "Active since July 2025; at least three victims in South Korea (construction, software, telecom equipment).",
+      "Link to Operation SyncHole — medium/high confidence.",
+      "LPEClient uses post-quantum ML-KEM-1024.",
+      "AI used for lures and fake job-seeker sites."
+    ],
+    "stats": [],
+    "recommendations": [
+      "Do not rely on traffic analysis: detect in-memory malware on endpoints.",
+      "Vet candidates and their portfolios during hiring, especially in IT."
+    ],
+    "why_it_matters": "The first cases of post-quantum cryptography in a state APT's toolkit.",
+    "source_note": "Summary based on the Kaspersky press release and coverage (BleepingComputer, TechRadar)."
+  }
 });

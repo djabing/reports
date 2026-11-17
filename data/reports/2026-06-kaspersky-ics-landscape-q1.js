@@ -58,5 +58,35 @@ RDB.add({
     "Контролировать съёмные носители и почту как каналы проникновения в сети АСУ ТП."
   ],
   "why_it_matters": "Базовая статистика для оценки уровня угроз промышленным сетям.",
-  "source_note": "Выжимка по странице Kaspersky ICS CERT и вторичному обзору (daily.dev); региональные цифры стоит сверить."
+  "source_note": "Выжимка по странице Kaspersky ICS CERT и вторичному обзору (daily.dev); региональные цифры стоит сверить.",
+  "en": {
+    "tldr": "The share of ICS computers on which malicious objects were blocked fell to 19.6% — a three-year low. The highest share was in Africa (27.4%), the lowest in Northern Europe (9.1%).",
+    "summary": "Kaspersky ICS CERT's quarterly statistics for computers in industrial networks. The overall infection rate is declining, but regional differences remain large. According to a secondary review, the ransomware share hit a record low of 0.14%. In a press release the company noted a rise in attacks on manufacturing in early 2026.",
+    "key_findings": [
+      "19.6% of ICS computers had malicious objects blocked — a three-year low.",
+      "Africa 27.4%, Northern Europe 9.1%.",
+      "Ransomware 0.14% (per a secondary review).",
+      "Early 2026 saw a rise in attacks on manufacturing (press release)."
+    ],
+    "stats": [
+      {
+        "value": "19.6%",
+        "label": "of ICS computers attacked"
+      },
+      {
+        "value": "27.4%",
+        "label": "Africa"
+      },
+      {
+        "value": "9.1%",
+        "label": "Northern Europe"
+      }
+    ],
+    "recommendations": [
+      "Compare your region's and industry's figures with the report.",
+      "Control removable media and email as entry points into ICS networks."
+    ],
+    "why_it_matters": "Baseline statistics for assessing the threat level to industrial networks.",
+    "source_note": "Summary based on the Kaspersky ICS CERT page and a secondary review (daily.dev); regional figures should be verified."
+  }
 });

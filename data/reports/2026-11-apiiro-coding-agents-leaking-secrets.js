@@ -64,5 +64,38 @@ RDB.add({
     "Дополнить сканеры секретов правилами для конфигураций ИИ-агентов."
   ],
   "why_it_matters": "Конкретный, легко проверяемый риск ИИ-разработки: удобство агентов превращается в утечку ключей в публичный доступ.",
-  "source_note": "Выжимка по блогу Apiiro и обзорам (Dark Reading, DevOps.com, Cybernews)."
+  "source_note": "Выжимка по блогу Apiiro и обзорам (Dark Reading, DevOps.com, Cybernews).",
+  "en": {
+    "tldr": "Apiiro found 2,539 secrets in 1,994 public repositories. The cause: the 'Yes, and don't ask again' button in Claude Code saves the approved command, secrets included, to .claude/settings.local.json; about 19% of these secrets are missed by Gitleaks and TruffleHog.",
+    "summary": "Researchers examined 104,185 public copies of .claude/settings.local.json and found real secrets in 1,122 of them (~1.1%). Including git history, other files and saved transcripts — 2,539 secrets in 1,994 repositories. Of the 16 agents compared, only Claude Code saves the full approved command to a project file by default. Key validity was not checked and no abuse was reported. Anthropic said it is looking into preventive measures.",
+    "key_findings": [
+      "104,185 .claude/settings.local.json files checked; secrets in 1,122 (~1.1%).",
+      "2,539 secrets in total across 1,994 repositories, including history and transcripts.",
+      "Of 16 agents, only Claude Code saves the full command to a project file by default.",
+      "~19% of secrets are not detected by Gitleaks and TruffleHog.",
+      "Key validity was not checked; Anthropic is looking into a fix."
+    ],
+    "stats": [
+      {
+        "value": "2,539",
+        "label": "secrets"
+      },
+      {
+        "value": "1,994",
+        "label": "repositories"
+      },
+      {
+        "value": "~19%",
+        "label": "missed by secret scanners"
+      }
+    ],
+    "recommendations": [
+      "Add .claude/settings.local.json and similar agent files to .gitignore.",
+      "Do not pass secrets in commands approved for an agent 'forever'; use environment variables and secret stores.",
+      "Check repository history for leaked keys and revoke them.",
+      "Extend secret scanners with rules for AI agent configurations."
+    ],
+    "why_it_matters": "A concrete, easily verifiable AI development risk: agent convenience turns into public key leaks.",
+    "source_note": "Summary based on the Apiiro blog and coverage (Dark Reading, DevOps.com, Cybernews)."
+  }
 });

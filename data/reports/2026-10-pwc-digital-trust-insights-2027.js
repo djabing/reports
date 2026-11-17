@@ -98,6 +98,7 @@ RDB.add({
       "Launch a post-quantum readiness programme.",
       "Assign cyber-risk accountability at C-suite level."
     ],
-    "why_it_matters": "Lets you compare your company's priorities with a global snapshot of senior leadership."
+    "why_it_matters": "Lets you compare your company's priorities with a global snapshot of senior leadership.",
+    "source_note": "Summary based on PwC pages and coverage (Infosecurity Magazine, SecurityWeek)."
   }
 });

@@ -87,5 +87,37 @@ RDB.add({
     "Мониторить .config-файлы .NET-приложений с параметрами appDomainManagerAssembly."
   ],
   "why_it_matters": "Наглядный пример того, как геополитические события мгновенно отражаются на активности APT и как «job lure» остаётся эффективным вектором против инженеров.",
-  "source_note": "Выжимка по аннотации Unit 42 и обзорам (Cyber Magazine, TechCentral, Cipherssecurity). Дата — приблизительно, по датам публикаций обзоров."
+  "source_note": "Выжимка по аннотации Unit 42 и обзорам (Cyber Magazine, TechCentral, Cipherssecurity). Дата — приблизительно, по датам публикаций обзоров.",
+  "en": {
+    "tldr": "Iran's Screening Serpens (UNC1549, Smoke Sandstorm) targets IT and defence companies with fake job offers; six new RATs appeared in February–April 2026, and AppDomainManager hijacking was used for the first time.",
+    "summary": "Unit 42 tracked the group's attacks from mid-February to April 2026 against organisations in the US, Israel, the UAE and at least two other Middle Eastern countries. The spike coincided with the regional conflict that began on 28 February 2026. The group uses personalised 'recruitment' lures in the name of well-known brands and hiring platforms, and combines DLL sideloading with .NET AppDomainManager hijacking for execution.",
+    "key_findings": [
+      "Six new RAT variants developed and deployed in February–April 2026.",
+      "First use of DLL sideloading + AppDomainManager hijacking to launch MiniJunk and MiniUpdate.",
+      "Targets: technology and defence professionals in at least five countries.",
+      "Lures: personalised job offers in the name of well-known brands and hiring platforms ('Iranian Dream Job').",
+      "High operational tempo sustained through March and April."
+    ],
+    "stats": [
+      {
+        "value": "6",
+        "label": "new RAT variants"
+      },
+      {
+        "value": "5+",
+        "label": "target countries"
+      },
+      {
+        "value": "3 months",
+        "label": "observation period"
+      }
+    ],
+    "recommendations": [
+      "Warn engineers and HR about fake vacancies and 'test assignments'.",
+      "Detect DLL loading from unusual directories next to signed binaries.",
+      "Monitor .NET application .config files for appDomainManagerAssembly settings."
+    ],
+    "why_it_matters": "A clear example of how geopolitical events instantly show up in APT activity and how job lures remain effective against engineers.",
+    "source_note": "Summary based on the Unit 42 abstract and coverage (Cyber Magazine, TechCentral, Cipherssecurity). Date is approximate, based on coverage dates."
+  }
 });

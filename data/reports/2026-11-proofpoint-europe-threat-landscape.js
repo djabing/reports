@@ -80,5 +80,42 @@ RDB.add({
     "Мониторить действия в облачных почтовых ящиках после входа: правила пересылки, доступ к файлам."
   ],
   "why_it_matters": "Редкий региональный срез: показывает, что Европа отстаёт по устойчивости к фишингу и становится целью шпионажа.",
-  "source_note": "Выжимка по блогу Proofpoint и обзорам (Infosecurity Magazine, GlobeNewswire)."
+  "source_note": "Выжимка по блогу Proofpoint и обзорам (Infosecurity Magazine, GlobeNewswire).",
+  "en": {
+    "tldr": "Phishing in Europe is growing three times faster than globally (×4.5 vs ×1.5), and Europeans click 4 times more often. South Asian groups are extending espionage into Western Europe, and attacks on AI components grew 4.6-fold.",
+    "summary": "Proofpoint research presented at Web Summit in Lisbon. In Europe there are 8.3 clicks per 100 delivered malicious emails versus 2.0 globally; callback phishing rose 262%. Russian and Chinese state groups are refining their techniques, while South Asian groups are moving into Western Europe; UNK_AcademicFlare, targeting government, education and think tanks, is singled out. Proofpoint found more than 188,000 AI apps connected via OAuth; 64% of European organisations targeted by focused cloud attacks were successfully compromised.",
+    "key_findings": [
+      "Phishing detections in Europe grew 4.5-fold (1.5-fold globally).",
+      "8.3 clicks per 100 malicious emails in Europe vs 2.0 globally.",
+      "Callback phishing +262% year on year.",
+      "South Asian groups are extending espionage into Western Europe; UNK_AcademicFlare is active.",
+      "188,000+ AI apps via OAuth; attacks on AI components grew 4.6-fold.",
+      "64% of targets of focused cloud attacks showed signs of successful compromise."
+    ],
+    "stats": [
+      {
+        "value": "×4.5",
+        "label": "phishing growth in Europe"
+      },
+      {
+        "value": "8.3",
+        "label": "clicks per 100 emails"
+      },
+      {
+        "value": "+262%",
+        "label": "callback phishing"
+      },
+      {
+        "value": "64%",
+        "label": "successful cloud compromises"
+      }
+    ],
+    "recommendations": [
+      "Review and restrict OAuth consents for AI apps.",
+      "Train employees to recognise callback phishing (calling a number from an email).",
+      "Monitor post-login activity in cloud mailboxes: forwarding rules, file access."
+    ],
+    "why_it_matters": "A rare regional snapshot: shows Europe lagging in phishing resilience and becoming an espionage target.",
+    "source_note": "Summary based on the Proofpoint blog and coverage (Infosecurity Magazine, GlobeNewswire)."
+  }
 });

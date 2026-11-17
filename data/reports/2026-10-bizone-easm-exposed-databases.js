@@ -70,5 +70,37 @@ RDB.add({
     "Срочно обновить Remote Desktop Services."
   ],
   "why_it_matters": "Быстрая самопроверка: эти четыре протокола на периметре — самые дешёвые для закрытия дыры.",
-  "source_note": "Выжимка по полному тексту публикации BI.ZONE."
+  "source_note": "Выжимка по полному тексту публикации BI.ZONE.",
+  "en": {
+    "title": "BI.ZONE EASM: one in five companies has databases exposed to the internet",
+    "tldr": "According to BI.ZONE EASM, in 2026 22% of Russian companies have databases directly reachable from the internet, 18% RDP, 15% SMB and 6% LDAP. In Q3, 90,000 systems with open remote access were found amid a critical RDS vulnerability.",
+    "summary": "A study of Russian companies' external perimeter by the BI.ZONE EASM attack surface management service. Exposed databases, RDP, SMB and LDAP do not in themselves mean a breach, but sharply increase the chance of a successful attack — from password guessing to exploiting vulnerabilities without user interaction.",
+    "key_findings": [
+      "22% of companies have had database services on the external perimeter since the start of 2026.",
+      "18% have RDP reachable from the internet: risk of brute force and reuse of stolen passwords.",
+      "15% have SMB open, 6% LDAP (which reveals network structure and accounts).",
+      "July–September 2026: 90,000 systems in the Russian internet segment with active remote access amid a Microsoft Remote Desktop Services vulnerability allowing code execution without user interaction."
+    ],
+    "stats": [
+      {
+        "value": "22%",
+        "label": "of companies with exposed databases"
+      },
+      {
+        "value": "18%",
+        "label": "with RDP exposed to the internet"
+      },
+      {
+        "value": "90,000",
+        "label": "systems with open remote access"
+      }
+    ],
+    "recommendations": [
+      "Scan the external perimeter regularly and find services not meant for the internet.",
+      "Remove databases, SMB and LDAP from the internet; RDP only via a gateway with MFA.",
+      "Update Remote Desktop Services urgently."
+    ],
+    "why_it_matters": "A quick self-check: these four protocols on the perimeter are the cheapest holes to close.",
+    "source_note": "Summary based on the full text of the BI.ZONE publication."
+  }
 });

@@ -56,5 +56,34 @@ RDB.add({
     "Ввести перечень разрешённых ИИ-инструментов в компании."
   ],
   "why_it_matters": "Показывает масштаб злоупотребления ИИ-брендами на старте года агентного ИИ.",
-  "source_note": "Выжимка по пресс-релизам Kaspersky и обзорам (Business Standard, Dawn)."
+  "source_note": "Выжимка по пресс-релизам Kaspersky и обзорам (Business Standard, Dawn).",
+  "en": {
+    "tldr": "From January to early May 2026 Kaspersky recorded more than 92,000 attacks using malware and unwanted software disguised as popular AI services and agents; 15,000+ samples posed as agentic AI software, including fake versions of OpenClaw.",
+    "summary": "The most frequently faked brands were ChatGPT (49%), Claude and Gemini (18% each), according to Business Standard's coverage. Fakes of new agentic tools are highlighted separately. The company advises using AI services only from trusted providers and protection that blocks phishing sites and malware installation.",
+    "key_findings": [
+      "92,000+ attacks disguised as AI services and agents (January — early May 2026).",
+      "Fakes: ChatGPT 49%, Claude 18%, Gemini 18% (per coverage).",
+      "15,000+ samples disguised as agentic AI software, including a fake OpenClaw."
+    ],
+    "stats": [
+      {
+        "value": "92,000+",
+        "label": "attacks"
+      },
+      {
+        "value": "15,000+",
+        "label": "samples posing as AI agents"
+      },
+      {
+        "value": "49%",
+        "label": "faked ChatGPT"
+      }
+    ],
+    "recommendations": [
+      "Install AI clients and agents only from official sources.",
+      "Maintain a list of approved AI tools in the company."
+    ],
+    "why_it_matters": "Shows the scale of AI brand abuse at the start of the year of agentic AI.",
+    "source_note": "Summary based on Kaspersky press releases and coverage (Business Standard, Dawn)."
+  }
 });

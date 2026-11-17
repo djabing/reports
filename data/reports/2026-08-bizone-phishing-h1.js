@@ -61,5 +61,33 @@ RDB.add({
     "Внедрять фишингоустойчивую MFA, чтобы снизить ценность украденных паролей."
   ],
   "why_it_matters": "Падение числа фишинговых доменов легко неверно истолковать как успех — на деле атаки стали точнее.",
-  "source_note": "Выжимка по публикациям CNews и Techora со ссылкой на BI.ZONE; первоисточник на сайте BI.ZONE не открывался."
+  "source_note": "Выжимка по публикациям CNews и Techora со ссылкой на BI.ZONE; первоисточник на сайте BI.ZONE не открывался.",
+  "en": {
+    "title": "BI.ZONE: phishing in H1 2026 — fewer domains, more personalisation",
+    "tldr": "BI.ZONE Digital Risk Protection blocked more than 13,500 phishing domains in H1 2026 — 73% fewer than a year earlier. The reason is not a decline in the threat but a change in tactics: high-quality personalised AI-assisted phishing instead of mass sites.",
+    "summary": "A summary from the BI.ZONE DRP digital risk protection service. Fraudsters create mass phishing sites less often and invest more in quality and personalisation. AI lets beginners produce convincing phishing and helps experienced attackers pick psychological scenarios more precisely.",
+    "key_findings": [
+      "More than 13,500 phishing domains detected and blocked in H1 2026.",
+      "A 73% drop vs H1 2025 — the result of changing tactics, not a weaker threat.",
+      "Focus shifting from mass mailings to personalised content.",
+      "AI lowers the entry barrier and helps choose convincing scenarios for talking to victims."
+    ],
+    "stats": [
+      {
+        "value": "13,500",
+        "label": "phishing domains blocked"
+      },
+      {
+        "value": "−73%",
+        "label": "vs H1 2025"
+      }
+    ],
+    "recommendations": [
+      "Shift staff training from 'spot the dodgy site' to recognising targeted scenarios.",
+      "Monitor registration of domains resembling the company brand.",
+      "Deploy phishing-resistant MFA to reduce the value of stolen passwords."
+    ],
+    "why_it_matters": "The drop in phishing domains is easy to misread as a success — in fact attacks have become more precise.",
+    "source_note": "Summary based on CNews and Techora articles citing BI.ZONE; the primary source on the BI.ZONE website could not be opened."
+  }
 });

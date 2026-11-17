@@ -60,5 +60,22 @@ RDB.add({
     "Проверить, что сертификат «Windows Production PCA 2011» внесён в список запрещённых UEFI (по рекомендациям вторичных источников)."
   ],
   "why_it_matters": "Показывает, что «полностью обновлённая» система может оставаться уязвимой без ручных шагов.",
-  "source_note": "Выжимка по обзорам (BleepingComputer, Born City, SecurityLab); первоисточник Kaspersky в поиске не найден, ссылка ведёт на BleepingComputer."
+  "source_note": "Выжимка по обзорам (BleepingComputer, Born City, SecurityLab); первоисточник Kaspersky в поиске не найден, ссылка ведёт на BleepingComputer.",
+  "en": {
+    "tldr": "The BlackX UEFI bootkit bypassed Secure Boot on fully updated Windows via the old Baton Drop vulnerability (CVE-2022-21894): administrators had not manually enabled additional Secure Boot certificate revocations. Targets were diplomatic agencies in Central Asia.",
+    "summary": "BlackX resembles BlackLotus but differs in its exploit implementation and drivers. After bypassing Secure Boot it loads a malicious kernel driver. Kaspersky calls this a gap in the update process: the patch requires manual steps that are rarely performed. An attempt to disable Kaspersky protection was blocked. Attribution differs between sources (some link it to APT41).",
+    "key_findings": [
+      "UEFI bootkit exploiting CVE-2022-21894 (Baton Drop).",
+      "All victims ran fully updated Windows without manual activation of Secure Boot revocations.",
+      "Targets: diplomatic agencies in Tajikistan, Uzbekistan and Turkmenistan.",
+      "Similar to BlackLotus; loads a malicious kernel driver."
+    ],
+    "stats": [],
+    "recommendations": [
+      "Manually apply Secure Boot revocations per Microsoft's guidance for CVE-2023-24932.",
+      "Check that the 'Windows Production PCA 2011' certificate is in the UEFI forbidden list (per secondary sources' recommendations)."
+    ],
+    "why_it_matters": "Shows that a 'fully updated' system can stay vulnerable without manual steps.",
+    "source_note": "Summary based on coverage (BleepingComputer, Born City, SecurityLab); the Kaspersky primary source was not found in search, so the link leads to BleepingComputer."
+  }
 });

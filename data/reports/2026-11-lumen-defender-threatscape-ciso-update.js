@@ -72,5 +72,37 @@ RDB.add({
     "Отслеживать трафик с резидентных IP-адресов как возможный прокси."
   ],
   "why_it_matters": "Взгляд крупного магистрального провайдера: показывает скорость массовой эксплуатации, недоступную телеметрии EDR.",
-  "source_note": "Выжимка по пресс-релизам Lumen и обзорам (TelecomTV, CIO Influence)."
+  "source_note": "Выжимка по пресс-релизам Lumen и обзорам (TelecomTV, CIO Influence).",
+  "en": {
+    "tldr": "Black Lotus Labs: early-year trends have accelerated — attackers start exploiting a new vulnerability within 24 hours, and within 72 hours 100+ servers join the attack. On average almost 4,000 brute-force attacks and scanners per day.",
+    "summary": "November update to Lumen's April report. The main idea: the most valuable threat signals are in the network, not on endpoints. Attackers target edge devices (routers, VPN gateways, firewalls) that bypass EDR and use 'residentially disguised' proxies built from compromised home and office devices.",
+    "key_findings": [
+      "Exploitation of new vulnerabilities starts within 24 hours.",
+      "Within 72 hours more than 100 servers join the attack.",
+      "Almost 4,000 brute-force attacks and exploit scanners per day (H1 2026).",
+      "The main target is edge network devices that bypass EDR.",
+      "Growth of 'residential' proxies on compromised SOHO devices."
+    ],
+    "stats": [
+      {
+        "value": "24 h",
+        "label": "until exploitation starts"
+      },
+      {
+        "value": "100+",
+        "label": "attack servers within 72 h"
+      },
+      {
+        "value": "~4,000",
+        "label": "attacks and scanners per day"
+      }
+    ],
+    "recommendations": [
+      "Shorten the patching window for edge devices to hours.",
+      "Add network telemetry (NetFlow, DNS) to EDR.",
+      "Track traffic from residential IP addresses as possible proxies."
+    ],
+    "why_it_matters": "A backbone provider's view: shows the speed of mass exploitation invisible to EDR telemetry.",
+    "source_note": "Summary based on Lumen press releases and coverage (TelecomTV, CIO Influence)."
+  }
 });

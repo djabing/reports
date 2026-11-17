@@ -67,5 +67,40 @@ RDB.add({
     "Переориентировать аналитиков SOC с разбора алертов на задание правил и проверку автоматических действий."
   ],
   "why_it_matters": "Задаёт повестку на 2027 год: безопасность ИИ-агентов становится вопросом управления идентичностями, а не только защиты моделей.",
-  "source_note": "Выжимка по блогу Google Cloud (рассылка Cloud CISO Perspectives); отдельного PDF-отчёта на странице нет."
+  "source_note": "Выжимка по блогу Google Cloud (рассылка Cloud CISO Perspectives); отдельного PDF-отчёта на странице нет.",
+  "en": {
+    "tldr": "Google Cloud and Mandiant forecast 2027: every AI agent is a separate identity with least privilege, Zero Trust goes down to the transaction level, and attackers poison MCP tools and AI-assistant libraries.",
+    "summary": "Google Cloud CISO Chris Betz, with leaders of Google Threat Intelligence and Mandiant, reviews 2026 and gives a forecast. Finding and fixing vulnerabilities with LLM agents has become mainstream. Attackers compress six months of reconnaissance into hours, poison open source, MCP tools and external libraries used by coding assistants, and ransomware operators are switching to fast mass data theft — including model weights, agent skills, prompt libraries and cloud GPUs (LLMJacking). Abuse of the agentic frameworks ARTEX, Hexstrike and CAIRN since September is mentioned, as is the XCPE botnet (1.3M+ TV boxes).",
+    "key_findings": [
+      "Every autonomous agent should be a full identity with its own credentials and least privilege.",
+      "Zero Trust should be extended to the level of individual transactions.",
+      "Attackers compress 'six months of reconnaissance into hours' (Sandra Joyce, GTIG).",
+      "Poisoning of open source, MCP tools and libraries used by AI assistants.",
+      "LLMJacking: theft of model weights, agent skills, prompt libraries and GPU capacity.",
+      "Betting on a single 'universal' agent to defend the enterprise in 2027 will fail."
+    ],
+    "stats": [
+      {
+        "value": "1.3M+",
+        "label": "TV boxes in the XCPE botnet"
+      },
+      {
+        "value": "hours",
+        "label": "instead of 6 months of reconnaissance"
+      },
+      {
+        "value": "3",
+        "label": "agentic frameworks in attacks (ARTEX, Hexstrike, CAIRN)"
+      }
+    ],
+    "recommendations": [
+      "Make continuous red teaming of agentic systems a prerequisite for production.",
+      "Keep an immutable log of agent decisions: inputs, reasoning, tool calls, policy decisions.",
+      "Govern models, agent permissions, supply chain and cloud in a single governance model.",
+      "Use teams of specialised agents with a central coordinator and staged autonomy.",
+      "Refocus SOC analysts from alert triage to setting rules and reviewing automated actions."
+    ],
+    "why_it_matters": "Sets the agenda for 2027: AI agent security becomes a matter of identity governance, not just model protection.",
+    "source_note": "Summary based on the Google Cloud blog (Cloud CISO Perspectives newsletter); there is no separate PDF report on the page."
+  }
 });

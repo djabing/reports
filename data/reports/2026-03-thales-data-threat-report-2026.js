@@ -98,6 +98,7 @@ RDB.add({
       "Increase encryption coverage of sensitive cloud data.",
       "Consolidate data protection tools and key management systems."
     ],
-    "why_it_matters": "Shows how AI is changing data-protection priorities and budgeting."
+    "why_it_matters": "Shows how AI is changing data-protection priorities and budgeting.",
+    "source_note": "Summary based on Thales materials and coverage (Help Net Security, Kiteworks)."
   }
 });

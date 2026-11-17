@@ -99,6 +99,7 @@ RDB.add({
       "Use automation to offset staff shortages.",
       "Watch for team burnout — it is a risk factor."
     ],
-    "why_it_matters": "Arguments for discussing headcount, budget and AI incident exercises with leadership."
+    "why_it_matters": "Arguments for discussing headcount, budget and AI incident exercises with leadership.",
+    "source_note": "Summary based on ISACA materials and press releases."
   }
 });

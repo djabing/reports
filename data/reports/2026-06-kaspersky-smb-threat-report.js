@@ -58,5 +58,36 @@ RDB.add({
     "Ввести список разрешённых ИИ-сервисов для сотрудников."
   ],
   "why_it_matters": "ИИ-хайп превратился в главную приманку для атак на малый бизнес.",
-  "source_note": "Выжимка по Securelist и пресс-релизам Kaspersky; доли по сервисам — по вторичному блогу."
+  "source_note": "Выжимка по Securelist и пресс-релизам Kaspersky; доли по сервисам — по вторичному блогу.",
+  "en": {
+    "tldr": "33,352 attacks on SMB users with malware disguised as five popular AI services (January–April 2026) — almost 5 times more than a year earlier. The most faked were ChatGPT (42%), Claude (24%) and DeepSeek (20%).",
+    "summary": "Report for International SMB Day (27 June). Posing as AI services became the most popular lure — 39% more common than others. Most files are trojans, including loaders; there are more than 1,100 unique samples with AI lures (+21%). 414,736 attacks were disguised as popular communication apps.",
+    "key_findings": [
+      "33,352 attacks with malware posing as AI services — almost ×5 vs 2025.",
+      "Lures: ChatGPT 42%, Claude 24%, DeepSeek 20%.",
+      "1,100+ unique samples with AI lures (+21%).",
+      "414,736 attacks disguised as communication apps.",
+      "Most files are trojans, including loaders."
+    ],
+    "stats": [
+      {
+        "value": "33,352",
+        "label": "attacks posing as AI"
+      },
+      {
+        "value": "×5",
+        "label": "growth vs 2025"
+      },
+      {
+        "value": "42%",
+        "label": "faked ChatGPT"
+      }
+    ],
+    "recommendations": [
+      "Install AI clients only from official websites and stores.",
+      "Introduce a list of approved AI services for employees."
+    ],
+    "why_it_matters": "The AI hype has become the main lure for attacks on small businesses.",
+    "source_note": "Summary based on Securelist and Kaspersky press releases; per-service shares come from a secondary blog."
+  }
 });

@@ -64,5 +64,24 @@ RDB.add({
     "Реагировать на появление незнакомого бэкдора как на предвестник шифрования."
   ],
   "why_it_matters": "Одна из самых активных групп вымогателей 2026 года — см. также отчёты ReliaQuest и GuidePoint.",
-  "source_note": "Выжимка по Securelist, пресс-релизу Kaspersky и обзорам (Technadu, Dutch IT Channel)."
+  "source_note": "Выжимка по Securelist, пресс-релизу Kaspersky и обзорам (Technadu, Dutch IT Channel).",
+  "en": {
+    "tldr": "GReAT: The Gentlemen deploy a new Go backdoor a day before encryption, use a new C ransomware variant and Windows Kernel Explorer and OpenArk64 to disable defences. The group is in the top 10 by leak-site victims in H1 2026.",
+    "summary": "Affiliates gain access through internet-exposed VPNs and firewalls and with stolen or weak credentials, probably via initial access brokers. The group builds its own tooling rather than using off-the-shelf solutions.",
+    "key_findings": [
+      "New Go backdoor deployed a day before encryption.",
+      "New Windows-focused ransomware variant written in C.",
+      "Defences disabled with Windows Kernel Explorer and OpenArk64.",
+      "Initial access via VPNs, firewalls and weak credentials.",
+      "Top 10 groups by leak-site victims in H1 2026."
+    ],
+    "stats": [],
+    "recommendations": [
+      "Protect VPNs and firewalls with MFA and timely updates.",
+      "Detect execution of kernel tools (OpenArk, Kernel Explorer).",
+      "Treat an unfamiliar backdoor as a precursor to encryption."
+    ],
+    "why_it_matters": "One of the most active ransomware groups of 2026 — see also the ReliaQuest and GuidePoint reports.",
+    "source_note": "Summary based on Securelist, the Kaspersky press release and coverage (Technadu, Dutch IT Channel)."
+  }
 });

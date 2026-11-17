@@ -83,5 +83,42 @@ RDB.add({
     "Сканировать интернет-периметр на заголовок realm=\"ARTEX\" и проверять IoC из отчёта (без слепой блокировки)."
   ],
   "why_it_matters": "Практическая детектирующая логика против агентных фреймворков, которые после утечки в открытый доступ стали массовым инструментом.",
-  "source_note": "Выжимка по оперативной публикации Unit 42 на GitHub (Unit42-timely-threat-intel)."
+  "source_note": "Выжимка по оперативной публикации Unit 42 на GitHub (Unit42-timely-threat-intel).",
+  "en": {
+    "tldr": "Unit 42 tracked (24 Sep – 27 Oct 2026) activity of the open multi-agent pentest framework ARTEX: reconnaissance via source maps and OpenAPI, attacks on IdP/OAuth and, on failure, abuse of exposed APIs.",
+    "summary": "ARTEX is an autonomous multi-agent pentest framework published in July 2026 and taken down on 8 October after 12,000+ forks. It is used by several unrelated groups, so ARTEX use alone does not point to a specific actor. Successful cases: self-registration of an account in a production application (~40 minutes) and reading ~50 MB of data via the API, and unauthenticated writes to a dev API document store. No successful compromise of IdP accounts was observed.",
+    "key_findings": [
+      "ARTEX was published in July 2026 and taken down on 8 October after 12,000+ forks.",
+      "Playbook: JS source maps, OpenAPI specs, runtime configs → attacks on IdP/OAuth → exposed APIs.",
+      "Account registration in ~40 minutes and ~50 MB of data exfiltrated via a production application's API.",
+      "700+ rejected access attempts to internal applications behind IAP; bursts of 1–14 requests with 25–31 s pauses.",
+      "Signs of an AI operator: 'think — act', self-correction on HTTP 422, verifying results by re-reading."
+    ],
+    "stats": [
+      {
+        "value": "12,000+",
+        "label": "ARTEX forks"
+      },
+      {
+        "value": "~40 min",
+        "label": "to account registration"
+      },
+      {
+        "value": "~50 MB",
+        "label": "exfiltrated via API"
+      },
+      {
+        "value": "700+",
+        "label": "rejected IAP attempts"
+      }
+    ],
+    "recommendations": [
+      "Do not publish source maps and OpenAPI specs of internal APIs in production.",
+      "Disable or restrict self-registration in business applications; require authorisation on all write operations.",
+      "Detect the pattern 'fetch /openapi.json → call a non-public API seconds later' and writes immediately followed by a GET.",
+      "Scan the internet perimeter for the realm=\"ARTEX\" header and check the report's IoCs (without blind blocking)."
+    ],
+    "why_it_matters": "Practical detection logic against agentic frameworks that became a mass tool after leaking into the open.",
+    "source_note": "Summary based on Unit 42's timely publication on GitHub (Unit42-timely-threat-intel)."
+  }
 });

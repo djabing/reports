@@ -55,5 +55,35 @@ RDB.add({
     "Не откладывать обновления Adobe на пользовательских рабочих станциях."
   ],
   "why_it_matters": "Объём патчей растёт кратно — без приоритизации по риску команды не успевают. Новая модель когорт может изменить процессы vulnerability management.",
-  "source_note": "Выжимка по анонсу разбора Qualys и сообщению Cyber Security News. Детали по конкретным CVE — в оригинале."
+  "source_note": "Выжимка по анонсу разбора Qualys и сообщению Cyber Security News. Детали по конкретным CVE — в оригинале.",
+  "en": {
+    "tldr": "October's Patch Tuesday fixed a record 1,118 vulnerabilities; Microsoft grouped them into 15 'risk cohorts' for the first time. Adobe released 11 bulletins covering 176 vulnerabilities in parallel.",
+    "summary": "Qualys researchers' monthly review of Microsoft security updates. The volume of fixes is unprecedented — more than a thousand CVEs in a single cycle — so Microsoft introduced a new grouping of vulnerabilities into risk cohorts to help teams prioritise deployment. The review is useful as a checklist for the vulnerability management team this month.",
+    "key_findings": [
+      "1,118 vulnerabilities fixed in Microsoft products in a single update cycle.",
+      "New classification: vulnerabilities grouped into 15 risk cohorts for prioritisation.",
+      "Adobe on the same day: 11 bulletins, 176 vulnerabilities across several products."
+    ],
+    "stats": [
+      {
+        "value": "1,118",
+        "label": "Microsoft vulnerabilities"
+      },
+      {
+        "value": "15",
+        "label": "risk cohorts"
+      },
+      {
+        "value": "176",
+        "label": "Adobe vulnerabilities"
+      }
+    ],
+    "recommendations": [
+      "Use Microsoft's risk cohorts to prioritise, starting with exploited and public-facing services.",
+      "Cross-check the list against the CISA KEV catalogue.",
+      "Do not delay Adobe updates on user workstations."
+    ],
+    "why_it_matters": "Patch volume is growing manifold — without risk-based prioritisation teams cannot keep up. The new cohort model may change vulnerability management processes.",
+    "source_note": "Summary based on the Qualys review announcement and a Cyber Security News report. Details on specific CVEs are in the original."
+  }
 });

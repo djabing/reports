@@ -60,5 +60,30 @@ RDB.add({
     "Настроить фильтрацию автоматических отчётов Data Studio от неизвестных отправителей."
   ],
   "why_it_matters": "Показывает, как злоупотребление легитимными облачными сервисами помогает спаму обходить фильтры.",
-  "source_note": "Выжимка по пресс-релизу «Лаборатории Касперского» от 13.11.2026 (Kaspersky CyberSecurity Weekend 2026, Ташкент)."
+  "source_note": "Выжимка по пресс-релизу «Лаборатории Касперского» от 13.11.2026 (Kaspersky CyberSecurity Weekend 2026, Ташкент).",
+  "en": {
+    "title": "Kaspersky detects a fraudulent 'compensation payment' mailing via a Google service",
+    "tldr": "Scammers send emails about 'compensation payments' via Google Data Studio's scheduled report delivery: the emails come from a legitimate Google service and lead via Google Slides and Forms to phishing pages.",
+    "summary": "Recipients are promised reimbursement of expenses, extra payments or an already approved transfer, citing 'changes in legislation' and adding state symbols. The attackers create a document in Google Data Studio and set up automatic delivery to victims' addresses, so the emails carry the service's branding and are harder for security solutions to block. A telltale sign is that emails arrive at the top or half of the hour.",
+    "key_findings": [
+      "Mailing via Google Data Studio's scheduled report delivery feature.",
+      "Lure: compensation, payments, 'approved' transfers citing changes in the law.",
+      "Links lead via Google Slides and Google Forms to phishing pages.",
+      "Emails arrive mostly at the top or half of the hour.",
+      "Legitimate infrastructure makes the mailing harder to block."
+    ],
+    "stats": [
+      {
+        "value": ":00 / :30",
+        "label": "email arrival times"
+      }
+    ],
+    "recommendations": [
+      "Do not follow links in unexpected payment emails, even if they come via Google services.",
+      "Verify payment information only on official government resources.",
+      "Filter automatic Data Studio reports from unknown senders."
+    ],
+    "why_it_matters": "Shows how abuse of legitimate cloud services helps spam bypass filters.",
+    "source_note": "Summary based on Kaspersky's press release of 13 Nov 2026 (Kaspersky CyberSecurity Weekend 2026, Tashkent)."
+  }
 });

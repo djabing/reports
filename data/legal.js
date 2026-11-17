@@ -19,11 +19,13 @@ window.RDB_LEGAL = {
   // Для пересказа используем первоисточник или другие издания.
   avoid_media: ["meduza.io", "zona.media", "currenttime.tv", "svoboda.org", "novayagazeta.eu", "theins.ru", "bellingcat.com"],
 
-  // Упоминания, которые требуют пометки. pattern — регулярное выражение (без учёта регистра), note — текст сноски.
+  // Упоминания, которые требуют пометки. pattern — регулярное выражение (без учёта регистра), note — текст сноски, note_en — он же для английского интерфейса.
   marked_mentions: [
     { pattern: "\\b(Meta Platforms|Facebook|Instagram)\\b",
-      note: "Meta Platforms Inc. (Facebook, Instagram) признана экстремистской организацией, её деятельность запрещена в РФ." },
+      note: "Meta Platforms Inc. (Facebook, Instagram) признана экстремистской организацией, её деятельность запрещена в РФ.",
+      note_en: "Meta Platforms Inc. (Facebook, Instagram) is designated an extremist organisation and its activities are banned in Russia." },
     { pattern: "Recorded Future",
-      note: "Деятельность Recorded Future признана нежелательной на территории РФ." }
+      note: "Деятельность Recorded Future признана нежелательной на территории РФ.",
+      note_en: "Recorded Future's activities are designated undesirable in Russia." }
   ]
 };

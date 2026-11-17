@@ -57,5 +57,36 @@ RDB.add({
     "Мониторить утечки учётных данных сотрудников в логах стилеров."
   ],
   "why_it_matters": "Показывает предложение на теневом рынке, ориентированном на Россию и СНГ.",
-  "source_note": "Выжимка по материалам BI.ZONE и обзорам (CISOClub, techora)."
+  "source_note": "Выжимка по материалам BI.ZONE и обзорам (CISOClub, techora).",
+  "en": {
+    "title": "Threat Zone 2026: the reverse side",
+    "tldr": "BI.ZONE analysed 35,000+ underground listings: the market is decentralising, the share of exploit-sale listings fell from 18% to 13%, and stealer data became 13% more expensive.",
+    "summary": "An annual study of the underground economy targeting Russia and the CIS. The lower share of exploits is not due to falling demand but to marketplace takedowns and sales moving to closed channels. A third of exploit listings concern Windows vulnerabilities, 15% perimeter security products.",
+    "key_findings": [
+      "35,000+ listings on forums, marketplaces and closed channels analysed.",
+      "Share of exploit-sale listings fell from 18% to 13% — due to changing sales channels.",
+      "A third of exploits target Windows, 15% perimeter security products.",
+      "Stealer data prices rose 13%; the market is decentralising."
+    ],
+    "stats": [
+      {
+        "value": "35,000+",
+        "label": "listings"
+      },
+      {
+        "value": "13%",
+        "label": "of listings are exploits"
+      },
+      {
+        "value": "+13%",
+        "label": "stealer data price"
+      }
+    ],
+    "recommendations": [
+      "Prioritise updating perimeter security products — exploits for them are actively sold.",
+      "Monitor employee credential leaks in stealer logs."
+    ],
+    "why_it_matters": "Shows what is on offer in the underground market targeting Russia and the CIS.",
+    "source_note": "Summary based on BI.ZONE materials and coverage (CISOClub, techora)."
+  }
 });

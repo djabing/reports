@@ -104,6 +104,7 @@ RDB.add({
       "Use package managers securely: version pinning, integrity checks, delayed updates.",
       "Prepare a DDoS resilience plan, but prioritise ransomware protection."
     ],
-    "why_it_matters": "The official European baseline for regulation (NIS2, CRA): useful for justifying budget and priorities."
+    "why_it_matters": "The official European baseline for regulation (NIS2, CRA): useful for justifying budget and priorities.",
+    "source_note": "Summary based on ENISA materials and analytical reviews (CSA, King & Spalding and others)."
   }
 });

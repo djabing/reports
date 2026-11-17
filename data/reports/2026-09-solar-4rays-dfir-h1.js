@@ -76,5 +76,43 @@ RDB.add({
     "Быстро привлекать DFIR при подозрениях — ранняя остановка атаки резко снижает ущерб."
   ],
   "why_it_matters": "Один из немногих отчётов с реальной статистикой расследований в России — с конкретными группировками и векторами.",
-  "source_note": "Выжимка по полному тексту отчёта в блоге Solar 4RAYS."
+  "source_note": "Выжимка по полному тексту отчёта в блоге Solar 4RAYS.",
+  "en": {
+    "title": "Solar 4RAYS: incident investigation chronicles, H1 2026",
+    "tldr": "Manufacturing accounted for 31% of investigated incidents (+11 pp year on year); 58% of intrusions came through web application vulnerabilities. Professional groups show an 'abnormal lull': only 4 known clusters versus 18 in 2025.",
+    "summary": "Solar 4RAYS report on dozens of incident investigations at Russian private and public organisations. Attackers' focus is shifting from government to manufacturing; the main vector is vulnerabilities in popular Russian software and open source. The authors attribute the first-half lull to possible cyclicality: groups operate stealthily early in the year and become more active in the second half.",
+    "key_findings": [
+      "Manufacturing — 31% of incidents (+11 pp vs H1 2025); government's share fell by 14.5 pp but is still one in five incidents.",
+      "Espionage is the main identified goal (31.6%); in almost half of cases the goal was not established because attacks were stopped early.",
+      "Web application vulnerabilities — 58% of initial intrusions (46% a year earlier); popular Russian software and open source are targeted.",
+      "No attacks via contractors were recorded in H1 — the 2025 trend was broken.",
+      "Only 4 known groups were active: Fairy Trickster, GOFFEE, NGC5081, Partisan Zmiy (32% of incidents); 68% unattributed.",
+      "The share of 'short' attacks (under a week) fell from 32% to 26%; no successful incidents in energy (12% a year ago)."
+    ],
+    "stats": [
+      {
+        "value": "31%",
+        "label": "of incidents — manufacturing"
+      },
+      {
+        "value": "58%",
+        "label": "of entries via web vulnerabilities"
+      },
+      {
+        "value": "4",
+        "label": "active groups (18 in 2025)"
+      },
+      {
+        "value": "68%",
+        "label": "of incidents unattributed"
+      }
+    ],
+    "recommendations": [
+      "Prioritise patching and WAF for public web applications, especially Russian and open-source software.",
+      "Prepare for increased APT activity in the second half: check SOC and IR readiness.",
+      "Bring in DFIR quickly when compromise is suspected — stopping an attack early sharply reduces damage."
+    ],
+    "why_it_matters": "One of the few reports with real investigation statistics from Russia — with specific groups and vectors.",
+    "source_note": "Summary based on the full text of the report on the Solar 4RAYS blog."
+  }
 });

@@ -64,5 +64,23 @@ RDB.add({
     "Детектировать дамп учётных данных и запуск SOCKS-прокси на рабочих станциях."
   ],
   "why_it_matters": "Пример терпеливого шпионажа против дипломатии с собственным инструментарием.",
-  "source_note": "Выжимка по пресс-релизу Kaspersky и обзорам (The Hacker News, Cybernews)."
+  "source_note": "Выжимка по пресс-релизу Kaspersky и обзорам (The Hacker News, Cybernews).",
+  "en": {
+    "tldr": "GReAT described a campaign using a new Go RAT, GoSerpent, against government bodies and diplomats in Southeast Asia. The goal is long-term access and intelligence collection; a link to TetrisPhantom is possible.",
+    "summary": "GoSerpent masquerades as system files (lass.exe, updates.exe); the new version encrypts its configuration and C2 traffic. The backdoor deploys Mimikatz and QuarksDumpLocalHash to steal credentials and sets up SOCKS5 proxies. The activity was discovered in February 2026; attacks had been under way since late 2025.",
+    "key_findings": [
+      "New Go RAT GoSerpent against government bodies and diplomats.",
+      "Masquerades as system files; encrypted configuration and C2.",
+      "Credential theft: Mimikatz, QuarksDumpLocalHash.",
+      "SOCKS5 proxies through infected hosts.",
+      "Suspected link to TetrisPhantom."
+    ],
+    "stats": [],
+    "recommendations": [
+      "Look for processes with system-like names (lass.exe) outside standard paths.",
+      "Detect credential dumping and SOCKS proxies on workstations."
+    ],
+    "why_it_matters": "An example of patient espionage against diplomacy with custom tooling.",
+    "source_note": "Summary based on the Kaspersky press release and coverage (The Hacker News, Cybernews)."
+  }
 });

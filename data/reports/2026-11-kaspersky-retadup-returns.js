@@ -54,5 +54,26 @@ RDB.add({
     "Отключить автозапуск и контролировать съёмные носители."
   ],
   "why_it_matters": "Напоминание, что старые черви возвращаются как канал доставки.",
-  "source_note": "Выжимка по пресс-релизу Kaspersky; точная дата — ноябрь 2026."
+  "source_note": "Выжимка по пресс-релизу Kaspersky; точная дата — ноябрь 2026.",
+  "en": {
+    "title": "The Retadup worm is back: infections via USB drives and CoffeeLoader",
+    "tldr": "The Retadup worm, thought neutralised in 2019, is spreading again via removable media and delivering CoffeeLoader; about 15,000 attack attempts were repelled in the first nine months of 2026.",
+    "summary": "The old worm has become active again and is used as a delivery channel for a modern loader. The main spreading route is USB drives.",
+    "key_findings": [
+      "Retadup is active again seven years after its takedown.",
+      "Delivers the CoffeeLoader loader.",
+      "~15,000 attack attempts in nine months of 2026."
+    ],
+    "stats": [
+      {
+        "value": "~15,000",
+        "label": "attack attempts"
+      }
+    ],
+    "recommendations": [
+      "Disable autorun and control removable media."
+    ],
+    "why_it_matters": "A reminder that old worms come back as delivery channels.",
+    "source_note": "Summary based on the Kaspersky press release; exact date — November 2026."
+  }
 });

@@ -64,5 +64,23 @@ RDB.add({
     "Детектировать DLL side-loading и маяки Cobalt Strike."
   ],
   "why_it_matters": "Новая кампания с собственным загрузчиком против госструктур и разработчиков.",
-  "source_note": "Выжимка по пресс-релизу Kaspersky и обзорам (The Hacker News, SC World); дата — июнь 2026."
+  "source_note": "Выжимка по пресс-релизу Kaspersky и обзорам (The Hacker News, SC World); дата — июнь 2026.",
+  "en": {
+    "tldr": "A previously unknown loader, SharkLoader, uses DLL side-loading to launch Cobalt Strike Beacon. Targets include a diplomatic organisation in Indonesia, government bodies in Taiwan and software developers.",
+    "summary": "Lures include fake Cisco AnyConnect and Google Update installers as well as PDF documents. SharkLoader uses legitimate Windows applications to load encrypted modules. Some of the tools are linked to Chinese-speaking developers, but the campaign is not attributed to a known group.",
+    "key_findings": [
+      "New SharkLoader loader delivers Cobalt Strike Beacon.",
+      "DLL side-loading via legitimate Windows applications.",
+      "Lures: fake Cisco AnyConnect and Google Update installers.",
+      "Victims: diplomacy in Indonesia, government in Taiwan, software developers.",
+      "Links to Chinese-speaking developers without attribution to a group."
+    ],
+    "stats": [],
+    "recommendations": [
+      "Install corporate remote-access clients and updates only from official sources approved by IT.",
+      "Detect DLL side-loading and Cobalt Strike beacons."
+    ],
+    "why_it_matters": "A new campaign with its own loader targeting government bodies and developers.",
+    "source_note": "Summary based on the Kaspersky press release and coverage (The Hacker News, SC World); date — June 2026."
+  }
 });

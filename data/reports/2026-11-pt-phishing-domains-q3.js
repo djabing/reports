@@ -67,5 +67,37 @@ RDB.add({
     "Обучать сотрудников не вводить коды подтверждения на сторонних сайтах."
   ],
   "why_it_matters": "Мессенджеры остаются главной мишенью массового фишинга в России, а угнанные аккаунты затем используются для целевых атак на организации.",
-  "source_note": "Выжимка по новостям CNews и Runet.News на основе данных Positive Technologies."
+  "source_note": "Выжимка по новостям CNews и Runet.News на основе данных Positive Technologies.",
+  "en": {
+    "title": "More than 3,400 phishing domains in Q3 2026: 89% target messenger users",
+    "tldr": "PT threat intelligence identified 3,425 phishing domains in Q3; about 89% aim to hijack accounts in popular messengers.",
+    "summary": "Over the quarter Positive Technologies found 3,425 new phishing domains. About 89% were used to steal messenger accounts, about 5% to steal banking data, 3% to distribute malicious Android apps and another 3% to break into other services.",
+    "key_findings": [
+      "3,425 new phishing domains in the quarter.",
+      "~89% — messenger account takeover.",
+      "~5% — banking data theft.",
+      "~3% — distribution of malicious Android apps; ~3% — other services."
+    ],
+    "stats": [
+      {
+        "value": "3,425",
+        "label": "phishing domains"
+      },
+      {
+        "value": "89%",
+        "label": "targeting messengers"
+      },
+      {
+        "value": "5%",
+        "label": "banking data"
+      }
+    ],
+    "recommendations": [
+      "Enable two-factor protection (cloud password) in all employees' messengers.",
+      "Monitor registration of domains resembling the company brand.",
+      "Train employees not to enter confirmation codes on third-party sites."
+    ],
+    "why_it_matters": "Messengers remain the main target of mass phishing in Russia, and hijacked accounts are then used for targeted attacks on organisations.",
+    "source_note": "Summary based on CNews and Runet.News reports drawing on Positive Technologies data."
+  }
 });

@@ -101,6 +101,7 @@ RDB.add({
       "Prioritise phishing protection and phishing-resistant MFA.",
       "Use the report's figures to quantify cyber risk in money and justify budget."
     ],
-    "why_it_matters": "The most cited source for translating cyber risk into financial terms."
+    "why_it_matters": "The most cited source for translating cyber risk into financial terms.",
+    "source_note": "Summary based on coverage of the report (Infosecurity Magazine, eSecurity Planet, Baker Donelson); US growth rates differ between sources."
   }
 });

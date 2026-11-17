@@ -66,5 +66,33 @@ RDB.add({
     "Проводить регулярный аудит конфигураций публичных сервисов."
   ],
   "why_it_matters": "Российский кейс, подтверждающий глобальный тренд: агентные атаки уже происходят в реальных инцидентах, а не только в отчётах вендоров ИИ.",
-  "source_note": "Выжимка по публикациям SecurityLab и пересказам расследования PT; вывод о полной автономности предварительный."
+  "source_note": "Выжимка по публикациям SecurityLab и пересказам расследования PT; вывод о полной автономности предварительный.",
+  "en": {
+    "title": "AI agents carried out an entire intrusion in three hours: a PT ESC IR investigation",
+    "tldr": "For the first time in its practice, PT ESC IR encountered an intrusion probably carried out entirely by AI agents: about three hours from the entry point to confidential data, and access to 10+ Linux and Windows hosts.",
+    "summary": "Positive Technologies specialists investigated an attack on a Russian company that developed abnormally fast: in about three hours the attackers went from initial access to confidential data and took over more than ten hosts. According to the experts, the attack was probably carried out entirely by AI agents, although the absence of a human 'at the controls' is not definitively confirmed. The vulnerable service and configuration are not disclosed.",
+    "key_findings": [
+      "~3 hours from initial access to confidential data.",
+      "More than 10 infrastructure hosts compromised (Linux and Windows).",
+      "According to PT, the attack was probably carried out entirely by AI agents — a first in the company's practice.",
+      "The vulnerable service and specific misconfiguration are not disclosed."
+    ],
+    "stats": [
+      {
+        "value": "~3 h",
+        "label": "to confidential data"
+      },
+      {
+        "value": "10+",
+        "label": "compromised hosts"
+      }
+    ],
+    "recommendations": [
+      "Shorten detection and response time: the reaction window is measured in hours.",
+      "Automate blocking at the EDR/NDR level on signs of fast lateral movement.",
+      "Regularly audit the configuration of public-facing services."
+    ],
+    "why_it_matters": "A Russian case confirming the global trend: agentic attacks are already happening in real incidents, not just in AI vendors' reports.",
+    "source_note": "Summary based on SecurityLab articles and accounts of the PT investigation; the conclusion of full autonomy is preliminary."
+  }
 });

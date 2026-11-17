@@ -70,6 +70,7 @@ RDB.add({
       "Include cyber scenarios in financial institutions' stress tests.",
       "Assign board-level accountability for cyber resilience."
     ],
-    "why_it_matters": "Cyber risk is recognized as a systemic risk to the global financial system — shaping regulatory requirements for banks."
+    "why_it_matters": "Cyber risk is recognized as a systemic risk to the global financial system — shaping regulatory requirements for banks.",
+    "source_note": "Summary based on media coverage of the report (Gulf Today, Banking Exchange); full text on the IMF website."
   }
 });

@@ -77,5 +77,38 @@ RDB.add({
     "Мониторинг идентичностей (ITDR) наравне с конечными точками."
   ],
   "why_it_matters": "Цифра «48 часов от PoC до атаки» — веский аргумент для пересмотра SLA по уязвимостям.",
-  "source_note": "Выжимка по обзорам отчёта (eSecurity Planet, CRN Asia, Security MEA). Точная ссылка на страницу отчёта — уточните на сайте CrowdStrike."
+  "source_note": "Выжимка по обзорам отчёта (eSecurity Planet, CRN Asia, Security MEA). Точная ссылка на страницу отчёта — уточните на сайте CrowdStrike.",
+  "en": {
+    "tldr": "'The year of the evasive adversary': AI-enabled attacks up 89%, 88% of exploitation begins within 48 hours of PoC publication, cloud eCrime up 171%.",
+    "summary": "The Falcon OverWatch team's annual report presented at Black Hat 2026. Attackers are exploiting vulnerabilities faster, using AI, targeting software supply chains (especially developer tools and AI ecosystems) and shifting towards identity and cloud attacks. Vishing, OAuth abuse and trusted accounts shorten the time to enterprise compromise.",
+    "key_findings": [
+      "AI-enabled cyber threats up 89%: AI accelerates exploitation and phishing.",
+      "88% of observed vulnerability attacks began within 48 hours of PoC publication.",
+      "Cloud cybercrime up 171% — targeting credentials and financial assets.",
+      "Vishing, OAuth abuse and trusted identities speed up compromise.",
+      "Supply-chain attacks increasingly target developer tools and AI ecosystems."
+    ],
+    "stats": [
+      {
+        "value": "+89%",
+        "label": "AI-enabled attacks"
+      },
+      {
+        "value": "88%",
+        "label": "exploited within 48 h of PoC"
+      },
+      {
+        "value": "+171%",
+        "label": "cloud eCrime"
+      }
+    ],
+    "recommendations": [
+      "A 48-hour SLA for patching critical public vulnerabilities, otherwise compensating controls.",
+      "A helpdesk call verification procedure (MFA/password reset only after identity check).",
+      "Audit OAuth apps and granted consents in cloud tenants.",
+      "Monitor identities (ITDR) on a par with endpoints."
+    ],
+    "why_it_matters": "The '48 hours from PoC to attack' figure is a strong argument for revisiting vulnerability SLAs.",
+    "source_note": "Summary based on coverage of the report (eSecurity Planet, CRN Asia, Security MEA). Check the CrowdStrike website for the exact report page."
+  }
 });

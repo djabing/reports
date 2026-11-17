@@ -84,6 +84,7 @@ RDB.add({
       "Set measurable ROI metrics for AI security tools before scaling.",
       "Build agentic AI governance before moving pilots to production."
     ],
-    "why_it_matters": "A sober look at the gap between expectations of AI in defence and actual returns."
+    "why_it_matters": "A sober look at the gap between expectations of AI in defence and actual returns.",
+    "source_note": "Summary based on the EY press release and CIO Dive coverage."
   }
 });

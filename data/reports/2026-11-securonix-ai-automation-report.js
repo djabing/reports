@@ -61,5 +61,37 @@ RDB.add({
     "Измерять эффект ИИ через показатели безопасности, а не через объём автоматизации."
   ],
   "why_it_matters": "Показывает реальную модель внедрения ИИ в SOC: не полная автономия, а управляемое исполнение.",
-  "source_note": "Выжимка по пресс-релизам Securonix (GlobeNewswire, Business Wire)."
+  "source_note": "Выжимка по пресс-релизам Securonix (GlobeNewswire, Business Wire).",
+  "en": {
+    "tldr": "A survey of 1,000 professionals: 99.6% increased AI budgets for security automation, but most (53%) prefer a human-in-the-loop model; only 16.4% run fully autonomous processes.",
+    "summary": "Securonix surveyed security professionals at companies with 2,000 to 50,000+ employees in the US, UK, France and Australia. AI investment has reached a tipping point, but organisations choose human-governed execution: 70% use human-in-the-loop or human-on-the-loop. The report recommends defining permissions, approval boundaries, escalation paths and accountability for every AI process.",
+    "key_findings": [
+      "99.6% increased AI budgets for security automation over the year.",
+      "70% use human-in-the-loop or human-on-the-loop control.",
+      "53% prefer human-in-the-loop; 16.4% run processes with minimal human involvement.",
+      "13% do not use AI in security automation.",
+      "55% of Australian respondents are ready to redirect headcount budget to AI initiatives."
+    ],
+    "stats": [
+      {
+        "value": "1,000",
+        "label": "professionals"
+      },
+      {
+        "value": "99.6%",
+        "label": "increased AI budgets"
+      },
+      {
+        "value": "53%",
+        "label": "favour human-in-the-loop"
+      }
+    ],
+    "recommendations": [
+      "Define permissions, approval boundaries, escalation and an owner for every AI process.",
+      "Develop the team's AI literacy and cross-functional AI governance.",
+      "Measure AI impact through security outcomes, not volume of automation."
+    ],
+    "why_it_matters": "Shows the real model of AI adoption in the SOC: not full autonomy but governed execution.",
+    "source_note": "Summary based on Securonix press releases (GlobeNewswire, Business Wire)."
+  }
 });

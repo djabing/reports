@@ -93,6 +93,7 @@ RDB.add({
       "Include state-actor scenarios in the threat model for critical systems.",
       "Prepare response plans for a possible rise in attacks."
     ],
-    "why_it_matters": "Official government statistics from a leading cyber power — a benchmark for critical-infrastructure threats."
+    "why_it_matters": "Official government statistics from a leading cyber power — a benchmark for critical-infrastructure threats.",
+    "source_note": "Summary based on NCSC materials and coverage (Infosecurity Magazine, techUK)."
   }
 });

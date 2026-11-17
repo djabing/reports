@@ -77,6 +77,7 @@ RDB.add({
       "Check product and investment strategy against the four areas.",
       "Assess readiness to protect AI agents and verify content authenticity."
     ],
-    "why_it_matters": "Useful for strategic planning of a security product portfolio."
+    "why_it_matters": "Useful for strategic planning of a security product portfolio.",
+    "source_note": "Summary based on the Gartner abstract; the full document is available to clients."
   }
 });

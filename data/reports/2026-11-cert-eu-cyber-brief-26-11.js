@@ -88,6 +88,7 @@ RDB.add({
       "Check updates for PAN-OS, Cisco Secure Email Gateway, Atlassian and Node.js.",
       "Monitor ransomware attempts against perimeter devices."
     ],
-    "why_it_matters": "A compact monthly brief from the EU institutions' CERT — handy for weekly patch prioritization."
+    "why_it_matters": "A compact monthly brief from the EU institutions' CERT — handy for weekly patch prioritization.",
+    "source_note": "Summary based on the CERT-EU publication; some points are confirmed only by PDF excerpts."
   }
 });

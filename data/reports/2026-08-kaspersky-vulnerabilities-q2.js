@@ -57,5 +57,36 @@ RDB.add({
     "Включить ИИ-платформы (Langflow и др.) в программу управления уязвимостями."
   ],
   "why_it_matters": "Показывает взрывной рост критических уязвимостей и уязвимостей ИИ-сервисов.",
-  "source_note": "Выжимка по Securelist и пресс-релизам Kaspersky; дата публикации — август 2026."
+  "source_note": "Выжимка по Securelist и пресс-релизам Kaspersky; дата публикации — август 2026.",
+  "en": {
+    "tldr": "Critical vulnerabilities reached 119 in Q2 — about 5 times more than at the end of 2025. Vulnerabilities in AI and LLM services rose about tenfold, and APT groups exploit new vulnerabilities immediately after disclosure.",
+    "summary": "Securelist's quarterly review. For Windows there is a trend of vulnerabilities being published before CVE registration and patches. AI helped find a series of Dirty Frag vulnerabilities in the Linux kernel. The Langflow vulnerability is one of the first cases of an APT group exploiting an AI technology.",
+    "key_findings": [
+      "119 critical vulnerabilities in Q2 — about ×5 vs end of 2025.",
+      "Vulnerabilities in AI/LLM services rose about tenfold since Q4 2025.",
+      "APT groups exploit vulnerabilities immediately after disclosure.",
+      "Langflow is one of the first cases of an APT group exploiting an AI technology.",
+      "AI found a series of Dirty Frag vulnerabilities in the Linux kernel."
+    ],
+    "stats": [
+      {
+        "value": "119",
+        "label": "critical vulnerabilities"
+      },
+      {
+        "value": "×5",
+        "label": "vs end of 2025"
+      },
+      {
+        "value": "×10",
+        "label": "vulnerabilities in AI services"
+      }
+    ],
+    "recommendations": [
+      "Shorten patching time — the window between disclosure and exploitation has almost disappeared.",
+      "Include AI platforms (Langflow etc.) in the vulnerability management programme."
+    ],
+    "why_it_matters": "Shows the explosive growth of critical vulnerabilities and of vulnerabilities in AI services.",
+    "source_note": "Summary based on Securelist and Kaspersky press releases; publication date — August 2026."
+  }
 });
