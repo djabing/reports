@@ -80,5 +80,41 @@ RDB.add({
     "Мониторить отключение средств защиты и регулярно тестировать восстановление."
   ],
   "why_it_matters": "Полезен MSP и МСБ: показывает, как ИИ и избыточные средства удалённого доступа расширяют поверхность атаки.",
-  "source_note": "Выжимка по материалам Acronis и обзорам (ITEuropa, GlobeNewswire)."
+  "source_note": "Выжимка по материалам Acronis и обзорам (ITEuropa, GlobeNewswire).",
+  "en": {
+    "tldr": "First edition of Acronis TRU: one operator with 12 AI agents attacked targets in 11 countries (BOSSAI). 63.1% of 1.8 million endpoints have more than one remote access tool installed, and the median time to install third-party patches is 5.7 days.",
+    "summary": "A summary report by Acronis's research unit. AI lets a lone actor operate at APT scale. Identity is the main way in: infostealers steal passwords, tokens, cookies and cloud keys, as well as AI tool API keys and GitHub tokens. The patching window is shrinking (Red Heron campaign: a public Gitea exploit a day after the patch). Ransomware increasingly targets Linux and VMware ESXi and deliberately disables defences.",
+    "key_findings": [
+      "BOSSAI: one operator coordinated 12 AI agents against targets in 11 countries.",
+      "Infostealers steal AI tool API keys, GitHub tokens and cloud secrets.",
+      "Median third-party patch installation time is 5.7 days; the worst 10% take more than 24.9 days.",
+      "63.1% of 1.8 million endpoints have additional remote access tools.",
+      "Ransomware targets Linux and ESXi and disables security tools."
+    ],
+    "stats": [
+      {
+        "value": "12",
+        "label": "AI agents run by one operator"
+      },
+      {
+        "value": "11",
+        "label": "target countries"
+      },
+      {
+        "value": "63.1%",
+        "label": "endpoints with extra RMM"
+      },
+      {
+        "value": "5.7 days",
+        "label": "median patching time"
+      }
+    ],
+    "recommendations": [
+      "Inventory and remove unnecessary RMM tools and former contractors' accounts.",
+      "Restrict AI agent permissions and protect their API keys as privileged secrets.",
+      "Monitor for security tools being disabled and test recovery regularly."
+    ],
+    "why_it_matters": "Useful for MSPs and SMBs: shows how AI and excess remote access tools expand the attack surface.",
+    "source_note": "Summary based on Acronis materials and coverage (ITEuropa, GlobeNewswire)."
+  }
 });

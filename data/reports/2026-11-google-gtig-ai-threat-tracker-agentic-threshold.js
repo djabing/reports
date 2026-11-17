@@ -113,5 +113,43 @@ RDB.add({
     "Контролировать изменения конфигурационных файлов ИИ-ассистентов для разработки в репозиториях."
   ],
   "why_it_matters": "Первое публичное подтверждение крупного вендора, что цикл «нашёл уязвимость — написал эксплойт — атаковал» уже выполняется без человека; это сжимает окно реагирования на n-day до дней.",
-  "source_note": "Выжимка по первоисточнику — публикации GTIG/Mandiant в блоге Google Cloud от 16.11.2026. Упомянутые CVE приведены как в оригинале."
+  "source_note": "Выжимка по первоисточнику — публикации GTIG/Mandiant в блоге Google Cloud от 16.11.2026. Упомянутые CVE приведены как в оригинале.",
+  "en": {
+    "tldr": "Google Threat Intelligence Group's quarterly tracker: for the first time a fully automated vulnerability discovery and exploitation pipeline without human involvement was observed, and multi-agent frameworks (ARTEX, CAIRN, CyberStrikeAI, PentAGI) have become a working tool for both cybercriminals and espionage groups.",
+    "summary": "GTIG and Mandiant describe the shift from manual prompts to autonomous multi-agent frameworks that automate individual intrusion phases. The exploit_agent framework was found on an exposed staging server: it continuously diffs versions of popular web applications, writes exploits and launches them itself (interest in media, entertainment and education sites in France). Zero-days are growing: from an average of 8 per month in 2025 to 11 per month in 2026 and 22 in August. Separate sections cover LLMJacking and resale of model access via 'LLM mixers', full integration of LLMs into information operations, and AI use by state groups (Iran, China, North Korea), including an attack via tampered coding-assistant settings. GTIG assesses that such tools currently 'trade stealth for speed' and leave noticeable traces.",
+    "key_findings": [
+      "The first fully autonomous vulnerability discovery and exploitation pipeline (exploit_agent) was identified: differential patch analysis, exploit generation and launch, web shell installation.",
+      "Attackers use the open agentic frameworks ARTEX, CAIRN, CyberStrikeAI, HexStrike AI and PentAGI; CAIRN was seen in attacks including on the US aerospace industry.",
+      "Exploited zero-days rose from 8 per month (2025 average) to 11 per month in 2026, and 22 in August; disclosures and exploits nearly doubled from January to August.",
+      "LLMJacking: in some incidents fraudulent charges exceeded $100,000 a day, with losses reaching $1 million in the worst case; model access is resold at $0.10–25 per 1M tokens.",
+      "MIDNIGHT NEPTUNE (North Korea) modified a coding assistant's settings file in repositories so that launching it loaded the SOMBERMEME backdoor.",
+      "An 'influence-as-a-service' platform managed 100,000+ accounts using AI agents, device ID spoofing and cloud phone farms."
+    ],
+    "stats": [
+      {
+        "value": "22",
+        "label": "zero-days in August 2026 (vs 8/month in 2025)"
+      },
+      {
+        "value": "$1M",
+        "label": "maximum loss from one LLMJacking case"
+      },
+      {
+        "value": "100,000+",
+        "label": "accounts in one influence platform"
+      },
+      {
+        "value": "$0.10–25",
+        "label": "price per 1M tokens in 'LLM mixers'"
+      }
+    ],
+    "recommendations": [
+      "Shorten the patching window for public web applications: exploits based on patch diffs appear within days.",
+      "Enable detection of agentic framework activity (ARTEX and similar) and apply Mandiant's hardening guidance against them.",
+      "Keep cloud and AI service API keys out of repositories; monitor service account creation and anomalous model spend.",
+      "Control changes to coding assistants' configuration files in repositories."
+    ],
+    "why_it_matters": "The first public confirmation by a major vendor that the 'find a vulnerability — write an exploit — attack' cycle already runs without humans; this shrinks the n-day response window to days.",
+    "source_note": "Summary based on the primary source — the GTIG/Mandiant post on the Google Cloud blog of 16 Nov 2026. CVEs are cited as in the original."
+  }
 });

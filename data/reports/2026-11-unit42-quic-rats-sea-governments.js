@@ -105,5 +105,42 @@ RDB.add({
     "Детектировать загрузку comsvcs.dll через rundll32.exe, в том числе по ординалу."
   ],
   "why_it_matters": "Переход вредоносного ПО на QUIC/HTTP3 делает канал управления «невидимым» для многих средств сетевой защиты, рассчитанных на TCP и TLS-инспекцию, — это тренд, который стоит учитывать при настройке периметра.",
-  "source_note": "Выжимка по первоисточнику — публикации Unit 42 от 16.11.2026."
+  "source_note": "Выжимка по первоисточнику — публикации Unit 42 от 16.11.2026.",
+  "en": {
+    "tldr": "Unit 42 described two new remote access trojans — PerfectPioneer (Go) and KUKURAT (C++) — from the TGR-STA-0049 group (aka REF7707, Earth Alux, Ink Dragon). Both can be controlled over HTTP/3 via QUIC (UDP/443), which lets them bypass TLS inspection and tools that analyse only TCP.",
+    "summary": "The campaign against Southeast Asian government bodies has run since July 2025: first PerfectPioneer was used (six variants), and from March 2026 the modular KUKURAT appeared in already compromised networks (at least 12 modules: SMB credential brute force, SOCKS tunnels, PsExec lateral movement, privilege escalation, BOF execution). Initial access is via exploitation of unpatched Microsoft Exchange and web servers with web shells, as well as phishing with executables disguised as PDFs (e.g. a lure impersonating Myanmar's election commission). For cover, KUKURAT makes background requests to popular sites, imitates Chrome activity and places its watchdog in a directory resembling a security product's path. Credentials are obtained by dumping LSASS via comsvcs.dll, DCSync and DPAPI; in Exchange the attackers grant themselves full access to all mailboxes. Documents on international relations and domestic policy were stolen.",
+    "key_findings": [
+      "TGR-STA-0049 (REF7707 / Earth Alux / Ink Dragon) has been active since at least March 2023; previously known for the Squidoor (FINALDRAFT) backdoor.",
+      "PerfectPioneer uses HTTP/3 over QUIC (UDP/443) with fallback to HTTP/2; it has a built-in blocklist of 41 keywords, 16 patterns and 12 protected paths so the operator does not accidentally 'break' the system.",
+      "KUKURAT has replaced PerfectPioneer since March 2026; the watchdog restarts the agent if it shows no signs of life for 15 seconds, and redeployment uses domain logon scripts.",
+      "In Exchange the attackers check the ApplicationImpersonation role and mass-add FullAccess to all mailboxes for themselves.",
+      "Exfiltration targets .pdf, .docx, .xlsx and .png files with politically sensitive names."
+    ],
+    "stats": [
+      {
+        "value": "6",
+        "label": "PerfectPioneer variants"
+      },
+      {
+        "value": "12+",
+        "label": "KUKURAT modules"
+      },
+      {
+        "value": "~9 mo.",
+        "label": "of observed campaign evolution"
+      },
+      {
+        "value": "UDP/443",
+        "label": "QUIC command channel"
+      }
+    ],
+    "recommendations": [
+      "Log and inspect QUIC or block outbound UDP/443 so clients fall back to inspectable TCP/HTTP2.",
+      "Update Exchange promptly, regularly review ApplicationImpersonation role assignments and watch for mass Add-MailboxPermission.",
+      "Audit SYSVOL and group policies for unauthorised logon scripts.",
+      "Detect loading of comsvcs.dll via rundll32.exe, including by ordinal."
+    ],
+    "why_it_matters": "Malware moving to QUIC/HTTP3 makes the command channel 'invisible' to many network security tools built for TCP and TLS inspection — a trend to factor into perimeter configuration.",
+    "source_note": "Summary based on the primary source — Unit 42 post of 16 Nov 2026."
+  }
 });

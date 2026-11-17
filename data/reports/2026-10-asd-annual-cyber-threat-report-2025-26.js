@@ -98,6 +98,7 @@ RDB.add({
       "Deploy phishing-resistant MFA and train staff against AI-driven social engineering.",
       "Prepare for severe ransomware: offline backups and recovery plans."
     ],
-    "why_it_matters": "National statistics from a Five Eyes country — comparable with NCSC and FBI reports."
+    "why_it_matters": "National statistics from a Five Eyes country — comparable with NCSC and FBI reports.",
+    "source_note": "Summary based on ASD/cyber.gov.au materials and coverage; some figures come from secondary sources."
   }
 });

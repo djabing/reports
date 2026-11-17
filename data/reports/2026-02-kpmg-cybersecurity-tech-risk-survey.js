@@ -86,6 +86,7 @@ RDB.add({
       "Review the security stack and consolidate overlapping tools.",
       "Build AI risk assessment into approval of business initiatives."
     ],
-    "why_it_matters": "Supports the case for platform consolidation in budget discussions."
+    "why_it_matters": "Supports the case for platform consolidation in budget discussions.",
+    "source_note": "Summary based on GRC Report coverage and KPMG press materials; publication date — approximately February 2026."
   }
 });

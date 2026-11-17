@@ -54,6 +54,7 @@ RDB.add({
     "recommendations": [
       "Use when selecting microsegmentation solutions, together with the upcoming Magic Quadrant."
     ],
-    "why_it_matters": "A reference document for choosing microsegmentation solutions."
+    "why_it_matters": "A reference document for choosing microsegmentation solutions.",
+    "source_note": "Summary based on the Gartner abstract; the full document is available to clients."
   }
 });

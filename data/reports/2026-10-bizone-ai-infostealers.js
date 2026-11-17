@@ -66,5 +66,29 @@ RDB.add({
     "Мониторить утечки учётных данных сотрудников в логах стилеров."
   ],
   "why_it_matters": "ИИ ускоряет монетизацию логов стилеров: злоумышленники быстрее находят самых ценных жертв среди тысяч заражений.",
-  "source_note": "Выжимка по публикации CISOClub и анонсам BI.ZONE."
+  "source_note": "Выжимка по публикации CISOClub и анонсам BI.ZONE.",
+  "en": {
+    "title": "AI infostealers: how Bee Stealer and AVENGER build dossiers on victims",
+    "tldr": "BI.ZONE opened a series of underground-market studies with a piece on AI infostealers: Bee Stealer and AVENGER use LLMs to profile victims automatically from stolen data.",
+    "summary": "The first study in BI.ZONE's new underground-market series covers infostealers with built-in AI analytics. Bee Stealer and AVENGER use LLMs to automatically parse data stolen from a device and build a dossier on the user — making it easier to select valuable victims for further attacks. Two such offers were already seen on underground forums in September 2026.",
+    "key_findings": [
+      "Bee Stealer and AVENGER use LLMs to profile victims automatically.",
+      "AI builds a user dossier from data on the compromised device.",
+      "September 2026 — two offers of infostealers with AI profiling on underground forums.",
+      "The study opens BI.ZONE's series on the cyber-threat underground market."
+    ],
+    "stats": [
+      {
+        "value": "2",
+        "label": "AI stealer offers in September"
+      }
+    ],
+    "recommendations": [
+      "Prohibit storing corporate passwords in browsers; use password managers.",
+      "Shorten the lifetime of session cookies and tokens.",
+      "Monitor stealer logs for leaked employee credentials."
+    ],
+    "why_it_matters": "AI speeds up the monetisation of stealer logs: attackers find the most valuable victims among thousands of infections faster.",
+    "source_note": "Summary based on a CISOClub article and BI.ZONE announcements."
+  }
 });

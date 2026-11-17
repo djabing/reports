@@ -86,6 +86,7 @@ RDB.add({
       "Plan and control AI token spend in SOC and AppSec as a separate budget line.",
       "Prepare a post-quantum migration roadmap to avoid a rush."
     ],
-    "why_it_matters": "A major analyst firm's view of 2027: AI risk becomes a corporate governance issue."
+    "why_it_matters": "A major analyst firm's view of 2027: AI risk becomes a corporate governance issue.",
+    "source_note": "The full report is available to Forrester clients; summary based on the public blog and press release."
   }
 });

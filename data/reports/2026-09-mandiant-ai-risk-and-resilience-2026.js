@@ -49,5 +49,25 @@ RDB.add({
     "Интегрировать агентные ИИ-системы с SOC."
   ],
   "why_it_matters": "Практические кейсы Mandiant о том, как атакуют сами ИИ-инструменты разработчиков.",
-  "source_note": "Страница Google Cloud не отдаёт текст автоматически; выжимка по обзорам (SecurityBrief) и анонсу в сообществе Google Cloud. Кейсы из вторичных пересказов стоит проверить."
+  "source_note": "Страница Google Cloud не отдаёт текст автоматически; выжимка по обзорам (SecurityBrief) и анонсу в сообществе Google Cloud. Кейсы из вторичных пересказов стоит проверить.",
+  "en": {
+    "tldr": "Mandiant: attackers have moved from prompts to agentic orchestration of attacks, poison internal AI repositories and AI-assistant CLI hooks, and embed lightweight AI models in malware for stealthy persistence.",
+    "summary": "Mandiant special report based on its investigations. At one IT company attackers poisoned an internal AI repository and modified the assistant's CLI hooks. Malware campaigns with embedded compact models for long-term persistence were observed. Governance problems include missing or outdated AI SBOMs and excessive permissions for AI tools. According to coverage, the report describes 'denial of wallet' cases (an agent stuck in a loop) and the spread of the Shai-Hulud worm through a hijacked AI-assistant session (~100 internal repositories). AI is quickly entering defensive practice, especially threat hunting.",
+    "key_findings": [
+      "Shift from simple prompts to agentic orchestration of attacks.",
+      "Poisoning of an internal AI repository and tampering with the assistant's CLI hooks.",
+      "Malware with embedded lightweight AI models for stealthy persistence.",
+      "AI SBOMs are missing or not maintained; AI tools get excessive permissions.",
+      "AI is being actively adopted for defence, especially threat hunting."
+    ],
+    "stats": [],
+    "recommendations": [
+      "Give agents separate identities and short-lived least-privilege credentials.",
+      "Treat AI-assistant sessions and MCP servers as privileged.",
+      "Build and maintain an AI SBOM.",
+      "Integrate agentic AI systems with the SOC."
+    ],
+    "why_it_matters": "Practical Mandiant cases showing how developers' AI tools themselves are being attacked.",
+    "source_note": "The Google Cloud page does not serve text to automated tools; summary based on coverage (SecurityBrief) and an announcement in the Google Cloud community. Cases from secondary accounts should be verified."
+  }
 });

@@ -81,5 +81,34 @@ RDB.add({
     "Проводить compromise assessment при подозрении на передачу доступа между группировками."
   ],
   "why_it_matters": "Важная переоценка для моделей угроз российских предприятий ОПК: «хактивист» может оказаться долгоживущим шпионом.",
-  "source_note": "Выжимка по полному тексту публикации BI.ZONE."
+  "source_note": "Выжимка по полному тексту публикации BI.ZONE.",
+  "en": {
+    "title": "Insolent Werewolf: cyber espionage instead of hacktivism",
+    "tldr": "BI.ZONE reclassified the Insolent Werewolf cluster from hacktivists to cyber spies: the group does not encrypt or leak, but quietly maintains access. Its arsenal includes the new NightStrike RAT, Octowave Loader, AdaptixC2 and, for the first time, Havoc.",
+    "summary": "Insolent Werewolf activity was previously linked to ideological attacks for publicity. Long-term observation showed the opposite: no wipers, ransomware or attack claims, but data collection and long-term access retention. Targets are government bodies, manufacturing and research institutes linked to the defence industry. The group may receive access to victims from other espionage clusters.",
+    "key_findings": [
+      "Motivation is cyber espionage, not hacktivism: no destructive malware or public claims.",
+      "Targets: government organisations, industrial enterprises and research institutes linked to the defence industry.",
+      "Initial access: spear-phishing, including the ClickFix technique; access may be handed over by other clusters.",
+      "The new NightStrike RAT was discovered in August 2026 and used since at least June: remote control, theft of browser and application data, screenshots.",
+      "Octowave Loader delivered AdaptixC2 and Havoc; Havoc had not been seen with the group before."
+    ],
+    "stats": [
+      {
+        "value": "since June",
+        "label": "NightStrike in attacks"
+      },
+      {
+        "value": "4",
+        "label": "new/updated tools"
+      }
+    ],
+    "recommendations": [
+      "Add detections for AdaptixC2 and Havoc (network and host).",
+      "Train defence-sector employees to recognise ClickFix lures.",
+      "Run a compromise assessment if access handover between groups is suspected."
+    ],
+    "why_it_matters": "An important reassessment for threat models of Russian defence enterprises: a 'hacktivist' may turn out to be a long-lived spy.",
+    "source_note": "Summary based on the full text of the BI.ZONE publication."
+  }
 });

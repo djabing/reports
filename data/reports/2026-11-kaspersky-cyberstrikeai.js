@@ -74,5 +74,33 @@ RDB.add({
     "Детектировать дамп LSASS и создание задач планировщика на серверах."
   ],
   "why_it_matters": "Пример того, как ИИ-фреймворки пост-эксплуатации доходят до слабо защищённых отраслей вроде образования.",
-  "source_note": "Выжимка по Securelist и вторичным обзорам; детали хронологии в источниках расходятся."
+  "source_note": "Выжимка по Securelist и вторичным обзорам; детали хронологии в источниках расходятся.",
+  "en": {
+    "tldr": "Kaspersky described attacks on educational institutions in Africa and Latin America using the CyberStrikeAI framework: after manual intrusion through a compromised SQL Server, post-exploitation was run by an LLM orchestrator.",
+    "summary": "The attackers gained access to an educational organisation's SQL Server, then after a pause deployed the CyberStrikeAI implant and exfiltrated database data via PowerShell. How the server was initially compromised was not established. The activity is not linked to a known group. Kaspersky solutions detected several stages, including credential dumping and malicious scheduled tasks.",
+    "key_findings": [
+      "Targets: educational organisations in Africa and Latin America.",
+      "Entry point: a compromised SQL Server, followed by deployment of the CyberStrikeAI implant.",
+      "Database data was exfiltrated via PowerShell.",
+      "Credential dumping and malicious scheduled tasks were detected.",
+      "No attribution to known groups."
+    ],
+    "stats": [
+      {
+        "value": "2",
+        "label": "regions attacked"
+      },
+      {
+        "value": "1",
+        "label": "entry point — SQL Server"
+      }
+    ],
+    "recommendations": [
+      "Do not expose SQL Server to the internet; disable xp_cmdshell and change sa credentials.",
+      "Monitor PowerShell launched by database services.",
+      "Detect LSASS dumping and scheduled task creation on servers."
+    ],
+    "why_it_matters": "An example of AI post-exploitation frameworks reaching poorly protected sectors such as education.",
+    "source_note": "Summary based on Securelist and secondary reviews; timeline details differ between sources."
+  }
 });

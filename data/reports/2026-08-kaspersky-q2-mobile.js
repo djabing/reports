@@ -61,5 +61,36 @@ RDB.add({
     "Использовать мобильную защиту с детектом дропперов."
   ],
   "why_it_matters": "Пара к отчёту за III квартал на портале — показывает динамику мобильных угроз.",
-  "source_note": "Выжимка по Securelist и обзорам; цифры — по фрагментам и вторичным источникам."
+  "source_note": "Выжимка по Securelist и обзорам; цифры — по фрагментам и вторичным источникам.",
+  "en": {
+    "tldr": "Mobile attacks declined (~2 million vs 2.7 million in Q1), but banking trojans account for 30.77% of malicious apps and attackers are moving to droppers: Trojan-Dropper.AndroidOS.Banker.dd rose from 0.01% to 2.16%.",
+    "summary": "Kaspersky's quarterly mobile threat report. 304,128 malicious Android samples and 93,574 banking trojan installation packages were detected. The Anatsa banker and the shift to dropper schemes are highlighted.",
+    "key_findings": [
+      "1,996,823 mobile attacks (2,676,328 in Q1).",
+      "304,128 malicious Android samples.",
+      "93,574 banking trojan packages; Trojan-Banker accounts for 30.77% of apps.",
+      "Trojan-Dropper.AndroidOS.Banker.dd: from 0.01% to 2.16% of attacked users.",
+      "Notable find: the Anatsa banker."
+    ],
+    "stats": [
+      {
+        "value": "~2 m",
+        "label": "mobile attacks"
+      },
+      {
+        "value": "30.77%",
+        "label": "banking trojans"
+      },
+      {
+        "value": "93,574",
+        "label": "banker packages"
+      }
+    ],
+    "recommendations": [
+      "Block APK installation from unknown sources on corporate devices.",
+      "Use mobile protection that detects droppers."
+    ],
+    "why_it_matters": "A companion to the Q3 report on the portal — shows how mobile threats are evolving.",
+    "source_note": "Summary based on Securelist and coverage; figures come from excerpts and secondary sources."
+  }
 });

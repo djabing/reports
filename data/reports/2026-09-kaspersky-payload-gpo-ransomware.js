@@ -78,5 +78,34 @@ RDB.add({
     "Централизованно собирать журналы аудита AD и защищать привилегированные учётные записи."
   ],
   "why_it_matters": "Показывает, что «нет шифровальщика» не значит «нет вымогательства»: AD сама становится оружием.",
-  "source_note": "Выжимка по пресс-релизу Kaspersky и обзорам (CyberInsider, SC World, IT-Connect). Полный технический разбор — на Securelist."
+  "source_note": "Выжимка по пресс-релизу Kaspersky и обзорам (CyberInsider, SC World, IT-Connect). Полный технический разбор — на Securelist.",
+  "en": {
+    "tldr": "Kaspersky GERT investigated an attack where the extortionists never ran ransomware: via a malicious 'PAYLOAD' GPO at the domain root they disabled local admins, put ransom notes on every screen and turned off the firewall, then published the stolen data on the dark web.",
+    "summary": "An analysis of a real incident at a manufacturing company in the Middle East (April 2026). Entry was via FortiGate SSL VPN with a valid but compromised domain account. Once privileged, the attackers created a GPO named PAYLOAD linked to the domain root, plus a second policy 'win Firewall Off'. No encryption was needed — the business was paralysed by its own management infrastructure.",
+    "key_findings": [
+      "Initial access: FortiGate SSL VPN with a valid compromised account.",
+      "'PAYLOAD' GPO at the domain root: disabled local administrators, ransom notes, replaced wallpaper and lock screen on every PC.",
+      "A second GPO 'win Firewall Off' disabled Windows Firewall in all profiles.",
+      "No ransomware was used — only data exfiltration and later publication on the dark web.",
+      "The attack bypasses defences tuned to detect encryption."
+    ],
+    "stats": [
+      {
+        "value": "0",
+        "label": "files encrypted"
+      },
+      {
+        "value": "2",
+        "label": "malicious GPOs"
+      }
+    ],
+    "recommendations": [
+      "Monitor creation and modification of GPOs, especially those linked to the domain root; watch SYSVOL changes.",
+      "Phishing-resistant MFA for VPN.",
+      "Restrict who can create and link group policies.",
+      "Centrally collect AD audit logs and protect privileged accounts."
+    ],
+    "why_it_matters": "Shows that 'no ransomware' does not mean 'no extortion': AD itself becomes the weapon.",
+    "source_note": "Summary based on the Kaspersky press release and coverage (CyberInsider, SC World, IT-Connect). The full technical analysis is on Securelist."
+  }
 });

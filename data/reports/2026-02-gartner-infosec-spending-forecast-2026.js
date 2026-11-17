@@ -88,6 +88,7 @@ RDB.add({
       "Budget for cloud security and AI agent protection.",
       "Start a cryptography inventory for the post-quantum transition."
     ],
-    "why_it_matters": "A baseline for budgeting and justifying investment to the CFO."
+    "why_it_matters": "A baseline for budgeting and justifying investment to the CFO.",
+    "source_note": "The Gartner document is available to clients; summary based on the abstract and public coverage. Quarterly update figures are not confirmed by the primary source."
   }
 });

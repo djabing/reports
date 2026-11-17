@@ -61,5 +61,23 @@ RDB.add({
     "Найти IoC PhantomCore и PhantomGraph."
   ],
   "why_it_matters": "Прямой риск для российских организаций, использующих отечественную ВКС.",
-  "source_note": "Выжимка по Securelist, пресс-релизу Kaspersky и обзору The Hacker News."
+  "source_note": "Выжимка по Securelist, пресс-релизу Kaspersky и обзору The Hacker News.",
+  "en": {
+    "tldr": "Head Mare exploits vulnerabilities in unpatched TrueConf servers: conference participants are served client installers that install the PhantomCore and PhantomGraph backdoors along with the normal functionality.",
+    "summary": "A multi-stage attack against Russian companies in instrument making, electronics, transport, energy, IT and software development. The vulnerabilities were fixed in the TrueConf Server update of 18 June 2026 (versions 5.3.9, 5.4.9, 5.5.5).",
+    "key_findings": [
+      "Exploitation of vulnerabilities in unpatched TrueConf servers.",
+      "Tampered TrueConf clients install PhantomCore and PhantomGraph.",
+      "Targets: Russian companies in instrument making, electronics, transport, energy and IT.",
+      "Fixed in TrueConf Server 5.3.9, 5.4.9, 5.5.5 (18 June 2026)."
+    ],
+    "stats": [],
+    "recommendations": [
+      "Update TrueConf Server to 5.3.9 / 5.4.9 / 5.5.5 or later immediately.",
+      "Check the integrity of TrueConf clients distributed via the server.",
+      "Hunt for PhantomCore and PhantomGraph IoCs."
+    ],
+    "why_it_matters": "A direct risk for Russian organisations using the domestic video conferencing system.",
+    "source_note": "Summary based on Securelist, the Kaspersky press release and The Hacker News coverage."
+  }
 });

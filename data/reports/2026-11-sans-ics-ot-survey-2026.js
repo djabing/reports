@@ -111,6 +111,7 @@ RDB.add({
       "Test recovery plans annually and include OT in BCP/DR.",
       "Reduce key-person risk: documentation and role redundancy."
     ],
-    "why_it_matters": "The largest independent survey of industrial security — a signal of a sharp rise in OT incidents."
+    "why_it_matters": "The largest independent survey of industrial security — a signal of a sharp rise in OT incidents.",
+    "source_note": "Summary based on SANS materials and coverage (Industrial Cyber, OPSWAT)."
   }
 });

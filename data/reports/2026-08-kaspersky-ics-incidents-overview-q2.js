@@ -39,5 +39,19 @@ RDB.add({
     "Использовать для разбора чужих инцидентов на учениях."
   ],
   "why_it_matters": "Удобный дайджест для служб ИБ промышленных предприятий.",
-  "source_note": "Карточка по PDF Kaspersky ICS CERT; содержание детально не пересказано."
+  "source_note": "Карточка по PDF Kaspersky ICS CERT; содержание детально не пересказано.",
+  "en": {
+    "tldr": "Kaspersky ICS CERT's quarterly collection of publicly known cybersecurity incidents in industry in Q2 2026.",
+    "summary": "A regular ICS CERT digest: incidents at industrial companies by country and sector and their impact on production. It complements the quarterly statistics and the APT attack review.",
+    "key_findings": [
+      "Collection of public incidents in industry for Q2 2026.",
+      "Complements ICS CERT statistics and the APT and financial attack review."
+    ],
+    "stats": [],
+    "recommendations": [
+      "Use it to walk through other organisations' incidents in exercises."
+    ],
+    "why_it_matters": "A handy digest for security teams at industrial enterprises.",
+    "source_note": "Card based on the Kaspersky ICS CERT PDF; contents not summarised in detail."
+  }
 });

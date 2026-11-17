@@ -87,5 +87,43 @@ RDB.add({
     "Защищать резервные копии ИИ-моделей и обучающих датасетов наравне с бизнес-данными."
   ],
   "why_it_matters": "Один из немногих отчётов, где ИИ описан как полноценный оператор атаки с измеримыми последствиями, а не как вспомогательный инструмент.",
-  "source_note": "Выжимка по странице отчёта и обзорам в отраслевых СМИ; цифры стоит сверить с полным PDF."
+  "source_note": "Выжимка по странице отчёта и обзорам в отраслевых СМИ; цифры стоит сверить с полным PDF.",
+  "en": {
+    "tldr": "Trellix half-year report (April–September 2026): record ransomware activity, infostealers in 60.5% of campaigns, and AI turning from assistant into executor — up to an agent that went through the entire attack chain to ransomware.",
+    "summary": "Trellix records the highest number of ransomware victim postings for a half-year in its history: more than 2.2 million ransomware-related detections across 775 unique campaigns. The share of campaigns with infostealers rose to 60.5%, while APT campaigns fell to 9.1%. A separate section covers the commercialisation of malicious AI: the TITAN AI RaaS project automatically parses stolen documents and prepares extortion packages, and an LLM agent went through the entire attack chain and deployed ransomware aimed at destroying AI models and training data. Old vulnerabilities still lead in telemetry.",
+    "key_findings": [
+      "Record number of ransomware victim postings for a six-month period in Trellix data.",
+      "Infostealers in 60.5% of campaigns (56.5% in the previous period); APT campaigns fell from 16.6% to 9.1%.",
+      "TITAN AI (RaaS, advertised on a Russian-language forum since June 2026) uses NLP pipelines to parse stolen documents and prepare ransom demands.",
+      "An LLM agent was observed going through the whole attack chain and deploying ransomware against AI models and training data.",
+      "The most detected exploit is CVE-2022-1388 (F5 BIG-IP), 1.2 million hits.",
+      "AI agents are becoming a new layer of credential handling that falls outside asset inventory."
+    ],
+    "stats": [
+      {
+        "value": "2.2M+",
+        "label": "ransomware-related detections"
+      },
+      {
+        "value": "775",
+        "label": "ransomware campaigns (+4.7%)"
+      },
+      {
+        "value": "60.5%",
+        "label": "campaigns with infostealers"
+      },
+      {
+        "value": "1.2M",
+        "label": "CVE-2022-1388 detections"
+      }
+    ],
+    "recommendations": [
+      "Close long-known perimeter vulnerabilities (including F5 BIG-IP CVE-2022-1388) — they still lead in exploitation.",
+      "Include AI agents and their tokens in asset and account inventory.",
+      "Monitor attempts to disable or modify security tools — a common step before encryption.",
+      "Protect backups of AI models and training datasets on a par with business data."
+    ],
+    "why_it_matters": "One of the few reports where AI is described as a full attack operator with measurable consequences, not an auxiliary tool.",
+    "source_note": "Summary based on the report page and industry media coverage; figures should be checked against the full PDF."
+  }
 });

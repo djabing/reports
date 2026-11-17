@@ -67,5 +67,41 @@ RDB.add({
     "Усилить контроль подрядчиков с доступом в инфраструктуру."
   ],
   "why_it_matters": "Срез реальных расследований в России за год.",
-  "source_note": "Выжимка по материалам Positive Technologies и обзорам (CNews, Хабр)."
+  "source_note": "Выжимка по материалам Positive Technologies и обзорам (CNews, Хабр).",
+  "en": {
+    "title": "Results of incident investigation and retrospective analysis projects, 2025–2026",
+    "tldr": "PT ESC, based on 140+ projects (Q4 2025 — Q3 2026): 54.1% of attacks disrupted business processes, manufacturing's share of clients rose to 22.5%, and the record covert presence was 1,398 days in a government agency's network (Stingy Basilisk group).",
+    "summary": "A summary of Positive Technologies investigations and retrospective analysis. 80% of projects were investigations, 20% retrospective analysis. Reconnaissance and espionage were found in 21.2% of projects and exfiltration of confidential data in 20%. 17 APT groups were identified; traces of known groups were found in 49.3% of organisations in the sample.",
+    "key_findings": [
+      "140+ projects: 80% investigations, 20% retrospective analysis.",
+      "54.1% of attacks disrupted business processes (encryption or service unavailability).",
+      "Manufacturing's share of clients rose from 9% to 22.5%.",
+      "Record covert presence — 1,398 days in a government agency (Stingy Basilisk).",
+      "17 APT groups; traces of known groups in 49.3% of organisations."
+    ],
+    "stats": [
+      {
+        "value": "140+",
+        "label": "projects"
+      },
+      {
+        "value": "54.1%",
+        "label": "attacks disrupting business"
+      },
+      {
+        "value": "1,398",
+        "label": "days of covert presence"
+      },
+      {
+        "value": "17",
+        "label": "APT groups"
+      }
+    ],
+    "recommendations": [
+      "Run a retrospective analysis (compromise assessment) at least once a year.",
+      "Tighten control over contractors with access to the infrastructure."
+    ],
+    "why_it_matters": "A snapshot of a year of real investigations in Russia.",
+    "source_note": "Summary based on Positive Technologies materials and coverage (CNews, Habr)."
+  }
 });

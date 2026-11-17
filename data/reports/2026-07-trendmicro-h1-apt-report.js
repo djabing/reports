@@ -80,5 +80,32 @@ RDB.add({
     "Сегментировать OT и мониторить ИТ→OT переходы."
   ],
   "why_it_matters": "Хороший стратегический обзор для CISO: показывает, куда движутся государственные группировки и почему allow-list доверенных сервисов перестаёт работать.",
-  "source_note": "Выжимка по аннотации отчёта на сайте Trend Micro и пресс-релизу; полный PDF — по ссылке."
+  "source_note": "Выжимка по аннотации отчёта на сайте Trend Micro и пресс-релизу; полный PDF — по ссылке.",
+  "en": {
+    "tldr": "State-sponsored groups are building AI into every stage of attack and hiding C2 inside services companies trust: clouds, dev tunnels, blockchains, paste sites. GenAI use by China's Earth Krahang and Earth Naga (Flax Typhoon) is documented for the first time.",
+    "summary": "TrendAI's semi-annual review of APT activity linked to China, Russia, North Korea and Iran. AI is now present in many stages of the intrusion lifecycle — from refining exploits to autonomous reconnaissance and lateral movement. The report profiles campaigns: AI-assisted development, C2 via legitimate services, multi-stage phishing, BYOVD, supply-chain poisoning, cryptocurrency theft, OT attacks and advertising intelligence (ADINT).",
+    "key_findings": [
+      "GenAI use across multiple attack stages documented for the first time for Earth Krahang, Earth Naga (Flax Typhoon) and an unidentified actor.",
+      "C2 increasingly hosted on trusted platforms: major clouds, developer tunnels, public blockchains, paste sites.",
+      "AI used to refine exploits, for autonomous reconnaissance and lateral movement.",
+      "Campaign profiles cover BYOVD, supply chain, cryptocurrency theft, OT attacks and ADINT surveillance."
+    ],
+    "stats": [
+      {
+        "value": "4",
+        "label": "sponsor countries covered"
+      },
+      {
+        "value": "6 months",
+        "label": "of observations"
+      }
+    ],
+    "recommendations": [
+      "Do not treat traffic to trusted clouds and dev tunnels as safe by default: analyse behaviour.",
+      "Block vulnerable driver loading (Microsoft Vulnerable Driver Blocklist, WDAC).",
+      "Segment OT and monitor IT→OT transitions."
+    ],
+    "why_it_matters": "A good strategic overview for CISOs: shows where state-sponsored groups are heading and why allowlisting trusted services no longer works.",
+    "source_note": "Summary based on the report abstract on the Trend Micro website and the press release; full PDF via the link."
+  }
 });

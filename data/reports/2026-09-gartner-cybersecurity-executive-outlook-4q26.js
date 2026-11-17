@@ -78,6 +78,7 @@ RDB.add({
       "Define an access policy for AI agents.",
       "Evaluate preemptive technologies (deception, moving target defense)."
     ],
-    "why_it_matters": "Gartner's quarterly reference for security leaders; the public part helps justify a PQC programme."
+    "why_it_matters": "Gartner's quarterly reference for security leaders; the public part helps justify a PQC programme.",
+    "source_note": "The Gartner document is available to clients; summary based on the abstract and Gartner's press release of 30 Sep 2026."
   }
 });

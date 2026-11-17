@@ -11,7 +11,10 @@ global.RDB = { items: [], add(r){ this.items.push(r); } };
 require(path.join(ROOT, "data/vendors.js"));
 require(path.join(ROOT, "data/manifest.js"));
 require(path.join(ROOT, "data/legal.js"));
+require(path.join(ROOT, "data/labels_en.js"));
 const L = window.RDB_LEGAL || {};
+const LBL = window.RDB_LABELS_EN || {};
+const CYR = /[А-Яа-яЁё]/;
 const hostOf = u => { try { return new URL(u).hostname.replace(/^www\./, ""); } catch(e){ return ""; } };
 const hostIn = (h, list) => (list || []).some(d => h === d || h.endsWith("." + d));
 
@@ -60,18 +63,24 @@ for (const r of RDB.items){
     if (b) e(`источник запрещён (data/legal.js): ${b.name} — ${b.status}`);
     if (hostIn(h, L.avoid_media)) e(`ссылка на издание из стоп-листа data/legal.js (avoid_media): ${h}`);
   }
-  const text = JSON.stringify([r.title, r.title_ru, r.tldr, r.summary, r.key_findings, r.recommendations, r.why_it_matters, r.actors, r.malware, r.tags]);
+  const text = JSON.stringify([r.title, r.title_ru, r.tldr, r.summary, r.key_findings, r.recommendations, r.why_it_matters, r.actors, r.malware, r.tags, r.en]);
   for (const m of L.marked_mentions || []) if (new RegExp(m.pattern, "i").test(text)) warns.push(`${id}: есть упоминание, к которому интерфейс добавит сноску — «${m.note}»`);
   const g = r.group || (V[r.vendor] || {}).group || "main";
   if (!GROUPS.includes(g)) e(`неизвестный раздел «${g}»`);
-  if (g === "intl"){
-    if (!r.en) e("отчёт раздела «Международная аналитика» должен иметь английскую версию (поле en)");
-    else {
-      for (const k of ["tldr","summary","why_it_matters"]) if (!r.en[k]) e(`en.${k} пусто`);
-      for (const k of ["key_findings","recommendations","stats"])
-        if ((r.en[k] || []).length !== (r[k] || []).length) e(`en.${k}: ${ (r.en[k]||[]).length } элементов, а в русской версии ${ (r[k]||[]).length }`);
-    }
+  // английская версия нужна каждому отчёту: её показывает английский интерфейс
+  if (!r.en) e("нет английской версии (поле en) — она нужна для английского интерфейса");
+  else {
+    for (const k of ["tldr","summary","why_it_matters"]) if (!r.en[k]) e(`en.${k} пусто`);
+    for (const k of ["key_findings","recommendations","stats"])
+      if ((r.en[k] || []).length !== (r[k] || []).length) e(`en.${k}: ${ (r.en[k]||[]).length } элементов, а в русской версии ${ (r[k]||[]).length }`);
+    if (r.lang !== "en" && !r.en.title) e("для отчёта не на английском нужно en.title — английское название");
+    if (r.source_note && !r.en.source_note) e("нет en.source_note — английского перевода source_note");
+    for (const k of ["title","tldr","summary","why_it_matters","source_note"]) if (r.en[k] && CYR.test(r.en[k])) e(`en.${k} содержит кириллицу`);
+    for (const k of ["key_findings","recommendations"]) if ((r.en[k] || []).some(x => CYR.test(x))) e(`en.${k} содержит кириллицу`);
+    if ((r.en.stats || []).some(x => CYR.test(x.value + x.label))) e("en.stats содержит кириллицу");
   }
+  for (const k of ["tags","sectors","regions","actors","malware"])
+    for (const t of r[k] || []) if (CYR.test(t) && !LBL[t]) e(`${k}: «${t}» — нет перевода в data/labels_en.js`);
 }
 for (const [id, v] of Object.entries(V)){
   if ((L.blocked_sources || []).some(b => b.id === id || hostIn(String(v.domain || "").replace(/^www\./, ""), b.domains)))

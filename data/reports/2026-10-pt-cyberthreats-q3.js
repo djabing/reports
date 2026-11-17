@@ -77,5 +77,42 @@ RDB.add({
     "Отслеживать IoC Rare Werewolf и других активных в России групп."
   ],
   "why_it_matters": "Основной квартальный срез по российскому ландшафту: подтверждает перенос этапов атак на ИИ-агентов и в российском сегменте.",
-  "source_note": "Выжимка по публикациям Телеспутника и SecurityLab на основе данных PT ESC; первоисточник — ptsecurity.com."
+  "source_note": "Выжимка по публикациям Телеспутника и SecurityLab на основе данных PT ESC; первоисточник — ptsecurity.com.",
+  "en": {
+    "title": "Analysis of hacker group activity in Q3 2026",
+    "tldr": "PT ESC: 13 groups attacked Russian organisations in Q3 2026; 1,121 malicious files were identified (leader — Rare Werewolf, 26.4%). Events with explicit AI markers in web traffic rose 65% quarter on quarter.",
+    "summary": "Positive Technologies analysts recorded the activity of 13 hacker groups against Russian organisations and analysed more than a thousand unique malware samples. Rare Werewolf leads with 296 samples. According to PT AF Cloud, the total number of security events in web traffic rose 12%, and events with explicit AI markers rose 65% vs Q2; attackers are gradually handing reconnaissance, weakness discovery and intrusion attempts to AI agents.",
+    "key_findings": [
+      "13 groups attacked Russian organisations in Q3.",
+      "1,121 malicious files; Rare Werewolf — 296 samples (26.4%).",
+      "Security events in web traffic rose 12%.",
+      "Events with explicit AI markers — +65% vs Q2.",
+      "Reconnaissance, weakness discovery and exploitation attempts are being handed to AI agents."
+    ],
+    "stats": [
+      {
+        "value": "13",
+        "label": "groups"
+      },
+      {
+        "value": "1,121",
+        "label": "malicious files"
+      },
+      {
+        "value": "26.4%",
+        "label": "Rare Werewolf share"
+      },
+      {
+        "value": "+65%",
+        "label": "events with AI markers"
+      }
+    ],
+    "recommendations": [
+      "Filter email attachments and links — phishing remains the groups' main vector.",
+      "Use a WAF that detects automated (AI) traffic.",
+      "Track IoCs of Rare Werewolf and other groups active in Russia."
+    ],
+    "why_it_matters": "The main quarterly snapshot of the Russian landscape: confirms that attack stages are shifting to AI agents in the Russian segment too.",
+    "source_note": "Summary based on Telesputnik and SecurityLab articles drawing on PT ESC data; primary source — ptsecurity.com."
+  }
 });

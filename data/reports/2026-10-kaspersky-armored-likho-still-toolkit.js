@@ -60,5 +60,22 @@ RDB.add({
     "Защищать сессии Telegram: облачный пароль, контроль активных сеансов."
   ],
   "why_it_matters": "Активная APT-группа против российских пользователей и организаций.",
-  "source_note": "Выжимка по Securelist и обзорам (Cyber Security News); дата — октябрь 2026."
+  "source_note": "Выжимка по Securelist и обзорам (Cyber Security News); дата — октябрь 2026.",
+  "en": {
+    "tldr": "Armored Likho (Eagle Werewolf) spreads the Rust-based Still Toolkit spyware in Russia through a plausible donation-collection app; the Still Sync component steals Telegram sessions.",
+    "summary": "The group combines financially motivated campaigns against individuals with targeted espionage against organisations. The campaign was discovered in May 2026. Kaspersky previously described a group campaign with BusySnake Stealer against government and energy in Russia, Kazakhstan and Brazil.",
+    "key_findings": [
+      "Lure: a fake donation app.",
+      "Still Toolkit written in Rust; Still Sync steals Telegram session data.",
+      "The group combines financial attacks with cyber espionage.",
+      "The campaign was discovered in May 2026."
+    ],
+    "stats": [],
+    "recommendations": [
+      "Check the sources of donation and fundraising apps.",
+      "Protect Telegram sessions: cloud password, review of active sessions."
+    ],
+    "why_it_matters": "An active APT group targeting Russian users and organisations.",
+    "source_note": "Summary based on Securelist and coverage (Cyber Security News); date — October 2026."
+  }
 });

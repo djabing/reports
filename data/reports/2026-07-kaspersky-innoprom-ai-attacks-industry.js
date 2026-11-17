@@ -43,5 +43,24 @@ RDB.add({
     "Включить ИИ-сценарии (дипфейки, ИИ-фишинг) в обучение персонала промышленных компаний."
   ],
   "why_it_matters": "Отраслевой срез ИИ-угроз для российской промышленности.",
-  "source_note": "Выжимка по публикации Mobile-review со ссылкой на данные Kaspersky; точная дата не установлена."
+  "source_note": "Выжимка по публикации Mobile-review со ссылкой на данные Kaspersky; точная дата не установлена.",
+  "en": {
+    "title": "INNOPROM 2026: 28% of industrial companies hit by AI-enabled attacks",
+    "tldr": "According to Kaspersky data presented at INNOPROM 2026, 28% of industrial companies faced AI-enabled attacks over the past year.",
+    "summary": "Company research for the industrial sector presented at the INNOPROM exhibition in Yekaterinburg. It shows that AI attacks are no longer exotic for industry either.",
+    "key_findings": [
+      "28% of industrial companies faced AI-enabled attacks."
+    ],
+    "stats": [
+      {
+        "value": "28%",
+        "label": "of industrial firms hit by AI attacks"
+      }
+    ],
+    "recommendations": [
+      "Include AI scenarios (deepfakes, AI phishing) in staff training at industrial companies."
+    ],
+    "why_it_matters": "An industry view of AI threats for Russian manufacturing.",
+    "source_note": "Summary based on a Mobile-review article citing Kaspersky data; exact date not established."
+  }
 });

@@ -48,5 +48,26 @@ RDB.add({
     "Бронировать только через проверенные сервисы и не переходить по ссылкам из сообщений."
   ],
   "why_it_matters": "Сезонная потребительская аналитика для коммуникаций с клиентами и сотрудниками.",
-  "source_note": "Выжимка по публикации CNews."
+  "source_note": "Выжимка по публикации CNews.",
+  "en": {
+    "title": "Cyber threats for travellers: 376 million web threats in Russia",
+    "tldr": "From October 2025 to June 2026 Kaspersky recorded 376 million web threats in Russia; the study describes fraud schemes targeting tourists in popular destinations.",
+    "summary": "A consumer study of travel risks: phishing booking sites, fake services and regional schemes (for example, government impersonation fraud in Singapore).",
+    "key_findings": [
+      "376 million web threats in Russia from October 2025 to June 2026.",
+      "Government impersonation fraud is popular in Singapore.",
+      "Phishing around bookings and travel services."
+    ],
+    "stats": [
+      {
+        "value": "376M",
+        "label": "web threats in Russia"
+      }
+    ],
+    "recommendations": [
+      "Book only through trusted services and do not follow links from messages."
+    ],
+    "why_it_matters": "Seasonal consumer analytics for communications with customers and employees.",
+    "source_note": "Summary based on a CNews article."
+  }
 });

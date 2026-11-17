@@ -50,8 +50,11 @@
      опросы, дайджесты), `case` (разбор одной кампании/атаки). В интерфейсе пока не показывается.
    - Выжимка на русском: `tldr` (2–3 предложения), `summary`, 3–6 `key_findings`, 2–4 `stats`, 2–4 `recommendations`,
      `why_it_matters`. Техники — валидные ID MITRE ATT&CK.
-3. Для отчётов раздела «Международная аналитика» обязательно поле `en` с английской версией: `tldr, summary,
-   key_findings, stats, recommendations, why_it_matters` — столько же элементов, сколько в русской версии.
+3. **Для каждого отчёта** (во всех разделах) обязательно поле `en` с английской версией — её показывает английский
+   интерфейс портала: `tldr, summary, key_findings, stats, recommendations, why_it_matters, source_note` — столько же
+   элементов, сколько в русской версии, без кириллицы. Если отчёт не на английском (`lang` — `ru` и т. п.), добавить
+   `en.title` — английское название. Новые русские метки в `tags`, `sectors`, `regions` (а также `actors`/`malware`
+   с кириллицей) — дописать с переводом в `data/labels_en.js`.
 4. Добавить строку в `data/manifest.js` сразу под `NEW-REPORT-ANCHOR`:
    `{ "id": "...", "url": "...", "title": "...", "added": "ГГГГ-ММ-ДД" },`
 5. Новый вендор — строка в `data/vendors.js` над `NEW-VENDOR-ANCHOR` (`name`, `domain`, `color`, при необходимости `group`;

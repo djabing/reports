@@ -73,5 +73,41 @@ RDB.add({
     "Закладывать в модель угроз скорость атак, выполняемых ИИ-агентами."
   ],
   "why_it_matters": "Первоисточник о том, как реально используют ИИ злоумышленники, — от вендора модели, а не по косвенным признакам.",
-  "source_note": "Выжимка по публикациям об отчёте (Unite.AI, FoneArena, Enterprise DNA). Прямой доступ к сайту из среды сбора был ограничен."
+  "source_note": "Выжимка по публикациям об отчёте (Unite.AI, FoneArena, Enterprise DNA). Прямой доступ к сайту из среды сбора был ограничен.",
+  "en": {
+    "tldr": "Anthropic describes ~40 groups that misused Claude between December 2025 and August 2026 across seven categories. The key trend: attackers delegate entire attack stages to AI agents, leaving humans only to pick targets and check results.",
+    "summary": "A report by Anthropic's Threat Intelligence team on detected and disrupted model misuse: cyber operations, influence operations, surveillance, fraud, biological and conventional weapons, and illicit model distillation. The main conclusion is that LLMs are being built into autonomous multi-agent frameworks that perform complex tasks at machine speed, narrowing the gap between state-sponsored groups and low-resource attackers.",
+    "key_findings": [
+      "About 40 tracked groups across seven misuse categories.",
+      "Agentic cyber operations: a human chooses targets and checks the outcome, AI does the rest.",
+      "AI supply-chain attack: 30 AI companies in four days, targeting pre-release models and production API keys.",
+      "Fraudulent AI 'resellers' proxied traffic to other models and harvested account credentials.",
+      "A French hacktivist breached 14 of 42 targets and built a doxing engine with tens of millions of records."
+    ],
+    "stats": [
+      {
+        "value": "~40",
+        "label": "groups identified"
+      },
+      {
+        "value": "7",
+        "label": "misuse categories"
+      },
+      {
+        "value": "30",
+        "label": "AI companies attacked in 4 days"
+      },
+      {
+        "value": "14/42",
+        "label": "successful hacktivist breaches"
+      }
+    ],
+    "recommendations": [
+      "Protect AI provider API keys as production secrets: secrets vault, rotation, usage monitoring.",
+      "Use only official channels to access models — not third-party 'cheap resellers'.",
+      "Factor the speed of AI agent-driven attacks into the threat model."
+    ],
+    "why_it_matters": "A primary source on how attackers really use AI — from the model vendor itself, not inferred indirectly.",
+    "source_note": "Summary based on articles about the report (Unite.AI, FoneArena, Enterprise DNA). Direct access to the website from the collection environment was restricted."
+  }
 });

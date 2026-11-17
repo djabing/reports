@@ -86,5 +86,39 @@ RDB.add({
     "Ограничить учётные данные мониторинговых систем (PRTG и др.) минимально необходимыми правами."
   ],
   "why_it_matters": "Показывает, что виртуализацию разрушают не 0-day, а слабая гигиена учётных данных — и что бэкапы атакуют первыми.",
-  "source_note": "Выжимка по Securelist и пересказам в СМИ (GBHackers и др.)."
+  "source_note": "Выжимка по Securelist и пересказам в СМИ (GBHackers и др.).",
+  "en": {
+    "tldr": "Kaspersky GERT analysed a BlackNevas attack: in 10 days the attacker destroyed the victim's entire virtualisation — 4 ESXi hosts, all VMs, both vCenters and the backups — without a single hypervisor vulnerability.",
+    "summary": "A Global Emergency Response Team study of hypervisor ransomware. In the key case, access was gained via credentials extracted from PRTG Network Monitor and a shared root password on several hosts. An unusual technique was abuse of vCenter Host Profiles to enable SSH en masse. A few days before the main attack, antivirus protection of the backup environment was disabled, then backup services were stopped and the recovery infrastructure encrypted. The binary was not recovered; attribution to the Trigona/BlackNevas family was based on command-line style. According to GERT, ransomware accounted for 39.4% of incidents in 2025.",
+    "key_findings": [
+      "4 ESXi hosts, all VMs, both vCenter Server Appliances and the backup infrastructure destroyed in 10 days.",
+      "No hypervisor exploits: credentials from PRTG and a reused root password.",
+      "Abuse of vCenter Host Profiles to enable SSH on all hosts.",
+      "Backup protection disabled a few days before the strike.",
+      "Ransomware accounted for 39.4% of incidents handled by GERT in 2025."
+    ],
+    "stats": [
+      {
+        "value": "10 days",
+        "label": "attack duration"
+      },
+      {
+        "value": "4",
+        "label": "ESXi hosts destroyed"
+      },
+      {
+        "value": "39.4%",
+        "label": "of GERT incidents — ransomware"
+      }
+    ],
+    "recommendations": [
+      "Unique root passwords on every ESXi host stored in PAM; SSH off by default.",
+      "Isolate vCenter/ESXi management in a separate segment with MFA.",
+      "Monitor Host Profile changes and SSH enablement on hosts.",
+      "Keep immutable/offline copies and a separate perimeter for the backup system.",
+      "Restrict monitoring system credentials (PRTG etc.) to the minimum necessary rights."
+    ],
+    "why_it_matters": "Shows that virtualisation is destroyed not by zero-days but by weak credential hygiene — and that backups are attacked first.",
+    "source_note": "Summary based on Securelist and media accounts (GBHackers and others)."
+  }
 });

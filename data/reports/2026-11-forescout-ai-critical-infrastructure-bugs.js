@@ -63,5 +63,41 @@ RDB.add({
     "Ужесточить требования к безопасности поставщиков OT/IoT-устройств."
   ],
   "why_it_matters": "Наглядно показывает, что поиск уязвимостей в критической инфраструктуре стал дешёвым и быстрым — и для атакующих тоже.",
-  "source_note": "Выжимка по публикации Forescout и обзорам (Computer Weekly, Infosecurity Magazine, Industrial Cyber)."
+  "source_note": "Выжимка по публикации Forescout и обзорам (Computer Weekly, Infosecurity Magazine, Industrial Cyber).",
+  "en": {
+    "tldr": "Using ordinary AI models and a $935 budget, Forescout Vedere Labs found 66 new vulnerabilities in 10 TCP/IP stacks used in OT and IoT. The work took 90 hours instead of about nine months.",
+    "summary": "Project Memoria: researchers built an AI vulnerability-hunting harness and ran 10 TCP/IP stacks through it, seven of which had been analysed manually in 2020–2021. 99 vulnerabilities were found, 66 of them previously unknown; 52% of the new ones are high or critical. The average cost per finding was $2.58. The approach is good at finding memory errors in protocol parsing code but misses logic and design flaws.",
+    "key_findings": [
+      "99 vulnerabilities in 10 TCP/IP stacks, 66 of them previously unknown.",
+      "52% of new vulnerabilities are high or critical.",
+      "Total cost $935, an average of $2.58 per finding.",
+      "90 hours (≈10 h of automated analysis and 80 h of manual verification) instead of ~9 months.",
+      "AI is good at finding memory errors in protocol parsers but misses logic errors."
+    ],
+    "stats": [
+      {
+        "value": "66",
+        "label": "new vulnerabilities"
+      },
+      {
+        "value": "$935",
+        "label": "cost of the whole analysis"
+      },
+      {
+        "value": "90 h",
+        "label": "instead of ~9 months"
+      },
+      {
+        "value": "52%",
+        "label": "high/critical"
+      }
+    ],
+    "recommendations": [
+      "Build AI static analysis into development and release pipelines.",
+      "Isolate devices that cannot be updated and reduce their network reachability.",
+      "Tighten security requirements for OT/IoT device vendors."
+    ],
+    "why_it_matters": "Clearly shows that finding vulnerabilities in critical infrastructure has become cheap and fast — for attackers too.",
+    "source_note": "Summary based on the Forescout publication and coverage (Computer Weekly, Infosecurity Magazine, Industrial Cyber)."
+  }
 });

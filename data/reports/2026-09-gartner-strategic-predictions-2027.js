@@ -80,6 +80,7 @@ RDB.add({
       "Implement management of machine identities and AI agent privileges.",
       "Extend security monitoring to all AI services in use."
     ],
-    "why_it_matters": "Sets reference points for 2027 strategies: AI agents become a new class of privileged accounts."
+    "why_it_matters": "Sets reference points for 2027 strategies: AI agents become a new class of privileged accounts.",
+    "source_note": "Summary based on the Gartner press release and coverage; figures on the number of agents differ between sources and are not included."
   }
 });

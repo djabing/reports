@@ -55,5 +55,24 @@ RDB.add({
     "Заказчикам ПО — проверять обновления и подписи поставщиков."
   ],
   "why_it_matters": "Почти состоявшаяся атака на цепочку поставок через российского разработчика.",
-  "source_note": "Выжимка по публикациям CNews, Anti-Malware, CISOClub; технический отчёт — на сайте Kaspersky ICS CERT."
+  "source_note": "Выжимка по публикациям CNews, Anti-Malware, CISOClub; технический отчёт — на сайте Kaspersky ICS CERT.",
+  "en": {
+    "title": "BO Team spent months in a Russian software developer's network: supply-chain attack risk",
+    "tldr": "Kaspersky ICS CERT helped stop a months-long BO Team attack on a Russian software developer: the attackers reached the source code and the build-signing server — a possible goal was injecting code into products to attack customers.",
+    "summary": "The developer contacted ICS CERT after noticing suspicious activity. Following the experts' recommendations, the company cut off the attackers' access; a malicious mailing was detected in time and no credentials were leaked. Kaspersky previously classified BO Team as pro-Ukrainian hacktivists.",
+    "key_findings": [
+      "BO Team spent several months in the software developer's infrastructure.",
+      "Access to source code and the build-signing server.",
+      "Likely goal: attacking customers through products (supply chain).",
+      "The attack was stopped before completion; no credentials leaked."
+    ],
+    "stats": [],
+    "recommendations": [
+      "Isolate build and code-signing servers and log all signing operations.",
+      "Control access to source code repositories and detect anomalous downloads.",
+      "Software customers should verify vendors' updates and signatures."
+    ],
+    "why_it_matters": "A near-successful supply-chain attack via a Russian software developer.",
+    "source_note": "Summary based on articles in CNews, Anti-Malware and CISOClub; the technical report is on the Kaspersky ICS CERT website."
+  }
 });

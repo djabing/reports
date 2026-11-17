@@ -66,5 +66,41 @@ RDB.add({
     "Регулярно тестировать восстановление из офлайн-резервных копий."
   ],
   "why_it_matters": "Базовая квартальная статистика для сравнения динамики: рост числа модификаций шифровальщиков в 1,5 раза — сигнал усиления активности вымогателей.",
-  "source_note": "Выжимка по Securelist и пересказам отчёта; данные по IoT-разделу проверены частично."
+  "source_note": "Выжимка по Securelist и пересказам отчёта; данные по IoT-разделу проверены частично.",
+  "en": {
+    "tldr": "Kaspersky quarterly statistics: 311 million web attacks blocked, 4,470 new ransomware modifications (1.5 times more than in Q2), Qilin accounts for 15% of victims on leak sites.",
+    "summary": "Continuation of the IT threat evolution series. In Q3 2026 Kaspersky solutions repelled more than 311 million attacks from online resources, and the file antivirus detected 23.7 million malicious and unwanted objects. Three new families and 4,470 new ransomware modifications were detected — more than 1.5 times as many as the previous quarter. Qilin remains the leader by number of victims on DLS. The IoT section notes a declining share of Mirai among downloaded threats amid growth of other botnets.",
+    "key_findings": [
+      "311,083,655 attacks from online resources blocked in the quarter.",
+      "23,733,652 malicious and potentially unwanted objects detected by the file antivirus.",
+      "3 new families and 4,470 new ransomware modifications — more than 1.5× growth vs Q2.",
+      "Qilin — 15% of victims published on leak sites.",
+      "Mirai's share among IoT threats is declining while other botnets grow."
+    ],
+    "stats": [
+      {
+        "value": "311M",
+        "label": "web attacks blocked"
+      },
+      {
+        "value": "23.7M",
+        "label": "malicious objects"
+      },
+      {
+        "value": "4,470",
+        "label": "new ransomware modifications"
+      },
+      {
+        "value": "15%",
+        "label": "of DLS victims — Qilin"
+      }
+    ],
+    "recommendations": [
+      "Update OS and software, prioritising vulnerabilities exploited by ransomware.",
+      "Change default passwords and close SSH/Telnet on IoT devices to the internet.",
+      "Regularly test recovery from offline backups."
+    ],
+    "why_it_matters": "Baseline quarterly statistics for tracking trends: 1.5× growth in ransomware modifications signals rising ransomware activity.",
+    "source_note": "Summary based on Securelist and accounts of the report; the IoT section data were partially verified."
+  }
 });

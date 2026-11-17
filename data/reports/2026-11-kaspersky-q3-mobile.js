@@ -63,5 +63,37 @@ RDB.add({
     "Обучать пользователей распознавать фишинговые ссылки на APK в мессенджерах."
   ],
   "why_it_matters": "Подтверждает, что мобильный банкинг остаётся главной целью, а ИИ начинает встраиваться и в мобильное ВПО.",
-  "source_note": "Выжимка по Securelist и пересказам; часть цифр (число атак, APK) взята из вторичных обзоров."
+  "source_note": "Выжимка по Securelist и пересказам; часть цифр (число атак, APK) взята из вторичных обзоров.",
+  "en": {
+    "tldr": "Banking trojans remain the main mobile threat: 31.63% of detected malicious apps. The number of attacks fell to 1.67 million, but the number of malicious installation packages grew.",
+    "summary": "Kaspersky's quarterly mobile threat report. Trojan-Banker is the most common category (31.63% of malicious apps), with Creduz leading among bankers. About 1.67 million mobile attacks were blocked versus ~2 million in Q2, while the number of detected malicious Android installation packages rose to ~378,000. The report's reviews mention Android malware with AI elements, subscription-fraud apps in Google Play and the Vo1d botnet.",
+    "key_findings": [
+      "Trojan-Banker — 31.63% of all detected malicious mobile apps.",
+      "Creduz again holds the largest share among banking trojans.",
+      "~1.67 million mobile attacks blocked (about 2 million in Q2).",
+      "~378,000 malicious Android installation packages.",
+      "In focus: Android malware with AI features, subscription fraud in Google Play, the Vo1d botnet."
+    ],
+    "stats": [
+      {
+        "value": "31.63%",
+        "label": "share of banking trojans"
+      },
+      {
+        "value": "~1.67M",
+        "label": "mobile attacks"
+      },
+      {
+        "value": "~378K",
+        "label": "malicious APKs"
+      }
+    ],
+    "recommendations": [
+      "Install apps only from official stores and check requested permissions (especially Accessibility).",
+      "Use mobile protection on employees' devices that access corporate data.",
+      "Train users to recognise phishing links to APKs in messengers."
+    ],
+    "why_it_matters": "Confirms that mobile banking remains the main target and that AI is starting to appear in mobile malware too.",
+    "source_note": "Summary based on Securelist and accounts of it; some figures (number of attacks, APKs) come from secondary reviews."
+  }
 });

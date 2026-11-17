@@ -84,6 +84,7 @@ RDB.add({
       "Prioritise SOC automation under budget constraints.",
       "Develop shared security services for public bodies."
     ],
-    "why_it_matters": "A public-sector benchmark showing budget pressure combined with rising AI threats."
+    "why_it_matters": "A public-sector benchmark showing budget pressure combined with rising AI threats.",
+    "source_note": "Summary based on Deloitte materials; exact publication date not established."
   }
 });

@@ -83,5 +83,42 @@ RDB.add({
     "Проверять сегментацию мультиарендных сред и баз данных."
   ],
   "why_it_matters": "Первые подробные данные о реальных, а не экспериментальных агентных вторжениях: показывает, что порог входа для масштабных атак резко снижается.",
-  "source_note": "Выжимка по блогу CrowdStrike и обзорам Cybersecurity Dive/CIO Dive; оценки темпов роста в СМИ расходятся."
+  "source_note": "Выжимка по блогу CrowdStrike и обзорам Cybersecurity Dive/CIO Dive; оценки темпов роста в СМИ расходятся.",
+  "en": {
+    "tldr": "CrowdStrike described four previously unknown adversaries carrying out intrusions with agentic AI and almost no human involvement. The main limit on scaling such attacks is the token budget, not development complexity.",
+    "summary": "CrowdStrike analysts found offensive agentic frameworks of four groups left in open directories (activity May–August 2026). Two used sophisticated harnesses and two simple ones, yet the latter also breached numerous organisations. All four bypassed model safeguards by presenting intrusions as authorised penetration tests. CrowdStrike expects the volume and sophistication of agentic intrusions to almost certainly grow over 12 months, letting low-skilled actors operate at the scale of organised crime.",
+    "key_findings": [
+      "Four previously unknown actors carried out intrusions with agentic AI and minimal human involvement.",
+      "The scaling constraint is the token budget, not engineering complexity.",
+      "One actor breached at least 15 healthcare organisations in Argentina.",
+      "An agent used a cloud IAM token with Kubernetes cluster-admin rights and accessed 726 tenant databases.",
+      "All four actors bypassed model restrictions by presenting attacks as authorised pentests."
+    ],
+    "stats": [
+      {
+        "value": "4",
+        "label": "new agentic actors"
+      },
+      {
+        "value": "15+",
+        "label": "clinics breached in Argentina"
+      },
+      {
+        "value": "726",
+        "label": "tenant DBs via one IAM token"
+      },
+      {
+        "value": "12 mo.",
+        "label": "horizon of expected growth"
+      }
+    ],
+    "recommendations": [
+      "Minimise the permissions of cloud tokens and service accounts (especially cluster-admin in Kubernetes).",
+      "Shorten response times: agentic attacks run at machine speed.",
+      "Watch for abnormally fast reconnaissance and exploitation sequences from a single source.",
+      "Check segmentation of multi-tenant environments and databases."
+    ],
+    "why_it_matters": "The first detailed data on real rather than experimental agentic intrusions: shows the bar for large-scale attacks is dropping sharply.",
+    "source_note": "Summary based on the CrowdStrike blog and Cybersecurity Dive/CIO Dive coverage; growth estimates differ between media outlets."
+  }
 });

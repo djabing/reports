@@ -50,5 +50,22 @@ RDB.add({
     "Усилить фильтрацию целевого фишинга в промышленных компаниях."
   ],
   "why_it_matters": "Дайджест угроз промышленности с акцентом на группы, атакующие Россию.",
-  "source_note": "Выжимка по странице Kaspersky ICS CERT (фрагменты отчёта)."
+  "source_note": "Выжимка по странице Kaspersky ICS CERT (фрагменты отчёта).",
+  "en": {
+    "tldr": "ICS CERT's quarterly roundup: among other things, BO Team, showing signs of an operational link to Head Mare, targets Russian oil and gas, manufacturing and telecom companies; PhantomCore (Head Mare) ran phishing against an industrial enterprise.",
+    "summary": "A review of publicly reported APT and financial attacks on industry in Q2 2026. It highlights pro-Ukrainian groups operating against Russian organisations in several sectors and a PhantomCore phishing attack on a Russian industrial company (8 April).",
+    "key_findings": [
+      "BO Team shows signs of an operational link to Head Mare.",
+      "Targets in Russia: oil and gas, manufacturing, telecom.",
+      "PhantomCore (Head Mare) — spear phishing against an industrial company.",
+      "Roundup of APT and financial attacks on industry by region."
+    ],
+    "stats": [],
+    "recommendations": [
+      "Match BO Team and Head Mare IoCs against your logs.",
+      "Strengthen spear-phishing filtering at industrial companies."
+    ],
+    "why_it_matters": "An industry threat digest focused on groups attacking Russia.",
+    "source_note": "Summary based on the Kaspersky ICS CERT page (report excerpts)."
+  }
 });

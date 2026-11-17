@@ -58,5 +58,22 @@ RDB.add({
     "Мониторить подозрительные архивы в каталогах обновлений Windows."
   ],
   "why_it_matters": "Целевая атака на специализированные госсборки ОС через канал обновлений.",
-  "source_note": "Выжимка по пресс-релизу Kaspersky и обзорам (The Record, The Hacker News)."
+  "source_note": "Выжимка по пресс-релизу Kaspersky и обзорам (The Record, The Hacker News).",
+  "en": {
+    "tldr": "GReAT discovered NetamLoader — a previously unknown .NET assembly-loading framework — in an archive in the Windows updates directory of a special government build of Windows 10. The location and contents of the archive suggest a possible supply-chain attack.",
+    "summary": "Presented at Security Analyst Summit 2026. NetamLoader collects system information, evades Windows scanning, removes traces and loads additional code. One victim was identified; there is no attribution and the country is not named. No signs of Patch My PC compromise were found.",
+    "key_findings": [
+      "New .NET loader NetamLoader.",
+      "Found in a CAB archive in the Windows update packages directory.",
+      "Target: a Windows 10 build exclusively for government bodies.",
+      "Possible supply-chain attack; one identified victim."
+    ],
+    "stats": [],
+    "recommendations": [
+      "Verify the integrity of update packages and third-party software distribution systems.",
+      "Monitor for suspicious archives in Windows update directories."
+    ],
+    "why_it_matters": "A targeted attack on specialised government OS builds via the update channel.",
+    "source_note": "Summary based on the Kaspersky press release and coverage (The Record, The Hacker News)."
+  }
 });

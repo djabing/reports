@@ -54,5 +54,27 @@ RDB.add({
     "Проверить IoC группы из исследования."
   ],
   "why_it_matters": "Активная группа против российских компаний.",
-  "source_note": "Выжимка по пресс-релизу Kaspersky и публикациям CNews; данные о задержании — The Hacker News."
+  "source_note": "Выжимка по пресс-релизу Kaspersky и публикациям CNews; данные о задержании — The Hacker News.",
+  "en": {
+    "title": "VasyGrek: 100+ attack attempts on organisations in Russia and the CIS",
+    "tldr": "In the first three quarters of 2026 more than 100 VasyGrek attack attempts on organisations in Russia and the CIS were recorded; the group expanded its geography and uses new tools to infect corporate devices.",
+    "summary": "VasyGrek targets corporate users in Russia and CIS countries, in 2026 with an updated toolkit. In November 2026 Russian police reported the arrest of three alleged members of the group.",
+    "key_findings": [
+      "100+ attack attempts in three quarters of 2026.",
+      "Geography expanded to CIS countries.",
+      "New tools for infecting corporate devices."
+    ],
+    "stats": [
+      {
+        "value": "100+",
+        "label": "attack attempts"
+      }
+    ],
+    "recommendations": [
+      "Filter attachments in emails 'from counterparties' and accounting mailings.",
+      "Check the group's IoCs from the study."
+    ],
+    "why_it_matters": "An active group targeting Russian companies.",
+    "source_note": "Summary based on the Kaspersky press release and CNews articles; arrest information — The Hacker News."
+  }
 });

@@ -98,6 +98,7 @@ RDB.add({
       "Embed supplier cybersecurity assessment in procurement.",
       "Include geopolitical scenarios in the threat model."
     ],
-    "why_it_matters": "The flagship report for CEOs and governments: sets the language boards use to discuss cyber risk."
+    "why_it_matters": "The flagship report for CEOs and governments: sets the language boards use to discuss cyber risk.",
+    "source_note": "Summary based on WEF materials and coverage (Help Net Security, Kiteworks)."
   }
 });

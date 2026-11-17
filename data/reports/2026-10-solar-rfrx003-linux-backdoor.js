@@ -73,5 +73,34 @@ RDB.add({
     "Развернуть EDR на Linux-серверах."
   ],
   "why_it_matters": "Linux-инфраструктура в России всё чаще становится целью шпионских кампаний, а EDR на серверах по-прежнему редкость.",
-  "source_note": "Выжимка по публикациям CNews, SecurityLab и Газеты.Ru."
+  "source_note": "Выжимка по публикациям CNews, SecurityLab и Газеты.Ru.",
+  "en": {
+    "title": "Solar 4RAYS: RFRx003 backdoor for Linux servers",
+    "tldr": "While investigating a targeted attack, Solar 4RAYS discovered RFRx003, a previously unknown Linux backdoor that masquerades as a time synchronisation service and potentially threatens every company with Linux servers.",
+    "summary": "RFRx003 was found while investigating an incident at an unnamed organisation. The backdoor is built on the embeddable Mongoose C framework and supports two transports — HTTPS and WSS; data exfiltration is disguised as user avatar requests. Persistence is via a service imitating a time synchronisation daemon and a root cron job. There are no overlaps with known malware sets; an APT group may be behind the attack.",
+    "key_findings": [
+      "A new Linux backdoor with no overlaps with known families.",
+      "HTTPS and WSS transport based on the Mongoose framework.",
+      "Exfiltration disguised as a user avatar upload.",
+      "Persistence via a fake time synchronisation service and a root cron job.",
+      "Likely actor — an APT group (Solar's assumption)."
+    ],
+    "stats": [
+      {
+        "value": "1",
+        "label": "confirmed attack in Russia"
+      },
+      {
+        "value": "2",
+        "label": "transport modes (HTTPS/WSS)"
+      }
+    ],
+    "recommendations": [
+      "Check Linux servers for unknown time synchronisation services and root cron jobs.",
+      "Load IoCs from the Solar 4RAYS report into monitoring tools.",
+      "Deploy EDR on Linux servers."
+    ],
+    "why_it_matters": "Linux infrastructure in Russia is increasingly targeted by espionage campaigns, while EDR on servers is still rare.",
+    "source_note": "Summary based on articles in CNews, SecurityLab and Gazeta.Ru."
+  }
 });

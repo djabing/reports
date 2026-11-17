@@ -54,5 +54,35 @@ RDB.add({
     "Использовать данные при планировании программ повышения осведомлённости сотрудников и клиентов."
   ],
   "why_it_matters": "Срез отношения россиян к кибергигиене — полезен для программ обучения и коммуникаций.",
-  "source_note": "Выжимка по пресс-релизу «Лаборатории Касперского» от 16.11.2026; опрос проведён в 2026 году среди 1006 жителей крупных городов России."
+  "source_note": "Выжимка по пресс-релизу «Лаборатории Касперского» от 16.11.2026; опрос проведён в 2026 году среди 1006 жителей крупных городов России.",
+  "en": {
+    "title": "Kaspersky: almost 60% of Russians believe cyber culture will become an important part of society",
+    "tldr": "A survey of 1,006 residents of large Russian cities: 59% believe cyber culture will become an important part of society, 31% rate its current level as low, and 44% place responsibility for developing it on institutions and companies.",
+    "summary": "The 'Digital care and cybersecurity culture' study by the company's in-house research centre, presented at Kaspersky CyberSecurity Weekend 2026 in Tashkent. 23% are confident that cyber culture will become a foundation of society taught from childhood; 14% think it is needed only for narrow tasks. Respondents split responsibility between the state (17%), digital services (10%), security software vendors (7%), education (5%), media (3%) and employers (1%); only a quarter consider themselves and their families responsible. Current level: 60% medium, 31% low, 9% high.",
+    "key_findings": [
+      "59% believe cyber culture will become an important part of society.",
+      "23% believe it will become a foundation of society, taught from childhood.",
+      "44% place responsibility on institutions and companies; only a quarter on themselves and their families.",
+      "Cyber culture level: 31% low, 60% medium, 9% high."
+    ],
+    "stats": [
+      {
+        "value": "1,006",
+        "label": "respondents"
+      },
+      {
+        "value": "59%",
+        "label": "see cyber culture as important"
+      },
+      {
+        "value": "31%",
+        "label": "rate the level as low"
+      }
+    ],
+    "recommendations": [
+      "Use the data when planning awareness programmes for employees and customers."
+    ],
+    "why_it_matters": "A snapshot of Russians' attitudes to cyber hygiene — useful for training programmes and communications.",
+    "source_note": "Summary based on Kaspersky's press release of 16 Nov 2026; the survey was conducted in 2026 among 1,006 residents of large Russian cities."
+  }
 });

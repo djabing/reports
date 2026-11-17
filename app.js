@@ -123,21 +123,26 @@ function vendorOf(r){
 }
 function enOn(){ return S.lang === "en" && S.group === "intl"; }
 /* Английская версия выжимки: оригинальное название + поля из r.en */
+/* английское содержимое: во всём портале при английском интерфейсе, в «Международной аналитике» — и по переключателю */
+function cEn(){ return S.ui === "en" || enOn(); }
+/* английское название метки (тег, отрасль, регион) — только для показа, фильтры работают по исходному значению */
+const LB = t => (S.ui === "en" && (window.RDB_LABELS_EN || {})[t]) || t;
 function loc(r){
-  if (!r || !enOn() || !r.en) return r;
+  if (!r || !cEn() || !r.en) return r;
   const e = r.en;
-  return Object.assign({}, r, { title_ru: r.title, tldr: e.tldr || r.tldr, summary: e.summary || r.summary,
+  return Object.assign({}, r, { title_ru: e.title || r.title, title: r.lang === "en" ? r.title : (e.title || r.title), tldr: e.tldr || r.tldr, summary: e.summary || r.summary,
     key_findings: e.key_findings || r.key_findings, stats: e.stats || r.stats, recommendations: e.recommendations || r.recommendations,
-    why_it_matters: e.why_it_matters || r.why_it_matters, __en: true });
+    why_it_matters: e.why_it_matters || r.why_it_matters, source_note: e.source_note || r.source_note, __en: true });
 }
-const T = s => ((S.ui === "en" || enOn()) && EN_UI[s]) || L(s);
+const T = s => (cEn() && EN_UI[s]) || L(s);
 /* Ограничения по законодательству РФ (data/legal.js): сноски к упоминаниям и запрет источников */
 const LEGAL = window.RDB_LEGAL || { blocked_sources: [], marked_mentions: [] };
-const LEGAL_RX = (LEGAL.marked_mentions || []).map(m => ({ rx: new RegExp(m.pattern, "i"), note: m.note }));
+const LEGAL_RX = (LEGAL.marked_mentions || []).map(m => ({ rx: new RegExp(m.pattern, "i"), note: m.note, note_en: m.note_en }));
 function legalNotes(r){
   const text = [r.title, r.title_ru, r.tldr, r.summary, (r.key_findings||[]).join(" "), (r.recommendations||[]).join(" "),
-    r.why_it_matters, (r.actors||[]).join(" "), (r.malware||[]).join(" "), (r.tags||[]).join(" ")].join(" ");
-  return LEGAL_RX.filter(m => m.rx.test(text)).map(m => m.note);
+    r.why_it_matters, (r.actors||[]).join(" "), (r.malware||[]).join(" "), (r.tags||[]).join(" "),
+    r.en ? JSON.stringify(r.en) : ""].join(" ");
+  return LEGAL_RX.filter(m => m.rx.test(text)).map(m => (S.ui === "en" && m.note_en) || m.note);
 }
 function isBlocked(r){
   let host = ""; try { host = new URL(r.url).hostname.replace(/^www\./, ""); } catch(e){}
@@ -199,7 +204,8 @@ function haystack(r){
       (r.tags||[]).join(" "), (r.actors||[]).join(" "), (r.malware||[]).join(" "), (r.cves||[]).join(" "),
       (r.sectors||[]).join(" "), (r.regions||[]).join(" "), (r.key_findings||[]).join(" "),
       (r.ttps||[]).map(t => t.id + " " + t.name).join(" "),
-      r.en ? [r.en.tldr, r.en.summary, (r.en.key_findings||[]).join(" ")].join(" ") : ""].join(" "));
+      r.en ? [r.en.title, r.en.tldr, r.en.summary, (r.en.key_findings||[]).join(" ")].join(" ") : "",
+      [].concat(r.tags||[], r.sectors||[], r.regions||[]).map(t => (window.RDB_LABELS_EN || {})[t] || "").join(" ")].join(" "));
   }
   return r.__h;
 }
@@ -252,7 +258,7 @@ function renderSide(){
   const tg = {}; POOL.forEach(r => (r.tags||[]).forEach(t => { const k = norm(t); tg[k] = tg[k] || { t, n: 0 }; tg[k].n++; }));
   const tops = Object.values(tg).sort((a, b) => b.n - a.n).slice(0, 18);
   if (tops.length) h += `<h4>${L("Темы")}</h4><div class="tagcloud">` + tops.map(x =>
-    `<button class="chip ${S.tag && norm(S.tag)===norm(x.t)?"active":""}" data-tag="${esc(x.t)}">${esc(x.t)} <span style="opacity:.55">${x.n}</span></button>`).join("") + `</div>`;
+    `<button class="chip ${S.tag && norm(S.tag)===norm(x.t)?"active":""}" data-tag="${esc(x.t)}">${esc(LB(x.t))} <span style="opacity:.55">${x.n}</span></button>`).join("") + `</div>`;
 
   h += `<div class="hint" style="margin-top:26px"><span><span class="kbd">/</span> ${L("поиск")}</span><span><span class="kbd">j</span><span class="kbd">k</span> ${L("навигация")}</span><span><span class="kbd">Enter</span> ${L("открыть")}</span><span><span class="kbd">f</span> ${L("в избранное")}</span></div>`;
   const nc = gc("comp");
@@ -279,7 +285,7 @@ function card(r, i){
     <div class="c-tldr">${esc(r.tldr)}</div>
     ${statsMini(r)}
     ${legalNotes(r).length ? `<div class="c-legal">* ${legalNotes(r).map(esc).join(" ")}</div>` : ""}
-    <div class="c-foot">${typeBadge(r)}${(r.tags||[]).slice(0, 3).map(t => `<span class="chip">${esc(t)}</span>`).join("")}</div>
+    <div class="c-foot">${typeBadge(r)}${(r.tags||[]).slice(0, 3).map(t => `<span class="chip">${esc(LB(t))}</span>`).join("")}</div>
   </article>`;
 }
 function row(r, i){
@@ -305,7 +311,7 @@ function renderMain(){
         `<button role="tab" aria-selected="${S.group===g}" class="grp-tab${S.group===g?" on":""}" data-group="${g}">
           <span class="t-top"><span class="t-name">${L(GROUPS[g].name)}</span><span class="t-short">${L(TAB_SHORT[g])}</span><span class="t-cnt">${gc(g)}</span></span>
           <span class="t-hint">${L(TAB_HINT[g])}</span></button>`).join("") + `</nav>` +
-      `<div class="grp-sub"><p>${L(G.hint)}</p>${S.group === "intl" ? `<div class="seg lang" role="group" aria-label="${L("Язык выжимок")}">${S.ui === "en" ? `<span class="seg-lbl">${L("Выжимки:")}</span>` : ""}
+      `<div class="grp-sub"><p>${L(G.hint)}</p>${S.group === "intl" && S.ui !== "en" ? `<div class="seg lang" role="group" aria-label="${L("Язык выжимок")}">${S.ui === "en" ? `<span class="seg-lbl">${L("Выжимки:")}</span>` : ""}
           <button data-lang="ru" class="${S.lang==="ru"?"on":""}">Русский</button><button data-lang="en" class="${S.lang==="en"?"on":""}">English</button></div>` : ""}</div>`;
   h += `<section class="hero">
     <div class="kpi"><b>${POOL.length}</b><span>${P(POOL.length,"отчёт","отчёта","отчётов","report","reports")} ${L("в разделе")}</span></div>
@@ -317,7 +323,7 @@ function renderMain(){
   const act = [];
   if (S.type) act.push(`<button class="chip active" data-clear="type">${L(TYPES[S.type].name)}<span class="x">✕</span></button>`);
   if (S.vendor) act.push(`<button class="chip active" data-clear="vendor">${esc(vendorOf({vendor:S.vendor}).name)}<span class="x">✕</span></button>`);
-  if (S.tag) act.push(`<button class="chip active" data-clear="tag">#${esc(S.tag)}<span class="x">✕</span></button>`);
+  if (S.tag) act.push(`<button class="chip active" data-clear="tag">#${esc(LB(S.tag))}<span class="x">✕</span></button>`);
   if (S.q) act.push(`<button class="chip active" data-clear="q">«${esc(S.q)}»<span class="x">✕</span></button>`);
   h += `<div class="toolbar"><span class="title">${names[S.view]}</span><span class="chip">${LIST.length}</span>${act.join("")}<span class="spacer"></span>
     <select class="sel" id="sort" aria-label="${L("Сортировка")}">
@@ -391,7 +397,7 @@ function chipList(arr, kind){
     if (kind === "ttp"){ const id = String(x.id||""); const path = id.replace(".", "/");
       return /^T\d{4}(\.\d{3})?$/.test(id) ? `<a class="chip mono" target="_blank" rel="noopener" href="https://attack.mitre.org/techniques/${path}/" title="${esc(x.name)}">${esc(id)} · ${esc(x.name)}</a>` : `<span class="chip">${esc(id)} ${esc(x.name)}</span>`; }
     if (kind === "cve") return /^CVE-\d{4}-\d+$/.test(x) ? `<a class="chip mono" target="_blank" rel="noopener" href="https://nvd.nist.gov/vuln/detail/${esc(x)}">${esc(x)}</a>` : `<span class="chip mono">${esc(x)}</span>`;
-    return `<button class="chip" data-search="${esc(x)}" title="${L("Найти все отчёты")}">${esc(x)}</button>`;
+    return `<button class="chip" data-search="${esc(x)}" title="${L("Найти все отчёты")}">${esc(LB(x))}</button>`;
   }).join("") + `</div>`;
 }
 function openReader(i){
@@ -406,7 +412,7 @@ function openReader(i){
     [L("Отрасли"), chipList(r.sectors)], [L("Регионы"), chipList(r.regions)]
   ].filter(x => x[1]);
   let h = `<div style="--vc:${esc(v.color)}">
-    <div class="r-top">${logo(v)}<div><div class="v">${esc(v.name)}</div><div class="d">${esc(fmtDate(r))} · ${typeBadge(r)} ${L(r.__en ? "· English version" : r.lang==="ru" ? "· на русском" : "· оригинал на английском")}</div></div></div>
+    <div class="r-top">${logo(v)}<div><div class="v">${esc(v.name)}</div><div class="d">${esc(fmtDate(r))} · ${typeBadge(r)} ${L(r.__en ? (r.lang === "en" ? "· оригинал на английском" : "· English version") : r.lang==="ru" ? "· на русском" : "· оригинал на английском")}</div></div></div>
     <h1 class="r-h1">${esc(r.title_ru || r.title)}</h1>
     ${r.title_ru && r.title && r.title !== r.title_ru ? `<div class="r-sub">${esc(r.title)}</div>` : ""}
     <div class="r-actions">
@@ -426,7 +432,7 @@ function openReader(i){
     ${meta.length ? `<div class="sec"><h3>${L("Кто, где, чем")}</h3><div class="meta-grid">${meta.map(m => `<div><h5>${m[0]}</h5>${m[1]}</div>`).join("")}</div></div>` : ""}
     ${(r.ttps||[]).length ? `<div class="sec"><h3>${L("Техники MITRE ATT&amp;CK")}</h3>${chipList(r.ttps, "ttp")}</div>` : ""}
     ${(r.cves||[]).length ? `<div class="sec"><h3>${L("Уязвимости")}</h3>${chipList(r.cves, "cve")}</div>` : ""}
-    ${(r.tags||[]).length ? `<div class="sec"><h3>${L("Темы")}</h3><div class="chips">${r.tags.map(t => `<button class="chip" data-tagopen="${esc(t)}">#${esc(t)}</button>`).join("")}</div></div>` : ""}
+    ${(r.tags||[]).length ? `<div class="sec"><h3>${L("Темы")}</h3><div class="chips">${r.tags.map(t => `<button class="chip" data-tagopen="${esc(t)}">#${esc(LB(t))}</button>`).join("")}</div></div>` : ""}
     <div class="sec"><h3>${L("Мои заметки")}</h3><textarea class="note" id="note" placeholder="${L("Выводы для своей организации, к кому передать, что проверить…")}">${esc(notes[r.id] || "")}</textarea></div>
     ${legalNotes(r).length ? `<div class="legal-note">${legalNotes(r).map(n => `<p>* ${esc(n)}</p>`).join("")}</div>` : ""}
     <div class="src">${esc(r.source_note || "")}${r.added ? ` · ${L("Добавлено в библиотеку")}: ${esc(r.added)}` : ""}</div>
