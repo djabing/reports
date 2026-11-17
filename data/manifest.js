@@ -1,11 +1,18 @@
 // Реестр отчётов. Каждая строка = файл data/reports/<id>.js.
 // Сборщик добавляет новые строки сразу под якорем и обновляет "updated" и "build".
 window.RDB_MANIFEST = {
-  "updated": "2026-11-16T17:35:00+03:00",
-  "build": "2026-11-16.21",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
-  "last_run_note": "+6 Kaspersky: Citrus (GERT), Arra Ghouls (Securelist), рассылка через Google Data Studio, опросы о киберкультуре и мобильных геймерах, Киберпульс H1 2026.",
+  "updated": "2026-11-17T07:32:00+03:00",
+  "build": "2026-11-17.1",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
+  "last_run_note": "+7: Unit 42 (QUIC-RAT PerfectPioneer/KUKURAT, ARTEX и ИИ-инструменты), Microsoft (закладки в агентах для кода, SCKit/ScreenConnect, GSocket), Kaspersky (фейковые каналы магазинов косметики, опрос МСБ о требованиях ИБ в цепочках поставок).",
   "reports": [
     // NEW-REPORT-ANCHOR (не удалять: сборщик вставляет новые записи под этой строкой)
+    { "id": "2026-11-unit42-quic-rats-sea-governments", "url": "https://unit42.paloaltonetworks.com/custom-rats-target-southeast-asia-governments/", "title": "QUIC and Covert: Novel HTTP/3-Powered RATs Target Southeast Asian Governments", "added": "2026-11-17" },
+    { "id": "2026-11-unit42-artex-ai-red-teaming-tools", "url": "https://unit42.paloaltonetworks.com/artex-and-ai-powered-red-teaming-tools/", "title": "ARTEX and AI-Powered Red Teaming Tools: What Defenders Need to Know", "added": "2026-11-17" },
+    { "id": "2026-11-microsoft-trained-to-betray-coding-agents", "url": "https://www.microsoft.com/en-us/security/blog/2026/11/12/trained-to-betray-how-post-training-supply-chain-attacks-hijack-coding-agents/", "title": "Trained to betray: How post-training supply chain attacks hijack coding agents", "added": "2026-11-17" },
+    { "id": "2026-11-microsoft-sckit-screenconnect", "url": "https://www.microsoft.com/en-us/security/blog/2026/11/13/sckit-abuses-screenconnect-deploy-remote-access-target-technician-sessions/", "title": "SCKit abuses ScreenConnect to deploy remote access and target technician sessions", "added": "2026-11-17" },
+    { "id": "2026-11-microsoft-gsocket-linux-c2", "url": "https://www.microsoft.com/en-us/security/blog/2026/11/11/global-socket-how-threat-actors-weaponizing-gsocket-stealthy-c2/", "title": "The global socket: how threat actors are weaponizing GSocket for stealthy C2", "added": "2026-11-17" },
+    { "id": "2026-11-kaspersky-cosmetics-messenger-account-theft", "url": "https://www.kaspersky.ru/about/press-releases/krasota-ne-trebuet-zhertv-moshenniki-kradut-akkaunty-v-messendzherah-cherez-fejkovye-kanaly-magazinov-kosmetiki", "title": "Красота не требует жертв: мошенники крадут аккаунты в мессенджерах через фейковые каналы магазинов косметики", "added": "2026-11-17" },
+    { "id": "2026-11-kaspersky-smb-supply-chain-compliance", "url": "https://www.kaspersky.com/about/press-releases/it-security-non-compliance-leads-to-loss-of-contract-for-quarter-of-smbs", "title": "IT security non-compliance leads to loss of contract for quarter of SMBs", "added": "2026-11-17" },
     { "id": "2026-11-kaspersky-cyberculture-survey", "url": "https://www.kaspersky.ru/about/press-releases/laboratoriya-kasperskogo-pochti-60-rossiyan-veryat-chto-kiberkultura-stanet-vazhnoj-chastyu-obshestva", "title": "«Лаборатория Касперского»: почти 60% россиян верят, что киберкультура станет важной частью общества", "added": "2026-11-16" },
     { "id": "2026-11-kaspersky-google-data-studio-compensation-scam", "url": "https://www.kaspersky.ru/about/press-releases/laboratoriya-kasperskogo-obnaruzhila-moshennicheskuyu-rassylku-o-kompensacionnyh-vyplatah-cherez-servis-google", "title": "«Лаборатория Касперского» обнаружила мошенническую рассылку о компенсационных выплатах через сервис Google", "added": "2026-11-16" },
     { "id": "2026-11-kaspersky-citrus-ransomware", "url": "https://www.kaspersky.ru/about/press-releases/novaya-gruppa-shifrovalshikov-citrus-atakovala-rossijskie-organizacii-cherez-podryadchikov", "title": "Новая группа шифровальщиков Citrus атаковала российские организации через подрядчиков", "added": "2026-11-16" },
