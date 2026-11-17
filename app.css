@@ -255,3 +255,40 @@ a.brand:hover .brand-logo{filter:brightness(1.12)}
 /* цвет вендора в цифрах подмешивается к цвету текста темы: тёмные фирменные цвета остаются читаемыми на тёмном фоне */
 @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){ --vc-mix:25% } }
 :root[data-theme="dark"]{ --vc-mix:25% }
+
+/* переключатель языка интерфейса */
+.ui-btn{font:700 12.5px var(--mono);letter-spacing:.04em;width:auto;min-width:38px;padding:0 10px}
+.seg .seg-lbl{align-self:center;padding:0 6px 0 8px;font-size:12.5px;color:var(--ink-3)}
+.grp-tab .t-short{display:none}
+
+/* длинные метки (техники MITRE, CVE, теги) переносятся, а не растягивают окно отчёта */
+.chips .chip{white-space:normal;max-width:100%;overflow-wrap:anywhere;text-align:left;line-height:1.35;padding-top:4px;padding-bottom:4px}
+.r-body p,.r-body li,.why,.src,.tldr,.r-h1,.r-sub{overflow-wrap:anywhere}
+.c-stat span{-webkit-line-clamp:3;hyphens:auto}
+
+@media (max-width:640px){
+  /* три раздела видны сразу, без прокрутки */
+  .grp-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;padding:4px;margin:0 0 10px;overflow:visible;border-radius:14px;border:1px solid var(--line);margin-left:0;margin-right:0}
+  .grp-tab{max-width:none;padding:9px 6px;border-radius:10px;align-items:center;text-align:center;gap:2px}
+  .grp-tab .t-top{flex-direction:column;gap:3px;width:100%}
+  .grp-tab .t-name,.grp-tab .t-hint{display:none}
+  .grp-tab .t-short{display:block;font-size:13.5px;font-weight:800;letter-spacing:-.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+  .grp-tab .t-cnt{margin-left:0;font-size:11px;padding:1px 7px}
+  .grp-sub p{font-size:12.5px}
+  /* карточка: подписи цифр не обрезаются */
+  .c-stats{gap:6px}
+  .c-stat{padding:7px 8px}
+  .c-stat b{font-size:15px}
+  .c-stat span{font-size:10.5px}
+  /* окно отчёта: компактные кнопки в две колонки */
+  .r-actions{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+  .r-actions .btn{height:38px;padding:0 10px;font-size:13px;justify-content:center;text-align:center;line-height:1.15}
+  .r-actions .btn.primary{grid-column:1 / -1}
+  .r-top{align-items:flex-start}
+  .r-top .logo{width:44px;height:44px;font-size:44px;border-radius:12px;flex:none}
+  .stats{grid-template-columns:1fr 1fr;gap:8px}
+  .stat b{font-size:22px}
+  .ui-btn{min-width:34px;padding:0 8px}
+}
+@media (max-width:640px){ .grp-tab{padding:9px 4px} .grp-tab .t-short{font-size:13px;letter-spacing:-.015em} }
+@media (max-width:380px){ .grp-tab .t-short{font-size:11.5px;letter-spacing:-.02em} }

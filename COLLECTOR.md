@@ -54,7 +54,8 @@
    key_findings, stats, recommendations, why_it_matters` — столько же элементов, сколько в русской версии.
 4. Добавить строку в `data/manifest.js` сразу под `NEW-REPORT-ANCHOR`:
    `{ "id": "...", "url": "...", "title": "...", "added": "ГГГГ-ММ-ДД" },`
-5. Новый вендор — строка в `data/vendors.js` над `NEW-VENDOR-ANCHOR` (`name`, `domain`, `color`, при необходимости `group`)
+5. Новый вендор — строка в `data/vendors.js` над `NEW-VENDOR-ANCHOR` (`name`, `domain`, `color`, при необходимости `group`;
+   если `name` на русском — добавить `name_en` для английского интерфейса)
    и логотип `data/logos/<vendor>.png` 128×128: иконка сайта вендора или
    `https://t2.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://<домен>&size=128`.
 6. В `data/manifest.js` обновить `updated` (текущие дата и время, `+03:00`), `build` (новое значение, например
