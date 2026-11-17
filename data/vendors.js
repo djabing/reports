@@ -1,11 +1,12 @@
 // Справочник вендоров: брендовый цвет и домен для логотипа.
 // "group": "intl" — раздел «Международная аналитика» (консалтинг, аналитические агентства, межд. организации);
+// "name_en" — название для английского интерфейса (если основное на русском);
 // "group": "kasp" — отдельный раздел «Kaspersky»;
 // "group": "comp" — скрытый раздел «Конкуренты» (PT и аффилированные, F6). Без group — основной раздел «Вендоры ИБ».
 // Сборщик добавляет сюда новых вендоров (строкой перед якорем). Если вендора нет —
 // интерфейс возьмёт имя и домен из самого отчёта.
 window.RDB_VENDORS = {
-  "kaspersky":   { "name": "Kaspersky · пресс-релизы", "domain": "kaspersky.com", "color": "#00A88E", "group": "kasp" },
+  "kaspersky":   { "name": "Kaspersky · пресс-релизы", "name_en": "Kaspersky · press releases", "domain": "kaspersky.com", "color": "#00A88E", "group": "kasp" },
   "kaspersky-great": { "name": "Kaspersky GReAT",  "domain": "securelist.com",         "color": "#00A88E", "group": "kasp" },
   "kaspersky-ics": { "name": "Kaspersky ICS CERT",   "domain": "ics-cert.kaspersky.com", "color": "#00A88E", "group": "kasp" },
   "kaspersky-gert": { "name": "Kaspersky GERT",      "domain": "kaspersky.com",          "color": "#00A88E", "group": "kasp" },
@@ -14,7 +15,7 @@ window.RDB_VENDORS = {
   "pt":          { "name": "Positive Technologies","domain": "ptsecurity.com",         "color": "#D7262B", "group": "comp" },
   "bizone":      { "name": "BI.ZONE",              "domain": "bi.zone",                "color": "#1E5BFF" },
   "f6":          { "name": "F6",                   "domain": "f6.ru",                  "color": "#E4002B", "group": "comp" },
-  "solar":       { "name": "Солар",                "domain": "rt-solar.ru",            "color": "#FF6B00" },
+  "solar":       { "name": "Солар", "name_en": "Solar",                "domain": "rt-solar.ru",            "color": "#FF6B00" },
   "microsoft":   { "name": "Microsoft",            "domain": "microsoft.com",          "color": "#0078D4" },
   "google":      { "name": "Google Threat Intelligence", "domain": "cloud.google.com", "color": "#4285F4" },
   "crowdstrike": { "name": "CrowdStrike",          "domain": "crowdstrike.com",        "color": "#E01F3D" },
@@ -42,14 +43,14 @@ window.RDB_VENDORS = {
   "pwc":         { "name": "PwC",                  "domain": "pwc.com",                "color": "#D04A02", "group": "intl" },
   "ey":          { "name": "EY",                   "domain": "ey.com",                 "color": "#2E2E38", "group": "intl" },
   "kpmg":        { "name": "KPMG",                 "domain": "kpmg.com",               "color": "#00338D", "group": "intl" },
-  "ncsc":        { "name": "NCSC (Великобритания)", "domain": "ncsc.gov.uk",           "color": "#3D2E73", "group": "intl" },
-  "europol":     { "name": "Европол",              "domain": "europol.europa.eu",      "color": "#0B3D91", "group": "intl" },
+  "ncsc":        { "name": "NCSC (Великобритания)", "name_en": "NCSC (UK)", "domain": "ncsc.gov.uk",           "color": "#3D2E73", "group": "intl" },
+  "europol":     { "name": "Европол", "name_en": "Europol",              "domain": "europol.europa.eu",      "color": "#0B3D91", "group": "intl" },
   "isaca":       { "name": "ISACA",                "domain": "isaca.org",              "color": "#0067B1", "group": "intl" },
   "allianz":     { "name": "Allianz",              "domain": "allianz.com",            "color": "#003781", "group": "intl" },
-  "fbi":         { "name": "ФБР (IC3)",            "domain": "ic3.gov",                "color": "#1B3A5C", "group": "intl" },
+  "fbi":         { "name": "ФБР (IC3)", "name_en": "FBI (IC3)",            "domain": "ic3.gov",                "color": "#1B3A5C", "group": "intl" },
   "deloitte":    { "name": "Deloitte",             "domain": "deloitte.com",           "color": "#86BC25", "group": "intl" },
   "thales":      { "name": "Thales",               "domain": "thalesgroup.com",        "color": "#242A75", "group": "intl" },
-  "imf":         { "name": "МВФ",                  "domain": "imf.org",                "color": "#004C97", "group": "intl" },
+  "imf":         { "name": "МВФ", "name_en": "IMF",                  "domain": "imf.org",                "color": "#004C97", "group": "intl" },
   "forescout":   { "name": "Forescout Vedere Labs", "domain": "forescout.com",         "color": "#E8730C" },
   "securonix":   { "name": "Securonix",            "domain": "securonix.com",          "color": "#00A0DF" },
   "cloudsek":    { "name": "CloudSEK",             "domain": "cloudsek.com",           "color": "#1A56DB" },
@@ -59,8 +60,8 @@ window.RDB_VENDORS = {
   "elastic":     { "name": "Elastic Security",     "domain": "elastic.co",             "color": "#00BFB3" },
   "mandiant":    { "name": "Mandiant (Google Cloud)", "domain": "mandiant.com",        "color": "#C8102E" },
   "sans":        { "name": "SANS Institute",       "domain": "sans.org",               "color": "#C8102E", "group": "intl" },
-  "nctv":        { "name": "NCTV / NCSC (Нидерланды)", "domain": "nctv.nl",            "color": "#154273", "group": "intl" },
+  "nctv":        { "name": "NCTV / NCSC (Нидерланды)", "name_en": "NCTV / NCSC (Netherlands)", "domain": "nctv.nl",            "color": "#154273", "group": "intl" },
   "certeu":      { "name": "CERT-EU",              "domain": "cert.europa.eu",         "color": "#004494", "group": "intl" },
-  "asd":         { "name": "ASD / ACSC (Австралия)", "domain": "cyber.gov.au",         "color": "#1C3F6E", "group": "intl" },
+  "asd":         { "name": "ASD / ACSC (Австралия)", "name_en": "ASD / ACSC (Australia)", "domain": "cyber.gov.au",         "color": "#1C3F6E", "group": "intl" },
   // NEW-VENDOR-ANCHOR (не удалять: сборщик вставляет новых вендоров над этой строкой)
 };
