@@ -61,5 +61,9 @@ window.RDB_LABELS_EN = {
   "утечки": "leaks", "утечки данных": "data breaches", "уязвимости": "vulnerabilities", "финансовая стабильность": "financial stability",
   "финсектор": "financial sector", "фишинг": "phishing", "хактивизм": "hacktivism", "хостинг": "hosting",
   "цепочка поставок": "supply chain", "человеческий фактор": "human factor", "черви": "worms", "шифровальщики": "ransomware",
-  "шифрование": "encryption", "шпионаж": "espionage", "эксплойты": "exploits", "эксплуатация уязвимостей": "vulnerability exploitation"
+  "шифрование": "encryption", "шпионаж": "espionage", "эксплойты": "exploits", "эксплуатация уязвимостей": "vulnerability exploitation",
+  "облачные сервисы как C2": "cloud services as C2", "билеты": "tickets", "веб-скимминг": "web skimming", "криптовалюта": "cryptocurrency",
+  "облачные сервисы": "cloud services", "безопасность ИИ": "AI security", "открытые модели": "open-weight models",
+  "уязвимости нулевого дня": "zero-day vulnerabilities", "теневые ресурсы": "underground resources", "киберразведка": "threat intelligence",
+  "Логистика": "Logistics", "Казахстан": "Kazakhstan", "стилер": "stealer", "игроки": "gamers", "трендовые уязвимости": "trending vulnerabilities"
 };
