@@ -1,11 +1,18 @@
 // Реестр отчётов. Каждая строка = файл data/reports/<id>.js.
 // Сборщик добавляет новые строки сразу под якорем и обновляет "updated" и "build".
 window.RDB_MANIFEST = {
-  "updated": "2026-11-18T07:45:00+03:00",
-  "build": "2026-11-18.1",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
-  "last_run_note": "+12: Kaspersky GReAT (операция ShadowCloud: GitDoor/GraphDoor), Kaspersky (фишинг театральных билетов), Unit 42 (OPTIMJACK), Google GTIG (COLD RELIC), Microsoft (device code против ИИ-агентов, фишинг «сбой Microsoft 365»), CrowdStrike (бэкдоры в LoRA), BI.ZONE (рынок 0-day, атаки на ритейл в сезон распродаж); конкуренты: F6 (Rezet и ИИ-панель AnyDoor, WebRAT), PT (трендовые уязвимости ноября).",
+  "updated": "2026-11-19T08:30:00+03:00",
+  "build": "2026-11-19.1",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
+  "last_run_note": "+7: Kaspersky GReAT (AuditTeam и фреймворк OpsAgent), Elastic (ИИ-вторжение в AWS с сервера CyberStrikeAI; пять агентных фреймворков для атак), Proofpoint (ландшафт угроз Великобритании); конкуренты: F6 (первая эксплуатация CVE-2026-76466 в Cisco Expressway; «Мамонт» и GTA VI), PT (PT Vector 2027).",
   "reports": [
     // NEW-REPORT-ANCHOR (не удалять: сборщик вставляет новые записи под этой строкой)
+    { "id": "2026-11-elastic-cyberstrikeai-aws-intrusion", "url": "https://www.elastic.co/security-labs/threat-command/cyberstrikeai-aws-cloudtrail-intrusion", "title": "56 AWS API calls in 141 milliseconds: Inside an AI-run intrusion", "added": "2026-11-19" },
+    { "id": "2026-11-elastic-agentic-offensive-frameworks", "url": "https://www.elastic.co/security-labs/threat-command/agentic-offensive-frameworks-detection-artex", "title": "Inside the loop: Five AI attack frameworks that never ask permission", "added": "2026-11-19" },
+    { "id": "2026-11-proofpoint-uk-threat-landscape", "url": "https://www.proofpoint.com/uk/blog/threat-insight/uk-threat-landscape-phishing-surges-targeted-attacks-intensify", "title": "The UK Threat Landscape: Phishing Surges as Targeted Attacks Intensify", "added": "2026-11-19" },
+    { "id": "2026-11-pt-vector-2027", "url": "https://www.securitylab.ru/news/580189.php", "title": "PT Vector 2027", "added": "2026-11-19" },
+    { "id": "2026-11-kaspersky-auditteam-opsagent", "url": "https://securelist.com/auditteam-opsagent-forced-audit/122031/", "title": "The forced audit: how AuditTeam's OpsAgent framework masks ransomware as consulting", "added": "2026-11-19" },
+    { "id": "2026-11-f6-cisco-expressway-cve-2026-76466", "url": "https://www.f6.ru/media-center/press-releases/cisco-cve-2026-76466/", "title": "F6 зафиксировала первый случай эксплуатации критической уязвимости CVE-2026-76466 в Cisco Expressway", "added": "2026-11-19" },
+    { "id": "2026-11-f6-mammoth-gta6-scam", "url": "https://www.f6.ru/media-center/press-releases/mammoth-gta6/", "title": "«Мамонт» атакует фанатов GTA VI: скамеры предлагают пополнить баланс PlayStation Store через фейковый сервис", "added": "2026-11-19" },
     { "id": "2026-11-kaspersky-operation-shadowcloud", "url": "https://securelist.com/operation-shadowcloud-gitdoor/122004/", "title": "Operation ShadowCloud: cloud service–based backdoors targeting government networks in Asia and Africa (Parts 1–2)", "added": "2026-11-18" },
     { "id": "2026-11-kaspersky-theatre-ticket-phishing", "url": "https://www.kaspersky.ru/about/press-releases/svobodnyh-mest-net-laboratoriya-kasperskogo-preduprezhdaet-o-fishingovyh-sajtah-po-prodazhe-biletov-v-teatr", "title": "«Свободных мест нет»: «Лаборатория Касперского» предупреждает о фишинговых сайтах по продаже билетов в театр", "added": "2026-11-18" },
     { "id": "2026-11-unit42-optimjack-supply-chain", "url": "https://unit42.paloaltonetworks.com/optimjack-supply-chain-attack/", "title": "Borrowed Code, Real Consequences: What OPTIMJACK Teaches Us", "added": "2026-11-18" },
