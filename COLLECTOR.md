@@ -5,8 +5,9 @@
 
 ## 1. Что ищем
 
-Отчёты, исследования и аналитику по кибербезопасности (включая угрозы и защиту ИИ), опубликованные **после** даты
-`updated` в `data/manifest.js` (и не раньше чем за 7 дней до запуска — на случай, если вчерашний запуск что-то пропустил).
+Отчёты, исследования и аналитику по кибербезопасности (включая угрозы и защиту ИИ), опубликованные за **последние 7 дней**
+(не только после `updated` в `data/manifest.js`: американские и европейские публикации выходят уже после утреннего запуска,
+и их легко пропустить). Перед добавлением сверить с `data/manifest.js`, чтобы не было дублей.
 
 Источники, по приоритету:
 
@@ -21,9 +22,22 @@
    тоже сюда — через поле `"group": "intl"` в самом отчёте.
 3. **Вендоры ИБ** (раздел «Вендоры ИБ») — CrowdStrike, Unit 42, Mandiant/Google, Microsoft, Trellix, Check Point, ESET, Sophos,
    Trend Micro, Proofpoint, Elastic, Acronis, Lumen, Forescout, Apiiro, CloudSEK, Securonix, Tenable, Qualys, GuidePoint,
-   ReliaQuest, Anthropic, BI.ZONE, Солар (4RAYS) и др.
+   ReliaQuest, Anthropic, BI.ZONE, Солар (4RAYS), Fortinet (FortiGuard Labs), ZeroFox, Cisco Talos, Rapid7, SentinelOne,
+   Zscaler, Netskope, Okta, Cloudflare, Akamai, Fortra, Arctic Wolf, Huntress, Sekoia (Recorded Future не добавляем — запрещён, раздел 4).
+   Список не исчерпывающий: отчёт нового вендора добавляем, если в нём есть собственные данные об угрозах.
+   Рыночные оценки аналитических агентств по классам решений ИБ (Gartner Magic Quadrant, Forrester Wave, IDC MarketScape —
+   SIEM, EDR/XDR, TI и т. п.) тоже добавляем в «Международную аналитику».
 4. **Конкуренты** (скрытый раздел) — Positive Technologies и всё аффилированное с PT (PT ESC и т. п.), F6. Их отчёты
    добавляются, но только в этот раздел (по vendor `pt` / `f6`, раздел задан в `data/vendors.js`).
+
+**Как искать (обязательно оба способа):**
+1. По списку источников выше — разделы исследований и блоги вендоров.
+2. Общий поиск по ключевым словам за последние 7 дней, независимо от списка: «threat report», «threat forecast»,
+   «predictions <следующий год>», «Magic Quadrant», «Forrester Wave», «ransomware report», «survey CISO», «отчёт киберугрозы»,
+   «исследование кибербезопасность», а также ленты Help Net Security, SecurityWeek, Infosecurity Magazine, The Record,
+   CNews, SecurityLab, Anti-Malware — там видно отчёты вендоров, которых нет в списке.
+Если сайт вендора недоступен из среды, отчёт всё равно добавляем по официальному пресс-релизу или профильным СМИ
+(и честно пишем это в `source_note`), а в итоге запуска перечисляем недоступные сайты.
 
 Не добавляем: новости без собственной аналитики, рекламные материалы, пересказы чужих отчётов (добавляем первоисточник),
 дубли (проверить `url` и название по `data/manifest.js`), отчёты из запрещённых источников (раздел 4).
