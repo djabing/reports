@@ -28,14 +28,15 @@ RDB.add({
     "Северная Америка"
   ],
   "tldr": "ZeroFox: около 718 инцидентов вымогательства в месяц в 2026 году против 573 в 2025-м (+25%). Публичных объявлений о продаже доступа стало меньше (с ~620 до ~370 в квартал), но торговля ушла в закрытые каналы — угроза не снизилась.",
-  "summary": "Ежегодный прогноз ZeroFox Intelligence из пяти прогнозов. III квартал 2026 года — рекордный: не менее 2381 инцидента (+14% к прежнему максимуму), к концу октября 2026 год уже превзошёл весь 2025-й. После ликвидации форумов XSS, RAMP и LeakBase брокеры доступа перешли в закрытые каналы (чаще всего Tox); базовый доступ подешевел до менее $500, права администратора домена — около $8000. В 2027 году ожидаются сокращение окна от раскрытия уязвимости до массовой эксплуатации до часов, рост продаж сессионных токенов и доступа к поставщикам и интеграторам, а также атаки на корпоративных ИИ-агентов. Показатели — по наблюдениям ZeroFox и сайтам утечек, их нельзя напрямую переносить на Россию и СНГ.",
+  "summary": "Ежегодный прогноз ZeroFox Intelligence из пяти прогнозов: эксплуатация за часы, ИИ-агенты как цель, рекорд вымогателей, служба поддержки как новый вектор фишинга, уход подполья в закрытые каналы. III квартал 2026 года — рекордный: не менее 2381 инцидента (+14% к прежнему максимуму), к концу октября 2026 год уже превзошёл весь 2025-й. После ликвидации форумов XSS, RAMP и LeakBase брокеры доступа перешли в закрытые каналы (чаще всего Tox); базовый доступ подешевел до менее $500, права администратора домена — около $8000. В 2027 году ожидаются сокращение окна от раскрытия уязвимости до массовой эксплуатации до часов, рост продаж сессионных токенов и доступа к поставщикам и интеграторам, а также атаки на корпоративных ИИ-агентов. Показатели — по наблюдениям ZeroFox и сайтам утечек, их нельзя напрямую переносить на Россию и СНГ.",
   "key_findings": [
     "~718 инцидентов вымогательства в месяц (январь–октябрь 2026) против ~573 в 2025 году.",
     "III квартал 2026 — рекорд: не менее 2381 инцидента; Qilin — около 15% (1104 из 7239), The Gentlemen — 935.",
     "Публичные объявления о продаже доступа: ~620 → ~370 в квартал; сделки ушли в закрытые каналы (Tox), базовый доступ дешевле $500, доступ администратора домена — ~$8000.",
     "Прогноз: окно от раскрытия уязвимости до массовой эксплуатации сократится до часов.",
     "Атаки на корпоративных ИИ-агентов и их учётные данные будут расти быстрее, чем применение созданного ИИ вредоносного ПО.",
-    "Службы поддержки, SaaS-интеграции, сессии и доступ поставщиков — ключевые пути через доверенные связи (пример — кража OAuth-токенов Salesloft Drift, Gainsight, Klue)."
+    "Службы поддержки, SaaS-интеграции, сессии и доступ поставщиков — ключевые пути через доверенные связи (пример — кража OAuth-токенов Salesloft Drift, Gainsight, Klue).",
+    "Фишинг по голосу и через платформы совместной работы против служб поддержки обгонит почтовый; геополитика: рост гибридных мер России против европейских сторонников Украины и атак Ирана на страны Персидского залива (оценки ZeroFox)."
   ],
   "stats": [
     {
@@ -70,17 +71,18 @@ RDB.add({
     "Учитывать, что часть заявлений на сайтах утечек будет непроверенной или преувеличенной."
   ],
   "why_it_matters": "Показывает, что снижение видимых сигналов в даркнете не означает снижения угрозы: атаки идут через доверенные связи и украденные сессии.",
-  "source_note": "Полный отчёт — по форме на сайте ZeroFox (недоступен из среды сбора); выжимка по открытому обзору ZeroFox и публикации Help Net Security от 19.11.2026.",
+  "source_note": "Выжимка по открытому обзору прогнозов на сайте ZeroFox (полный отчёт — по форме) и публикации Help Net Security от 19.11.2026.",
   "en": {
     "tldr": "ZeroFox: about 718 ransomware and extortion incidents a month in 2026 versus 573 in 2025 (+25%). Public access-for-sale listings fell (from ~620 to ~370 a quarter), but trading moved into private channels — the threat has not decreased.",
-    "summary": "ZeroFox Intelligence's annual forecast with five predictions. Q3 2026 set a record: at least 2,381 incidents (+14% over the previous high), and by the end of October 2026 had already surpassed all of 2025. After the takedowns of the XSS, RAMP and LeakBase forums, access brokers moved into private channels (most often Tox); basic access fell below $500, domain admin access is about $8,000. For 2027 ZeroFox expects the window from disclosure to mass exploitation to shrink to hours, more sales of session tokens and vendor/integrator access, and attacks on corporate AI agents. Figures reflect ZeroFox observations and leak sites and cannot be applied directly to Russia and the CIS.",
+    "summary": "ZeroFox Intelligence's annual forecast with five predictions: exploitation within hours, AI agents as a target, record ransomware, the help desk as the new phishing vector and the underground going private. Q3 2026 set a record: at least 2,381 incidents (+14% over the previous high), and by the end of October 2026 had already surpassed all of 2025. After the takedowns of the XSS, RAMP and LeakBase forums, access brokers moved into private channels (most often Tox); basic access fell below $500, domain admin access is about $8,000. For 2027 ZeroFox expects the window from disclosure to mass exploitation to shrink to hours, more sales of session tokens and vendor/integrator access, and attacks on corporate AI agents. Figures reflect ZeroFox observations and leak sites and cannot be applied directly to Russia and the CIS.",
     "key_findings": [
       "~718 ransomware incidents per month (January–October 2026) vs ~573 in 2025.",
       "Q3 2026 was a record: at least 2,381 incidents; Qilin ~15% (1,104 of 7,239), The Gentlemen 935.",
       "Public access-for-sale listings: ~620 → ~370 per quarter; deals moved to private channels (Tox), basic access under $500, domain admin access ~$8,000.",
       "Forecast: the window from vulnerability disclosure to mass exploitation will shrink to hours.",
       "Attacks on corporate AI agents and their credentials will grow faster than use of AI-generated malware.",
-      "Help desks, SaaS integrations, sessions and vendor access are key paths via trusted relationships (e.g. theft of Salesloft Drift, Gainsight and Klue OAuth tokens)."
+      "Help desks, SaaS integrations, sessions and vendor access are key paths via trusted relationships (e.g. theft of Salesloft Drift, Gainsight and Klue OAuth tokens).",
+      "Voice and collaboration-platform phishing against help desks will outpace email phishing; geopolitics: more Russian hybrid measures against European supporters of Ukraine and more Iranian targeting of Gulf states (ZeroFox assessments)."
     ],
     "stats": [
       {
@@ -107,6 +109,6 @@ RDB.add({
       "Expect some leak-site claims to be unverified or exaggerated."
     ],
     "why_it_matters": "Shows that fewer visible dark web signals do not mean less threat: attacks come through trusted relationships and stolen sessions.",
-    "source_note": "The full report is behind a form on the ZeroFox website (not reachable from the collection environment); summary based on ZeroFox's public overview and Help Net Security's article of 19 Nov 2026."
+    "source_note": "Summary based on ZeroFox's public predictions hub (the full report is behind a form) and Help Net Security's article of 19 Nov 2026."
   }
 });

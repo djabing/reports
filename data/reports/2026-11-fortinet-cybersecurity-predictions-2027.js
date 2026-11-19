@@ -17,7 +17,8 @@ RDB.add({
     "2027",
     "ИИ-агенты",
     "агентные атаки",
-    "киберпреступность"
+    "киберпреступность",
+    "эксплуатация уязвимостей"
   ],
   "sectors": [
     "Все отрасли"
@@ -25,27 +26,32 @@ RDB.add({
   "regions": [
     "Глобально"
   ],
-  "tldr": "FortiGuard Labs ждёт в 2027 году атак на ИИ-агентов ради их законных полномочий: коннекторы, расширения, память агентов и системы извлечения контекста становятся точками компрометации. Отчёт отделяет лабораторные демонстрации от реальных кампаний.",
-  "summary": "Прогноз на 12–18 месяцев (17 страниц, 11 прогнозов) с разбором того, какие прогнозы на 2026 год подтвердились. Это сценарии для планирования, а не статистика распространённости угроз. Главная тема — ИИ-агенты, которым компании дают доступ к почте, документам и бизнес-приложениям: перехват их полномочий позволит красть данные, менять записи и запускать транзакции. Отдельно — подмена данных, на которых ИИ в SecOps принимает решения, и специализация криминального рынка вокруг доступа к ИИ.",
+  "tldr": "FortiGuard Labs: главная тема 2027 года — доверенный доступ. На горизонте 12–18 месяцев атакующие всё чаще будут перехватывать ИИ-агентов, чтобы действовать их законными полномочиями, а доступ к платным ИИ-моделям станет криминальным товаром. Окно от раскрытия уязвимости до эксплуатации сократится до часов.",
+  "summary": "Отчёт на 17 страницах: проверка прогнозов на 2026 год, 11 прогнозов о действиях атакующих и 5 приоритетов защиты. Авторы явно разделяют наблюдаемую активность, продемонстрированные в лабораториях возможности и долгосрочные сценарии. Агент может корректно пройти аутентификацию и остаться в рамках прав, выполняя при этом инструкции злоумышленника из документа, письма или веб-страницы, поэтому одной проверки идентичности агента недостаточно. По оценке FortiGuard Labs, 34 из 208 записей MITRE ATLAS (около шестой части) описывают перехват агента или злоупотребление его доступом. Отдельно — «ИИ-брокеры», объединяющие криминальные сервисы, дистилляция возможностей ведущих моделей в небольшие криминальные модели, атаки на свидетельства, на которых строит решения ИИ в SecOps, на память агентов и на коннекторы к бизнес-системам.",
   "key_findings": [
-    "Атаки на ИИ-агентов ради доступа к данным и бизнес-системам через их законные полномочия.",
-    "Коннекторы, расширения, память агентов и системы извлечения контекста — потенциальные точки компрометации и закрепления.",
-    "Попытки подменять данные и свидетельства, на которых ИИ в SecOps основывает решения.",
-    "Специализация рынка: продажа украденного доступа к платным моделям и посредники, объединяющие ИИ-инструменты, удешевят подготовку атак.",
-    "Лабораторные демонстрации (например, распространение ИИ-червя в тестовой сети) не доказывают массового применения таких инструментов."
+    "ИИ-агенты станут новой инсайдерской угрозой: перехват агента не требует кражи учётных данных или классической уязвимости — достаточно вредоносных инструкций в документе, письме или на веб-странице.",
+    "34 из 208 техник и подтехник MITRE ATLAS (около 1/6) описывают перехват агента или злоупотребление его легитимным доступом (оценка FortiGuard Labs; это не частота атак).",
+    "Доступ к платным ИИ-сервисам станет криминальным товаром: кража ключей и учётных записей для использования моделей за счёт жертвы и перепродажи; «ИИ-брокеры» будут продавать наборы возможностей для разных этапов атак.",
+    "Окно эксплуатации продолжит сокращаться: для критичных уязвимостей в 2026 году — 24–48 часов, к 2027 году нужно уметь закрывать экспонированные уязвимости в течение часов.",
+    "Новые цели: свидетельства, на которых принимает решения ИИ в SecOps, память агентов (для закрепления), коннекторы и расширения ИИ (как цепочка поставок).",
+    "Лабораторные демонстрации — например, адаптивный ИИ-червь в тестовой сети — не доказывают массового применения; скоординированные «рои» агентов на периферии — долгосрочный сценарий, а не прогноз на 2027 год."
   ],
   "stats": [
     {
       "value": "11",
-      "label": "прогнозов"
+      "label": "прогнозов о действиях атакующих"
+    },
+    {
+      "value": "34 из 208",
+      "label": "записей MITRE ATLAS — о перехвате агентов"
+    },
+    {
+      "value": "24–48 ч",
+      "label": "окно эксплуатации критичных уязвимостей"
     },
     {
       "value": "12–18 мес.",
       "label": "горизонт прогноза"
-    },
-    {
-      "value": "17",
-      "label": "страниц"
     }
   ],
   "actors": [],
@@ -53,44 +59,49 @@ RDB.add({
   "cves": [],
   "ttps": [],
   "recommendations": [
-    "Инвентаризировать полномочия ИИ-агентов, их коннекторы и интеграции; обеспечить журналирование действий и возможность быстро отозвать права.",
-    "Понимать, как полномочия передаются между пользователями, агентами и связанными сервисами.",
-    "Защищать источники телеметрии и проверять автоматические действия ИИ в SOC.",
-    "Использовать прогнозы как сценарии планирования, без допущений о массовости неподтверждённых угроз."
+    "Проверять идентичность агентов и контролировать делегированные полномочия: минимальные права, без общих учётных данных, с журналом действий и проверенной возможностью быстро отозвать доступ.",
+    "Выявлять «теневых» агентов, подключённых сотрудниками к почте, браузерам, репозиториям и облаку.",
+    "Измерять операционную готовность под окно в часы: закрывать или ограничивать экспонированные уязвимости до выхода патча, обеспечить круглосуточное реагирование.",
+    "Приоритизировать уязвимости по данным о реальной эксплуатации и экспозиции; защищать ключи ИИ-сервисов и отслеживать аномальные расходы на модели."
   ],
-  "why_it_matters": "Трезвый прогноз крупного вендора: фокус смещается с «ИИ-вредоносов» на злоупотребление полномочиями ИИ-агентов внутри компании.",
-  "source_note": "Сайт Fortinet из среды сбора недоступен; выжимка по описанию отчёта и обзорам (SecurityBrief, iTWire), число страниц и прогнозов — по PDF.",
+  "why_it_matters": "Трезвый прогноз крупного вендора: фокус смещается с «ИИ-вредоносов» на злоупотребление полномочиями ИИ-агентов и доступом к ИИ-ресурсам, а отчёт честно отделяет подтверждённое от гипотетического.",
+  "source_note": "Выжимка по полному тексту PDF-отчёта FortiGuard Labs и блогу Fortinet от 18.11.2026.",
   "en": {
-    "tldr": "FortiGuard Labs expects attacks on AI agents in 2027 aimed at their legitimate permissions: connectors, extensions, agent memory and context retrieval systems become points of compromise. The report separates lab demonstrations from real campaigns.",
-    "summary": "A 12–18 month forecast (17 pages, 11 predictions) that also reviews which 2026 predictions materialised. These are planning scenarios, not statistics on threat prevalence. The main theme is AI agents that companies give access to email, documents and business applications: hijacking their permissions would let criminals steal data, alter records and trigger transactions. Separate sections cover tampering with the data on which AI in SecOps bases decisions, and specialisation of the criminal market around AI access.",
+    "tldr": "FortiGuard Labs: the central 2027 theme is trusted access. Over the next 12–18 months attackers will increasingly hijack AI agents to act under their legitimate permissions, and access to paid AI models will become a criminal commodity. The window from vulnerability disclosure to exploitation will shrink to hours.",
+    "summary": "A 17-page report: a review of the 2026 predictions, 11 adversary predictions and 5 defensive priorities. The authors explicitly separate observed activity, capabilities demonstrated in labs and longer-term scenarios. An agent can authenticate correctly and stay within its permissions while carrying out an attacker's instructions embedded in a document, email or web page, so verifying agent identity alone is not enough. By FortiGuard Labs' count, 34 of 208 MITRE ATLAS entries (about one sixth) describe agent hijacking or misuse of its access. Separate predictions cover 'AI brokers' consolidating criminal services, distillation of leading models' capabilities into small criminal models, and attacks on the evidence AI SecOps relies on, on agent memory and on connectors to business systems.",
     "key_findings": [
-      "Attacks on AI agents to reach data and business systems through their legitimate permissions.",
-      "Connectors, extensions, agent memory and context retrieval systems are potential points of compromise and persistence.",
-      "Attempts to tamper with the data and evidence on which AI in SecOps bases decisions.",
-      "Market specialisation: resale of stolen access to paid models and brokers bundling AI tools will make attack preparation cheaper.",
-      "Lab demonstrations (e.g. an AI worm spreading in a test network) do not prove mass criminal use of such tools."
+      "AI agents will become a new insider threat: hijacking an agent needs no stolen credentials or classic vulnerability — malicious instructions in a document, email or web page are enough.",
+      "34 of 208 MITRE ATLAS techniques and sub-techniques (about 1/6) describe agent hijacking or misuse of legitimate access (FortiGuard Labs' assessment; not a measure of attack frequency).",
+      "Access to paid AI services will become a criminal commodity: theft of keys and accounts to use models at the victim's expense and for resale; 'AI brokers' will sell bundles of capabilities for different attack stages.",
+      "The exploitation window will keep shrinking: 24–48 hours for critical vulnerabilities in 2026; by 2027 organisations need to mitigate exposed vulnerabilities within hours.",
+      "New targets: the evidence AI SecOps bases decisions on, agent memory (for persistence), and AI connectors and extensions (as a supply chain).",
+      "Lab demonstrations — e.g. an adaptive AI worm in a test network — do not prove mass use; coordinated agent 'swarms' at the edge are a longer-term scenario, not a 2027 forecast."
     ],
     "stats": [
       {
         "value": "11",
-        "label": "predictions"
+        "label": "adversary predictions"
+      },
+      {
+        "value": "34 of 208",
+        "label": "MITRE ATLAS entries on agent hijacking"
+      },
+      {
+        "value": "24–48 h",
+        "label": "exploitation window for critical vulnerabilities"
       },
       {
         "value": "12–18 mo.",
         "label": "forecast horizon"
-      },
-      {
-        "value": "17",
-        "label": "pages"
       }
     ],
     "recommendations": [
-      "Inventory AI agents' permissions, connectors and integrations; ensure their actions are logged and rights can be revoked quickly.",
-      "Understand how authority flows between users, agents and connected services.",
-      "Protect telemetry sources and verify automated AI actions in the SOC.",
-      "Use the predictions as planning scenarios without assuming unconfirmed threats are widespread."
+      "Verify agent identity and control delegated authority: least privilege, no shared credentials, action logging and a tested ability to revoke access quickly.",
+      "Discover 'shadow' agents that employees connect to email, browsers, repositories and cloud.",
+      "Measure operational readiness against an hours-long window: close or restrict exposed vulnerabilities before the patch is out and ensure round-the-clock response.",
+      "Prioritise vulnerabilities by evidence of real exploitation and exposure; protect AI service keys and monitor anomalous model spend."
     ],
-    "why_it_matters": "A sober forecast from a major vendor: the focus shifts from 'AI malware' to abuse of AI agents' permissions inside the company.",
-    "source_note": "The Fortinet website was not reachable from the collection environment; summary based on the report description and coverage (SecurityBrief, iTWire); page and prediction counts from the PDF."
+    "why_it_matters": "A sober forecast from a major vendor: the focus shifts from 'AI malware' to abuse of AI agents' permissions and AI resource access, and the report honestly separates confirmed from hypothetical.",
+    "source_note": "Summary based on the full text of the FortiGuard Labs PDF report and Fortinet's blog post of 18 Nov 2026."
   }
 });
