@@ -63,5 +63,7 @@ window.RDB_VENDORS = {
   "nctv":        { "name": "NCTV / NCSC (Нидерланды)", "name_en": "NCTV / NCSC (Netherlands)", "domain": "nctv.nl",            "color": "#154273", "group": "intl" },
   "certeu":      { "name": "CERT-EU",              "domain": "cert.europa.eu",         "color": "#004494", "group": "intl" },
   "asd":         { "name": "ASD / ACSC (Австралия)", "name_en": "ASD / ACSC (Australia)", "domain": "cyber.gov.au",         "color": "#1C3F6E", "group": "intl" },
+  "fortinet":    { "name": "Fortinet",             "domain": "fortinet.com",           "color": "#DA291C" },
+  "zerofox":     { "name": "ZeroFox",              "domain": "zerofox.com",            "color": "#E4002B" },
   // NEW-VENDOR-ANCHOR (не удалять: сборщик вставляет новых вендоров над этой строкой)
 };
