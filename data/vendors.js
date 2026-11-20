@@ -67,5 +67,7 @@ window.RDB_VENDORS = {
   "zerofox":     { "name": "ZeroFox",              "domain": "zerofox.com",            "color": "#E4002B" },
   "bitdefender": { "name": "Bitdefender",          "domain": "bitdefender.com",        "color": "#ED1C24" },
   "symantec":    { "name": "Symantec (Broadcom)",  "domain": "security.com",           "color": "#FDB511" },
+  "blackfog":    { "name": "BlackFog",             "domain": "blackfog.com",           "color": "#1C1C1C" },
+  "dashlane":    { "name": "Dashlane",             "domain": "dashlane.com",           "color": "#0E353D" },
   // NEW-VENDOR-ANCHOR (не удалять: сборщик вставляет новых вендоров над этой строкой)
 };

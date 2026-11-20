@@ -1,11 +1,13 @@
 // Реестр отчётов. Каждая строка = файл data/reports/<id>.js.
 // Сборщик добавляет новые строки сразу под якорем и обновляет "updated" и "build".
 window.RDB_MANIFEST = {
-  "updated": "2026-11-20T11:00:00+03:00",
-  "build": "2026-11-20.4",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
-  "last_run_note": "+3 старше 7 дней (по запросу): Kaspersky KATA — 2 млн попыток использования хакерских инструментов; Bitdefender Threat Debrief за ноябрь 2026; Forrester Wave по корпоративным межсетевым экранам, IV кв. 2026.",
+  "updated": "2026-11-20T12:00:00+03:00",
+  "build": "2026-11-20.5",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
+  "last_run_note": "+2 вручную: BlackFog (вымогатели, III кв. 2026), Dashlane (опрос о доверии ИИ-агентам и учётных данных).",
   "reports": [
     // NEW-REPORT-ANCHOR (не удалять: сборщик вставляет новые записи под этой строкой)
+    { "id": "2026-11-blackfog-q3-ransomware", "url": "https://www.blackfog.com/2026-q3-ransomware-report/", "title": "2026 Q3 Ransomware Report: Ransomware's Hidden Crisis Comes to Light", "added": "2026-11-20" },
+    { "id": "2026-11-dashlane-misplaced-trust-ai", "url": "https://www.dashlane.com/blog/ai-coworker-employee-trust", "title": "Misplaced Trust: Inside the Workplace's New AI Security Blind Spot", "added": "2026-11-20" },
     { "id": "2026-11-kaspersky-kata-hidden-threats-h1", "url": "https://www.kaspersky.ru/about/press-releases/dva-milliona-skrytyh-kiberugroz-za-polgoda-laboratoriya-kasperskogo-rasskazala-kak-zloumyshlenniki-maskiruyutsya-v-korporativnyh-setyah", "title": "Два миллиона скрытых киберугроз за полгода: «Лаборатория Касперского» рассказала, как злоумышленники маскируются в корпоративных сетях", "added": "2026-11-20" },
     { "id": "2026-11-bitdefender-threat-debrief-november", "url": "https://www.bitdefender.com/en-us/blog/businessinsights/bitdefender-threat-debrief-november-2026", "title": "Bitdefender Threat Debrief | November 2026", "added": "2026-11-20" },
     { "id": "2026-11-forrester-wave-enterprise-firewall-q4-2026", "url": "https://reprint.forrester.com/reports/the-forrester-wavetm-enterprise-firewall-solutions-q4-2026-239c3b85/index.html", "title": "The Forrester Wave: Enterprise Firewall Solutions, Q4 2026", "added": "2026-11-20" },

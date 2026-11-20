@@ -22,7 +22,7 @@ window.RDB_LABELS_EN = {
   "Телеком": "Telecom", "Транспорт": "Transport", "Туризм": "Travel", "Туркменистан": "Turkmenistan", "Узбекистан": "Uzbekistan",
   "Финансы": "Finance", "Финтех": "Fintech", "Франция": "France", "Хостинг": "Hosting", "Центральная Азия": "Central Asia",
   "Частные пользователи": "Consumers", "Энергетика": "Energy", "Эфиопия": "Ethiopia", "Юго-Восточная Азия": "Southeast Asia",
-  "Южная Азия": "South Asia", "Южная Корея": "South Korea",
+  "Южная Азия": "South Asia", "теневой ИИ": "shadow AI", "Южная Корея": "South Korea",
   "Hermes (ИИ-агент)": "Hermes (AI agent)", "Cairn (модифицированный форк)": "Cairn (modified fork)",
   "автоматизация": "automation", "агентная защита": "agentic defence", "агентные атаки": "agentic attacks", "агентный ИИ": "agentic AI",
   "андеграунд": "underground", "базы данных": "databases", "банки": "banks", "банковские трояны": "banking trojans",
