@@ -100,7 +100,7 @@ const S = {
   view: store.get("view", "all"),         // all | new | unread | fav | top
   type: null, vendor: null, tag: null,
   q: "",
-  sort: store.get("sort", "date"),
+  sort: ["date", "importance", "vendor"].includes(store.get("sort", "date")) ? store.get("sort", "date") : "date",
   layout: store.get("layout", "cards"),
   kb: -1, open: null
 };
@@ -167,7 +167,14 @@ function fmtDate(r){
   if (m.length === 2) return (en ? MONTHS_EN : MONTHS)[+m[1]-1] + " " + m[0];
   return p || L("дата не указана");
 }
-function isNew(r, days){ const a = Date.parse(r.added); return !isNaN(a) && (Date.now() - a) <= days * DAY; }
+/* «новый» — по дате выхода отчёта, а не по дате добавления на портал.
+   Если известен только месяц (или год), отчёт считается новым, пока идёт этот месяц и он добавлен недавно. */
+function isNew(r, days){
+  const p = String(r.published || ""), now = Date.now();
+  if (/^\d{4}-\d{2}-\d{2}$/.test(p)){ const t = Date.parse(p + "T00:00:00"); return !isNaN(t) && now - t <= days * DAY && now - t >= -DAY; }
+  const a = Date.parse(r.added), d = new Date(now), cur = d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0");
+  return /^\d{4}-\d{2}$/.test(p) && p === cur && !isNaN(a) && now - a <= days * DAY;
+}
 function plural(n, a, b, c){ const m10 = n % 10, m100 = n % 100; return m10 === 1 && m100 !== 11 ? a : (m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20) ? b : c); }
 function toast(t){ const el = $("#toast"); el.textContent = t; el.classList.add("on"); clearTimeout(toast.t); toast.t = setTimeout(() => el.classList.remove("on"), 1800); }
 
@@ -222,7 +229,6 @@ function apply(){
   const terms = norm(S.q).split(/\s+/).filter(Boolean);
   if (terms.length) L = L.filter(r => { const h = haystack(r); return terms.every(t => h.includes(t)); });
   if (S.sort === "date") L.sort((a, b) => sortKey(b).localeCompare(sortKey(a)) || (b.added||"").localeCompare(a.added||""));
-  if (S.sort === "added") L.sort((a, b) => (b.added||"").localeCompare(a.added||"") || sortKey(b).localeCompare(sortKey(a)));
   if (S.sort === "vendor") L.sort((a, b) => vendorOf(a).name.localeCompare(vendorOf(b).name, S.ui) || sortKey(b).localeCompare(sortKey(a)));
   if (S.sort === "importance") L.sort((a, b) => (b.importance||0) - (a.importance||0) || sortKey(b).localeCompare(sortKey(a)));
   LIST = L;
@@ -328,7 +334,6 @@ function renderMain(){
   h += `<div class="toolbar"><span class="title">${names[S.view]}</span><span class="chip">${LIST.length}</span>${act.join("")}<span class="spacer"></span>
     <select class="sel" id="sort" aria-label="${L("Сортировка")}">
       <option value="date" ${S.sort==="date"?"selected":""}>${L("По дате публикации")}</option>
-      <option value="added" ${S.sort==="added"?"selected":""}>${L("По дате добавления")}</option>
       <option value="importance" ${S.sort==="importance"?"selected":""}>${L("По важности")}</option>
       <option value="vendor" ${S.sort==="vendor"?"selected":""}>${L("По вендору")}</option></select>
     <div class="seg"><button data-layout="cards" class="${S.layout==="cards"?"on":""}">${L("Карточки")}</button><button data-layout="list" class="${S.layout==="list"?"on":""}">${L("Список")}</button></div></div>`;
@@ -342,7 +347,6 @@ function renderMain(){
     LIST.forEach((r, i) => {
       const key = S.sort === "vendor" ? vendorOf(r).name
         : S.sort === "importance" ? L(["Обычные","Обычные","Заметные","Важные"][r.importance||0])
-        : S.sort === "added" ? L("Добавлено") + " " + (r.added || "—")
         : (() => { const k = sortKey(r); return r.date_precision === "year" ? k.slice(0,4) + " · " + L("дата не уточнена") : (S.ui === "en" ? MONTHS_EN : MONTHS)[+k.slice(5,7)-1] + " " + k.slice(0,4); })();
       const g = groups[groups.length-1];
       if (!g || g.key !== key) groups.push({ key, items: [[r, i]] }); else g.items.push([r, i]);
