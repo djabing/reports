@@ -1,11 +1,14 @@
 // Реестр отчётов. Каждая строка = файл data/reports/<id>.js.
 // Сборщик добавляет новые строки сразу под якорем и обновляет "updated" и "build".
 window.RDB_MANIFEST = {
-  "updated": "2026-11-20T10:00:00+03:00",
+  "updated": "2026-11-20T11:00:00+03:00",
   "build": "2026-11-20.2",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
-  "last_run_note": "+3: Kaspersky GReAT — ВПО BadVibe, созданное с помощью ИИ; Bitdefender — перестроенный фреймворк EggStreme; Symantec — атака через ПО управления ИБП CyberPower PowerPanel.",
+  "last_run_note": "+3 старше 7 дней (по запросу): Kaspersky KATA — 2 млн попыток использования хакерских инструментов; Bitdefender Threat Debrief за ноябрь 2026; Forrester Wave по корпоративным межсетевым экранам, IV кв. 2026.",
   "reports": [
     // NEW-REPORT-ANCHOR (не удалять: сборщик вставляет новые записи под этой строкой)
+    { "id": "2026-11-kaspersky-kata-hidden-threats-h1", "url": "https://www.kaspersky.ru/about/press-releases/dva-milliona-skrytyh-kiberugroz-za-polgoda-laboratoriya-kasperskogo-rasskazala-kak-zloumyshlenniki-maskiruyutsya-v-korporativnyh-setyah", "title": "Два миллиона скрытых киберугроз за полгода: «Лаборатория Касперского» рассказала, как злоумышленники маскируются в корпоративных сетях", "added": "2026-11-20" },
+    { "id": "2026-11-bitdefender-threat-debrief-november", "url": "https://www.bitdefender.com/en-us/blog/businessinsights/bitdefender-threat-debrief-november-2026", "title": "Bitdefender Threat Debrief | November 2026", "added": "2026-11-20" },
+    { "id": "2026-11-forrester-wave-enterprise-firewall-q4-2026", "url": "https://www.prnewswire.com/news-releases/check-point-named-a-leader-in-enterprise-firewall-solutions-302935110.html", "title": "The Forrester Wave: Enterprise Firewall Solutions, Q4 2026", "added": "2026-11-20" },
     { "id": "2026-11-kaspersky-badvibe-ai-malware", "url": "https://www.kaspersky.ru/about/press-releases/laboratoriya-kasperskogo-obnaruzhila-novoe-vredonosnoe-po-atakuyushee-polzovatelej-v-rossii-i-belarusi", "title": "«Лаборатория Касперского» обнаружила новое вредоносное ПО, атакующее пользователей в России и Беларуси", "added": "2026-11-20" },
     { "id": "2026-11-bitdefender-eggstreme-rebuilt", "url": "https://www.bitdefender.com/en-us/blog/businessinsights/eggstreme-malware-revises-architecture-infrastructure", "title": "EggStreme Malware: Rebuilt Under Scrutiny", "added": "2026-11-20" },
     { "id": "2026-11-symantec-powerpanel-ups-attack", "url": "https://www.security.com/threat-intelligence/power-management-software-attack-vector", "title": "CyberPower PowerPanel Exploited to Run Malicious Code on Domain Controller", "added": "2026-11-20" },
