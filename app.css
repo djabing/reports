@@ -222,7 +222,7 @@ ul.todo li.done span{text-decoration:line-through;color:var(--ink-3)}
 .grp-head.muted h2{color:var(--ink-2)}
 
 /* вкладки разделов */
-.grp-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:6px;margin:0 0 12px;background:var(--bg-2);border:1px solid var(--line);border-radius:16px}
+.grp-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;padding:6px;margin:0 0 12px;background:var(--bg-2);border:1px solid var(--line);border-radius:16px}
 .grp-tab{display:flex;flex-direction:column;gap:3px;text-align:left;border:0;background:none;padding:11px 14px;border-radius:11px;color:var(--ink-2);cursor:pointer;min-width:0}
 .grp-tab:hover{background:var(--panel)}
 .grp-tab .t-top{display:flex;align-items:center;gap:8px}
@@ -268,7 +268,7 @@ a.brand:hover .brand-logo{filter:brightness(1.12)}
 
 @media (max-width:640px){
   /* три раздела видны сразу, без прокрутки */
-  .grp-tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;padding:4px;margin:0 0 10px;overflow:visible;border-radius:14px;border:1px solid var(--line);margin-left:0;margin-right:0}
+  .grp-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;padding:4px;margin:0 0 10px;overflow:visible;border-radius:14px;border:1px solid var(--line);margin-left:0;margin-right:0}
   .grp-tab{max-width:none;padding:9px 6px;border-radius:10px;align-items:center;text-align:center;gap:2px}
   .grp-tab .t-top{flex-direction:column;gap:3px;width:100%}
   .grp-tab .t-name,.grp-tab .t-hint{display:none}
@@ -292,3 +292,24 @@ a.brand:hover .brand-logo{filter:brightness(1.12)}
 }
 @media (max-width:640px){ .grp-tab{padding:9px 4px} .grp-tab .t-short{font-size:13px;letter-spacing:-.015em} }
 @media (max-width:380px){ .grp-tab .t-short{font-size:11.5px;letter-spacing:-.02em} }
+
+/* Научные исследования: статус публикации и уверенность */
+.pub{display:inline-flex;align-items:center;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:999px;margin-right:6px;white-space:nowrap;border:1px solid var(--line)}
+.pub.preprint{color:#9a5b00;background:color-mix(in oklab,#f0a000 14%,transparent)}
+.pub.peer_reviewed{color:#1d7a46;background:color-mix(in oklab,#22a060 14%,transparent)}
+@media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .pub.preprint{color:#f2c26b} :root:not([data-theme="light"]) .pub.peer_reviewed{color:#7fd6a4} }
+:root[data-theme="dark"] .pub.preprint{color:#f2c26b} :root[data-theme="dark"] .pub.peer_reviewed{color:#7fd6a4}
+.r-pub{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;margin:2px 0 14px;font-size:13px;color:var(--ink-2,inherit);opacity:.9}
+.conf{margin:0 0 6px}
+/* четыре раздела: длинные названия переносятся, на телефоне — короткие подписи мельче */
+@media (min-width:641px){
+  .grp-tab{padding:10px 12px}
+  .grp-tab .t-top{align-items:flex-start}
+  .grp-tab .t-name{font-size:14.5px;line-height:1.2;white-space:normal;overflow:visible;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+}
+@media (max-width:640px){
+  .grp-tab{padding:8px 2px}
+  .grp-tab .t-top{align-items:center}
+  .grp-tab .t-short{font-size:12px;letter-spacing:-.02em}
+}
+@media (max-width:380px){ .grp-tab .t-short{font-size:11px} }
