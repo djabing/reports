@@ -4,7 +4,7 @@ RDB.add({
   "group": "intl",
   "title": "The Forrester Wave: Enterprise Firewall Solutions, Q4 2026",
   "title_ru": "Forrester Wave: корпоративные межсетевые экраны, IV квартал 2026",
-  "url": "https://www.prnewswire.com/news-releases/check-point-named-a-leader-in-enterprise-firewall-solutions-302935110.html",
+  "url": "https://reprint.forrester.com/reports/the-forrester-wavetm-enterprise-firewall-solutions-q4-2026-239c3b85/index.html",
   "pdf_url": "",
   "published": "2026-11",
   "date_precision": "month",
@@ -54,7 +54,7 @@ RDB.add({
     "Учитывать, что выводы о лидерах получены из материалов самих вендоров."
   ],
   "why_it_matters": "Рыночная оценка ключевого класса средств сетевой защиты, которую заказчики используют при выборе поставщиков.",
-  "source_note": "Отчёт Forrester платный и не читался; выжимка по пресс-релизу Check Point от 10.11.2026 и странице Cisco о статусе лидера. Полный список участников и категорий проверить не удалось.",
+  "source_note": "Ссылка ведёт на открытую копию отчёта на сайте Forrester (из среды сбора не открывалась); выжимка по пресс-релизу Check Point от 10.11.2026 и странице Cisco о статусе лидера. Полный список участников и категорий проверить не удалось.",
   "en": {
     "tldr": "Forrester published its evaluation of the enterprise firewall market for Q4 2026. According to vendors, Check Point and Cisco were named Leaders; the full list of participants could not be found in public sources.",
     "summary": "The Forrester Wave evaluates enterprise firewall providers on current offering and strategy. Check Point (press release of 10 Nov 2026) reports Leader status, a tied top score in the current offering category, the highest possible score on 15 of 26 criteria (including advanced threat prevention, threat intelligence, cloud and container enforcement, performance, pricing flexibility and unified management) and quotes Forrester on its extensive use of AI for security. Cisco also lists itself as a Leader in this Wave on its website. In the previous edition (Q4 2024) the Leaders were Cisco, Fortinet and Palo Alto Networks. The report itself is paid; this summary is based on vendor materials.",
@@ -81,6 +81,6 @@ RDB.add({
       "Keep in mind that Leader claims come from the vendors' own materials."
     ],
     "why_it_matters": "A market evaluation of a key class of network security products that buyers use when choosing suppliers.",
-    "source_note": "The Forrester report is paid and was not read; summary based on Check Point's press release of 10 Nov 2026 and Cisco's Leader page. The full list of participants and categories could not be verified."
+    "source_note": "The link leads to Forrester's open reprint of the report (not reachable from the collection environment); summary based on Check Point's press release of 10 Nov 2026 and Cisco's Leader page. The full list of participants and categories could not be verified."
   }
 });
