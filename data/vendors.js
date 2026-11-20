@@ -65,5 +65,7 @@ window.RDB_VENDORS = {
   "asd":         { "name": "ASD / ACSC (Австралия)", "name_en": "ASD / ACSC (Australia)", "domain": "cyber.gov.au",         "color": "#1C3F6E", "group": "intl" },
   "fortinet":    { "name": "Fortinet",             "domain": "fortinet.com",           "color": "#DA291C" },
   "zerofox":     { "name": "ZeroFox",              "domain": "zerofox.com",            "color": "#E4002B" },
+  "bitdefender": { "name": "Bitdefender",          "domain": "bitdefender.com",        "color": "#ED1C24" },
+  "symantec":    { "name": "Symantec (Broadcom)",  "domain": "security.com",           "color": "#FDB511" },
   // NEW-VENDOR-ANCHOR (не удалять: сборщик вставляет новых вендоров над этой строкой)
 };
