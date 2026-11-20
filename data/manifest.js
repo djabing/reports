@@ -1,11 +1,14 @@
 // Реестр отчётов. Каждая строка = файл data/reports/<id>.js.
 // Сборщик добавляет новые строки сразу под якорем и обновляет "updated" и "build".
 window.RDB_MANIFEST = {
-  "updated": "2026-11-19T15:30:00+03:00",
-  "build": "2026-11-19.3",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
-  "last_run_note": "+3 вручную (пропущены сборщиком): Gartner Magic Quadrant по SIEM 2026, прогнозы FortiGuard Labs на 2027 год, прогноз угроз ZeroFox на 2027 год.",
+  "updated": "2026-11-20T10:00:00+03:00",
+  "build": "2026-11-20.1",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
+  "last_run_note": "+3: Kaspersky GReAT — ВПО BadVibe, созданное с помощью ИИ; Bitdefender — перестроенный фреймворк EggStreme; Symantec — атака через ПО управления ИБП CyberPower PowerPanel.",
   "reports": [
     // NEW-REPORT-ANCHOR (не удалять: сборщик вставляет новые записи под этой строкой)
+    { "id": "2026-11-kaspersky-badvibe-ai-malware", "url": "https://www.kaspersky.ru/about/press-releases/laboratoriya-kasperskogo-obnaruzhila-novoe-vredonosnoe-po-atakuyushee-polzovatelej-v-rossii-i-belarusi", "title": "«Лаборатория Касперского» обнаружила новое вредоносное ПО, атакующее пользователей в России и Беларуси", "added": "2026-11-20" },
+    { "id": "2026-11-bitdefender-eggstreme-rebuilt", "url": "https://www.bitdefender.com/en-us/blog/businessinsights/eggstreme-malware-revises-architecture-infrastructure", "title": "EggStreme Malware: Rebuilt Under Scrutiny", "added": "2026-11-20" },
+    { "id": "2026-11-symantec-powerpanel-ups-attack", "url": "https://www.security.com/threat-intelligence/power-management-software-attack-vector", "title": "CyberPower PowerPanel Exploited to Run Malicious Code on Domain Controller", "added": "2026-11-20" },
     { "id": "2026-11-gartner-magic-quadrant-siem-2026", "url": "https://www.gartner.com/en/documents/8644197", "title": "Magic Quadrant for Security Information and Event Management", "added": "2026-11-19" },
     { "id": "2026-11-fortinet-cybersecurity-predictions-2027", "url": "https://www.fortinet.com/blog/industry-trends/issues-shaping-cybersecurity-in-2027-predictions-from-fortiguard-labs", "title": "Cybersecurity Predictions for 2027: Emerging Threats and Evolving Defensive Priorities", "added": "2026-11-19" },
     { "id": "2026-11-zerofox-2027-threat-forecast", "url": "https://www.zerofox.com/reports/2027-threat-forecast/", "title": "2027 Threat Forecast — Plan for the Attackers You Can't See", "added": "2026-11-19" },
