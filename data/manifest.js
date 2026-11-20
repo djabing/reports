@@ -2,10 +2,11 @@
 // Сборщик добавляет новые строки сразу под якорем и обновляет "updated" и "build".
 window.RDB_MANIFEST = {
   "updated": "2026-11-20T12:00:00+03:00",
-  "build": "2026-11-20.6",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
-  "last_run_note": "+2 вручную: BSI (доклад о состоянии ИТ-безопасности Германии 2026), Солар («Киберболоид. Аналитика», октябрь 2026).",
+  "build": "2026-11-20.7",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
+  "last_run_note": "+1 вручную: CrowdStrike — VAPOR PANDA и ИИ-фреймворк ARTEX (29.10.2026).",
   "reports": [
     // NEW-REPORT-ANCHOR (не удалять: сборщик вставляет новые записи под этой строкой)
+    { "id": "2026-10-crowdstrike-vapor-panda-artex", "url": "https://www.crowdstrike.com/en-us/blog/vapor-panda-uses-artex-to-scale-global-campaign/", "title": "VAPOR PANDA Uses AI-Driven ARTEX to Grow Global Espionage Campaign", "added": "2026-11-20" },
     { "id": "2026-11-bsi-lagebericht-2026", "url": "https://www.bsi.bund.de/DE/Service-Navi/Presse/Pressemitteilungen/Presse2026/261119_Lagebericht.html", "title": "Die Lage der IT-Sicherheit in Deutschland 2026", "added": "2026-11-20" },
     { "id": "2026-11-solar-cyberboloid-october", "url": "https://www.comnews.ru/content/248446/2026-11-19/2026-w47/1008/oktyabre-zloumyshlenniki-bolshe-vsego-atakovali-finansy-strakhovanie-i-pischevuyu-promyshlennost", "title": "Киберболоид. Аналитика: октябрь 2026", "added": "2026-11-20" },
     { "id": "2026-11-blackfog-q3-ransomware", "url": "https://www.blackfog.com/2026-q3-ransomware-report/", "title": "2026 Q3 Ransomware Report: Ransomware's Hidden Crisis Comes to Light", "added": "2026-11-20" },
