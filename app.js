@@ -23,14 +23,15 @@ const GROUPS = {
   main: { name: "Вендоры ИБ",              hint: "аналитика ИБ-вендоров и исследовательских центров" },
   kasp: { name: "Kaspersky",               hint: "исследования «Лаборатории Касперского»: Securelist, GReAT, ICS CERT, GERT, Digital Footprint Intelligence" },
   intl: { name: "Международная аналитика", hint: "консалтинг, аналитические агентства, международные организации и флагманские годовые исследования" },
+  res:  { name: "Научные исследования",    hint: "академические статьи и препринты по безопасности ИИ и киберзащите — с оценкой достоверности и ограничений" },
   comp: { name: "Конкуренты",              hint: "Positive Technologies и аффилированные компании, F6 — отдельно от основной ленты" }
 };
-const TAB_HINT = { intl: "консалтинг, агентства, регуляторы", kasp: "GReAT, ICS CERT, GERT, Securelist", main: "аналитика других ИБ-вендоров" };
-const SLUG = { intl: "international", kasp: "kaspersky", main: "vendors", comp: "competitors" };
+const TAB_HINT = { intl: "консалтинг, агентства, регуляторы", kasp: "GReAT, ICS CERT, GERT, Securelist", main: "аналитика других ИБ-вендоров", res: "arXiv, конференции, журналы" };
+const SLUG = { intl: "international", kasp: "kaspersky", main: "vendors", res: "research", comp: "competitors" };
 const BY_SLUG = Object.fromEntries(Object.entries(SLUG).map(([k, v]) => [v, k]));
 /* Подписи читалки на английском (для англ. версии международных отчётов) */
 const EN_UI = { "Коротко": "TL;DR", "Ключевые цифры": "Key figures", "О чём отчёт": "About the report", "Главные выводы": "Key findings",
-  "Почему это важно": "Why it matters", "Что сделать · чек-лист": "What to do · checklist", "Открыть оригинал ↗": "Open original ↗" };
+  "Почему это важно": "Why it matters", "Ограничения и достоверность": "Limitations and confidence", "Что сделать · чек-лист": "What to do · checklist", "Открыть оригинал ↗": "Open original ↗" };
 /* ---------- язык интерфейса (RU / EN). Содержание отчётов не переводится. ---------- */
 const I18N = {
   "Ландшафт угроз":"Threat landscape","Вымогатели":"Ransomware","APT и кампании":"APT & campaigns","Уязвимости":"Vulnerabilities",
@@ -42,7 +43,11 @@ const I18N = {
   "консалтинг, аналитические агентства, международные организации и флагманские годовые исследования":"consultancies, analyst firms, international bodies and flagship annual studies",
   "Positive Technologies и аффилированные компании, F6 — отдельно от основной ленты":"Positive Technologies and affiliates, F6 — kept apart from the main feed",
   "консалтинг, агентства, регуляторы":"consultancies, analysts, regulators","аналитика других ИБ-вендоров":"other security vendors",
-  "Междунар.":"International","Вендоры":"Vendors",
+  "Мировая":"Intl","Вендоры":"Vendors",
+  "Научные исследования":"Research","Наука":"Research","arXiv, конференции, журналы":"arXiv, conferences, journals",
+  "академические статьи и препринты по безопасности ИИ и киберзащите — с оценкой достоверности и ограничений":"academic papers and preprints on AI security and cyber defence — with confidence and limitations",
+  "Препринт":"Preprint","Рецензированная статья":"Peer-reviewed paper","Издания":"Venues","Уверенность":"Confidence",
+  "высокая":"high","средняя–высокая":"medium–high","средняя":"medium","средняя–низкая":"medium–low","низкая":"low","Авторы":"Authors",
   "Подборки":"Collections","Все отчёты":"All reports","Новые за 7 дней":"New in 7 days","Непрочитанные":"Unread","Избранное":"Favourites","Главное":"Highlights",
   "Тип отчёта":"Report type","Источники":"Sources","Команды":"Teams","Темы":"Topics",
   "поиск":"search","навигация":"navigate","открыть":"open","в избранное":"favourite",
@@ -77,7 +82,10 @@ const L = s => (S.ui === "en" && I18N[s] !== undefined) ? I18N[s] : s;
 const P = (n, a, b, c, en1, enN) => S.ui === "en" ? (n === 1 ? en1 : enN) : plural(n, a, b, c);
 const MONTHS_EN = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 const MONTHS_G_EN = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-const TAB_SHORT = { intl: "Междунар.", kasp: "Kaspersky", main: "Вендоры" };
+const TAB_SHORT = { intl: "Мировая", kasp: "Kaspersky", main: "Вендоры", res: "Наука" };
+/* Научные исследования: статус публикации и уверенность в выводах */
+const PUB_STATUS = { preprint: "Препринт", peer_reviewed: "Рецензированная статья" };
+const CONFIDENCE = { high: "высокая", "medium-high": "средняя–высокая", medium: "средняя", "medium-low": "средняя–низкая", low: "низкая" };
 const MONTHS = ["январь","февраль","март","апрель","май","июнь","июль","август","сентябрь","октябрь","ноябрь","декабрь"];
 const MONTHS_G = ["янв","фев","мар","апр","мая","июн","июл","авг","сен","окт","ноя","дек"];
 const DAY = 864e5;
@@ -132,7 +140,7 @@ function loc(r){
   const e = r.en;
   return Object.assign({}, r, { title_ru: e.title || r.title, title: r.lang === "en" ? r.title : (e.title || r.title), tldr: e.tldr || r.tldr, summary: e.summary || r.summary,
     key_findings: e.key_findings || r.key_findings, stats: e.stats || r.stats, recommendations: e.recommendations || r.recommendations,
-    why_it_matters: e.why_it_matters || r.why_it_matters, source_note: e.source_note || r.source_note, __en: true });
+    why_it_matters: e.why_it_matters || r.why_it_matters, limits: e.limits || r.limits, source_note: e.source_note || r.source_note, __en: true });
 }
 const T = s => (cEn() && EN_UI[s]) || L(s);
 /* Ограничения по законодательству РФ (data/legal.js): сноски к упоминаниям и запрет источников */
@@ -256,7 +264,7 @@ function renderSide(){
 
   const vc = {}; POOL.forEach(r => { vc[r.vendor] = (vc[r.vendor]||0) + 1; });
   const vids = Object.keys(vc).sort((a, b) => vc[b] - vc[a] || vendorOf({vendor:a}).name.localeCompare(vendorOf({vendor:b}).name));
-  h += `<h4>${L(S.group === "intl" ? "Источники" : S.group === "kasp" ? "Команды" : "Вендоры")} · ${vids.length}</h4>` + vids.map(id => {
+  h += `<h4>${L(S.group === "intl" ? "Источники" : S.group === "kasp" ? "Команды" : S.group === "res" ? "Издания" : "Вендоры")} · ${vids.length}</h4>` + vids.map(id => {
     const r0 = POOL.find(r => r.vendor === id), v = vendorOf(r0);
     return `<button class="nav-item ${S.vendor===id?"on":""}" data-vendor="${esc(id)}">${logo(v)}<span class="nm">${esc(v.name)}</span><span class="cnt">${vc[id]}</span></button>`;
   }).join("");
@@ -280,6 +288,7 @@ function statsMini(r){
   return `<div class="c-stats">` + s.map(x => `<div class="c-stat"><b>${esc(x.value)}</b><span>${esc(x.label)}</span></div>`).join("") + `</div>`;
 }
 function typeBadge(r){ const t = TYPES[r.type] || TYPES.other; return `<span class="type" style="--tc:${t.c}">${L(t.name)}</span>`; }
+function pubBadge(r){ return PUB_STATUS[r.pub_status] ? `<span class="pub ${esc(r.pub_status)}">${L(PUB_STATUS[r.pub_status])}</span>` : ""; }
 function card(r, i){
   r = loc(r);
   const v = vendorOf(r), title = r.title_ru || r.title, orig = r.title_ru && r.title && r.title_ru !== r.title ? r.title : "";
@@ -291,7 +300,7 @@ function card(r, i){
     <div class="c-tldr">${esc(r.tldr)}</div>
     ${statsMini(r)}
     ${legalNotes(r).length ? `<div class="c-legal">* ${legalNotes(r).map(esc).join(" ")}</div>` : ""}
-    <div class="c-foot">${typeBadge(r)}${(r.tags||[]).slice(0, 3).map(t => `<span class="chip">${esc(LB(t))}</span>`).join("")}</div>
+    <div class="c-foot">${pubBadge(r)}${typeBadge(r)}${(r.tags||[]).slice(0, 3).map(t => `<span class="chip">${esc(LB(t))}</span>`).join("")}</div>
   </article>`;
 }
 function row(r, i){
@@ -313,7 +322,7 @@ function renderMain(){
   const gc = g => ALL.filter(r => groupOf(r) === g).length;
   let h = S.group === "comp"
     ? `<div class="grp-head muted"><h2>${L(G.name)}</h2><p>${L(G.hint)}</p><button class="chip" data-group="intl">${L("← К основной ленте")}</button></div>`
-    : `<nav class="grp-tabs" role="tablist" aria-label="${L("Раздел библиотеки")}">` + ["intl", "kasp", "main"].map(g =>
+    : `<nav class="grp-tabs" role="tablist" aria-label="${L("Раздел библиотеки")}">` + ["intl", "kasp", "main", "res"].map(g =>
         `<button role="tab" aria-selected="${S.group===g}" class="grp-tab${S.group===g?" on":""}" data-group="${g}">
           <span class="t-top"><span class="t-name">${L(GROUPS[g].name)}</span><span class="t-short">${L(TAB_SHORT[g])}</span><span class="t-cnt">${gc(g)}</span></span>
           <span class="t-hint">${L(TAB_HINT[g])}</span></button>`).join("") + `</nav>` +
@@ -322,7 +331,7 @@ function renderMain(){
   h += `<section class="hero">
     <div class="kpi"><b>${POOL.length}</b><span>${P(POOL.length,"отчёт","отчёта","отчётов","report","reports")} ${L("в разделе")}</span></div>
     <div class="kpi accent"><b>${new7}</b><span>${P(new7,"новый","новых","новых","new","new")} ${L("за 7 дней")}</span></div>
-    <div class="kpi"><b>${vendors}</b><span>${S.group === "intl" ? P(vendors,"источник","источника","источников","source","sources") : S.group === "kasp" ? P(vendors,"команда","команды","команд","team","teams") : P(vendors,"вендор","вендора","вендоров","vendor","vendors")}</span></div>
+    <div class="kpi"><b>${vendors}</b><span>${S.group === "intl" ? P(vendors,"источник","источника","источников","source","sources") : S.group === "kasp" ? P(vendors,"команда","команды","команд","team","teams") : S.group === "res" ? P(vendors,"издание","издания","изданий","venue","venues") : P(vendors,"вендор","вендора","вендоров","vendor","vendors")}</span></div>
     <div class="kpi"><b>${unread}</b><span>${L("не прочитано")}</span></div></section>`;
 
   const names = { all:L("Все отчёты"), new:L("Новые за 7 дней"), unread:L("Непрочитанные"), fav:L("Избранное"), top:L("Главное") };
@@ -419,6 +428,7 @@ function openReader(i){
     <div class="r-top">${logo(v)}<div><div class="v">${esc(v.name)}</div><div class="d">${esc(fmtDate(r))} · ${typeBadge(r)} ${L(r.__en ? (r.lang === "en" ? "· оригинал на английском" : "· English version") : r.lang==="ru" ? "· на русском" : "· оригинал на английском")}</div></div></div>
     <h1 class="r-h1">${esc(r.title_ru || r.title)}</h1>
     ${r.title_ru && r.title && r.title !== r.title_ru ? `<div class="r-sub">${esc(r.title)}</div>` : ""}
+    ${r.pub_status ? `<div class="r-pub">${pubBadge(r)}${r.venue ? `<span>${esc(r.venue)}</span>` : ""}${r.authors ? `<span>${L("Авторы")}: ${esc(r.authors)}</span>` : ""}</div>` : ""}
     <div class="r-actions">
       ${url ? `<a class="btn primary" href="${esc(url)}" target="_blank" rel="noopener">${T("Открыть оригинал ↗")}</a>` : ""}
       ${pdf ? `<a class="btn" href="${esc(pdf)}" target="_blank" rel="noopener">PDF ↗</a>` : ""}
@@ -431,6 +441,7 @@ function openReader(i){
     ${(r.stats||[]).length ? `<div class="sec"><h3>${T("Ключевые цифры")}</h3><div class="stats">${r.stats.map(s => `<div class="stat"><b>${esc(s.value)}</b><span>${esc(s.label)}</span></div>`).join("")}</div></div>` : ""}
     ${r.summary ? `<div class="sec"><h3>${T("О чём отчёт")}</h3><p>${esc(r.summary)}</p></div>` : ""}
     ${(r.key_findings||[]).length ? `<div class="sec"><h3>${T("Главные выводы")}</h3><ol class="find">${r.key_findings.map(f => `<li>${esc(f)}</li>`).join("")}</ol></div>` : ""}
+    ${r.limits ? `<div class="sec"><h3>${T("Ограничения и достоверность")}</h3>${CONFIDENCE[r.confidence] ? `<p class="conf conf-${esc(r.confidence)}">${L("Уверенность")}: <b>${L(CONFIDENCE[r.confidence])}</b></p>` : ""}<p>${esc(r.limits)}</p></div>` : ""}
     ${r.why_it_matters ? `<div class="sec"><h3>${T("Почему это важно")}</h3><div class="why">${esc(r.why_it_matters)}</div></div>` : ""}
     ${(r.recommendations||[]).length ? `<div class="sec"><h3>${T("Что сделать · чек-лист")}</h3><ul class="todo">${r.recommendations.map((x, k) => `<li class="${td[k]?"done":""}"><input type="checkbox" data-todo="${k}" ${td[k]?"checked":""}><span>${esc(x)}</span></li>`).join("")}</ul></div>` : ""}
     ${meta.length ? `<div class="sec"><h3>${L("Кто, где, чем")}</h3><div class="meta-grid">${meta.map(m => `<div><h5>${m[0]}</h5>${m[1]}</div>`).join("")}</div></div>` : ""}

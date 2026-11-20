@@ -2,10 +2,19 @@
 // Сборщик добавляет новые строки сразу под якорем и обновляет "updated" и "build".
 window.RDB_MANIFEST = {
   "updated": "2026-11-20T12:00:00+03:00",
-  "build": "2026-11-20.8",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
-  "last_run_note": "+1 вручную: CrowdStrike — VAPOR PANDA и ИИ-фреймворк ARTEX (29.10.2026).",
+  "build": "2026-11-20.9",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
+  "last_run_note": "Новый раздел «Научные исследования»: 9 статей по безопасности ИИ-агентов и AI-SOC (arXiv, ACM AISec, MDPI).",
   "reports": [
     // NEW-REPORT-ANCHOR (не удалять: сборщик вставляет новые записи под этой строкой)
+    { "id": "2026-11-arxiv-acam-agent-capability-modeling", "url": "https://arxiv.org/abs/2611.23507", "title": "ACaM: Automated Capability Modeling for Agentic AI Security", "added": "2026-11-20" },
+    { "id": "2026-11-arxiv-intent-contracts", "url": "https://arxiv.org/abs/2611.24025", "title": "Intent Contracts: Taking Tools Away from Agents", "added": "2026-11-20" },
+    { "id": "2026-11-arxiv-pipette-prompt-injection-purple-teaming", "url": "https://arxiv.org/abs/2611.24362", "title": "PIPETTE: Prompt Injection Purple-Teaming for Robust LLM Agents", "added": "2026-11-20" },
+    { "id": "2026-11-arxiv-kaer-secure-replanning", "url": "https://arxiv.org/abs/2611.24839", "title": "Kaer: Security-Aware Replanning for Multi-Agent Systems", "added": "2026-11-20" },
+    { "id": "2026-11-arxiv-statefence-soc-agents", "url": "https://arxiv.org/abs/2611.02605", "title": "StateFence: Task-State Protection Against Evidence-Chain Contamination in Blue-Team LLM Agents", "added": "2026-11-20" },
+    { "id": "2026-11-arxiv-etude-tool-update-gap", "url": "https://arxiv.org/abs/2611.01976", "title": "Beyond Prompt Injection: The Tool Update Gap in LLM Agent Security", "added": "2026-11-20" },
+    { "id": "2026-11-arxiv-mcp-tool-poisoning-frameworks", "url": "https://arxiv.org/abs/2611.03555", "title": "MCP Tool Poisoning in Agentic AI Frameworks: A Cross-Framework Measurement Study", "added": "2026-11-20" },
+    { "id": "2026-11-arxiv-signed-sealed-leaked-mcp", "url": "https://arxiv.org/abs/2611.06585", "title": "Signed, Sealed, Leaked: Trust Beyond Signature for MCP Toolchains", "added": "2026-11-20" },
+    { "id": "2026-11-mdpi-ai-driven-soc-evaluation", "url": "https://www.mdpi.com/2076-3417/16/22/11295", "title": "Design, Implementation, and Performance Evaluation of an AI-Driven SOC", "added": "2026-11-20" },
     { "id": "2026-10-crowdstrike-vapor-panda-artex", "url": "https://www.crowdstrike.com/en-us/blog/vapor-panda-uses-artex-to-scale-global-campaign/", "title": "VAPOR PANDA Uses AI-Driven ARTEX to Grow Global Espionage Campaign", "added": "2026-11-20" },
     { "id": "2026-11-bsi-lagebericht-2026", "url": "https://www.bsi.bund.de/DE/Service-Navi/Presse/Pressemitteilungen/Presse2026/261119_Lagebericht.html", "title": "Die Lage der IT-Sicherheit in Deutschland 2026", "added": "2026-11-20" },
     { "id": "2026-11-solar-cyberboloid-october", "url": "https://www.comnews.ru/content/248446/2026-11-19/2026-w47/1008/oktyabre-zloumyshlenniki-bolshe-vsego-atakovali-finansy-strakhovanie-i-pischevuyu-promyshlennost", "title": "Киберболоид. Аналитика: октябрь 2026", "added": "2026-11-20" },

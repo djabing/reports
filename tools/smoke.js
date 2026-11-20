@@ -13,7 +13,7 @@ const URL = "file://" + path.resolve(__dirname, "..", "index.html");
   const p = await b.newPage({ viewport: { width: 1300, height: 1000 } });
   p.setDefaultTimeout(5000);
   p.on("pageerror", e => problems.push("JS: " + e.message));
-  for (const sec of ["international", "international/en", "kaspersky", "vendors", "competitors"]){
+  for (const sec of ["international", "international/en", "kaspersky", "vendors", "research", "competitors"]){
     await p.goto(URL + "#/" + sec); await p.reload(); await p.waitForTimeout(600);
     const n = await p.locator("article.card").count();
     console.log(`#/${sec}: ${n} карточек`);

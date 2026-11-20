@@ -21,7 +21,8 @@ const hostIn = (h, list) => (list || []).some(d => h === d || h.endsWith("." + d
 const errors = [], warns = [];
 const V = window.RDB_VENDORS || {}, M = window.RDB_MANIFEST || {};
 const TYPES = ["landscape","ransomware","apt","vulnerabilities","ai","industry","forecast","ics","mobile","phishing","other"];
-const GROUPS = ["intl","kasp","main","comp"];
+const GROUPS = ["intl","kasp","main","res","comp"];
+const PUB = ["preprint","peer_reviewed"], CONF = ["high","medium-high","medium","medium-low","low"];
 const TIERS = ["key","analytics","case"];
 
 if (!M.updated || isNaN(Date.parse(M.updated))) errors.push("manifest: некорректное поле updated");
@@ -67,6 +68,15 @@ for (const r of RDB.items){
   for (const m of L.marked_mentions || []) if (new RegExp(m.pattern, "i").test(text)) warns.push(`${id}: есть упоминание, к которому интерфейс добавит сноску — «${m.note}»`);
   const g = r.group || (V[r.vendor] || {}).group || "main";
   if (!GROUPS.includes(g)) e(`неизвестный раздел «${g}»`);
+  // научные исследования: статус публикации, авторы, уверенность и ограничения
+  if (g === "res"){
+    if (!PUB.includes(r.pub_status)) e("для научного исследования нужен pub_status: preprint или peer_reviewed");
+    if (!r.authors) e("для научного исследования нужно поле authors");
+    if (!CONF.includes(r.confidence)) e("для научного исследования нужно confidence: " + CONF.join(" / "));
+    if (!r.limits) e("для научного исследования нужно поле limits — ограничения и достоверность");
+    if (r.en && !r.en.limits) e("нет en.limits");
+    if (r.en && r.en.limits && CYR.test(r.en.limits)) e("en.limits содержит кириллицу");
+  }
   // английская версия нужна каждому отчёту: её показывает английский интерфейс
   if (!r.en) e("нет английской версии (поле en) — она нужна для английского интерфейса");
   else {
