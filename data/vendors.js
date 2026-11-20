@@ -69,5 +69,6 @@ window.RDB_VENDORS = {
   "symantec":    { "name": "Symantec (Broadcom)",  "domain": "security.com",           "color": "#FDB511" },
   "blackfog":    { "name": "BlackFog",             "domain": "blackfog.com",           "color": "#1C1C1C" },
   "dashlane":    { "name": "Dashlane",             "domain": "dashlane.com",           "color": "#0E353D" },
+  "bsi":         { "name": "BSI (Германия)", "name_en": "BSI (Germany)", "domain": "bsi.bund.de", "color": "#00427A", "group": "intl" },
   // NEW-VENDOR-ANCHOR (не удалять: сборщик вставляет новых вендоров над этой строкой)
 };
