@@ -1,11 +1,13 @@
 // Реестр отчётов. Каждая строка = файл data/reports/<id>.js.
 // Сборщик добавляет новые строки сразу под якорем и обновляет "updated" и "build".
 window.RDB_MANIFEST = {
-  "updated": "2026-11-20T12:00:00+03:00",
-  "build": "2026-11-20.9",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
-  "last_run_note": "Новый раздел «Научные исследования»: 9 статей по безопасности ИИ-агентов и AI-SOC (arXiv, ACM AISec, MDPI).",
+  "updated": "2026-11-22T16:40:41+03:00",
+  "build": "2026-11-22.1",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
+  "last_run_note": "+2 научных исследования: CaMeL и FIDES — архитектурная защита ИИ-агентов.",
   "reports": [
     // NEW-REPORT-ANCHOR (не удалять: сборщик вставляет новые записи под этой строкой)
+    { "id": "2025-03-arxiv-camel-prompt-injection-defense", "url": "https://arxiv.org/abs/2503.18813", "title": "Defeating Prompt Injections by Design", "added": "2026-11-22" },
+    { "id": "2025-05-arxiv-fides-information-flow", "url": "https://arxiv.org/abs/2505.23643", "title": "Securing AI Agents with Information-Flow Control", "added": "2026-11-22" },
     { "id": "2026-11-arxiv-acam-agent-capability-modeling", "url": "https://arxiv.org/abs/2611.23507", "title": "ACaM: Automated Capability Modeling for Agentic AI Security", "added": "2026-11-20" },
     { "id": "2026-11-arxiv-intent-contracts", "url": "https://arxiv.org/abs/2611.24025", "title": "Intent Contracts: Taking Tools Away from Agents", "added": "2026-11-20" },
     { "id": "2026-11-arxiv-pipette-prompt-injection-purple-teaming", "url": "https://arxiv.org/abs/2611.24362", "title": "PIPETTE: Prompt Injection Purple-Teaming for Robust LLM Agents", "added": "2026-11-20" },
