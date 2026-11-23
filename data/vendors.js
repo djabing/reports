@@ -72,5 +72,10 @@ window.RDB_VENDORS = {
   "bsi":         { "name": "BSI (Германия)", "name_en": "BSI (Germany)", "domain": "bsi.bund.de", "color": "#00427A", "group": "intl" },
   "arxiv":       { "name": "arXiv",                "domain": "arxiv.org",              "color": "#B31B1B", "group": "res" },
   "mdpi":        { "name": "MDPI",                 "domain": "mdpi.com",               "color": "#4F5671", "group": "res" },
+  "dragos":      { "name": "Dragos",                "domain": "dragos.com",              "color": "#F26522" },
+  "halcyon":     { "name": "Halcyon",               "domain": "halcyon.ai",             "color": "#EE3E42" },
+  "beyondtrust": { "name": "BeyondTrust",           "domain": "beyondtrust.com",        "color": "#005EB8" },
+  "okta":        { "name": "Okta",                  "domain": "okta.com",               "color": "#00297A" },
+  "experian":    { "name": "Experian",              "domain": "experian.com",           "color": "#1F3B73", "group": "intl" },
   // NEW-VENDOR-ANCHOR (не удалять: сборщик вставляет новых вендоров над этой строкой)
 };
