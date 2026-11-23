@@ -1,11 +1,18 @@
 // Реестр отчётов. Каждая строка = файл data/reports/<id>.js.
 // Сборщик добавляет новые строки сразу под якорем и обновляет "updated" и "build".
 window.RDB_MANIFEST = {
-  "updated": "2026-11-22T16:40:41+03:00",
-  "build": "2026-11-22.1",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
-  "last_run_note": "+2 научных исследования: CaMeL и FIDES — архитектурная защита ИИ-агентов.",
+  "updated": "2026-11-24T19:30:00+03:00",
+  "build": "2026-11-24.1",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
+  "last_run_note": "+7 отчётов: Check Point, Dragos и Halcyon (рекордный Q3 по вымогателям), SANS CTI Survey, BeyondTrust и Experian (прогнозы на 2027), Okta (опрос CISO об ИИ-агентах).",
   "reports": [
     // NEW-REPORT-ANCHOR (не удалять: сборщик вставляет новые записи под этой строкой)
+    { "id": "2026-11-checkpoint-state-of-ransomware-q3", "url": "https://research.checkpoint.com/2026/the-state-of-ransomware-q3-2026/", "title": "The State of Ransomware Q3 2026", "added": "2026-11-24" },
+    { "id": "2026-11-dragos-industrial-ransomware-q3", "url": "https://www.dragos.com/blog/dragos-industrial-ransomware-analysis-q3-2026", "title": "Industrial Ransomware Analysis: Q3 2026", "added": "2026-11-24" },
+    { "id": "2026-11-halcyon-q3-ransomware-evolution", "url": "https://www.halcyon.ai/ransomware-research/reports", "title": "Q3 2026 Ransomware Evolution Report", "added": "2026-11-24" },
+    { "id": "2026-11-sans-cti-survey-2026", "url": "https://www.sans.org/research/cyber-threat-intelligence-report", "title": "2026 SANS Cyber Threat Intelligence (CTI) Survey", "added": "2026-11-24" },
+    { "id": "2026-11-beyondtrust-predictions-2027", "url": "https://www.beyondtrust.com/blog/entry/beyondtrust-cybersecurity-trend-predictions", "title": "Top Cybersecurity Trend Predictions for 2027 and Beyond", "added": "2026-11-24" },
+    { "id": "2026-10-okta-global-ciso-insights-2026", "url": "https://www.okta.com/newsroom/articles/global-ciso-insights-2026/", "title": "Global CISO Insights 2026", "added": "2026-11-24" },
+    { "id": "2026-09-experian-data-breach-forecast-2027", "url": "https://www.experianplc.com/newsroom/press-releases/2026/trust-becomes-the-new-cyber-battleground-in-2027", "title": "2027 Data Breach Industry Forecast: Consumers at Risk", "added": "2026-11-24" },
     { "id": "2025-03-arxiv-camel-prompt-injection-defense", "url": "https://arxiv.org/abs/2503.18813", "title": "Defeating Prompt Injections by Design", "added": "2026-11-22" },
     { "id": "2025-05-arxiv-fides-information-flow", "url": "https://arxiv.org/abs/2505.23643", "title": "Securing AI Agents with Information-Flow Control", "added": "2026-11-22" },
     { "id": "2026-11-arxiv-acam-agent-capability-modeling", "url": "https://arxiv.org/abs/2611.23507", "title": "ACaM: Automated Capability Modeling for Agentic AI Security", "added": "2026-11-20" },
