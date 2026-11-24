@@ -1,11 +1,16 @@
 // Реестр отчётов. Каждая строка = файл data/reports/<id>.js.
 // Сборщик добавляет новые строки сразу под якорем и обновляет "updated" и "build".
 window.RDB_MANIFEST = {
-  "updated": "2026-11-24T19:30:00+03:00",
-  "build": "2026-11-24.1",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
-  "last_run_note": "+7 отчётов: Check Point, Dragos и Halcyon (рекордный Q3 по вымогателям), SANS CTI Survey, BeyondTrust и Experian (прогнозы на 2027), Okta (опрос CISO об ИИ-агентах).",
+  "updated": "2026-11-25T01:32:56+03:00",
+  "build": "2026-11-24.2",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
+  "last_run_note": "+5 отчётов: Securelist об онлайн-покупках, ReliaQuest о вторжениях, BlackFog и Sapio о раскрытии данных через ИИ, препринт о Project Glasswing и ESET об активности APT.",
   "reports": [
     // NEW-REPORT-ANCHOR (не удалять: сборщик вставляет новые записи под этой строкой)
+    { "id": "2026-11-kaspersky-online-shopping-threats", "url": "https://securelist.com/black-friday-threat-report-2026/122061/", "title": "Kaspersky online shopping threat report 2026", "added": "2026-11-24" },
+    { "id": "2026-11-reliaquest-intrusion-volume", "url": "https://reliaquest.com/blog/intrusion-volume-has-surged-in-the-last-90-days-signaling-a-new-normal-for-defense/", "title": "Intrusion Volume Has Surged 138% in the Last 90 Days, Signaling a New Normal for Defense", "added": "2026-11-24" },
+    { "id": "2026-11-blackfog-ai-data-exposure", "url": "https://www.blackfog.com/blackfog-sapio-sensitive-data-exposure-ai-tools/", "title": "BlackFog Research: 47% of security leaders have experienced sensitive data exposure through AI tools", "added": "2026-11-24" },
+    { "id": "2026-11-arxiv-glasswing-cyber-defense", "url": "https://arxiv.org/abs/2611.06629", "title": "Does Frontier AI Strengthen Cyber Defense? Evidence from Project Glasswing", "added": "2026-11-24" },
+    { "id": "2026-10-eset-apt-activity-q2-q3", "url": "https://www.welivesecurity.com/en/eset-research/eset-apt-activity-report-q2-2026-q3-2026/", "title": "ESET APT Activity Report Q2 2026–Q3 2026", "added": "2026-11-24" },
     { "id": "2026-11-checkpoint-state-of-ransomware-q3", "url": "https://research.checkpoint.com/2026/the-state-of-ransomware-q3-2026/", "title": "The State of Ransomware Q3 2026", "added": "2026-11-24" },
     { "id": "2026-11-dragos-industrial-ransomware-q3", "url": "https://www.dragos.com/blog/dragos-industrial-ransomware-analysis-q3-2026", "title": "Industrial Ransomware Analysis: Q3 2026", "added": "2026-11-24" },
     { "id": "2026-11-halcyon-q3-ransomware-evolution", "url": "https://www.halcyon.ai/ransomware-research/reports", "title": "Q3 2026 Ransomware Evolution Report", "added": "2026-11-24" },
