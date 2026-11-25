@@ -1,9 +1,9 @@
 // Реестр отчётов. Каждая строка = файл data/reports/<id>.js.
 // Сборщик добавляет новые строки сразу под якорем и обновляет "updated" и "build".
 window.RDB_MANIFEST = {
-  "updated": "2026-11-25T13:14:33+03:00",
-  "build": "2026-11-25.2",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
-  "last_run_note": "+5 исследований: Wavestone, GAO, OX Security, Salt Security и Cyberhaven; русские и английские карточки, методология и ограничения.",
+  "updated": "2026-11-25T13:27:58+03:00",
+  "build": "2026-11-25.3",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
+  "last_run_note": "Обновлены логотипы GAO, Wavestone и F6 из официальных векторных источников; сброс кэша иконок.",
   "reports": [
         {"id": "2026-11-wavestone-cert-report", "url": "https://www.wavestone.com/en/insight/2026-wavestone-cert-report/", "title": "CERT-W Report 2026: Incident response in an AI-accelerated threat landscape", "added": "2026-11-25"},
     {"id": "2026-11-gao-ai-cybersecurity", "url": "https://www.gao.gov/products/gao-27-108458", "title": "AI and Cybersecurity: Technologies Can Magnify Cyberattacks and Enhance Cyber Defense", "added": "2026-11-25"},
