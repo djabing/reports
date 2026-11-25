@@ -1,11 +1,13 @@
 // Реестр отчётов. Каждая строка = файл data/reports/<id>.js.
 // Сборщик добавляет новые строки сразу под якорем и обновляет "updated" и "build".
 window.RDB_MANIFEST = {
-  "updated": "2026-11-25T01:32:56+03:00",
-  "build": "2026-11-24.2",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
-  "last_run_note": "+5 отчётов: Securelist об онлайн-покупках, ReliaQuest о вторжениях, BlackFog и Sapio о раскрытии данных через ИИ, препринт о Project Glasswing и ESET об активности APT.",
+  "updated": "2026-11-25T10:16:01+03:00",
+  "build": "2026-11-25.1",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
+  "last_run_note": "+2 отчёта: Kaspersky «Киберпульс. ИТ/Телеком. Россия» и STL Partners о потребностях SMB в кибербезопасности; ссылки, ограничения данных и английские версии.",
   "reports": [
     // NEW-REPORT-ANCHOR (не удалять: сборщик вставляет новые записи под этой строкой)
+    { "id": "2026-11-kaspersky-cyberpulse-it-telecom", "url": "https://www.kaspersky.ru/about/press-releases/chislo-ddos-atak-na-rossijskie-it-kompanii-v-2026-godu-vyroslo-na-61", "title": "Киберпульс. ИТ/Телеком. Россия. Обзор 2026", "added": "2026-11-25" },
+    { "id": "2026-11-stl-smb-cybersecurity-needs", "url": "https://stlpartners.com/research/cybersecurity-what-do-small-and-medium-businesses-need-in-2026/", "title": "Cybersecurity: What do small and medium businesses need in 2026?", "added": "2026-11-25" },
     { "id": "2026-11-kaspersky-online-shopping-threats", "url": "https://securelist.com/black-friday-threat-report-2026/122061/", "title": "Kaspersky online shopping threat report 2026", "added": "2026-11-24" },
     { "id": "2026-11-reliaquest-intrusion-volume", "url": "https://reliaquest.com/blog/intrusion-volume-has-surged-in-the-last-90-days-signaling-a-new-normal-for-defense/", "title": "Intrusion Volume Has Surged 138% in the Last 90 Days, Signaling a New Normal for Defense", "added": "2026-11-24" },
     { "id": "2026-11-blackfog-ai-data-exposure", "url": "https://www.blackfog.com/blackfog-sapio-sensitive-data-exposure-ai-tools/", "title": "BlackFog Research: 47% of security leaders have experienced sensitive data exposure through AI tools", "added": "2026-11-24" },

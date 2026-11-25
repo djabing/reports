@@ -77,5 +77,6 @@ window.RDB_VENDORS = {
   "beyondtrust": { "name": "BeyondTrust",           "domain": "beyondtrust.com",        "color": "#005EB8" },
   "okta":        { "name": "Okta",                  "domain": "okta.com",               "color": "#00297A" },
   "experian":    { "name": "Experian",              "domain": "experian.com",           "color": "#1F3B73", "group": "intl" },
+  "stlpartners": { "name": "STL Partners", "domain": "stlpartners.com", "color": "#163C67", "group": "intl" },
   // NEW-VENDOR-ANCHOR (не удалять: сборщик вставляет новых вендоров над этой строкой)
 };
