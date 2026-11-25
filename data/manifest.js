@@ -1,10 +1,15 @@
 // Реестр отчётов. Каждая строка = файл data/reports/<id>.js.
 // Сборщик добавляет новые строки сразу под якорем и обновляет "updated" и "build".
 window.RDB_MANIFEST = {
-  "updated": "2026-11-25T10:16:01+03:00",
-  "build": "2026-11-25.1",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
-  "last_run_note": "+2 отчёта: Kaspersky «Киберпульс. ИТ/Телеком. Россия» и STL Partners о потребностях SMB в кибербезопасности; ссылки, ограничения данных и английские версии.",
+  "updated": "2026-11-25T13:14:33+03:00",
+  "build": "2026-11-25.2",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
+  "last_run_note": "+5 исследований: Wavestone, GAO, OX Security, Salt Security и Cyberhaven; русские и английские карточки, методология и ограничения.",
   "reports": [
+        {"id": "2026-11-wavestone-cert-report", "url": "https://www.wavestone.com/en/insight/2026-wavestone-cert-report/", "title": "CERT-W Report 2026: Incident response in an AI-accelerated threat landscape", "added": "2026-11-25"},
+    {"id": "2026-11-gao-ai-cybersecurity", "url": "https://www.gao.gov/products/gao-27-108458", "title": "AI and Cybersecurity: Technologies Can Magnify Cyberattacks and Enhance Cyber Defense", "added": "2026-11-25"},
+    {"id": "2026-11-ox-plug-and-pray", "url": "https://www.ox.security/reports/plug-and-pray-how-ai-is-changing-software-supply-chain-attacks/", "title": "Plug and Pray: How AI Is Changing Software Supply Chain Attacks", "added": "2026-11-25"},
+    {"id": "2026-11-salt-autonomy-before-control", "url": "https://content.salt.security/AutonomyBeforeControl2026CSuiteReport_LP.html", "title": "Autonomy Before Control: The 2026 C-Suite Report on AI Agent Risk", "added": "2026-11-25"},
+    {"id": "2026-11-cyberhaven-agents-confidential-data", "url": "https://www.cyberhaven.com/blog/research-ai-agents-leak-confidential-data", "title": "The Agent Knew the File Was Confidential. It Shared It Anyway, to Finish the Job.", "added": "2026-11-25"},
     // NEW-REPORT-ANCHOR (не удалять: сборщик вставляет новые записи под этой строкой)
     { "id": "2026-11-kaspersky-cyberpulse-it-telecom", "url": "https://www.kaspersky.ru/about/press-releases/chislo-ddos-atak-na-rossijskie-it-kompanii-v-2026-godu-vyroslo-na-61", "title": "Киберпульс. ИТ/Телеком. Россия. Обзор 2026", "added": "2026-11-25" },
     { "id": "2026-11-stl-smb-cybersecurity-needs", "url": "https://stlpartners.com/research/cybersecurity-what-do-small-and-medium-businesses-need-in-2026/", "title": "Cybersecurity: What do small and medium businesses need in 2026?", "added": "2026-11-25" },

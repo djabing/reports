@@ -78,5 +78,10 @@ window.RDB_VENDORS = {
   "okta":        { "name": "Okta",                  "domain": "okta.com",               "color": "#00297A" },
   "experian":    { "name": "Experian",              "domain": "experian.com",           "color": "#1F3B73", "group": "intl" },
   "stlpartners": { "name": "STL Partners", "domain": "stlpartners.com", "color": "#163C67", "group": "intl" },
+  "wavestone": {"name": "Wavestone", "domain": "wavestone.com", "color": "#2855A1", "group": "intl"},
+  "gao": {"name": "U.S. GAO", "domain": "gao.gov", "color": "#2855A1", "group": "intl"},
+  "oxsecurity": {"name": "OX Security", "domain": "ox.security", "color": "#2855A1"},
+  "saltsecurity": {"name": "Salt Security", "domain": "salt.security", "color": "#2855A1"},
+  "cyberhaven": {"name": "Cyberhaven Labs", "domain": "cyberhaven.com", "color": "#2855A1"},
   // NEW-VENDOR-ANCHOR (не удалять: сборщик вставляет новых вендоров над этой строкой)
 };
