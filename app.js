@@ -189,7 +189,7 @@ function toast(t){ const el = $("#toast"); el.textContent = t; el.classList.add(
 /* логотип: локальный файл data/logos/<vendor>.png → favicon Google → инициалы на брендовом цвете */
 function logo(v){
   const ini = esc((v.name.match(/[A-Za-zА-Яа-я0-9]/g) || ["?"]).slice(0, 2).join("").toUpperCase());
-  const local = "data/logos/" + encodeURIComponent(v.id) + ".png";
+  const local = "data/logos/" + encodeURIComponent(v.id) + ".png?v=" + encodeURIComponent(window.RDB_MANIFEST.build);
   return `<span class="logo"><img alt="" loading="lazy" src="${local}" data-d="${esc(v.domain)}" data-c="${esc(v.color)}" data-i="${ini}" onerror="window.__logoFail(this)"></span>`;
 }
 window.__logoFail = function(img){
