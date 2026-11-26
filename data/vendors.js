@@ -83,5 +83,7 @@ window.RDB_VENDORS = {
   "oxsecurity": {"name": "OX Security", "domain": "ox.security", "color": "#2855A1"},
   "saltsecurity": {"name": "Salt Security", "domain": "salt.security", "color": "#2855A1"},
   "cyberhaven": {"name": "Cyberhaven Labs", "domain": "cyberhaven.com", "color": "#2855A1"},
+  "pitchbook": {"name":"PitchBook","domain":"pitchbook.com","color":"#173B52","group":"intl"},
+  "eclypsium": {"name":"InfraTrust · Eclypsium","domain":"eclypsium.com","color":"#253B60"},
   // NEW-VENDOR-ANCHOR (не удалять: сборщик вставляет новых вендоров над этой строкой)
 };
