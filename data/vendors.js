@@ -89,5 +89,7 @@ window.RDB_VENDORS = {
   "rubrik": {"name": "Rubrik", "domain": "rubrik.com", "color": "#00B2A9"},
   "censys": {"name": "Censys", "domain": "censys.com", "color": "#F15A22"},
   "armadin": {"name": "Armadin", "domain": "armadin.com", "color": "#1F2A44"},
+  "ukfinance": {"name": "UK Finance", "domain": "ukfinance.org.uk", "color": "#00205B", "group": "intl"},
+  "spycloud": {"name": "SpyCloud", "domain": "spycloud.com", "color": "#00A3E0"},
   // NEW-VENDOR-ANCHOR (не удалять: сборщик вставляет новых вендоров над этой строкой)
 };
