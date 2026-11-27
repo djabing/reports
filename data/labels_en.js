@@ -70,4 +70,5 @@ window.RDB_LABELS_EN = {
   "ущерб": "damage", "экономика ИБ": "security economics", "бюджеты ИБ": "security budgets", "боковое перемещение": "lateral movement", "хакерские инструменты": "hacking tools",
   "Автопром": "Automotive", "автомобильная безопасность": "automotive security", "OTA-обновления": "OTA updates", "кража секретов": "secret theft",
   "Потребительский сектор": "Consumer discretionary", "Южная Америка": "South America", "неперсональные учётные записи": "non-human identities",
+  "агентные навыки": "agent skills",
 };
