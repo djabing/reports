@@ -1,9 +1,9 @@
 // Реестр отчётов. Каждая строка = файл data/reports/<id>.js.
 // Сборщик добавляет новые строки сразу под якорем и обновляет "updated" и "build".
 window.RDB_MANIFEST = {
-  "updated": "2026-11-26T08:13:56+03:00",
-  "build": "2026-11-26.1",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
-  "last_run_note": "+3: Kaspersky о предустановленных угрозах Android, PitchBook Q3 2026 и InfraTrust Pulse November 2026; проверенные первоисточники и ограничения.",
+  "updated": "2026-11-27T08:30:00+03:00",
+  "build": "2026-11-27.1",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
+  "last_run_note": "+17: Kaspersky (VDC, KSB-прогноз цепочки поставок, IT Security Risks, KATA, ICS CERT OTA), Solar 4RAYS npm/PyPI, NCC Group, Rubrik, Censys, Armadin, UK Finance, Fortinet, SpyCloud и 4 препринта arXiv по безопасности ИИ-агентов.",
   "reports": [
         {"id": "2026-11-wavestone-cert-report", "url": "https://www.wavestone.com/en/insight/2026-wavestone-cert-report/", "title": "CERT-W Report 2026: Incident response in an AI-accelerated threat landscape", "added": "2026-11-25"},
     {"id": "2026-11-gao-ai-cybersecurity", "url": "https://www.gao.gov/products/gao-27-108458", "title": "AI and Cybersecurity: Technologies Can Magnify Cyberattacks and Enhance Cyber Defense", "added": "2026-11-25"},
@@ -14,6 +14,23 @@ window.RDB_MANIFEST = {
     {"id": "2026-11-pitchbook-q3-cybersecurity", "url": "https://pitchbook.com/news/reports/q3-2026-cybersecurity-report-a-prompt-injection-of-capital", "title": "Q3 2026 Cybersecurity Report: A Prompt Injection of Capital", "added": "2026-11-26"},
     {"id": "2026-11-infratrust-pulse-november", "url": "https://pulse.infra-trust.org/november-2026/", "title": "InfraTrust Pulse November 2026: What to Patch First", "added": "2026-11-26"},
     // NEW-REPORT-ANCHOR (не удалять: сборщик вставляет новые записи под этой строкой)
+    { "id": "2026-10-kaspersky-ics-vehicle-ota-security", "url": "https://ics-cert.kaspersky.com/publications/reports/2026/10/15/cybersecurity-of-over-the-air-update-mechanisms-for-vehicles/", "title": "Cybersecurity of over-the-air update mechanisms for vehicles", "added": "2026-11-27" },
+    { "id": "2026-11-armadin-opportunity-intelligence", "url": "https://armadin.com/opportunity-intelligence-research", "title": "Opportunity Intelligence: Reducing Exposure to Adversaries", "added": "2026-11-27" },
+    { "id": "2026-11-arxiv-agent-skills-supply-chain", "url": "https://arxiv.org/abs/2611.30932", "title": "Carried-Over and Agent-Native Threats in the Supply Chain of LLM Agent Skills", "added": "2026-11-27" },
+    { "id": "2026-11-arxiv-github-hidden-prompt-injection", "url": "https://arxiv.org/abs/2611.28763", "title": "Who Is Prompt-Injecting Coding Agents? An Empirical Study of Hidden AI-Directed Text on GitHub", "added": "2026-11-27" },
+    { "id": "2026-11-arxiv-llm-triage-detection-pipeline", "url": "https://arxiv.org/abs/2611.33470", "title": "Dynamic Reasoning in Next-Gen Detection and Response: An Empirical Study of LLM Triage, Reinforcement Tuning, and Adversarial Evasion", "added": "2026-11-27" },
+    { "id": "2026-11-arxiv-skill-hub-detectors", "url": "https://arxiv.org/abs/2611.30913", "title": "Demystifying Detectors Guarding Agent Skill Hubs", "added": "2026-11-27" },
+    { "id": "2026-11-censys-artex-agentic-asbestos", "url": "https://censys.com/blog/artex-agentic-asbestos/", "title": "ARTEX: Agentic Asbestos", "added": "2026-11-27" },
+    { "id": "2026-11-fortinet-holiday-threats", "url": "https://www.fortinet.com/blog/threat-research/fake-delivery-notices-stolen-logins-and-malicious-domains-threaten-holiday-shoppers", "title": "Holiday Season Cyber Threats Report 2026", "added": "2026-11-27" },
+    { "id": "2026-11-kaspersky-it-security-risks-incident-cost", "url": "https://www.kaspersky.com/about/press-releases/cybersecurity-incidents-cost-enterprises-four-times-more-than-smbs-kaspersky-finds", "title": "Cybersecurity incidents cost enterprises four times more than SMBs, Kaspersky finds", "added": "2026-11-27" },
+    { "id": "2026-11-kaspersky-kata-lateral-movement-tools", "url": "https://www.kaspersky.com/about/press-releases/2-million-hacking-tool-detections-in-six-months-kaspersky-reveals-the-most-used-lateral-movement-utilities", "title": "2 million hacking tool detections in six months: Kaspersky reveals the most used lateral movement utilities", "added": "2026-11-27" },
+    { "id": "2026-11-kaspersky-ksb-supply-chain-predictions-2027", "url": "https://www.kaspersky.com/about/press-releases/kaspersky-warns-of-seven-supply-chain-risks-for-2027", "title": "Kaspersky warns of seven supply chain risks for 2027", "added": "2026-11-27" },
+    { "id": "2026-11-kaspersky-vdc-ransomware-cost", "url": "https://www.kaspersky.com/about/press-releases/kaspersky-and-vdc-strategy-ransomware-incidents-could-cost-each-affected-company-over-470000", "title": "Kaspersky and VDC Strategy: ransomware incidents could cost each affected company over $470,000", "added": "2026-11-27" },
+    { "id": "2026-11-nccgroup-threat-pulse-october", "url": "https://insights.nccgroup.com/l/898251/2026-11-19/31p6lv6/898251/1795085578SO8oe8pJ/October_2026_Cyber_Threat_Intelligence_Report.pdf", "title": "October 2026 Cyber Threat Intelligence Report", "added": "2026-11-27" },
+    { "id": "2026-11-rubrik-ransomware-extortion-economy", "url": "https://zerolabs.rubrik.com/reports/global-threat-landscape-report-2026-ransomware-extortion-economy", "title": "Global Threat Landscape Report 2026: Ransomware Extortion Economy", "added": "2026-11-27" },
+    { "id": "2026-11-solar-npm-pypi-malicious-packages", "url": "https://habr.com/ru/companies/solarsecurity/articles/1111860/", "title": "Установил библиотеку — потерял данные: как вредоносные пакеты npm и PyPI крадут секреты разработчиков", "added": "2026-11-27" },
+    { "id": "2026-11-spycloud-2027-forecast", "url": "https://spycloud.com/resource/report/spycloud-2026-forecast-report/", "title": "SpyCloud 2026 Forecast Report", "added": "2026-11-27" },
+    { "id": "2026-11-ukfinance-half-year-fraud", "url": "https://www.ukfinance.org.uk/system/files/2026-11/HalfYearFraudReport2026_November.pdf", "title": "Half Year Fraud Report 2026", "added": "2026-11-27" },
     { "id": "2026-11-kaspersky-cyberpulse-it-telecom", "url": "https://www.kaspersky.ru/about/press-releases/chislo-ddos-atak-na-rossijskie-it-kompanii-v-2026-godu-vyroslo-na-61", "title": "Киберпульс. ИТ/Телеком. Россия. Обзор 2026", "added": "2026-11-25" },
     { "id": "2026-11-stl-smb-cybersecurity-needs", "url": "https://stlpartners.com/research/cybersecurity-what-do-small-and-medium-businesses-need-in-2026/", "title": "Cybersecurity: What do small and medium businesses need in 2026?", "added": "2026-11-25" },
     { "id": "2026-11-kaspersky-online-shopping-threats", "url": "https://securelist.com/black-friday-threat-report-2026/122061/", "title": "Kaspersky online shopping threat report 2026", "added": "2026-11-24" },

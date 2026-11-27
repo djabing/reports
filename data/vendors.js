@@ -85,5 +85,11 @@ window.RDB_VENDORS = {
   "cyberhaven": {"name": "Cyberhaven Labs", "domain": "cyberhaven.com", "color": "#2855A1"},
   "pitchbook": {"name":"PitchBook","domain":"pitchbook.com","color":"#173B52","group":"intl"},
   "eclypsium": {"name":"InfraTrust · Eclypsium","domain":"eclypsium.com","color":"#253B60"},
+  "nccgroup": {"name": "NCC Group", "domain": "nccgroup.com", "color": "#5A2D82"},
+  "rubrik": {"name": "Rubrik", "domain": "rubrik.com", "color": "#00B2A9"},
+  "censys": {"name": "Censys", "domain": "censys.com", "color": "#F15A22"},
+  "armadin": {"name": "Armadin", "domain": "armadin.com", "color": "#1F2A44"},
+  "ukfinance": {"name": "UK Finance", "domain": "ukfinance.org.uk", "color": "#00205B", "group": "intl"},
+  "spycloud": {"name": "SpyCloud", "domain": "spycloud.com", "color": "#00A3E0"},
   // NEW-VENDOR-ANCHOR (не удалять: сборщик вставляет новых вендоров над этой строкой)
 };
