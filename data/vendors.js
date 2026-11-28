@@ -91,5 +91,8 @@ window.RDB_VENDORS = {
   "armadin": {"name": "Armadin", "domain": "armadin.com", "color": "#1F2A44"},
   "ukfinance": {"name": "UK Finance", "domain": "ukfinance.org.uk", "color": "#00205B", "group": "intl"},
   "spycloud": {"name": "SpyCloud", "domain": "spycloud.com", "color": "#00A3E0"},
+  "sailpoint":   { "name": "SailPoint",            "domain": "sailpoint.com",          "color": "#0033A1" },
+  "crest":       { "name": "CREST",                "domain": "crest-approved.org",     "color": "#00205B", "group": "intl" },
+  "datadog":     { "name": "Datadog Security Labs", "domain": "datadoghq.com",         "color": "#632CA6" },
   // NEW-VENDOR-ANCHOR (не удалять: сборщик вставляет новых вендоров над этой строкой)
 };

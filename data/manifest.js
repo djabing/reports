@@ -1,9 +1,9 @@
 // Реестр отчётов. Каждая строка = файл data/reports/<id>.js.
 // Сборщик добавляет новые строки сразу под якорем и обновляет "updated" и "build".
 window.RDB_MANIFEST = {
-  "updated": "2026-11-27T08:27:36+03:00",
-  "build": "2026-11-27.2",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
-  "last_run_note": "Проверка новых отчётов: Kaspersky/VDC от 26 ноября уже в каталоге; добавлен прямой PDF и уточнены модельные допущения в обеих языковых версиях.",
+  "updated": "2026-11-28T09:30:00+03:00",
+  "build": "2026-11-28.1",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
+  "last_run_note": "Добавлено 7 отчётов: Kaspersky (теневой ИИ в российских компаниях), Gartner Magic Quadrant ISOC, CREST (ИИ в TLPT), Datadog State of Cloud Security 2026, прогнозы SailPoint на 2027 год и два препринта arXiv о безопасности LLM-агентов. В data/legal.js добавлены университеты из реестра нежелательных организаций (Стэнфорд, Беркли, Тафтс, Йель).",
   "reports": [
         {"id": "2026-11-wavestone-cert-report", "url": "https://www.wavestone.com/en/insight/2026-wavestone-cert-report/", "title": "CERT-W Report 2026: Incident response in an AI-accelerated threat landscape", "added": "2026-11-25"},
     {"id": "2026-11-gao-ai-cybersecurity", "url": "https://www.gao.gov/products/gao-27-108458", "title": "AI and Cybersecurity: Technologies Can Magnify Cyberattacks and Enhance Cyber Defense", "added": "2026-11-25"},
@@ -14,6 +14,13 @@ window.RDB_MANIFEST = {
     {"id": "2026-11-pitchbook-q3-cybersecurity", "url": "https://pitchbook.com/news/reports/q3-2026-cybersecurity-report-a-prompt-injection-of-capital", "title": "Q3 2026 Cybersecurity Report: A Prompt Injection of Capital", "added": "2026-11-26"},
     {"id": "2026-11-infratrust-pulse-november", "url": "https://pulse.infra-trust.org/november-2026/", "title": "InfraTrust Pulse November 2026: What to Patch First", "added": "2026-11-26"},
     // NEW-REPORT-ANCHOR (не удалять: сборщик вставляет новые записи под этой строкой)
+    { "id": "2026-11-kaspersky-shadow-ai-russia", "url": "https://www.kaspersky.ru/about/press-releases/skrytaya-ugroza-97-rossijskih-kompanij-stalkivalis-s-problemami-iz-za-nekontroliruemogo-ispolzovaniya-ii-sotrudnikami", "title": "Скрытая угроза: 97% российских компаний сталкивались с проблемами из-за неконтролируемого использования ИИ сотрудниками", "added": "2026-11-28" },
+    { "id": "2026-11-sailpoint-2027-identity-predictions", "url": "https://www.helpnetsecurity.com/2026/11/27/sailpoint-2027-ai-identity-security-predictions-report/", "title": "2027 Identity Security Predictions", "added": "2026-11-28" },
+    { "id": "2026-11-crest-ai-threat-led-pentesting", "url": "https://www.helpnetsecurity.com/2026/11/27/crest-ai-threat-led-penetration-testing/", "title": "AI and the Future of Threat-Led Penetration Testing: Capability, Control and Credible Assurance", "added": "2026-11-28" },
+    { "id": "2026-11-gartner-magic-quadrant-isoc-2026", "url": "https://www.crowdstrike.com/en-us/press-releases/crowdstrike-named-a-leader-2026-gartner-magic-quadrant-isoc-siem/", "title": "Magic Quadrant for Integrated Security Operations Center Systems", "added": "2026-11-28" },
+    { "id": "2026-11-datadog-state-of-cloud-security-2026", "url": "https://www.datadoghq.com/state-of-cloud-security/", "title": "State of Cloud Security 2026", "added": "2026-11-28" },
+    { "id": "2026-11-arxiv-tare-content-free-state", "url": "https://arxiv.org/abs/2611.30259", "title": "Attributing Security Outcomes in LLM-Agent Evaluations: The Role of Content-Free State", "added": "2026-11-28" },
+    { "id": "2026-11-arxiv-optional-traps-llm-deception", "url": "https://arxiv.org/abs/2611.19295", "title": "Optional Traps: An Empirical Study of LLM Agents Against Credential Deception and Alert-Driven Revocation", "added": "2026-11-28" },
     { "id": "2026-10-kaspersky-ics-vehicle-ota-security", "url": "https://ics-cert.kaspersky.com/publications/reports/2026/10/15/cybersecurity-of-over-the-air-update-mechanisms-for-vehicles/", "title": "Cybersecurity of over-the-air update mechanisms for vehicles", "added": "2026-11-27" },
     { "id": "2026-11-armadin-opportunity-intelligence", "url": "https://armadin.com/opportunity-intelligence-research", "title": "Opportunity Intelligence: Reducing Exposure to Adversaries", "added": "2026-11-27" },
     { "id": "2026-11-arxiv-agent-skills-supply-chain", "url": "https://arxiv.org/abs/2611.30932", "title": "Carried-Over and Agent-Native Threats in the Supply Chain of LLM Agent Skills", "added": "2026-11-27" },

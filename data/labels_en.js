@@ -71,4 +71,5 @@ window.RDB_LABELS_EN = {
   "Автопром": "Automotive", "автомобильная безопасность": "automotive security", "OTA-обновления": "OTA updates", "кража секретов": "secret theft",
   "Потребительский сектор": "Consumer discretionary", "Южная Америка": "South America", "неперсональные учётные записи": "non-human identities",
   "агентные навыки": "agent skills",
+  "пентест": "penetration testing", "бенчмарки": "benchmarks", "ловушки": "deception"
 };
