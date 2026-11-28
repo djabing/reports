@@ -94,5 +94,6 @@ window.RDB_VENDORS = {
   "sailpoint":   { "name": "SailPoint",            "domain": "sailpoint.com",          "color": "#0033A1" },
   "crest":       { "name": "CREST",                "domain": "crest-approved.org",     "color": "#00205B", "group": "intl" },
   "datadog":     { "name": "Datadog Security Labs", "domain": "datadoghq.com",         "color": "#632CA6" },
+  "redsecurity": {"name":"RED Security","domain":"redsecurity.ru","color":"#E82235"},
   // NEW-VENDOR-ANCHOR (не удалять: сборщик вставляет новых вендоров над этой строкой)
 };
