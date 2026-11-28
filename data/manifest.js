@@ -1,9 +1,9 @@
 // Реестр отчётов. Каждая строка = файл data/reports/<id>.js.
 // Сборщик добавляет новые строки сразу под якорем и обновляет "updated" и "build".
 window.RDB_MANIFEST = {
-  "updated": "2026-11-28T09:30:00+03:00",
-  "build": "2026-11-28.1",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
-  "last_run_note": "Добавлено 7 отчётов: Kaspersky (теневой ИИ в российских компаниях), Gartner Magic Quadrant ISOC, CREST (ИИ в TLPT), Datadog State of Cloud Security 2026, прогнозы SailPoint на 2027 год и два препринта arXiv о безопасности LLM-агентов. В data/legal.js добавлены университеты из реестра нежелательных организаций (Стэнфорд, Беркли, Тафтс, Йель).",
+  "updated": "2026-11-28T08:57:20+03:00",
+  "build": "2026-11-28.2",  // меняйте при любом изменении файлов — сбрасывает кэш браузера
+  "last_run_note": "+1: RED Security о комплексных ИИ-сервисах на теневых форумах. Опрос Kaspersky о теневом ИИ от 27 ноября проверен и уже есть в каталоге; дубликат не создан.",
   "reports": [
         {"id": "2026-11-wavestone-cert-report", "url": "https://www.wavestone.com/en/insight/2026-wavestone-cert-report/", "title": "CERT-W Report 2026: Incident response in an AI-accelerated threat landscape", "added": "2026-11-25"},
     {"id": "2026-11-gao-ai-cybersecurity", "url": "https://www.gao.gov/products/gao-27-108458", "title": "AI and Cybersecurity: Technologies Can Magnify Cyberattacks and Enhance Cyber Defense", "added": "2026-11-25"},
@@ -13,6 +13,7 @@ window.RDB_MANIFEST = {
         {"id": "2026-11-kaspersky-preinstalled-android-malware", "url": "https://securelist.com/how-to-protect-against-preinstalled-android-malware/122093/", "title": "How to protect against preinstalled Android malware", "added": "2026-11-26"},
     {"id": "2026-11-pitchbook-q3-cybersecurity", "url": "https://pitchbook.com/news/reports/q3-2026-cybersecurity-report-a-prompt-injection-of-capital", "title": "Q3 2026 Cybersecurity Report: A Prompt Injection of Capital", "added": "2026-11-26"},
     {"id": "2026-11-infratrust-pulse-november", "url": "https://pulse.infra-trust.org/november-2026/", "title": "InfraTrust Pulse November 2026: What to Patch First", "added": "2026-11-26"},
+    {"id": "2026-11-redsecurity-ai-crime-services", "url": "https://redsecurity.ru/news/kazhdoe-trete-obyavlenie-ob-ii-na-tenevykh-forumakh-predlagaet-gotovyy-servis-dlya-kiberprestupnikov", "title": "RED Security: Каждое третье объявление об ИИ на теневых форумах предлагает готовый сервис для киберпреступников", "added": "2026-11-28"},
     // NEW-REPORT-ANCHOR (не удалять: сборщик вставляет новые записи под этой строкой)
     { "id": "2026-11-kaspersky-shadow-ai-russia", "url": "https://www.kaspersky.ru/about/press-releases/skrytaya-ugroza-97-rossijskih-kompanij-stalkivalis-s-problemami-iz-za-nekontroliruemogo-ispolzovaniya-ii-sotrudnikami", "title": "Скрытая угроза: 97% российских компаний сталкивались с проблемами из-за неконтролируемого использования ИИ сотрудниками", "added": "2026-11-28" },
     { "id": "2026-11-sailpoint-2027-identity-predictions", "url": "https://www.helpnetsecurity.com/2026/11/27/sailpoint-2027-ai-identity-security-predictions-report/", "title": "2027 Identity Security Predictions", "added": "2026-11-28" },
